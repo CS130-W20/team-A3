@@ -1,0 +1,13 @@
+{% extends "search.html" %}
+{% block high_search%}
+<div id="select">
+    <ul>
+        <form action="/search/key/{{key}}/" method="POST">
+        	<input type=hidden name=form_name value="search_option"/>
+            <input {{checked[0]}} type="radio" name="order" id="r1" value="0" /> <label for="r1">Relevence</label>
+            <input {{checked[1]}} type="radio" name="order" id="r2" value="1" /> <label for="r2">Hot</label>
+            <button class="btn" type="submit" style="background-color:transparent"><img src="{{ url_for('static', filename='img/sort.png') }}"></button>
+        </form>
+    </ul>
+</div>
+{% endblock %}

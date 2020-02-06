@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{{ url_for('static', filename='css/jquery-ui.css') }}" type="text/css" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/d3.v3.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/d3.legend.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/tooltip.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/jquery-ui.js') }}" type="text/javascript"></script>
+    {% if g.mode == "radar" %}
+    <link href="{{ url_for('static', filename='css/pure-min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/radar-chart.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/user_radar_style.css') }}" type="text/css" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/radar-chart.js') }}" type="text/javascript"></script>
+    {% elif g.mode == "line_chart" %}
+    <link href="{{ url_for('static', filename='css/user_linechart_style.css') }}" type="text/css" rel="stylesheet">
+    {% endif %}
+</head>
+<body>
+    <script type="text/javascript">
+      $(function () {
+        // enable tooltip
+        $( document ).tooltip();
+      });
+    </script>
+    {% if g.mode == "radar" %}
+    <div id="analyze_radar">
+    </div>
+    <script type="text/javascript">
+      var data = [];
+      var tmp_elem;
+      var data_axes;
+      {% for d in g.data %}
+          data_axes = [];
+          {% for a in d["axes"] %}
+            data_axes.push({axis: "{{a['axis']}}", value: parseInt("{{a['value']}}")})
+          {% endfor %}
+          tmp_elem = {className: "{{d.className}}",
+                          axes: data_axes};
+          data.push(tmp_elem);
+      {% endfor %}
+    </script>
+    <script src="{{ url_for('static', filename='js/user_radar_draw.js') }}" type="text/javascript"></script>
+    {% elif g.mode == "line_chart" %}
+    <script type="text/javascript">
+      var data = [];
+      var tmp_elem;
+      {% for d in g.data %}
+          tmp_elem = {};
+          {% for k in d.keys() %}
+            {% if k == "date" %}
+            tmp_elem["{{k}}"] = "{{d[k]}}";
+            {% else %}
+            tmp_elem["{{k}}"] = parseFloat("{{d[k]}}");
+            {% endif %}
+          {% endfor %}
+          data.push(tmp_elem);
+      {% endfor %}
+    </script>
+    <script src="{{ url_for('static', filename='js/user_linechart_draw.js') }}" type="text/javascript"></script>
+    {% endif %}
+</body>
+</html>

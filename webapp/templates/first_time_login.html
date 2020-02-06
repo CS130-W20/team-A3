@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>EducationAI first-time login</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="{{ url_for('static', filename='img/logo.png') }}" />
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-select.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/floating-labels.css') }}" type="text/css" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/tooltip.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-select.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-toolkit.min.js') }}" type="text/javascript"></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+
+<body style="height:1200px;">
+<script src="{{ url_for('static', filename='js/canvas-nest.js') }}" type="text/javascript" color="195,215,238" pointColor="195,215,238" opacity='0.66' zIndex="-1" count="60" ></script>
+<script src="{{ url_for('static', filename='js/canvas-nest.js') }}" type="text/javascript" color="255,255,255" pointColor="255,255,255" opacity='0.66' zIndex="-1" count="60" ></script>
+
+<form class="form-signin" method="POST" name="user_profile_init" action="/newuser">
+  <div class="text-center mb-4">
+    <!--could be svg-->
+    <img class="mb-4" src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Welcome to Education AI</h1>
+    <p>To start with, we need some more basic information from you to start your profile.</p>
+    <p>Only fields with star <code>(*)</code> are required; other fields of the form are optional.</p>
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" id="printUserName" name="printUserName" class="form-control" placeholder="User Name" readonly value="{{username}}">
+    <label for="printUserName">User Name</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="inputEmail">
+    <label for="inputEmail">Email address (*)</label>
+  </div>
+
+  <div class="form-row">
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+      <div class="form-label-group">
+        <input type="text" id="inputFirstname" name="inputFirstname" class="form-control" placeholder="First Name" required value="{{username}}">
+        <label for="inputFirstname">First Name (*)</label>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+      <div class="form-label-group">
+        <input type="text" id="inputLastname" name="inputLastname" class="form-control" placeholder="Last Name">
+        <label for="inputLastname">Last Name</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputEduLevel">Highest Level of Education (could be on-going)</label>
+    <select class="form-control" id="inputEduLevel" name="inputEduLevel">
+      <option>Null</option>
+      <option>No High School</option>
+      <option>Some High School</option>
+      <option>Some College</option>
+      <option>High School Diploma or GED</option>
+      <option>Professional Certificate</option>
+      <option>Associate Degree</option>
+      <option>Professional Degree</option>
+      <option>Bachelor's Degree</option>
+      <option>Master's Degree</option>
+      <option>Doctorate Degree</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="inputInterests">(*) What's your interests? (at most 6)</label>
+    <select id="inputInterests" name="inputInterests" class="selectpicker form-control" data-live-search="true" multiple data-max-options="6" required>
+      <optgroup label="General Domain">
+        <option>Machine Learning</option>
+        <option>Data Mining</option>
+        <option>Artificial Intelligence</option>
+      </optgroup>
+      <optgroup label="Direction">
+        <option>Natural Language Processing</option>
+        <option>Computer Vision</option>
+      </optgroup>
+      <optgroup label="Perspective">
+        <option>Algorithm</option>
+        <option>Application</option>
+        <option>Research</option>
+      </optgroup>
+    </select>
+  </div>
+
+
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me" name="remember"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
+  <p class="mt-5 mb-3 text-muted text-center">&copy; ScAi Lab, CS Department, UCLA 2019</p>
+  <p class="mt-5 mb-3 text-muted text-center"><a href="{{ url_for('main') }}">Return to Homepage</a></p>
+</form>
+</body>
+</html>
