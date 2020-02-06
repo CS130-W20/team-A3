@@ -1,15 +1,24 @@
-# Sample Project Title
-Briefly describe your project here.
+# EducationAI
+EducationAI is a new and intelligent way to learn!
 
-## Directory Structure
-Explain how the code is organized
+Have a program of study tailored for your individual needs for *whatever* you wish to study: be it Deep Learning or Underwater Basket Weaving!
 
-## Installation/Run instructions
-Explain how to run your application
+## File Structure
 
-## Relevant Links 
-- Documentation link
-- Working URL (if any)
-- anything else
+### [Web-APP](./webapp/)
+* To run:
+  ```shell
+  python application.py
+  ```
+* All the assets files, including **JavaScript** and **CSS** and **Images** are under [static](./webapp/static/)
+* Templates (**html** rendered by Flask / Jinja) are under [templates](./webapp/static/templates/)
+* Parts handling user login / logout are stored in [auth](./webapp/auth/)
+* Data Files are in [database](./webapp/database/)
 
+### Other
+Under [code](./code/)
 
+### Note
+session-debug
+- login from the search page
+- and then go to home page
