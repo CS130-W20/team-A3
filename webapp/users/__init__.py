@@ -1,6 +1,9 @@
 import json
 import datetime
 import random
+import configparser
+import os
+
 # Import flask dependencies
 from flask import Blueprint, request, render_template, \
                   flash, g, session, redirect, url_for
@@ -17,4 +20,7 @@ from auth.models import User
 
 from werkzeug.utils import secure_filename
 
-import os
+config = configparser.ConfigParser()
+config.read('config.ini', 'utf-8')
+USERDB_PATH = config['DEFAULT']['user_db_path']
+CONFIG_PATH = 'config.ini'
