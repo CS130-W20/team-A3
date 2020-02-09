@@ -16,6 +16,11 @@ from flask_login import current_user, login_user, logout_user, login_required
 # Import module models (i.e. User)
 from auth.models import User
 
+import sqlite3
+from users import USERDB_PATH   # path to users db
+from search import COURSEDB_PATH  # path to courses db
+import numpy as np
+
 # Define the blueprint: 'auth'
 auth = Blueprint('auth', __name__)
 
@@ -118,6 +123,20 @@ def new_user():
         f_name = request.form['inputFirstname']
         l_name = request.form['inputLastname']
         interests = request.form['inputInterests']
+
+        # TODO: new user knowledge entry in knowledge table should be populated according to questionnaire
+        # temporarily initialize to random embeddings
+        conn = sqlite3.connect(USERDB_PATH)
+        interests = (current_user.id,) + tuple(np.random.randint(0, 2, 100, 'int'))
+        conn.execute("INSERT INTO knowledge VALUES (%s)" % ",".join(['?' for i in range(101)]), interests)
+
+        # TODO: new user interests entry in interests table should be populated according to questionnaire
+        # temporarily initialize to random embeddings
+        interests = (current_user.id,) + tuple(np.random.randint(0, 2, 100, 'int'))
+        conn.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(101)]), interests)
+        conn.commit()
+        conn.close()
+
         education = request.form['inputEduLevel']
         email = request.form['inputEmail']
         user = User.query.filter_by(id=current_user.id).first()
@@ -125,7 +144,7 @@ def new_user():
         user.lname = l_name
         user.email = email
         user.verified = True
-        user.interests = interests
+        # user.interests = interests
         user.education = education
         try:
             db.session.add(user)
