@@ -127,12 +127,12 @@ def new_user():
         # TODO: new user knowledge entry in knowledge table should be populated according to questionnaire
         # temporarily initialize to random embeddings
         conn = sqlite3.connect(USERDB_PATH)
-        interests = (current_user.id,) + tuple(np.random.randint(0, 2, 100, 'int'))
+        interests = (current_user.id,) + tuple(np.random.randint(0, 2, 100, 'bool'))
         conn.execute("INSERT INTO knowledge VALUES (%s)" % ",".join(['?' for i in range(101)]), interests)
 
         # TODO: new user interests entry in interests table should be populated according to questionnaire
         # temporarily initialize to random embeddings
-        interests = (current_user.id,) + tuple(np.random.randint(0, 2, 100, 'int'))
+        interests = (current_user.id,) + tuple(np.random.randint(0, 2, 100, 'bool'))
         conn.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(101)]), interests)
         conn.commit()
         conn.close()
