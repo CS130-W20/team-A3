@@ -1,7 +1,7 @@
 from flask import Blueprint, request, render_template, \
     flash, g, session, redirect, url_for
 
-from search.utils import cut_page, find, searchidlist, \
+from search.utils import cut_page, find, find_concept, searchidlist, \
     get_k_nearest
 from search.search_engine import SearchEngine
 from search import CONFIG_PATH
@@ -77,6 +77,21 @@ def next_page(page_no):
         print('next error')
 
 
+@searcher.route('concepts/<id>/', methods=['GET', 'POST'])
+def content_concept(id):
+    """
+    Fetch concept content with document id = id.
+    :param id:
+    :return:
+    """
+    try:
+        doc = find_concept([id], extra=True)
+        return render_template('concept.html', doc=doc[0])
+    except Exception(e):
+        print('content error' + e)
+        return error_page()
+
+
 @searcher.route('/<id>/', methods=['GET', 'POST'])
 def content(id):
     """
@@ -90,7 +105,6 @@ def content(id):
     except:
         print('content error')
         return error_page()
-
 
 @searcher.route('/key/<key>/', methods=['POST'])
 def high_search(key):
