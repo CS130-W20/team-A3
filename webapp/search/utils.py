@@ -94,6 +94,8 @@ def find_concept(docid, extra=False):
     for id in docid:
         root = ET.parse(DIR_CONCEPT_PATH + '%s.xml' % id).getroot()
         id = root.find('id').text
+        concept_name = safe_et_find(root, 'concept_name', "N/A")
+        wiki = safe_et_find(root, 'wiki', "N/A")
         course_url = safe_et_find(root, 'course_url', "#")
         course_name = safe_et_find(root, 'course_name', "N/A")
         course_platform = safe_et_find(root, 'course_platform', "N/A")
@@ -113,9 +115,9 @@ def find_concept(docid, extra=False):
         # for Youtube video, in order to display them inline, we need to change the url to */embed/*
         # videos from other sites might have other tricks
         video_urls = ["https://www.youtube.com/embed/aircAruvnKk"]
-        doc = {'id': id, 'course_url': course_url, 'course_name': course_name,
+        doc = {'id': id, 'course_url': course_url, 'concept_name': concept_name,
                'course_platform': course_platform, 'course_instructor': course_instructor,
-               'course_introduction': course_introduction, 'course_category': course_category,
+               'wiki': wiki, 'course_category': course_category,
                'course_tag': course_tag, 'course_rating': course_rating, 'course_orgnization': course_orgnization,
                'course_chapter': course_chapter, 'course_sub_chapter': course_sub_chapter,
                'course_time': course_time, 'reviews': reviews, 'reviewers': reviewers,

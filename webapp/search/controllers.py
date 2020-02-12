@@ -77,7 +77,7 @@ def next_page(page_no):
         print('next error')
 
 
-@searcher.route('concept/<id>/', methods=['GET', 'POST'])
+@searcher.route('concepts/<id>/', methods=['GET', 'POST'])
 def content_concept(id):
     """
     Fetch concept content with document id = id.
