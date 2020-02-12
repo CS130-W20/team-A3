@@ -5,6 +5,7 @@ import sqlite3
 import re
 
 from search import DIR_PATH
+from search import DIR_CONCEPT_PATH
 from search import CONFIG_PATH
 
 from search.search_engine import SearchEngine
@@ -91,7 +92,7 @@ def find_concept(docid, extra=False):
     """
     docs = []
     for id in docid:
-        root = ET.parse(DIR_PATH + '%s.xml' % id).getroot()
+        root = ET.parse(DIR_CONCEPT_PATH + '%s.xml' % id).getroot()
         id = root.find('id').text
         course_url = safe_et_find(root, 'course_url', "#")
         course_name = safe_et_find(root, 'course_name', "N/A")

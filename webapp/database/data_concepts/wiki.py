@@ -7,7 +7,8 @@ def get_wiki(concept):
     wiki = bs4.BeautifulSoup(res.text, "html.parser")
     for i in wiki.select("p"):
         return (i.getText())
-    
+
+
 # create the file structure
 data = ET.Element('doc')
 id = ET.SubElement(data,'id')
