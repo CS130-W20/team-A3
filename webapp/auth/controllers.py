@@ -113,11 +113,14 @@ def register():
 @auth.route('/newuser', methods=['GET','POST'])
 def new_user():
     if request.method == 'GET':
-        username = current_user.username
-        if current_user.verified:
+        if current_user.is_anonymous:
             redirect('/')
         else:
-            return render_template('first_time_login.html', username=username)
+            username = current_user.username
+            if current_user.verified:
+                redirect('/')
+            else:
+                return render_template('first_time_login.html', username=username)
 
     if request.method == 'POST':
         f_name = request.form['inputFirstname']
