@@ -125,16 +125,19 @@ def new_user():
         interests = request.form.getlist('inputInterests')
         concepts = request.form.getlist('inputConcepts')
 
-        # TODO: new user knowledge entry in knowledge table should be populated according to questionnaire
-        # temporarily initialize to random embeddings
         conn = sqlite3.connect(USERDB_PATH)
-        interests = (current_user.id,) + tuple(np.random.randint(0, 2, 100, 'bool'))
-        conn.execute("INSERT INTO knowledge VALUES (%s)" % ",".join(['?' for i in range(101)]), interests)
+        cur = conn.cursor()
 
-        # TODO: new user interests entry in interests table should be populated according to questionnaire
+        # new user interests entry in interests table should be populated according to questionnaire
         # temporarily initialize to random embeddings
-        interests = (current_user.id,) + tuple(np.random.randint(0, 2, 100, 'bool'))
-        conn.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(101)]), interests)
+        interests = (current_user.id, ) + tuple(interests) + tuple(np.random.randint(0, 2, 100 - len(interests), 'bool'))
+        cur.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(101)]), interests)
+
+        # new user knowledge entry in knowledge table should be populated according to questionnaire
+        # temporarily initialize to random embeddings
+        concepts = (current_user.id, ) + tuple(concepts) + tuple(np.random.randint(0, 2, 100 - len(concepts), 'bool'))
+        cur.execute("INSERT INTO knowledge VALUES (%s)" % ",".join(['?' for i in range(101)]), concepts)
+
         conn.commit()
         conn.close()
 
