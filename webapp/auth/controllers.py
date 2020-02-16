@@ -122,7 +122,8 @@ def new_user():
     if request.method == 'POST':
         f_name = request.form['inputFirstname']
         l_name = request.form['inputLastname']
-        interests = request.form['inputInterests']
+        interests = request.form.getlist('inputInterests')
+        concepts = request.form.getlist('inputConcepts')
 
         # TODO: new user knowledge entry in knowledge table should be populated according to questionnaire
         # temporarily initialize to random embeddings
