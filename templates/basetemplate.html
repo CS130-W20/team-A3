@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}BaseTemplate{% endblock %}</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="{{ url_for('static', filename='img/logo.png') }}" />
+    <!--The font-awesome stylesheet has to be online-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-select.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/customized_layout.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/chatbox_layout.css') }}" type="text/css" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/tooltip.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-select.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-toolkit.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/jquery-ui.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/frontend_interaction.js') }}" type="text/javascript"></script>
+</head>
+<body>
+    <!--
+    {% with fmessages = get_flashed_messages() %}
+       {% if fmessages %}
+          {% for fmessage in fmessages %}
+              <div class="alert alert-dismissible alert-secondary">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>{{ fmessage }}
+    </div>
+          {% endfor %}
+       {% endif %}
+    {% endwith %}
+    -->
+    <nav class="fixed-bottom navbar_blue_solid" style="height:6px;"></nav>
+    <!-- if current_user.is_authenticated -->
+    {% if current_user.is_authenticated %}
+    <div class="card bg-transparent" style="border:0px;height:50px;width:300px;z-index:3;position:absolute;" id="chatbox_draggable">
+      <div class="card-header top-bar navbar_blue" onclick="click_collapse();">
+        <a>
+          <span style="margin-right:6px;"><i class="fa fa-comment"></i></span>
+          EDA Chat
+          &nbsp;&nbsp;
+          <i class="fa fa-chevron-circle-down" id="chat_icon"></i>
+        </a>
+      </div>
+
+      <div id="chat_window_content" class="collapse show">
+        <div class="card-body msg_container_base" id="msg_container_base_id">
+          <div class="row msg_container base_sent">
+            <div class="col-md-8 col-xs-8 col-lg-8 col-sm-8">
+              <div class="messages msg_sent">
+                <p>MongoDB is much more widely-used than sqlite. Do you think I should change sqlite DB to MongoDB?</p>
+                </div>
+              </div>
+          </div>
+
+          <div class="row msg_container base_receive">
+            <div class="col-md-8 col-xs-8 col-lg-8 col-sm-8">
+              <div class="messages msg_receive">
+                <p>Yes I agree with you. Should we change sqlite to MongoDB right away?</p>
+              </div>
+            </div>
+          </div>
+
+          <chat_log></chat_log>
+        </div>
+
+        <!--CHAT USER BOX-->
+        <div class="card-footer">
+          <div class="input-group">
+            <input id="chatbox-input" type="text" class="form-control input-sm chat_input" placeholder="Write your message here...">
+            <div class="input-group-append">
+              <button class="btn btn-primary btn-sm" id="chatbox_submit" type="submit">Send</button> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- endif -->
+    {% endif %}
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top navbar-custom navbar_blue">
+      <a class="navbar-brand" href="#" onclick="change_maindiv_size();category_selected(this);" id=-1><img src="{{ url_for('static', filename='img/logo.png') }}" style="width:27px;height:27px;">&nbsp;EduAI</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars_dropdowns" aria-controls="navbars_dropdowns" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbars_dropdowns">
+        <ul class="navbar-nav mr-auto">
+          {% if welcome %}
+          <li class="nav-item active">
+          {% else %}
+          <li class="nav-item">
+          {% endif %}
+            <a class="nav-link" href="{{ url_for('main') }}">Home <!--span class="sr-only">(current)</span--></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" onclick="alert('Knowledge Graph Visualization coming out soon')">Concepts</a> 
+            <!--href="XXX" will come out soon-->
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Learn More</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#" aria-disabled="true">About Education AI</a>
+              <a class="dropdown-item" href="#" aria-disabled="true">Contact</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" name="search" action="/search/" method="POST">
+          <input type=hidden name=form_name value="search"/>
+          {% if key %}
+            <input class="form-control mr-sm-2" type="text" name="key_word" value="{{key}}" placeholder="Search" aria-label="Search">
+          {% else %}
+            <input class="form-control mr-sm-2" type="text" name="key_word" placeholder="Search" aria-label="Search">
+          {% endif %}
+
+          <select class="selectpicker" data-live-search="true" title="Search by ..." name="search_field">
+            <option>Any Property</option>
+            <option>Professor</option>
+            <option>University</option>
+            <option>Platform</option>
+          </select>
+          &nbsp;
+          &nbsp;
+
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+            <img src="{{ url_for('static', filename='img/search-white.png') }}">
+          </button>
+        </form>
+        &nbsp;
+        &nbsp;
+        <script type="text/javascript">
+          console.log("{{g.user['username']}}");
+        </script>
+        {% if current_user.is_authenticated %}
+        <button class="btn btn-secondary my-2 my-sm-0" onclick="logout();">
+          logout {{ current_user.get_name() }}
+        </button>
+        <script type="text/javascript">
+          function logout() {
+            var form = document.getElementById("logout_form");
+            form.confirm_logout.value = 1;
+            form.submit();
+          }
+        </script>
+        <div style="display:none;">
+          <form action="/logout" method=post id="logout_form">
+            <input type=hidden name=form_name value="logout"/>
+            <input type=hidden name=confirm_logout value=0 id="confirm_logout"/>
+          </form>
+        </div>
+        {% else %}
+        <button class="btn btn-secondary my-2 my-sm-0" data-toggle="modal" data-target="#loginModal">
+          Login / Register
+        </button>
+        {% endif %}
+      </div>
+    </nav>
+    <!-- alert -->
+    {% if error %}
+    <script type="text/javascript">console.log("error");</script>
+    <div class="alert alert-danger alert-dismissible alert-block" style="margin: 0 auto;">
+      <strong>ERROR: </strong> {{error}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %}
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login / Register Form</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!--form class="form-horizontal" role="form" action="<url for a function to handle it>" method=post id="login_form"-->
+            <form class="form-horizontal" role="form" method=post id="login_form" action="/login">
+              <input type=hidden name=form_name value="login"/>
+              <div class="form-group">
+                <label for="usr" class="control-label">User Name</label>
+                <input type="text" class="form-control" id="username" name="username"
+                       placeholder="username please">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password</label>
+                <input type="password" class="form-control" id="password" name="password"
+                       placeholder="password please">
+              </div>
+              <div style="display:none;" id="pwd_confirm" class="form-group">
+                  <label for="pwd">Confirm Password</label>
+                  <input type="password" class="form-control" id="password_confirm" name="confirm"
+                         placeholder="confirm password please">
+              </div>
+              <div class="form-group">
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="show_password_checkbox" onclick="show_password()">
+                    <label class="form-check-label" for="show_password_checkbox">Show Password</label>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" onclick="show_confirm()" name="reg"> First time logging in
+                    </label>
+                  </div>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-secondary pull-right" onclick="check_valid_before_submit();">
+                  Confirm &amp; Submit
+                </button>
+              </div>
+            </form>
+          </div>
+          <!--div class="alert alert-warning" id="login_format_message"></div-->
+          <div class="container">
+            <div class="alert alert-warning" id="alert_of_login">
+              <a class="close pointer" onclick="$('#alert_of_login').hide()">close ×</a>
+              <div id="login_format_message"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
+    {% if browse_categories and browse_categories|length > 0  %}
+    <script type="text/javascript">
+      //console.log('{{browse_categories|tojson}}');
+      var browse_categories_json = JSON.parse('{{browse_categories|tojson}}');
+      //console.log(browse_categories_json)
+    </script>
+    <div> <!--remove class="container" to avoid padding-->
+      <div class="row no-gutters">
+        <div class="col-xs-12 col-sm-3 col-lg-2 overflow-auto fixed_height" id="left_navbar">
+          <!--the side bar-->
+          <div class="accordion show" id="accordion_left">
+          </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-9 col-lg-10 overflow-auto fixed_height" id="main_div">
+    {% else %}
+    <script type="text/javascript">
+      console.log("the categories are not listed");
+      var browse_categories_json = {};
+    </script>
+    {% endif %}
+        {% block page_content %}
+        {% endblock %}
+    {% if browse_categories and browse_categories|length > 0  %}
+        <hr>
+        <footer class="container">
+          <p>&copy; ScAi Lab, CS Department, UCLA 2019</p>
+        </footer>
+        </div>
+      </div>
+    </div>
+    {% elif browse_categories %}
+    <hr>
+    <footer class="container">
+      <p>&copy; ScAi Lab, CS Department, UCLA 2019</p>
+    </footer>
+    {% endif %}
+    <script src="{{ url_for('static', filename='js/chatbox_interaction.js') }}" type="text/javascript"></script>
+</body>
+</html>
