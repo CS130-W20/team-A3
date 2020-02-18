@@ -12,3 +12,16 @@
 		* course data crawl.
 	* index_module.py
 		* build the inverted index database for search. 
+* webappinstantiation of 
+	* application.py
+		* The main file
+	* static
+		* resources for frontend.
+	* templates
+		* templates for frontend.
+	* config.py
+		* setting of support files.
+	* config.ini 
+		* instantiation of support files.
+	* __init__.py
+		* homepage backend.
