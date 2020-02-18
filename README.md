@@ -1,24 +1,14 @@
 # EducationAI
-EducationAI is a new and intelligent way to learn!
 
-Have a program of study tailored for your individual needs for *whatever* you wish to study: be it Deep Learning or Underwater Basket Weaving!
+## Note
+* **To meet the course requirement and be more professional, we resubmit our repo at Feb. 18. Please just ingore all the records before that day. (@Professor, @TA)**
 
-## File Structure
 
-### [Web-APP](./webapp/)
-* To run:
-  ```shell
-  python application.py
-  ```
-* All the assets files, including **JavaScript** and **CSS** and **Images** are under [static](./webapp/static/)
-* Templates (**html** rendered by Flask / Jinja) are under [templates](./webapp/static/templates/)
-* Parts handling user login / logout are stored in [auth](./webapp/auth/)
-* Data Files are in [database](./webapp/database/)
+##Code structure.
 
-### Other
-Under [code](./code/)
-
-### Note
-session-debug
-- login from the search page
-- and then go to home page
+* code
+	* This file is for the functional codes, including data crawl and database construction.
+	* crawl.py
+		* course data crawl.
+	* index_module.py
+		* build the inverted index database for search. 

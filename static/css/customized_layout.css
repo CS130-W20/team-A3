@@ -1,0 +1,155 @@
+body {
+  padding-top: 3.5rem;
+}
+
+.padded_content {
+  padding: 3rem 1.5rem;
+}
+
+.padded_content-aligned {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+  font-size: 3.5rem;
+  }
+}
+
+/* https://www.jquery-az.com/bootstrap-button-9-demos-of-custom-color-size-dropdown-navbar-and-more/ */
+/* https://samueli.ucla.edu/style-guide-colors/ */
+.btn-secondary
+{
+  background-color: #2774AE;
+  border-color: #FFFFFF;
+}
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-default.active, .open .dropdown-toggle.btn-default 
+{
+  background-color: #005587;
+  border-color: #FFFFFF;
+ }
+/* the navigation bar color */
+
+.navbar_blue {
+    background-color: rgba(16,33,56, 0.95) !important;
+}
+
+.navbar_blue_solid {
+    background-color: rgba(16,33,56, 1.0) !important;
+}
+
+/*
+ * https://blog.csdn.net/qq_17518593/article/details/52689178
+ * 
+ */
+
+.fixed_height{
+  height: calc(100vh - 50px);     
+}
+
+.end_link {
+  text-decoration: none;
+}
+.end_link:hover {
+  text-decoration: none;
+}
+
+input.form-control {
+  border-color: #ddd;
+  outline: none;
+  box-shadow: none;
+}
+
+/* bootstrap-selector style */
+.bs-placeholder {
+  border-color:#ddd;
+  background:#fefefe;"
+}
+
+.filter-option-inner-inner {
+  color:#595959;
+}
+
+.btn-light {
+  border-color:#ddd;
+  background:#fefefe;"
+}
+
+
+/* on-hover cursor styles */
+.alias {cursor: alias;}
+.all-scroll {cursor: all-scroll;}
+.auto {cursor: auto;}
+.cell {cursor: cell;}
+.context-menu {cursor: context-menu;}
+.col-resize {cursor: col-resize;}
+.copy {cursor: copy;}
+.crosshair {cursor: crosshair;}
+.default {cursor: default;}
+.e-resize {cursor: e-resize;}
+.ew-resize {cursor: ew-resize;}
+.grab {cursor: -webkit-grab; cursor: grab;}
+.grabbing {cursor: -webkit-grabbing; cursor: grabbing;}
+.help {cursor: help;}
+.move {cursor: move;}
+.n-resize {cursor: n-resize;}
+.ne-resize {cursor: ne-resize;}
+.nesw-resize {cursor: nesw-resize;}
+.ns-resize {cursor: ns-resize;}
+.nw-resize {cursor: nw-resize;}
+.nwse-resize {cursor: nwse-resize;}
+.no-drop {cursor: no-drop;}
+.none {cursor: none;}
+.not-allowed {cursor: not-allowed;}
+.pointer {cursor: pointer;}
+.progress {cursor: progress;}
+.row-resize {cursor: row-resize;}
+.s-resize {cursor: s-resize;}
+.se-resize {cursor: se-resize;}
+.sw-resize {cursor: sw-resize;}
+.text {cursor: text;}
+.url {cursor: url(myBall.cur),auto;}
+.w-resize {cursor: w-resize;}
+.wait {cursor: wait;}
+.zoom-in {cursor: zoom-in;}
+.zoom-out {cursor: zoom-out;}
+
+
+.my-btn-link:hover {
+  background-color: #eee;
+}
+
+.my-btn-link:focus {
+  background-color: #e7e7e7;
+}
+
+.my-btn-link {
+  text-align: left;
+}
+
+.my-btn-link-2 {
+  text-align: left;
+}
+
+.my-btn-link-2:hover {
+  background-color: #efefef;
+}
+
+.my-btn-link-2:focus {
+  background-color: #fff;
+}
+
+/* for the fancy style */
+.transparent-background:hover {
+  background:rgba(1,1,1,0.1)
+}

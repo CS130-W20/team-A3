@@ -1,0 +1,93 @@
+{% extends "basetemplate.html" %}
+{% block title %}EducationAI{% endblock %}
+{% block page_content %}
+    {% if welcome %}
+    <div class="jumbotron jumbotron-fluid transparent-background">
+      <div class="container">
+        <script src="{{ url_for('static', filename='js/canvas-nest.js') }}" type="text/javascript" color="50,131,191" pointColor="50,131,191" opacity='0.66' zIndex="-2" count="18" ></script>
+        <script src="{{ url_for('static', filename='js/canvas-nest.js') }}" type="text/javascript" color="255,209,0" pointColor="255,209,0" opacity='0.66' zIndex="-1" count="18" ></script>
+        <!--script src="{{ url_for('static', filename='js/canvas-nest.js') }}" type="text/javascript" color="195,215,238" pointColor="195,215,238" opacity='0.66' zIndex="-1" count="30" ></script-->
+        <h1 class="display-3">Welcome to Education AI</h1>
+        <p>We will help you get started with AI and enjoy your study.</p>
+        <p>
+          <form class="form-inline my-2 my-lg-0" name="search" action="/search/" method="POST">
+            <input type=hidden name=form_name value="search"/>
+          {% if key %}
+            <input class="form-control mr-sm-2" type="text" name="key_word" value="{{key}}" placeholder="Search" aria-label="Search">
+          {% else %}
+            <input class="form-control mr-sm-2" type="text" name="key_word" placeholder="Search" aria-label="Search">
+          {% endif %}
+
+            <select class="selectpicker" data-live-search="true" title="Search by ..." name="search_field">
+              <option>Any Property</option>
+              <option>Professor</option>
+              <option>University</option>
+              <option>Platform</option>
+            </select>
+            &nbsp;
+            &nbsp;
+
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+              <img src="{{ url_for('static', filename='img/search-white.png') }}">
+            </button>
+          </form>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Hot Topics</h2>
+          <p>We have some keywords for you that are recently very popular:
+            <ul>
+              <li>Machine Learning</li>
+              <li>Artificial Intelligence</li>
+              <li>Data Mining</li>
+              <li>Big Data</li>
+            </ul>
+          </p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Popular Resource</h2>
+          <p>Here are some of the courses / blogs that are recently very popular on our dataset. (balabalabala)</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>What's New</h2>
+          <p>Here are some of the recently-come-out courses... (balabalabala)</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <main role="main" class="container">
+      <div id="container" class="padded_content">
+          {% block high_search%}
+          {% endblock %}
+          {% if nonempty %}
+              {% for doc in docs%}
+              <div id="doc">
+                  <ul id="navigation">
+                      <p><big><a href="/search/{{doc.id}}/" target="_blank">{{doc.course_name}}</a></big></p>
+                      <p>{{doc.course_time}}<br/>{{doc.course_introduction}}<br/>
+                      <a href="{{ doc.course_url }}" target="_blank">{{doc.course_url}}</a>
+                      </p>
+                  </ul>
+              </div>
+              <br/>
+              {% endfor %}
+          <ul>
+            Pages: &nbsp;
+              {% for i in page %}
+                  <a href="/search/page/{{i}}/">{{i}}</a>&nbsp;
+              {% endfor %}
+          </ul>
+          {% else %}
+              <p>Sorry, our data currently do not include your keyword. Please try another one.</p>
+          {% endif %}
+      </div>
+    </main>
+    {% endif %}
+{% endblock %}
+
