@@ -10,6 +10,7 @@ import operator
 import sqlite3
 import configparser
 from datetime import *
+import numpy as np
 
 
 class SearchEngine:
@@ -75,9 +76,31 @@ class SearchEngine:
         c.execute('SELECT * FROM postings WHERE term=?', (term,))
         return c.fetchone()
 
+    def getIDF(self, file):
+        idfDict = {}
+        with open(file,'r', encoding='utf-8') as f:
+            for x in f.readlines():
+                w,v = x.split()
+                idfDict[w] = v
+        return idfDict
+
+    def tfIdf(self, tf, idf, k, b, length, avglen = 2200):
+        return idf*tf*(k+1)/(tf+k*(1-b+b*length/avglen))
+
+    def Replace(self, content):
+        content = content.replace("\"","")
+        content = content.replace("'", "")
+        content = content.replace("[", "")
+        content = content.replace("]", "")
+        content = content.replace("/", " ")
+        content = content.replace("//", " ")
+        content = content.replace(".", " ")
+        return content
+
     def result_by_BM25(self, sentence):
-        # seg_list = jieba.lcut(sentence, cut_all=False)
-        seg_list = nltk.word_tokenize(sentence)
+        idfDict = self.getIDF('idf.txt')
+        seg_list = jieba.lcut(sentence, cut_all=False)
+        #seg_list = nltk.word_tokenize(sentence)
         cleaned_dict = self.clean_list(seg_list)
         BM25_scores = {}
         # print ("before for")
@@ -87,11 +110,21 @@ class SearchEngine:
                 continue
             docs = r[2].split('\!@#$')
             for doc in docs:
+                tf = 0
                 docid = doc.split('\%^&*')[0]
+                doc = self.Replace(doc)
+                tokens = jieba.lcut(doc, cut_all=False)
+                for w in tokens:
+                    w = w.strip().lower()
+                    if w == term:
+                        tf = tf + 1
+                score = 0
+                if term in idfDict.keys():
+                    score = self.tfIdf(tf, floag(idfDict[term]), 1.5, 0.75, len(tokens), avglen = 2200)
                 if docid in BM25_scores:
-                    BM25_scores[docid] = BM25_scores[docid] + 1
+                    BM25_scores[docid] = BM25_scores[docid] + score
                 else:
-                    BM25_scores[docid] = 1
+                    BM25_scores[docid] = score
         BM25_scores = sorted(BM25_scores.items(), key=operator.itemgetter(1))
         BM25_scores.reverse()
         if len(BM25_scores) == 0:
