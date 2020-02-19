@@ -1,0 +1,35 @@
+{% extends "basetemplate.html" %}
+{% block title %}{{doc.course_name}}{% endblock %}
+{% block page_content %}
+  <!--main role="main" class="container overflow-auto fixed_height"-->
+  <main role="main" class="overflow-auto fixed_height">
+  <div class="padded_content">
+    <div id="basic" align="center">
+        <h1>{{doc.concept_name}}</h1>
+    </div>
+    <br/>
+    <hr/>
+    <div id="detail" align="center">
+        <table width="1000" border="0">
+            <tr> <h4>Introduction:</h4>
+            </tr>
+            <tr>
+                <td style="width:1000px"><p>{{doc.wiki}}</p></td>
+            </tr>
+        </table>
+    </div>
+    <div align="center">
+        <table width="1000" border="0">
+            <tr>
+                <td style="width:1000px"><h2>Related Courses</h2></td>
+            </tr>
+            <!--{% for each in doc.extra %}
+            <tr>
+                <td style="width:1000px"><a href="/search/{{each.id}}/" target="_blank">{{each.title}}</a></td>
+            </tr>
+            {% endfor %} -->
+        </table>
+    </div>
+  </div>
+  </main>
+{% endblock %}
