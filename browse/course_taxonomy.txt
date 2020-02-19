@@ -1,0 +1,60 @@
+1. Artificial Intelligence
+   1. Natural Language Processing
+   2. Computer Vision
+   3. Machine Learning
+   4. Deep Learning
+2. Information Science
+   1. Data Mining
+      1. Data Analysis
+      2. Probability and Mathematical Statistics Model
+      3. Data Mining Applications
+   2. The Web & Information Retrieval
+      1. Intelligent Information Systems
+      2. Web information Systems
+      3. Web Applications
+      4. Mobile and Web Development
+         1. Web and Mobile Development Tools
+         2. Web and Mobile Development Frameworks
+   3. Database
+      1. Data Management
+      2. Database Systems
+   4. Information Theory
+3. Networking
+   1. Wireless Systems
+   2. Mobile Computing
+   3. Data Communications
+   4. Cloud Computing
+   5. Network development
+4. Computer Theory
+   1. Logic and Verification
+   2. Algorithms and Complexity
+   3. Data Structure and Algorithms
+5. Computer Security
+   1. Computer Security and Systems Management
+      1. Cryptography
+      2. Cryptography
+   2. Hardware Security
+6. Computer Interdisciplinary
+   1. Computer Graphics
+   2. Economics & Computation
+   3. Robitics
+   4. Visualization
+   5. Human-computer Interaction
+   6. Computational bio & bioinformatics
+7. Software Engineering
+   1. Introduction to Programming
+      1. Java Programming
+      2. Python Programming
+      3. C/C++ Programming
+      4. Other Programming Languages
+      5. Programming Algorithms
+   2. Software Engineering Lifecycle
+   3. Design Automation
+   4. Software Development Processes and Methodologies
+8. Computer Systems
+   1. Programming Languages
+   2. Embeded & Real-time Analysis
+   3. Operating Systems
+   4. Computer Architecture
+   5. Computer Organization
+   6. Computer Compilers
