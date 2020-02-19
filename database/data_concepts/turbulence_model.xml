@@ -1,0 +1,86 @@
+<doc><id>turbulence_model</id><concept_name>turbulence model</concept_name><wiki>Turbulence modeling is the construction and use of a mathematical model to predict the effects of turbulence. Turbulent flows are commonplace in most real life scenarios, including the flow of blood through the cardiovascular system,[1] the airflow over an aircraft wing,[2] the re-entry of space vehicles,[3] besides others. In spite of decades of research, there is no analytical theory to predict the evolution of these turbulent flows. The equations governing turbulent flows can only be solved directly for simple cases of flow. For most real life turbulent flows, CFD simulations use turbulent models to predict the evolution of turbulence. These turbulence models are simplified constitutive equations that predict the statistical evolution of turbulent flows.[4]
+The Navier&#8211;Stokes equations govern the velocity and pressure of a fluid flow. In a turbulent flow, each of these quantities may be decomposed into a mean part and a fluctuating part. Averaging the equations gives the Reynolds-averaged Navier&#8211;Stokes (RANS) equations, which govern the mean flow. However, the nonlinearity of the Navier&#8211;Stokes equations means that the velocity fluctuations still appear in the RANS equations, in the nonlinear term 
+
+
+
+&#8722;
+&#961;
+
+
+
+
+v
+
+i
+
+
+&#8242;
+
+
+
+v
+
+j
+
+
+&#8242;
+
+
+
+&#175;
+
+
+
+
+{\displaystyle -\rho {\overline {v_{i}^{\prime }v_{j}^{\prime }}}}
+
+ from the convective acceleration. This term is known as the Reynolds stress, 
+
+
+
+
+R
+
+i
+j
+
+
+
+
+{\displaystyle R_{ij}}
+
+.[5] Its effect on the mean flow is like that of a stress term, such as from pressure or viscosity.
+To obtain equations containing only the mean velocity and pressure, we need to close the RANS equations by modelling the Reynolds stress term 
+
+
+
+
+R
+
+i
+j
+
+
+
+
+{\displaystyle R_{ij}}
+
+ as a function of the mean flow, removing any reference to the fluctuating part of the velocity. This is the closure problem.
+Joseph Valentin Boussinesq was the first to attack the closure problem,[6] by introducing the concept of eddy viscosity. In 1877 Boussinesq proposed relating the turbulence stresses to the mean flow to close the system of equations. Here the Boussinesq hypothesis is applied to model the Reynolds stress term. Note that a new proportionality constant 
+
+
+
+
+&#957;
+
+t
+
+
+&gt;
+0
+
+
+{\displaystyle \nu _{t}&gt;0}
+
+, the turbulence eddy viscosity, has been introduced. Models of this type are known as eddy viscosity models or EVM's.
+</wiki></doc>
