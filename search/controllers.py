@@ -2,7 +2,7 @@ from flask import Blueprint, request, render_template, \
     flash, g, session, redirect, url_for
 
 from search.utils import cut_page, find, searchidlist, \
-    get_k_nearest
+    get_k_nearest, find_concept
 from search.search_engine import SearchEngine
 from search import CONFIG_PATH
 from __init__ import browse_categories
