@@ -69,6 +69,19 @@ def next_page(page_no):
     except:
         print('next error')
 
+@searcher.route('concepts/<id>/', methods=['GET', 'POST'])
+def content_concept(id):
+    """
+    Fetch concept content with document id = id.
+    :param id:
+    :return:
+    """
+    try:
+        doc = find_concept([id], extra=True)
+        return render_template('concept.html', doc=doc[0])
+    except Exception(e):
+        print('content error' + e)
+        return error_page()
 
 @searcher.route('/<id>/', methods=['GET', 'POST'])
 def content(id):
