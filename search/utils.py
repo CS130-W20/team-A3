@@ -6,6 +6,7 @@ import re
 
 from search import DIR_PATH
 from search import CONFIG_PATH
+from search import DIR_CONCEPT_PATH
 
 from search.search_engine import SearchEngine
 
