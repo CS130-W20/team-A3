@@ -16,7 +16,10 @@ from flask_login import current_user, login_user, logout_user, login_required
 # Import module models (i.e. User)
 from auth.models import User
 
+import sqlite3
 import numpy as np
+from users import USERDB_PATH 
+from search import COURSEDB_PATH 
 
 # Define the blueprint: 'auth'
 auth = Blueprint('auth', __name__)
@@ -143,9 +146,13 @@ def new_user():
         user.education = education
         try:
             db.session.add(user)
-            db.session.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(101)]), interests)
-            db,session.execute("INSERT INTO knowledge VALUES (%s)" % ",".join(['?' for i in range(101)]), concepts)
             db.session.commit()
+            conn = sqlite3.connect(USERDB_PATH)
+            cur = conn.cursor()            
+            cur.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(101)]), interests)
+            cur.execute("INSERT INTO knowledge VALUES (%s)" % ",".join(['?' for i in range(101)]), concepts)
+            conn.commit()
+            conn.close()
         except:
             return render_template('500.html'),\
                                     json.dumps({'success': False, "code": 1, "message": "Database error"})
