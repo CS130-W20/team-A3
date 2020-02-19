@@ -27,13 +27,13 @@ application.config.from_object('config')
 db = SQLAlchemy(application)
 
 # Import a module / component using its blueprint handler variable (mod_auth)
-from auth.controllers import auth
+#from auth.controllers import auth
 from search.controllers import searcher
 from users.controllers import users
 from visualization.controllers import visualizer
 
 # Register blueprint(s)
-application.register_blueprint(auth)
+#application.register_blueprint(auth)
 application.register_blueprint(searcher)
 application.register_blueprint(users)
 application.register_blueprint(visualizer)

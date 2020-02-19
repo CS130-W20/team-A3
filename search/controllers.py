@@ -15,10 +15,10 @@ searcher = Blueprint('searcher', __name__, url_prefix='/search/')
 @searcher.route('/', methods=['POST'])
 def search():
     """
-        Implements search functionality to find courses.
-        Input: (via POST)
-            - Form containing:
-               * key_word
+    Implements search functionality to find courses.
+    Input: (via POST)
+        - Form containing:
+            * key_word
 
     :return:
         HTML template with the results.
