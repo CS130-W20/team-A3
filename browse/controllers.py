@@ -1,0 +1,124 @@
+'''
+Creator: Zijie Huang
+Data: Feb/18/2020
+Description: Functionality in Browse mode: 1.click box and expand. 2.clike box and show the corresponding category introduction.
+TODO: 1. category introduction. 2.category content. 3.category selection
+'''
+
+import sys
+sys.path.append("...")
+from flask import request, session, Blueprint
+from __init__ import browse_categories
+import json
+
+# Define the blueprint: 'browse'
+browse = Blueprint('browse', __name__)
+
+
+
+def include_category_tree(tmp_tree, tmp_dict):
+    for child in tmp_tree:
+        tmp_dict[child["id"]] = child["category_name"]
+        sub_categories = child.get("sub_categories", [])
+        if len(sub_categories):
+            tmp_dict = include_category_tree(sub_categories, tmp_dict)
+    return tmp_dict
+
+id2categories = include_category_tree(browse_categories, {-1: "Welcome to Education AI"})
+
+def get_category_introduction(category_id=-1):
+    '''
+    TODO : this is fake now, please implement it later
+    '''
+    if category_id == -1:
+        introduction = "We will help you get started with AI and enjoy your study."
+    else:
+        introduction = "brief introduction of category {}: {}".format(category_id, id2categories[category_id])
+    return introduction
+
+
+def get_category_content(category_id=-1):
+    '''
+    TODO : this is all fake, please implement it later
+    '''
+    if category_id == -1:
+        content = [
+            {   "title": "Hot Topics",
+                "content": ["We have some keywords for you that are recently very popular:",
+                    [
+                        "Machine Learning",
+                        "Artificial Intelligence",
+                        "Data Mining",
+                        "Big Data"
+                    ]
+                ],
+                "link": "#"
+            },
+            {   "title": "Popular Resource",
+                "content": ["Here are some of the courses / blogs that are recently very popular on our dataset. (balabalabala)"
+                ],
+                "link": "#"
+            },
+            {   "title": "What\'s New",
+                "content": ["Here are some of the recently-come-out courses... (balabalabala)"
+                ],
+                "link": "#"
+            }
+        ]
+    else:
+        category_name = id2categories[category_id]
+        content = [
+            {   "title": "Related Topics",
+                "content": ["balabalabalabala"
+                ]
+            },
+            {   "title": "Brief History",
+                "content": ["The development of {} experienced the following main stages".format(category_name),
+                    [
+                        {"stage 1": "#"},
+                        {"stage 2": "#"},
+                        {"stage 3": "#"},
+                        {"stage 4": "#"}
+                    ]
+                ],
+                "link": "#"
+            },
+            {   "title": "Most Recent Paper",
+                "content": ["Here are some of the most-recent research papers in {}... (balabalabala)".format(category_name)
+                ],
+                "link": "#"
+            }
+        ]
+    return content
+
+def get_category_info(category_id):
+    category_intro = get_category_introduction(category_id)
+    category_name = id2categories[category_id]
+    category_content = get_category_content(category_id)
+    category_info = {"id": category_id, "name": category_name, "intro": category_intro, "content": category_content}
+    return category_info
+
+
+# handeling the category selection
+@browse.route('/select_category', methods=['POST'])
+def select_category():
+    jsondata = request.form.get('data')
+    data = json.loads(jsondata)
+    # Notice: this category id is turned to string after passing back from the front-end
+    category_id = int(data["category_id"])
+    if category_id == -1:
+        print("TODO: category selection is canceled, please do something to clear the selection in the backend")
+    else:
+        print("TODO: category {} selected, please do something to implement browse mode".format(category_id))
+    session["current_category"] = get_category_info(category_id)
+    success = 1
+    info = [{
+        "success": success,
+        "current_category": session["current_category"]
+    }]
+    return json.dumps(info)
+
+
+
+
+
