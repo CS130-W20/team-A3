@@ -1,0 +1,88 @@
+<doc><id>semantic_compression</id><concept_name>semantic compression</concept_name><wiki>In natural language processing, semantic compression is a process of compacting a lexicon used to build 
+a textual document (or a set of documents) by reducing language heterogeneity, while maintaining text semantics. 
+As a result, the same ideas can be represented using a smaller set of words.
+In most applications, semantic compression is a lossy compression, that is, increased prolixity does not compensate for the lexical compression, and an original document cannot be reconstructed in a reverse process.
+Semantic compression is basically achieved in two steps, using frequency dictionaries and semantic network:
+Step 1 requires assembling word frequencies and 
+information on semantic relationships, specifically hyponymy. Moving upwards in word hierarchy, 
+a cumulative concept frequency is calculating by adding a sum of hyponyms' frequencies to frequency of their hypernym:
+
+
+
+
+c
+u
+m
+f
+(
+
+k
+
+i
+
+
+)
+=
+f
+(
+
+k
+
+i
+
+
+)
++
+
+&#8721;
+
+j
+
+
+c
+u
+m
+f
+(
+
+k
+
+j
+
+
+)
+
+
+{\displaystyle cumf(k_{i})=f(k_{i})+\sum _{j}cumf(k_{j})}
+
+ where 
+
+
+
+
+k
+
+i
+
+
+
+
+{\displaystyle k_{i}}
+
+ is a hypernym of 
+
+
+
+
+k
+
+j
+
+
+
+
+{\displaystyle k_{j}}
+
+.
+Then, a desired number of words with top cumulated frequencies are chosen to build a targed lexicon.
+</wiki></doc>
