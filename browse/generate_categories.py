@@ -69,16 +69,3 @@ def generate_course_list(input_file):
             data_new.append(data[k])
 
     return data_new
-
-
-
-
-
-
-
-
-
-
-
-
-
