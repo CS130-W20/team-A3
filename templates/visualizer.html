@@ -1,0 +1,61 @@
+{% extends "basetemplate.html" %}
+{% block title %}{{doc.course_name}}{% endblock %}
+{% block page_content %}
+  <main role="main" class="container overflow-auto fixed_height">
+  <div class="padded_content">
+    <div id="basic" align="center">
+        <h1>{{doc.course_name}}</h1>
+        <h4>Instructor: {{doc.course_instructor}} </h4>
+        <h4>Affiliation: {{doc.course_orgnization}}</h4>
+        <p>Platform: {{doc.course_platform}}
+        <p>Time: {{doc.course_time}}</p>
+        <p><a href="{{doc.course_url}}" target="_blank">{{doc.course_url}}</a></p>
+    </div>
+    <br/>
+    <div id="tag">
+      <p>Course Category: {{doc.course_category}}
+      <P>Course Tag: {{doc.course_tag}}
+      <p>Course Rating: {{doc.course_rating}}
+    </div>
+    <hr/>
+    <div id="detail" align="center">
+        <table width="1000" border="0">
+            <tr> <h4>Introduction:</h4>
+            </tr>
+            <tr>
+                <td style="width:1000px"><p>{{doc.course_introduction}}</p></td>
+            </tr>
+        </table>
+    </div>
+    <hr/>
+    <div>
+        <h5>Chapter:</h5>
+        <ul>
+        {% for chapter in doc.course_chapter %}
+            <li><h6>{{chapter}}</h6></li>
+        {% endfor %}
+        </ul>
+    </div>
+    <hr/>
+    <h5>Reviews:</h5>
+    <!--for now it doesn't work since it is a string-->
+    <ul>
+    {% for review in doc.reviews %} 
+        <li><h6>{{review}}</h6></li>
+    {% endfor %}
+    </ul>
+    <div align="center">
+        <table width="1000" border="0">
+            <tr>
+                <td style="width:1000px"><h2>Related Courses</h2></td>
+            </tr>
+            <!--{% for each in doc.extra %}
+            <tr>
+                <td style="width:1000px"><a href="/search/{{each.id}}/" target="_blank">{{each.title}}</a></td>
+            </tr>
+            {% endfor %} -->
+        </table>
+    </div>
+  </div>
+  </main>
+{% endblock %}
