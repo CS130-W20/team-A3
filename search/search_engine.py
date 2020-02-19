@@ -98,7 +98,7 @@ class SearchEngine:
         return content
 
     def result_by_BM25(self, sentence):
-        idfDict = self.getIDF('idf.txt')
+        idfDict = self.getIDF('search/idf.txt')
         seg_list = jieba.lcut(sentence, cut_all=False)
         #seg_list = nltk.word_tokenize(sentence)
         cleaned_dict = self.clean_list(seg_list)
