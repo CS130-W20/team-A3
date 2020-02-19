@@ -60,6 +60,4 @@ class User(UserMixin, db.Model):
 
     def get_date_modified(self):
         return self.date_modified
-
-    def get_interests(self):
-        return self.interests
+        
