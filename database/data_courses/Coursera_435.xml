@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<doc><id>Coursera_435</id><course_url>https://www.coursera.org/learn/serverless-machine-learning-gcp-jp</course_url><course_name>Serverless Machine Learning with Tensorflow on Google Cloud Platform 日本語版</course_name><course_platform>Coursera</course_platform><course_instructor>Google Cloud Training</course_instructor><course_introduction>この 1 週間の集中オンデマンド コースでは、Google Cloud Platform での機械学習モデルの設計と構築を実践しながら学びます。講義、デモ、ハンズオンラボを通じて、機械学習（ML）と TensorFlow の概念を学習し、ML モデルの開発、評価、製品化の実践的なスキルを習得します。
+
+目標
+
+このコースでは、次のスキルについて学習します。
+
+   ● 機械学習のユースケースを理解する
+   ● TensorFlow を使用して ML モデルを構築する
+   ● Cloud ML を使用してスケーラブルで導入可能な ML モデルを構築する
+   ● 前処理と結合機能の重要性を理解する
+   ● 高度な ML の概念をモデルに組み込む
+   ● トレーニング済みの ML モデルを製品化する
+
+前提条件
+
+このコースを最大限に活用するには、次の前提条件を満たしている必要があります。
+
+   ● Google Cloud Platform Big Data and Machine Learning Fundamentals コースを修了しているか、同等の経験がある
+   ● SQL などの一般的なクエリ言語に関する基本的な知識がある
+   ● データのモデリング、抽出、変換、読み込みのアクティビティの経験がある
+   ● Python などの一般的なプログラミング言語を使用したアプリケーションの開発経験がある
+   ● 機械学習と統計に精通している
+
+Google アカウントについての注意:
+• Google Cloud Platform の無料トライアルに登録するには、Google / Gmail アカウントとクレジットカードまたは銀行口座が必要です（Google のサービスは、現在中国ではご利用いただけません）。
+• 請求先住所が欧州連合（EU）またはロシアの Google Cloud Platform のユーザーは、VAT の概要文書（https://cloud.google.com/billing/docs/resources/vat-overview）をお読みください。
+• Google Cloud Platform の無料トライアルに関するよくある質問については、https://cloud.google.com/free/docs/frequently-asked-questions をご覧ください。</course_introduction><course_category>Browse.Data Science.Machine Learning</course_category><course_tag /><course_rating>4.6</course_rating><course_orgnization>Google Cloud</course_orgnization><course_chapter>Serverless Machine Learning on Google Cloud Platform へようこそ//モジュール 1: 機械学習の使用開始//モジュール 2: Tensorflow による ML モデルの構築//モジュール 3: Cloud ML Engine による ML モデルのスケーリング//モジュール 4: 特徴エンジニアリング</course_chapter><course_sub_chapter>[['本コースへようこそ', '機械学習についての考え方'], ['機械学習（ML）とは', 'ML の種類', 'ML パイプライン', 'ML モデルのバリエーション', 'ML 問題の骨組み', '機械学習（ML）の利用', '最適化', 'ニューラル ネットワーク環境', '特徴の組み合わせ', '特徴エンジニアリング', 'イメージモデル', '効果的な ML', '良いデータセットを作成するもの', 'エラー指標', '精度', '適合率-再現率', '機械学習データセットの作成', 'データセットの分割', 'Python Notebook', 'ML データセット作成のラボの概要', 'ML データセット作成のラボの復習'], ['モジュール 2 の概要', 'TensorFlow とは', 'コア TensorFlow', 'TensorFlow ラボの概要のスタートガイド', 'TensorFlow ラボの復習', 'Estimator API', 'tf.estimator を使用した機械学習', 'Estimator ラボの復習', '効果的な ML の構築', 'ラボのはじめに: バッチ処理と特徴作成を追加するためのリファクタリング', 'リファクタリングのラボの復習', 'トレーニングと評価', 'モニタリング', 'ラボのはじめに: 分散型トレーニングとモニタリング', 'ラボの復習: 分散型トレーニングとモニタリング'], ['モジュール 3 の概要', 'クラウド ML エンジンを選ぶ理由', '開発ワークフロー', 'パッケージング トレーナー', 'TensorFlow サービスの提供', 'ラボ: ML のスケーリング', 'ラボの復習: ML のスケーリング'], ['モジュール 4 の概要', '優れた特徴', '因果関係', '数値', '多数の例', '生データから特徴への変換', 'カテゴリ別の特徴', '特徴断面', 'バケット化', '広さと深さ', '特徴エンジニアリングを行う場所', '特徴エンジニアリングのラボの概要', '特徴エンジニアリングのラボの復習', 'ハイパーパラメータの調整とデモ', 'ML の抽象化レベル', 'まとめ']]</course_sub_chapter><course_time>Approx. 11 hours to complete</course_time><reviews>[]</reviews><reviewers>[]</reviewers><review_date>[]</review_date></doc>

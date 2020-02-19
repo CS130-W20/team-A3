@@ -9,7 +9,22 @@ $(function () {
     var browse_sidebar = generate_leftsiderbar(browse_categories_json);
     //console.log(browse_sidebar);
   }
+  // fill in the blank
+  var check = document.getElementById("category_name");
+  if (typeof(check) != 'undefined' && check != null) {
+    //console.log("exists");
+    render_categorized_content(current_category);
+  }
+  
+  /*
+  if (current_category.id != -1) {
+    render_categorized_content(current_category);
+  }
+  */
+  // enable tooltip
+  $( document ).tooltip();
 });
+
 
 // https://stackoverflow.com/questions/41566247/bootstrap-resizing-the-page-not-finding-viewport
 (function($, viewport){
@@ -27,6 +42,91 @@ $(function () {
 
 function jsonCopy(src) {
   return JSON.parse(JSON.stringify(src));
+}
+
+function fill_list_category_content(parent, list) {
+  for (var idx = 0; idx < list.length; idx++) {
+    if(typeof(list[idx])=="string") {
+      var newline = document.createElement('li');
+      newline.innerHTML = list[idx];
+      parent.appendChild(newline);
+    } else {
+      if (list[idx].length) {
+        var newlist = document.createElement('ul');
+        fill_list_category_content(newlist, list[idx]);
+        parent.appendChild(newlist);
+      }
+      else {
+        //console.log(list[idx]);
+        var link_name = Object.keys(list[idx]);
+        if(link_name && link_name.length) {
+          var newline = document.createElement('li');
+          var newlink = document.createElement('a');
+          newlink.innerHTML = link_name[0];
+          newlink.setAttribute("href", list[idx][link_name[0]]);
+          newline.appendChild(newlink);
+          parent.appendChild(newline);
+        }
+      }
+    }
+  }
+}
+
+function generate_category_content_element(category_elem_info) {
+  var container = document.createElement('div');
+  container.className = "col-md-4";
+  var title = document.createElement('h2');
+  title.innerHTML = category_elem_info.title;
+  container.appendChild(title);
+  for (var idx = 0; idx < category_elem_info.content.length; idx++) {
+    if(typeof(category_elem_info.content[idx])=="string") {
+      var newline = document.createElement('p');
+      newline.innerHTML = category_elem_info.content[idx];
+      container.appendChild(newline);
+    } else {
+      if (category_elem_info.content[idx].length) {
+        var newlist = document.createElement('ul');
+        fill_list_category_content(newlist, category_elem_info.content[idx]);
+        container.appendChild(newlist);
+      }
+      else {
+        //console.log(category_elem_info.content[idx]);
+        var link_name = Object.keys(category_elem_info.content[idx]);
+        if(link_name && link_name.length) {
+          var newline = document.createElement('li');
+          var newlink = document.createElement('a');
+          newlink.innerHTML = link_name[0];
+          newlink.setAttribute("href", category_elem_info.content[idx][link_name[0]]);
+          newline.appendChild(newlink);
+          parent.appendChild(newline);
+        }
+      }
+    }
+  }
+  if (category_elem_info.link) {
+    var button_container = document.createElement('p');
+    var button = document.createElement('a');
+    button.className = "btn btn-secondary";
+    button.innerHTML = "View details &raquo;";
+    button.setAttribute("href", category_elem_info.link);
+    button.setAttribute("role", "button");
+    button_container.appendChild(button);
+    container.appendChild(button_container);
+  }
+  return container;
+}
+
+function render_categorized_content(category_info) {
+  // render the welcome page
+  // console.log(category_info);
+  document.getElementById("category_name").innerHTML = category_info.name;
+  document.getElementById("category_intro").innerHTML = category_info.intro;
+  var content_div = document.getElementById("category_content");
+  content_div.innerHTML = ""; // clear
+  for(var idx = 0; idx < category_info.content.length; idx ++){
+    var tmpcontent_element = generate_category_content_element(category_info.content[idx])
+    content_div.appendChild(tmpcontent_element);
+  }
 }
 
 function category_selected(item) {
@@ -50,7 +150,9 @@ function category_selected(item) {
       dataType: 'json',
       success: function(data) {
         if (data[0].success == 1) {
-          console.log("succeed");
+          //console.log("succeed");
+          current_category = data[0].current_category;
+          render_categorized_content(current_category);
         } else {
           console.log("something wrong in the backend");
         }
