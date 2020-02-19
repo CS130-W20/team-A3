@@ -2,7 +2,6 @@
 Creator: Zijie Huang
 Data: Feb/18/2020
 Description: Functionality in Browse mode: 1.click box and expand. 2.clike box and show the corresponding category introduction.
-TODO: 1. category introduction. 2.category content. 3.category selection
 '''
 
 import sys

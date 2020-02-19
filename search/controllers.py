@@ -2,7 +2,7 @@ from flask import Blueprint, request, render_template, \
     flash, g, session, redirect, url_for
 
 from search.utils import cut_page, find, searchidlist, \
-    get_k_nearest
+    get_k_nearest, find_concept
 from search.search_engine import SearchEngine
 from search import CONFIG_PATH
 from __init__ import browse_categories
@@ -10,6 +10,8 @@ from __init__ import browse_categories
 # Define the blueprint: 'search', and set its url prefix: search
 searcher = Blueprint('searcher', __name__, url_prefix='/search/')
 
+def error_page():
+    return render_template('search.html', nonempty=False, welcome=False, browse_categories=browse_categories)
 
 
 @searcher.route('/', methods=['POST'])
@@ -69,6 +71,19 @@ def next_page(page_no):
     except:
         print('next error')
 
+@searcher.route('concepts/<id>/', methods=['GET', 'POST'])
+def content_concept(id):
+    """
+    Fetch concept content with document id = id.
+    :param id:
+    :return:
+    """
+    try:
+        doc = find_concept([id], extra=True)
+        return render_template('concept.html', doc=doc[0])
+    except Exception as e:
+        print('content error' + str(e))
+        return error_page()
 
 @searcher.route('/<id>/', methods=['GET', 'POST'])
 def content(id):
