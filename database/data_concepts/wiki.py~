@@ -1,0 +1,4 @@
+import sys, requests, bs4
+
+word = "learning"
+res = requests.get("https://en.wikipedia.org/wiki/" + word)
