@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<doc><id>Coursera_265</id><course_url>https://www.coursera.org/learn/gcp-big-data-ml-fundamentals-jp</course_url><course_name>Google Cloud Platform Big Data and Machine Learning Fundamentals 日本語版</course_name><course_platform>Coursera</course_platform><course_instructor>Google Cloud Training</course_instructor><course_introduction>この 1 週間の集中動画セミナーでは、Google Cloud Platform（GCP）のビッグデータと機械学習に関する機能をご紹介します。受講者は Google Cloud Platform の概要と、データ処理機能の詳細について学ぶことができます。
+
+このコースを完了すると、以下のことができるようになります。
+• ビッグデータと機械学習に関連する Google Cloud Platform の主なプロダクトの用途と価値の特定
+• CloudSQL と Cloud Dataproc を使用した、既存の MySQL と Hadoop / Pig / Spark / Hive ワークロードの Google Cloud Platform への移行
+• BigQuery と Cloud Datalab によるインタラクティブなデータ分析の実行
+• Cloud SQL、BigTable、データストアからの選択
+• TensorFlow を使用したニューラル ネットワークのトレーニングと使用
+• Google Cloud Platform のさまざまなデータ処理プロダクトからの取捨選択
+
+このコースに申し込むには、以下の 1 つ以上の分野で約 1 年の経験が必要となります。
+• SQL などの一般的なクエリ言語
+• 抽出、変換、読み込みの各アクティビティ
+• データ モデリング
+• 機械学習と統計
+• Python でのプログラミング
+
+Google アカウントについての注意: 
+• Google Cloud Platform の無料トライアルに登録するには、Google / Gmail アカウントとクレジット カードまたは口座番号が必要です（Google のサービスは、現在中国ではご利用いただけません）。
+• 請求書の送付先住所が欧州連合（EU）またはロシアの Google Cloud Platform ユーザーは、https://cloud.google.com/billing/docs/resources/vat-overview の VAT 概要文書をお読みください。
+• Google Cloud Platform の無料トライアルに関するよくある質問については、https://cloud.google.com/free/?hl=ja をご覧ください。
+
+Looking for the English version of this course? Check out https://www.coursera.org/learn/gcp-big-data-ml-fundamentals/
+Buscando la versión en español de este curso? Visita https://www.coursera.org/learn/gcp-big-data-ml-fundamentals-es/</course_introduction><course_category>Browse.Data Science.Machine Learning</course_category><course_tag /><course_rating>4.5</course_rating><course_orgnization>Google Cloud</course_orgnization><course_chapter> Google Cloud Platformの専門講座でのデータと機械学習の紹介//Google Cloud Platform とビッグデータ プロダクトの概要//GCP コンピューティングとストレージの基礎//クラウドでのデータ分析//データ分析のスケーリング: GCP によるコンピューティング//データ処理アーキテクチャ: スケーラブルな取り込み、変換、読み込み//Google Cloud Platform、ビッグデータ、ML のまとめ</course_chapter><course_sub_chapter>[['データと機械学習の専門分野の紹介', 'コースの概要と課題', 'Google Cloud Platform と Qwiklabs を使ってみる', 'インストラクターに会いましょう'], ['GCP とビッグデータ プロダクトの概要へようこそ', 'Google Cloud Platform とは', 'GCP のビッグデータ プロダクト', '使用シナリオ', 'モジュールのリソース'], ['GCP コンピューティングとストレージの基礎クラスへようこそ', 'CPUオンデマンド', 'ラボの概要', 'ラボの復習', 'グローバル ファイルシステム', 'ラボの概要', 'ラボの復習', 'モジュール復習', 'モジュールのリソース'], ['マネージドサービスの共通ユースケースの紹介', '変革への足掛かり', 'クラウドでの SQL データベース', 'ラボの概要', 'ラボの復習', 'クラウドでのマネージド Hadoop', 'ラボの概要', 'ラボの復習', 'モジュールの復習', 'モジュールのリソース'], ['データ分析のスケーリングの概要: GCP によるコンピューティングの方法を変える', '高速ランダム アクセス', 'ペタバイト級のデータ格納とインタラクティブなクエリ', 'BigQuery へのデータの取り込み', 'インタラクティブで反復型の開発とデモ', 'Cloud Datalab: デモ', 'BigQuery をサポートする Datalab', 'ラボの概要', 'ラボの復習: Datalab の設定', 'ラボの復習: IPython Notebook の使い方', 'TensorFlow での機械学習', 'ニューラル ネットワーク モデルのトレーニングと作成（パート 1）', 'ニューラル ネットワーク モデルのトレーニングと作成（パート 2）', 'ラボの概要', '完全にビルドされた機械学習モデルとラボ', '事前構築された ML API: 例', 'ラボの復習', 'モジュールの復習', 'モジュールソース', '機械学習: リソース'], ['データ処理アーキテクチャの概要', 'メッセージ指向アーキテクチャ', 'サーバーレス データ パイプライン', 'モジュールの復習'], ['GCP、ビッグデータ、ML のまとめ', '次のステップ', 'モジュールのリソース']]</course_sub_chapter><course_time>Approx. 13 hours to complete</course_time><reviews>['  Qwiklabs とうまく同期されず、サポートに問い合わせる必要があった。  ', '一部完了できないレクチャーがありますが、内容自体はGCPの全容を手を動かしながら把握できるため、o素晴らしいものであると感じました。', 'GCP初心者だったのでちょうどよかった。', 'Great course for begginer', 'Excellent course', '多少ガイダンスによくわからない箇所があったが、全体としては楽しかったです。', None, 'Lab assignments tracking and status completion was not upto the expectations. Due to name differences in the names given during lab, it was keeping course was incomplete.']</reviews><reviewers>['By Go A', 'By Osanaimasahiro ', 'By Yuki T', 'By Shirahama R', 'By Jesús A L', 'By Hiroyuki C', 'By Mary F', 'By Ravi K P']</reviewers><review_date>['Oct 16, 2018', 'Feb 10, 2019', 'Sep 23, 2018', 'Jun 22, 2019', 'Jul 19, 2019', 'Dec 10, 2018', 'Oct 02, 2018', 'Nov 09, 2018']</review_date></doc>

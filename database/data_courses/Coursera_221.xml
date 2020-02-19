@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<doc><id>Coursera_221</id><course_url>https://www.coursera.org/learn/machine-learning-big-data-apache-spark</course_url><course_name>Scalable Machine Learning on Big Data using Apache Spark</course_name><course_platform>Coursera</course_platform><course_instructor>Romeo Kienzler</course_instructor><course_introduction>After completing this course, you will be able to solve any data engineering and data science problem using Apache Spark. With 30.000+ commits, 1000+ contributors, nearly 1.000.000 lines of code and 200+ man years of effort, Apache Spark is the most active Apache Software Foundation project and one of the largest open source projects ever. In IBM alone, 3500 researchers and developers are working with Apache Spark and IBM calls it "potentially the most significant open source project of the next decade."
+
+You’ll master Apache Spark, for BigData but also for SmallData problems.
+
+You’ll be able to go beyond CPU, main memory and storage limitations by making use of large scale compute clusters (IBM provides a free Apache Spark cluster for you during the course which you can continue to use afterwards, all free of charge).
+
+You’ll understand how parallel code is written, capable of running on thousands of CPUs. 
+
+You’ll be able to use simple SQL statements on Petabytes of data using Apache SparkSQL and the Apache Spark DataFrame API.
+
+You’ll be able to explain how Tungsten and Catalyst are transforming SQL queries into cost based optimized dynamic execution graphs. A significant advantage Spark has over other state-of-the-art frameworks like TensorFlow.
+
+You’ll be able to apply machine learning algorithms on Petabytes of data using Apache SparkML Pipelines.
+
+Join us to learn one of the de-facto standards in data science, successfully applied by companies like Alibaba, Apple, Amazon, Baidu, eBay, IBM, NASA, Samsung, SAP, TripAdvisor, Yahoo! and Zalando.
+
+
+Prerequisites:
+- basic python programming
+- basic machine learning (optional introduction videos are provided in this course as well)
+- basic SQL skills for optional content
+
+
+The following courses are recommended taking before taking this class (unless think you have the skills already)
+
+https://www.coursera.org/learn/python-for-applied-data-science or similar
+https://www.coursera.org/learn/machine-learning-with-python or similar
+https://www.coursera.org/learn/sql-data-science or similar for optional lectures</course_introduction><course_category>Browse.Data Science.Machine Learning</course_category><course_tag>Data Science//Artificial Intelligence (AI)//Machine Learning//Big Data//Spark</course_tag><course_rating>4.3</course_rating><course_orgnization>IBM</course_orgnization><course_chapter>Week 1: Introduction//Week 2: Scaling Math for Statistics on Apache Spark//Week 3: Introduction to Apache SparkML//Week 4: Supervised and Unsupervised learning with SparkML</course_chapter><course_sub_chapter>[['Introduction to Apache Spark for Machine Learning on BigData', 'What is Big Data?', 'Data storage solutions', 'Parallel data processing strategies of Apache Spark', 'Functional programming basics', 'Resilient Distributed Dataset and DataFrames - ApacheSparkSQL'], ['Averages', 'Standard deviation', 'Skewness', 'Kurtosis', 'Covariance, Covariance matrices, correlation'], ['How ML Pipelines work', 'Introduction to SparkML', 'Extract - Transform - Load', 'Introduction to Clustering: k-Means', 'Using K-Means in Apache SparkML'], ['Linear Regression', 'LinearRegression with Apache SparkML', 'Logistic Regression', 'LogisticRegression with Apache SparkML']]</course_sub_chapter><course_time>Approx. 10 hours to complete</course_time><reviews>[]</reviews><reviewers>[]</reviewers><review_date>[]</review_date></doc>
