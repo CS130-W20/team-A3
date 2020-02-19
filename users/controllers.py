@@ -1,6 +1,6 @@
 from users.__init__ import *
 from auth import load_user
-# from users.modules.history import get_user_history
+from users.modules.history import get_user_history
 from users.modules.recommendation import recommend_course_for_user
 # from users.modules.education import get_education_options
 # from users.modules.portfolio import get_user_description, get_user_photo, remove_previous_image
