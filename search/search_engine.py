@@ -120,7 +120,7 @@ class SearchEngine:
                         tf = tf + 1
                 score = 0
                 if term in idfDict.keys():
-                    score = self.tfIdf(tf, floag(idfDict[term]), 1.5, 0.75, len(tokens), avglen = 2200)
+                    score = self.tfIdf(tf, float(idfDict[term]), 1.5, 0.75, len(tokens), avglen = 2200)
                 if docid in BM25_scores:
                     BM25_scores[docid] = BM25_scores[docid] + score
                 else:
