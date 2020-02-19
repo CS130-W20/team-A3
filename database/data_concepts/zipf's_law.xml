@@ -1,0 +1,39 @@
+<doc><id>zipf's_law</id><concept_name>zipf's law</concept_name><wiki>Zipf's law (/z&#618;f/, not /ts&#618;pf/ as in German) is an empirical law formulated using mathematical statistics that refers to the fact that many types of data studied in the physical and social sciences can be approximated with a Zipfian distribution, one of a family of related discrete power law probability distributions.  Zipf distribution is related to the zeta distribution, but is not identical.
+Zipf's law was originally formulated in terms of quantitative linguistics, stating that given some corpus of natural language utterances, the frequency of any word is inversely proportional to its rank in the frequency table. Thus the most frequent word will occur approximately twice as often as the second most frequent word, three times as often as the third most frequent word, etc.: the rank-frequency distribution is an inverse relation. For example, in the Brown Corpus of American English text, the word the is the most frequently occurring word, and by itself accounts for nearly 7% of all word occurrences (69,971 out of slightly over 1 million). True to Zipf's Law, the second-place word of accounts for slightly over 3.5% of words (36,411 occurrences), followed by and (28,852). Only 135 vocabulary items are needed to account for half the Brown Corpus.[1]
+The law is named after the American linguist George Kingsley Zipf (1902&#8211;1950), who popularized it and sought to explain it (Zipf 1935, 1949), though he did not claim to have originated it.[2] The French stenographer Jean-Baptiste Estoup (1868&#8211;1950) appears to have noticed the regularity before Zipf.[3][not verified in body] It was also noted in 1913 by German physicist Felix Auerbach[4] (1856&#8211;1933).
+The same relationship occurs in many other rankings unrelated to language, such as the population ranks of cities in various countries, corporation sizes, income rankings, ranks of number of people watching the same TV channel,[5] and so on. The appearance of the distribution in rankings of cities by population was first noticed by Felix Auerbach in 1913.[4] Empirically, a data set can be tested to see whether Zipf's law applies by checking the goodness of fit of an empirical distribution to the hypothesized power law distribution with a Kolmogorov&#8211;Smirnov test, and then comparing the (log) likelihood ratio of the power law distribution to alternative distributions like an exponential distribution or lognormal distribution.[6] When Zipf's law is checked for cities, a better fit has been found with exponent s = 1.07; i.e. the 
+
+
+
+
+n
+
+t
+h
+
+
+
+
+{\displaystyle n^{th}}
+
+ largest settlement is 
+
+
+
+
+
+1
+
+n
+
+1.07
+
+
+
+
+
+
+{\displaystyle {\frac {1}{n^{1.07}}}}
+
+ the size of the largest settlement.
+</wiki></doc>

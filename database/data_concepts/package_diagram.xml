@@ -1,0 +1,8 @@
+<doc><id>package_diagram</id><concept_name>package diagram</concept_name><wiki>A package diagram in the Unified Modeling Language depicts the dependencies between the packages that make up a model.
+In addition to the standard UML Dependency relationship, there are two special types of dependencies defined between packages:
+A package import is "a relationship between an importing namespace and a package, indicating that the importing namespace adds the names of the members of the package to its own namespace." [1]
+By default, an unlabeled dependency between two packages is interpreted as a package import relationship.
+In this relationship, elements within the target package will be imported into the source package.
+A package merge is "a directed relationship between two packages, that indicates that the contents of the two packages are to be combined. It is very similar to Generalisation in the sense that the source element conceptually adds the characteristics of the target element to its own characteristics resulting in an element that combines the characteristics of both"[2]
+In this relationship, if an element exists within both the source package and the target package, then the source element's definition will be expanded to include the target element's definition.
+</wiki></doc>

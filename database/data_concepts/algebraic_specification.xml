@@ -1,0 +1,5 @@
+<doc><id>algebraic_specification</id><concept_name>algebraic specification</concept_name><wiki>Algebraic specification,[1][2][3] is a software engineering technique for formally specifying system behavior.  Algebraic specification seeks to systematically develop more efficient programs by:
+An algebraic specification achieves these goals by defining one or more data types, and specifying a collection of functions that operate on those data types.  These functions can be divided into two classes:
+Consider a formal algebraic specification for the boolean data type.
+One possible algebraic specification may provide two constructor functions for the data-element: a true constructor and a false constructor.  Thus, a boolean data element could be declared, constructed, and initialized to a value.  In this scenario, all other connective elements, such as XOR and AND, would be additional functions.  Thus, a data element could be instantiated with either "true" or "false" value, and additional functions could be used to perform any operation on the data element.
+</wiki></doc>

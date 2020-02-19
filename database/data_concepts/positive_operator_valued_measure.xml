@@ -1,0 +1,34 @@
+<doc><id>positive_operator_valued_measure</id><concept_name>positive operator valued measure</concept_name><wiki>In functional analysis and quantum measurement theory, a positive-operator valued measure (POVM) is a measure whose values are positive semi-definite operators on a Hilbert space. POVMs are a generalisation of projection-valued measures (PVM) and, correspondingly, quantum measurements described by POVMs are a generalisation of quantum measurement described by PVMs (called projective measurements). 
+In rough analogy, a POVM is to a PVM what a mixed state is to a pure state. Mixed states are needed to specify the state of a subsystem of a larger system (see purification of quantum state); analogously, POVMs are necessary to describe the effect on a subsystem of a projective measurement performed on a larger system.
+POVMs are the most general kind of measurement in quantum mechanics, and can also be used in quantum field theory.[1] They are extensively used in the field of quantum information.
+In the simplest case, of a POVM with a finite number of elements acting on a finite-dimensional Hilbert space, a POVM is a set of positive semi-definite matrices 
+
+
+
+{
+
+F
+
+i
+
+
+}
+
+
+{\displaystyle \{F_{i}\}}
+
+ on a Hilbert space 
+
+
+
+
+
+H
+
+
+
+
+{\displaystyle {\mathcal {H}}}
+
+ that sum to the identity matrix,[2]:90
+</wiki></doc>

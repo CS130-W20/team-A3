@@ -1,0 +1,5 @@
+<doc><id>circular_dependency</id><concept_name>circular dependency</concept_name><wiki>
+In software engineering, a circular dependency is a relation between two or more modules which either directly or indirectly depend on each other to function properly. Such modules are also known as mutually recursive.
+Circular dependencies are natural in many domain models where certain objects of the same domain depend on each other.[1] However, in software design circular dependencies between larger software modules are considered an anti-pattern because of their negative effects,[1] however such circular (or cyclic) dependencies have been found to be widespread among the source files of real-world software.[2] Mutually recursive modules are, however, somewhat common in functional programming, where inductive and recursive definitions are often encouraged.
+Circular dependencies can cause many unwanted effects in software programs. Most problematic from a software design point of view is the tight coupling of the mutually dependent modules which reduces or makes impossible the separate re-use of a single module.
+</wiki></doc>

@@ -1,0 +1,5 @@
+<doc><id>work_order</id><concept_name>work order</concept_name><wiki>A work order is usually a task or a job for a customer, that can be scheduled or assigned to someone[1]. Such an order may be from a customer request or created internally within the organization. Work orders may also be created as follow ups to Inspections or Audits.  A work order may be for products or services.
+A work order may include one or more of the following:
+In a manufacturing environment, a work order is converted from a sales order to show that work is about to begin on the manufacture, building or engineering of the products  requested by the customer. In a service environment, a work order can be equivalent to a service order where the WO records the location, date and time the service is carried out and the nature of work that is done. The type of personnel (e.g. job position) may also be listed on the WO. A rate (e.g. $/hr, $/week) and also the total number of hours worked and total value is also shown on the work order.
+A work order may be a maintenance or repair request from students, faculty or staff in a university.[2][3]
+</wiki></doc>

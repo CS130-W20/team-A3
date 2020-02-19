@@ -1,0 +1,64 @@
+<doc><id>autoregressive_process</id><concept_name>autoregressive process</concept_name><wiki>In statistics, econometrics and signal processing, an autoregressive (AR) model is a representation of a type of random process; as such, it is used to describe certain time-varying processes in nature, economics, etc. The autoregressive model specifies that the output variable depends linearly on its own previous values and on a stochastic term (an imperfectly predictable term); thus the model is in the form of a stochastic difference equation (or recurrence relation which should not be confused with differential equation). Together with the moving-average (MA) model, it is a special case and key component of the more general autoregressive&#8211;moving-average (ARMA) and autoregressive integrated moving average (ARIMA) models of time series, which have a more complicated stochastic structure; it is also a special case of the vector autoregressive model (VAR), which consists of a system of more than one interlocking stochastic difference equation in more than one evolving random variable.
+Contrary to the moving-average model (ARMA), the autoregressive model is not always stationary as it may contain a unit root.
+The notation 
+
+
+
+A
+R
+(
+p
+)
+
+
+{\displaystyle AR(p)}
+
+ indicates an autoregressive model of order p. The AR(p) model is defined as
+where 
+
+
+
+
+&#966;
+
+1
+
+
+,
+&#8230;
+,
+
+&#966;
+
+p
+
+
+
+
+{\displaystyle \varphi _{1},\ldots ,\varphi _{p}}
+
+ are the parameters of the model, 
+
+
+
+c
+
+
+{\displaystyle c}
+
+ is a constant, and 
+
+
+
+
+&#949;
+
+t
+
+
+
+
+{\displaystyle \varepsilon _{t}}
+
+ is white noise. This can be equivalently written using the backshift operator B as
+</wiki></doc>

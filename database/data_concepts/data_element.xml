@@ -1,0 +1,5 @@
+<doc><id>data_element</id><concept_name>data element</concept_name><wiki>In metadata, the term data element is an atomic unit of data that has precise meaning or precise semantics. A data element has:
+Data elements usage can be discovered by inspection of software applications or application data files through a process of manual or automated Application Discovery and Understanding. Once data elements are discovered they can be registered in a metadata registry.
+In telecommunication, the term data element has the following components:
+In the areas of databases and data systems more generally a data element is a concept forming part of a data model. As an element of data representation, a collection of data elements forms a data structure.[1]
+</wiki></doc>

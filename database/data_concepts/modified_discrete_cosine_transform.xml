@@ -1,0 +1,33 @@
+<doc><id>modified_discrete_cosine_transform</id><concept_name>modified discrete cosine transform</concept_name><wiki>The modified discrete cosine transform (MDCT) is a lapped transform based on the type-IV discrete cosine transform (DCT-IV), with the additional property of being lapped: it is designed to be performed on consecutive blocks of a larger dataset, where subsequent blocks are overlapped so that the last half of one block coincides with the first half of the next block. This overlapping, in addition to the energy-compaction qualities of the DCT, makes the MDCT especially attractive for signal compression applications, since it helps to avoid artifacts stemming from the block boundaries. As a result of these advantages, the MDCT is the most widely used lossy compression technique in audio data compression. It is employed in most modern audio coding standards, including MP3, Dolby Digital (AC-3), Vorbis (Ogg), Windows Media Audio (WMA), ATRAC, Cook, Advanced Audio Coding (AAC),[1] High-Definition Coding (HDC),[2] LDAC, Dolby AC-4,[3] and MPEG-H 3D Audio,[4] as well as speech coding standards such as AAC-LD (LD-MDCT),[5] G.722.1,[6] G.729.1,[7] CELT,[8] and Opus.[9][10]
+The discrete cosine transform (DCT) was first proposed by Nasir Ahmed in 1972,[11] and demonstrated by Ahmed with T. Natarajan and K. R. Rao in 1974.[12] The MDCT was later proposed by John P. Princen, A.W. Johnson and Alan B. Bradley at the University of Surrey in 1987,[13] following earlier work by Princen and Bradley (1986)[14] to develop the MDCT's underlying principle of time-domain aliasing cancellation (TDAC), described below. (There also exists an analogous transform, the MDST, based on the discrete sine transform, as well as other, rarely used, forms of the MDCT based on different types of DCT or DCT/DST combinations.)
+In MP3, the MDCT is not applied to the audio signal directly, but rather to the output of a 32-band polyphase quadrature filter (PQF) bank. The output of this MDCT is postprocessed by an alias reduction formula to reduce the typical aliasing of the PQF filter bank. Such a combination of a filter bank with an MDCT is called a hybrid filter bank or a subband MDCT.   AAC, on the other hand, normally uses a pure MDCT; only the (rarely used) MPEG-4 AAC-SSR variant (by Sony) uses a four-band PQF bank followed by an MDCT. Similar to MP3, ATRAC uses stacked quadrature mirror filters (QMF) followed by an MDCT.
+As a lapped transform, the MDCT is a bit unusual compared to other Fourier-related transforms in that it has half as many outputs as inputs (instead of the same number).  In particular, it is a linear function 
+
+
+
+F
+:
+
+
+R
+
+
+2
+N
+
+
+&#8594;
+
+
+R
+
+
+N
+
+
+
+
+{\displaystyle F\colon \mathbf {R} ^{2N}\to \mathbf {R} ^{N}}
+
+ (where R denotes the set of real numbers).  The 2N real numbers x0, ..., x2N-1 are transformed into the N real numbers X0, ..., XN-1 according to the formula:
+</wiki></doc>

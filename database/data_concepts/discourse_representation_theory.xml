@@ -1,0 +1,5 @@
+<doc><id>discourse_representation_theory</id><concept_name>discourse representation theory</concept_name><wiki>In formal linguistics, discourse representation theory (DRT) is a framework for exploring meaning under a formal semantics approach. One of the main differences between DRT-style approaches and traditional Montagovian approaches is that DRT includes a level of abstract mental representations (discourse representation structures, DRS) within its formalism, which gives it an intrinsic ability to handle meaning across sentence boundaries. DRT was created by Hans Kamp in 1981.[1] A very similar theory was developed independently by Irene Heim in 1982, under the name of File Change Semantics (FCS).[2] Discourse representation theories have been used to implement semantic parsers[3] and natural language understanding systems.[4][5][6]
+DRT uses discourse representation structures (DRS) to represent a hearer's mental representation of a discourse as it unfolds over time. There are two critical components to a DRS: 
+Consider Sentence (1) below:
+The DRS of (1) can be notated as (2) below:
+</wiki></doc>

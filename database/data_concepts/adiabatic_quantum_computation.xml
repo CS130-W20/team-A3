@@ -1,0 +1,26 @@
+<doc><id>adiabatic_quantum_computation</id><concept_name>adiabatic quantum computation</concept_name><wiki>
+Adiabatic quantum computation (AQC) is a form of quantum computing which relies on the adiabatic theorem to do calculations[1] and is closely related to quantum annealing.[2][3][4][5]
+First, a (potentially complicated) Hamiltonian is found whose ground state describes the solution to the problem of interest.  Next, a system with a simple Hamiltonian is prepared and initialized to the ground state.  Finally, the simple Hamiltonian is adiabatically evolved to the desired complicated Hamiltonian.  By the adiabatic theorem, the system remains in the ground state, so at the end the state of the system describes the solution to the problem. Adiabatic quantum computing has been shown to be polynomially equivalent to conventional quantum computing in the circuit model.[6]
+The time complexity for an adiabatic algorithm is the time taken to complete the adiabatic evolution which is dependent on the gap in the energy eigenvalues (spectral gap) of the Hamiltonian. Specifically, if the system is to be kept in the ground state, the energy gap between the ground state and the first excited state of 
+
+
+
+H
+(
+t
+)
+
+
+{\displaystyle H(t)}
+
+ provides an upper bound on the rate at which the Hamiltonian can be evolved at time 
+
+
+
+t
+
+
+{\displaystyle t}
+
+.[7] When the spectral gap is small, the Hamiltonian has to be evolved slowly. The runtime for the entire algorithm can be bounded by:
+</wiki></doc>

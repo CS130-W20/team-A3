@@ -1,0 +1,116 @@
+<doc><id>cycles_per_instruction</id><concept_name>cycles per instruction</concept_name><wiki>In computer architecture, cycles per instruction (aka clock cycles per instruction, clocks per instruction, or CPI) is one aspect of a processor's performance: the average number of clock cycles per instruction for a program or program fragment.[1]  It is the multiplicative inverse of instructions per cycle.
+The average of Cycles Per Instruction in a given process is defined by the following:
+
+
+
+
+C
+P
+I
+=
+
+
+
+
+&#931;
+
+i
+
+
+(
+I
+
+C
+
+i
+
+
+)
+(
+C
+
+C
+
+i
+
+
+)
+
+
+I
+C
+
+
+
+
+
+{\displaystyle CPI={\frac {\Sigma _{i}(IC_{i})(CC_{i})}{IC}}}
+
+
+Where 
+
+
+
+I
+
+C
+
+i
+
+
+
+
+{\displaystyle IC_{i}}
+
+ is the number of instructions for a given instruction type 
+
+
+
+i
+
+
+{\displaystyle i}
+
+, 
+
+
+
+C
+
+C
+
+i
+
+
+
+
+{\displaystyle CC_{i}}
+
+ is the clock-cycles for that instruction type and 
+
+
+
+I
+C
+=
+
+&#931;
+
+i
+
+
+(
+I
+
+C
+
+i
+
+
+)
+
+
+{\displaystyle IC=\Sigma _{i}(IC_{i})}
+
+ is the total instruction count. The summation sums over all instruction types for a given benchmarking process.
+</wiki></doc>

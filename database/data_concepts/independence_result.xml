@@ -1,0 +1,5 @@
+<doc><id>independence_result</id><concept_name>independence result</concept_name><wiki>In mathematical logic, independence is the unprovability of a sentence from other sentences.
+A sentence &#963; is independent of a given first-order theory T if T neither proves nor refutes &#963;; that is, it is impossible to prove &#963; from T, and it is also impossible to prove from T that &#963; is false. Sometimes, &#963; is said (synonymously) to be undecidable from T; this is not the same meaning of "decidability" as in a decision problem.
+A theory T is independent if each axiom in T is not provable from the remaining axioms in T. A theory for which there is an independent set of axioms is independently axiomatizable.
+Some authors say that &#963; is independent of T when T simply cannot prove &#963;, and do not necessarily assert by this that T cannot refute &#963;. These authors will sometimes say "&#963; is independent of and consistent with T" to indicate that T can neither prove nor refute &#963;.
+</wiki></doc>

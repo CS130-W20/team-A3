@@ -1,0 +1,5 @@
+<doc><id>storage_network</id><concept_name>storage network</concept_name><wiki>
+A storage area network (SAN) or storage network is a computer network which provides access to consolidated, block-level data storage. SANs are primarily used to enhance accessibility of storage devices, such as disk arrays and tape libraries, to servers so that the devices appear to the operating system as locally-attached devices. A SAN typically is a dedicated network of storage devices not accessible through the local area network (LAN) by other devices, thereby preventing interference of LAN traffic in data transfer. 
+The cost and complexity of SANs dropped in the early 2000s to levels allowing wider adoption across both enterprise and small to medium-sized business environments.
+A SAN does not provide file abstraction, only block-level operations. However, file systems built on top of SANs do provide file-level access, and are known as shared-disk file systems.
+</wiki></doc>

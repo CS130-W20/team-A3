@@ -1,0 +1,49 @@
+<doc><id>superoperator</id><concept_name>superoperator</concept_name><wiki>In physics, a superoperator is a linear operator acting on a vector space of linear operators.[1]
+Sometimes the term refers more specially to a completely positive map which preserves or does not increase the trace of its argument. This specialized meaning is used extensively in the field of quantum computing, especially quantum programming, as they characterise mappings between density matrices.
+The use of the super- prefix here is in no way related to its other use in mathematical physics.  That is to say superoperators have no connection to supersymmetry and superalgebra which are extensions of the usual mathematical concepts defined by extending the ring of numbers to include Grassmann numbers.  Since superoperators are themselves operators the use of the super- prefix is used to distinguish them from the operators upon which they act.
+Defining the left and right multiplication superoperators by 
+
+
+
+
+
+L
+
+
+(
+A
+)
+[
+&#961;
+]
+=
+A
+&#961;
+
+
+{\displaystyle {\mathcal {L}}(A)[\rho ]=A\rho }
+
+ and 
+
+
+
+
+
+R
+
+
+(
+A
+)
+[
+&#961;
+]
+=
+&#961;
+A
+
+
+{\displaystyle {\mathcal {R}}(A)[\rho ]=\rho A}
+
+ respectively one can express the commutator as
+</wiki></doc>

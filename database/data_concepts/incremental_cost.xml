@@ -1,0 +1,42 @@
+<doc><id>incremental_cost</id><concept_name>incremental cost</concept_name><wiki>A conventional marginal cost  is incremented by one unit; that is, it is the cost of producing one more unit of a good.[1] Intuitively, marginal cost at each level of production includes the cost of any additional inputs required to produce the next unit. At each level of production and time period being considered, marginal costs include all costs that vary with the level of production, whereas other costs that do not vary with production are fixed and thus have no marginal cost. For example, the marginal cost of producing an automobile will generally include the costs of labor and parts needed for the additional automobile but not the fixed costs of the factory that have already been incurred. In practice, marginal analysis is segregated into short and long-run cases, so that, over the long run, all costs (including fixed costs) become marginal. Where there are economies of scale, prices set at marginal cost will fail to cover total costs, thus requiring a subsidy. Marginal cost pricing is not a matter of merely lowering the general level of prices with the aid of a subsidy; with or without subsidy it calls for a drastic restructuring of pricing practices, with opportunities for very substantial improvements in efficiency at critical points.[2]
+If the cost function 
+
+
+
+C
+
+
+{\displaystyle C}
+
+ is continuous and differentiable, the marginal cost 
+
+
+
+M
+C
+
+
+{\displaystyle MC}
+
+ is the first derivative of the cost function with respect to the output quantity 
+
+
+
+Q
+
+
+{\displaystyle Q}
+
+:[3]
+The marginal cost can be a function of quantity if the cost function is non-linear. If the cost function is not differentiable, the marginal cost can be expressed as follows:
+where 
+
+
+
+&#916;
+
+
+{\displaystyle \Delta }
+
+ denotes an incremental change of one unit.
+</wiki></doc>
