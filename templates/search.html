@@ -7,8 +7,8 @@
         <script src="{{ url_for('static', filename='js/canvas-nest.js') }}" type="text/javascript" color="50,131,191" pointColor="50,131,191" opacity='0.66' zIndex="-2" count="18" ></script>
         <script src="{{ url_for('static', filename='js/canvas-nest.js') }}" type="text/javascript" color="255,209,0" pointColor="255,209,0" opacity='0.66' zIndex="-1" count="18" ></script>
         <!--script src="{{ url_for('static', filename='js/canvas-nest.js') }}" type="text/javascript" color="195,215,238" pointColor="195,215,238" opacity='0.66' zIndex="-1" count="30" ></script-->
-        <h1 class="display-3">Welcome to Education AI</h1>
-        <p>We will help you get started with AI and enjoy your study.</p>
+        <h1 class="display-3" id="category_name"></h1>
+        <p id="category_intro"></p>
         <p>
           <form class="form-inline my-2 my-lg-0" name="search" action="/search/" method="POST">
             <input type=hidden name=form_name value="search"/>
@@ -35,29 +35,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Hot Topics</h2>
-          <p>We have some keywords for you that are recently very popular:
-            <ul>
-              <li>Machine Learning</li>
-              <li>Artificial Intelligence</li>
-              <li>Data Mining</li>
-              <li>Big Data</li>
-            </ul>
-          </p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Popular Resource</h2>
-          <p>Here are some of the courses / blogs that are recently very popular on our dataset. (balabalabala)</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>What's New</h2>
-          <p>Here are some of the recently-come-out courses... (balabalabala)</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div>
+      <div class="row" id="category_content">
       </div>
     </div>
     {% else %}

@@ -27,14 +27,14 @@ from browse.generate_categories import generate_course_list
 browse_categories = generate_course_list("browse/course_taxonomy.txt")
 
 # Import a module / component using its blueprint handler variable (mod_auth)
-from auth.controllers import auth
+#from auth.controllers import auth
 from search.controllers import searcher
 from users.controllers import users
 from visualization.controllers import visualizer
 from browse.controllers import browse,get_category_info
 
 # Register blueprint(s)
-application.register_blueprint(auth)
+#application.register_blueprint(auth)
 application.register_blueprint(searcher)
 application.register_blueprint(users)
 application.register_blueprint(visualizer)
