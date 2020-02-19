@@ -44,7 +44,22 @@ class User(UserMixin, db.Model):
         return check_password_hash(self.password, password)
 
     def is_verified(self):
-        return self.verfied
+        return self.verified
 
     def get_name(self):
         return self.username
+
+    def get_email(self):
+        return self.email
+
+    def get_education(self):
+        return self.education
+
+    def get_date_created(self):
+        return self.date_created
+
+    def get_date_modified(self):
+        return self.date_modified
+
+    def get_interests(self):
+        return self.interests
