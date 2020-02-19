@@ -10,6 +10,8 @@ from __init__ import browse_categories
 # Define the blueprint: 'search', and set its url prefix: search
 searcher = Blueprint('searcher', __name__, url_prefix='/search/')
 
+def error_page():
+    return render_template('search.html', nonempty=False, welcome=False, browse_categories=browse_categories)
 
 
 @searcher.route('/', methods=['POST'])
@@ -79,8 +81,8 @@ def content_concept(id):
     try:
         doc = find_concept([id], extra=True)
         return render_template('concept.html', doc=doc[0])
-    except Exception(e):
-        print('content error' + e)
+    except Exception as e:
+        print('content error' + str(e))
         return error_page()
 
 @searcher.route('/<id>/', methods=['GET', 'POST'])
