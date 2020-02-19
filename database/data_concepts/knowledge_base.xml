@@ -1,0 +1,5 @@
+<doc><id>knowledge_base</id><concept_name>knowledge base</concept_name><wiki>
+A knowledge base (KB) is a technology used to store complex structured and unstructured information used by a computer system. The initial use of the term was in connection with expert systems which were the first knowledge-based systems.
+The original use of the term knowledge-base was to describe one of the two sub-systems of a knowledge-based system. A knowledge-based system consists of a knowledge-base that represents facts about the world and an inference engine that can reason about those facts and use rules and other forms of logic to deduce new facts or highlight inconsistencies.[1]
+The term "knowledge-base" was coined to distinguish this form of knowledge store from the more common and widely used term database. At the time (the 1970s) virtually all large Management Information Systems stored their data in some type of hierarchical or relational database. At this point in the history of Information Technology, the distinction between a database and a knowledge base was clear and unambiguous.
+</wiki></doc>

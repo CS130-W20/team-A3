@@ -1,0 +1,5 @@
+<doc><id>gaussian_filter</id><concept_name>gaussian filter</concept_name><wiki>In electronics and signal processing, a Gaussian filter is a filter whose impulse response is a Gaussian function (or an approximation to it, since a true Gaussian response is physically unrealizable). Gaussian filters have the properties of having no overshoot to a step function input while minimizing the rise and fall time. This behavior is closely connected to the fact that the Gaussian filter has the minimum possible group delay. It is considered the ideal time domain filter, just as the sinc is the ideal frequency domain filter.[1]  These properties are important in areas such as oscilloscopes[2] and digital telecommunication systems.[3]
+Mathematically, a Gaussian filter modifies the input signal by convolution with a Gaussian function; this transformation is also known as the Weierstrass transform.
+The one-dimensional Gaussian filter has an impulse response given by
+and the frequency response is given by the Fourier transform
+</wiki></doc>

@@ -1,0 +1,130 @@
+<doc><id>random_graph</id><concept_name>random graph</concept_name><wiki>In mathematics, random graph is the general term to refer to probability distributions over graphs.  Random graphs may be described simply by a probability distribution, or by a random process which generates them.[1][2] The theory of random graphs lies at the intersection between graph theory and probability theory. From a mathematical perspective, random graphs are used to answer questions about the properties of typical graphs. Its practical applications are found in all areas in which complex networks need to be modeled&#160;&#8211; many random graph models are thus known, mirroring the diverse types of complex networks encountered in different areas. In a mathematical context, random graph refers almost exclusively to the Erd&#337;s&#8211;R&#233;nyi random graph model. In other contexts, any graph model may be referred to as a random graph.
+A random graph is obtained by starting with a set of n isolated vertices and adding successive edges between them at random. The aim of the study in this field is to determine at what stage a particular property of the graph is likely to arise.[3] Different random graph models produce different probability distributions on graphs. Most commonly studied is the one proposed by Edgar Gilbert, denoted G(n,p), in which every possible edge occurs independently with probability 0 &lt; p &lt; 1. The probability of obtaining any one particular random graph with m edges is 
+
+
+
+
+p
+
+m
+
+
+(
+1
+&#8722;
+p
+
+)
+
+N
+&#8722;
+m
+
+
+
+
+{\displaystyle p^{m}(1-p)^{N-m}}
+
+ with the notation 
+
+
+
+N
+=
+
+
+
+
+(
+
+
+n
+2
+
+
+)
+
+
+
+
+
+
+{\displaystyle N={\tbinom {n}{2}}}
+
+.[4]
+A closely related model, the Erd&#337;s&#8211;R&#233;nyi model denoted G(n,M), assigns equal probability to all graphs with exactly M edges. With 0 &#8804; M &#8804; N, G(n,M) has 
+
+
+
+
+
+
+
+(
+
+
+N
+M
+
+
+)
+
+
+
+
+
+
+{\displaystyle {\tbinom {N}{M}}}
+
+ elements and every element occurs with probability 
+
+
+
+1
+
+/
+
+
+
+
+
+(
+
+
+N
+M
+
+
+)
+
+
+
+
+
+
+{\displaystyle 1/{\tbinom {N}{M}}}
+
+.[3]  The latter model can be viewed as a snapshot at a particular time (M) of the random graph process 
+
+
+
+
+
+
+
+G
+~
+
+
+
+
+n
+
+
+
+
+{\displaystyle {\tilde {G}}_{n}}
+
+, which is a stochastic process that starts with n vertices and no edges, and at each step adds one new edge chosen uniformly from the set of missing edges.
+If instead we start with an infinite set of vertices, and again let every possible edge occur independently with probability 0 &lt; p &lt; 1, then we get an object G called an infinite random graph. Except in the trivial cases when p is 0 or 1, such a G almost surely has the following property:
+</wiki></doc>

@@ -1,0 +1,5 @@
+<doc><id>file_server</id><concept_name>file server</concept_name><wiki>. The term server highlights the role of the machine in the traditional client&#8211;server scheme, where the clients are the workstations using the storage. A file server does not normally perform computational tasks or run programs on behalf of its client workstations.
+File servers are commonly found in schools and offices, where users use a local area network to connect their client computers.
+A file server may be dedicated or non-dedicated. A dedicated server is designed specifically for use as a file server, with workstations attached for reading and writing files and databases.
+File servers may also be categorized by the method of access: Internet file servers are frequently accessed by File Transfer Protocol or by HTTP (but are different from, that often provide dynamic web content in addition to static files).  Servers on a LAN are usually accessed by SMB/CIFS protocol  (Windows and Unix-like) or NFS protocol (Unix-like systems).
+</wiki></doc>

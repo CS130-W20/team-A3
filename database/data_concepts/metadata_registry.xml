@@ -1,0 +1,5 @@
+<doc><id>metadata_registry</id><concept_name>metadata registry</concept_name><wiki>A metadata registry is a central location in an organization where metadata definitions are stored and maintained in a controlled method.
+A metadata repository is the database where metadata is stored. The registry also adds relationships with related metadata types.
+Metadata registries are used whenever data must be used consistently within an organization or group of organizations.  Examples of these situations include:
+Central to the charter of any metadata management programme is the process of creating trusting relationships with stakeholders and that definitions and structures have been reviewed and approved by appropriate parties.
+</wiki></doc>

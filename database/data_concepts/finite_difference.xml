@@ -1,0 +1,6 @@
+<doc><id>finite_difference</id><concept_name>finite difference</concept_name><wiki>
+
+A finite difference is a mathematical expression of the form f&#8201;(x + b) &#8722; f&#8201;(x + a). If a finite difference is divided by b &#8722; a, one gets a difference quotient. The approximation of derivatives by finite differences plays a central role in finite difference methods for the numerical solution of differential equations, especially boundary value problems.
+Certain recurrence relations can be written as difference equations by replacing iteration notation with finite differences.
+Today, the term "finite difference" is often taken as synonymous with finite difference approximations of derivatives, especially in the context of numerical methods.[1][2][3] Finite difference approximations are finite difference quotients in the terminology employed above.
+</wiki></doc>

@@ -1,0 +1,120 @@
+<doc><id>Grover's_algorithm</id><concept_name>Grover's algorithm</concept_name><wiki>Grover's algorithm is a quantum algorithm that finds with high probability the unique input to a black box function that produces a particular output value, using just 
+
+
+
+O
+(
+
+
+N
+
+
+)
+
+
+{\displaystyle O({\sqrt {N}})}
+
+ evaluations of the function, where 
+
+
+
+N
+
+
+{\displaystyle N}
+
+ is the size of the function's domain. It was devised by Lov Grover in 1996.
+The analogous problem in classical computation cannot be solved in fewer than 
+
+
+
+O
+(
+N
+)
+
+
+{\displaystyle O(N)}
+
+ evaluations (because, in the worst case, the 
+
+
+
+N
+
+
+{\displaystyle N}
+
+-th member of the domain might be the correct member). At roughly the same time that Grover published his algorithm, Bennett, Bernstein, Brassard, and Vazirani proved that any quantum solution to the problem needs to evaluate the function 
+
+
+
+&#937;
+(
+
+
+N
+
+
+)
+
+
+{\displaystyle \Omega ({\sqrt {N}})}
+
+ times, so Grover's algorithm is asymptotically optimal.[1]
+It has been shown that a non-local hidden variable quantum computer could implement a search of an 
+
+
+
+N
+
+
+{\displaystyle N}
+
+-item database in at most 
+
+
+
+O
+(
+
+
+N
+
+3
+
+
+
+)
+
+
+{\displaystyle O({\sqrt[{3}]{N}})}
+
+ steps. This is faster than the 
+
+
+
+O
+(
+
+
+N
+
+
+)
+
+
+{\displaystyle O({\sqrt {N}})}
+
+ steps taken by Grover's algorithm. Neither search method will allow quantum computers to solve NP-Complete problems in polynomial time.[2]
+Unlike other quantum algorithms, which may provide exponential speedup over their classical counterparts, Grover's algorithm provides only a quadratic speedup. However, even quadratic speedup is considerable when 
+
+
+
+N
+
+
+{\displaystyle N}
+
+ is large. Grover's algorithm could brute-force a 128-bit symmetric cryptographic key in roughly 264 iterations, or a 256-bit key in roughly 2128 iterations. As a result, it is sometimes suggested[3] that symmetric key lengths be doubled to protect against future quantum attacks.
+</wiki></doc>

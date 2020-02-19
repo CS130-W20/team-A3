@@ -1,0 +1,6 @@
+<doc><id>single_system_image</id><concept_name>single system image</concept_name><wiki>In distributed computing, a single system image (SSI) cluster is a cluster of machines that appears to be one single system.[1][2][3] The concept is often considered synonymous with that of a distributed operating system,[4][5] but a single image may be presented for more limited purposes, just job scheduling for instance, which may be achieved by means of an additional layer of software over conventional operating system images running on each node.[6] The interest in SSI clusters is based on the perception that they may be simpler to use and administer than more specialized clusters.
+Different SSI systems may provide a more or less complete illusion of a single system.
+Different SSI systems may, depending on their intended usage, provide some subset of these features.
+Many SSI systems provide process migration.[7]
+Processes may start on one node and be moved to another node, possibly for resource balancing or administrative reasons.[note 1]  As processes are moved from one node to another, other associated resources (for example IPC resources) may be moved with them.
+</wiki></doc>

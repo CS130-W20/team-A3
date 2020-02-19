@@ -1,0 +1,19 @@
+<doc><id>Ho-Lee_model</id><concept_name>Ho-Lee model</concept_name><wiki>In financial mathematics, the Ho&#8211;Lee model is a short rate model widely used in the pricing of bond options, swaptions and other interest rate derivatives, and in modeling future interest rates.[1]:381  It was developed in 1986 by Thomas Ho and Sang Bin Lee. 
+Under this model, the short rate follows a normal process:
+The model can be calibrated to market data by implying the form of 
+
+
+
+
+&#952;
+
+t
+
+
+
+
+{\displaystyle \theta _{t}}
+
+ from market prices, meaning that it can exactly return the price of bonds comprising the yield curve. This calibration, and subsequent valuation of bond options, swaptions and other interest rate derivatives, is typically performed via a binomial lattice based model. Closed form valuations of bonds, and "Black-like" bond option formulae are also available.[2]
+As the model generates a symmetric ("bell shaped") distribution of rates in the future, negative rates are possible. Further, it does not incorporate mean reversion. For both of these reasons, models such as Black&#8211;Derman&#8211;Toy (lognormal and mean reverting) and Hull&#8211;White (mean reverting with lognormal variant available) are often preferred.[1]:385 The Kalotay&#8211;Williams&#8211;Fabozzi model is a lognormal analogue to the Ho&#8211;Lee model, although is less widely used than the latter two.
+</wiki></doc>

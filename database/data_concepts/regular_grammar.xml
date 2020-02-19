@@ -1,0 +1,5 @@
+<doc><id>regular_grammar</id><concept_name>regular grammar</concept_name><wiki>In theoretical computer science and formal language theory, a regular grammar is a formal grammar that is right-regular or left-regular. Every regular grammar describes a regular language.
+A right regular grammar (also called right linear grammar) is a formal grammar (N, &#931;, P, S) such that all the production rules in P are of one of the following forms:
+In a  left regular grammar (also called left linear grammar), all rules obey the forms
+A regular grammar is a left or right regular grammar.
+</wiki></doc>

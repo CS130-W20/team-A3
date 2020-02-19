@@ -1,0 +1,5 @@
+<doc><id>weak_duality</id><concept_name>weak duality</concept_name><wiki>In applied mathematics, weak duality is a concept in optimization which states that the duality gap is always greater than or equal to 0.  That means the solution to the primal (minimization) problem is always greater than or equal to the solution to an associated dual problem.  This is opposed to strong duality which only holds in certain cases.[1]
+Many primal-dual approximation algorithms are based on the principle of weak duality.[2]
+The primal problem:
+The dual problem,
+</wiki></doc>

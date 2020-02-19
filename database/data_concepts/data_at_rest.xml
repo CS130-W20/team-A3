@@ -1,0 +1,5 @@
+<doc><id>data_at_rest</id><concept_name>data at rest</concept_name><wiki>Data at rest in information technology means inactive data that is stored physically in any digital form (e.g. databases, data warehouses, spreadsheets, archives, tapes, off-site backups, mobile devices etc.). 
+Data at rest is used as a complement to the terms data in use and data in transit which together define the three states of digital data (see Figure 1).[1]
+There is some disagreement as to the boundary between data at rest and data in use. Data at rest generally refers to data stored in persistent storage (disk, tape) while data in use generally refers to data being processed by a computer central processing unit (CPU) or in random access memory (RAM, also referred to as main memory or simply memory). 
+Definitions include: 
+"...all data in computer storage while excluding data that is traversing a network or temporarily residing in computer memory to be read or updated."[2]</wiki></doc>
