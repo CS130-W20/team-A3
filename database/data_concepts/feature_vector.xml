@@ -1,9 +1,0 @@
-<doc><id>feature_vector</id><concept_name>feature vector</concept_name><wiki>In machine learning and pattern recognition, a feature is an individual measurable property or characteristic of a phenomenon being observed.[1] Choosing informative, discriminating and independent features is a crucial step for effective algorithms in pattern recognition,  classification and regression. Features are usually numeric, but structural features such as strings and graphs are used in syntactic pattern recognition.
-The concept of "feature" is related to that of explanatory variable used in statistical techniques such as linear regression.
-A set of numeric features can be conveniently described by a feature vector.  
-An example of reaching a two-way classification[clarification needed] from a feature vector (related to the perceptron) consists of
-calculating the scalar product between the feature vector and a vector of weights,
-comparing the result with a threshold, and deciding the class based on the comparison.
-Algorithms for classification from a feature vector include nearest neighbor classification, neural networks, and statistical techniques such as Bayesian approaches.
-In character recognition, features may include histograms counting the number of black pixels along horizontal and vertical directions, number of internal holes, stroke detection and many others.
-</wiki></doc>
