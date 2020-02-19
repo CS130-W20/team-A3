@@ -78,6 +78,52 @@ def find(docid, extra=False):
     return docs
 
 
+def find_concept(docid, extra=False):
+    """
+
+    :param docid:
+    :param extra:
+    :return:
+    """
+    docs = []
+    for id in docid:
+        root = ET.parse(DIR_CONCEPT_PATH + '%s.xml' % id).getroot()
+        id = root.find('id').text
+        concept_name = safe_et_find(root, 'concept_name', "N/A")
+        wiki = safe_et_find(root, 'wiki', "N/A")
+        course_url = safe_et_find(root, 'course_url', "#")
+        course_name = safe_et_find(root, 'course_name', "N/A")
+        course_platform = safe_et_find(root, 'course_platform', "N/A")
+        course_instructor = safe_et_find(root, 'course_instructor', "N/A")
+        course_introduction = safe_et_find(root, 'course_introduction', "N/A")
+        course_category = safe_et_find(root, 'course_category', "N/A")
+        course_tag = safe_et_find(root, 'course_tag', "N/A")
+        course_rating = safe_et_find(root, 'course_rating', "N/A")
+        course_orgnization = safe_et_find(root, 'course_orgnization', "N/A")
+        course_chapter = safe_et_find(root, 'course_chapter', "N/A").split("//")
+        course_sub_chapter = safe_et_find(root, 'course_sub_chapter', "N/A")
+        course_time = safe_et_find(root, 'course_time', "N/A")
+        reviews = str_list_naive_parse(safe_et_find(root, 'reviews', "N/A"))
+        reviewers = safe_et_find(root, 'reviewers', "N/A")
+        review_date = safe_et_find(root, 'review_date', "N/A")
+        print("from search.utils.find: the video information is fake, please fix it here")
+        # for Youtube video, in order to display them inline, we need to change the url to */embed/*
+        # videos from other sites might have other tricks
+        video_urls = ["https://www.youtube.com/embed/aircAruvnKk"]
+        doc = {'id': id, 'course_url': course_url, 'concept_name': concept_name,
+               'course_platform': course_platform, 'course_instructor': course_instructor,
+               'wiki': wiki, 'course_category': course_category,
+               'course_tag': course_tag, 'course_rating': course_rating, 'course_orgnization': course_orgnization,
+               'course_chapter': course_chapter, 'course_sub_chapter': course_sub_chapter,
+               'course_time': course_time, 'reviews': reviews, 'reviewers': reviewers,
+               'review_date': review_date, 'extra': [], 'video_urls': video_urls}
+
+        if extra:
+            pass
+        docs.append(doc)
+    return docs
+
+
 def cut_page(page, no, doc_id):
     """
 
