@@ -1,0 +1,71 @@
+{
+ "name": "Concepts",
+ "children": [
+    {
+     "name": "Information Science",
+     "children": [
+      {"name": "Data Mining",
+       "children": [
+        {"name": "Data Analysis", "group":2, "level":4},
+        {"name": "Probability and Mathematical Statistics Model", "group":2, "level":4},
+        {"name": "Data Mining Applications", "group":2, "level":4}
+        ],
+       "group":2,
+       "level":3},
+      {"name": "The Web & Information Retrieval",
+       "children": [
+        {"name": "Intelligent Information Systems", "group":2, "level":4},
+        {"name": "Web information Systems", "group":2, "level":4},
+        {"name": "Web Applications", "group":2, "level":4},
+        {"name": "Mobile and Web Development", "group":2, "level":4}
+        ],
+       "group":2,
+       "level":3},
+      {"name": "Database",
+       "children": [
+        {"name": "Data Management", "group":2, "level":4},
+        {"name": "Database Systems", "group":2, "level":4}
+      ],
+       "group":2,
+       "level":3},
+      {"name": "Information Theory", "group":2, "level":3}
+     ],
+      "group": 2,
+      "level": 2
+    },
+    {
+     "name": "Networking",
+     "children": [
+      {"name": "Wireless Systems", "group":3, "level":3},
+      {"name": "Mobile Computing",  "group":3, "level":3},
+      {"name": "Data Communications", "group":3, "level":3},
+       {"name": "Cloud Computing", "group":3, "level":3},
+       {"name": "Network development", "group":3, "level":3}
+     ],
+      "group": 3,
+ "level": 2
+    },
+    {
+     "name": "Computer Theory",
+     "children": [
+      {"name": "Logic and Verification", "group":4, "level":3},
+      {"name": "Algorithms and Complexity", "group":4, "level":3},
+      {"name": "Data Structure and Algorithms", "group":4, "level":3}
+     ],
+      "group": 4,
+ "level": 2
+    },
+   {
+     "name": "Artificial Intelligence",
+     "children": [
+      {"name": "Natural Language Processing", "group":5, "level":3},
+      {"name": "Computer Vision", "group":5, "level":3},
+      {"name": "Machine Learning", "group":5, "level":3}
+     ],
+      "group": 5,
+ "level": 2
+    }
+ ],
+ "group": 1,
+ "level": 1
+}
