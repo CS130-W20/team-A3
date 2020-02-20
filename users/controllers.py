@@ -4,7 +4,6 @@ from users.modules.history import get_user_history
 from users.modules.recommendation import recommend_course_for_user
 from users.modules.education import get_education_options
 from users.modules.portfolio import get_user_description, get_user_photo, remove_previous_image
-from users.modules.analyze import get_analyze_radar_data, get_analyze_line_data
 
 from __init__ import application as app
 
@@ -28,19 +27,7 @@ def upload_photo():
 @users.route('/user_data_vis/<user_id>/<visualize_mode>/', methods=['GET', 'POST'])
 @users.route('/user_data_vis/<user_id>/<visualize_mode>', methods=['GET', 'POST'])
 def user_visualize(user_id=None, visualize_mode="0", methods=['GET', 'POST']):
-    # visualize_mode is string
     welcome_page = redirect(url_for("main"))
-    # if user_id is None or user_id == -1:
-    #     return welcome_page
-    # if visualize_mode == "0":
-    #     # radar
-    #     g.data = get_analyze_radar_data(user_id)
-    #     g.mode = "radar"
-    # elif visualize_mode == "1":
-    #     print("here")
-    #     g.data = get_analyze_line_data(user_id, most_recent=30)
-    #     g.mode = "line_chart"
-    # return render_template('pure_visualize.html')
 
 @users.route('/home', methods=['GET', 'POST'])
 @users.route('/home/<user_id>/', methods=['GET', 'POST'])
