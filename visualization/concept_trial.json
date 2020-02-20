@@ -1,0 +1,39 @@
+{
+ "name": "Concepts",
+ "children": [
+    {
+     "name": "cluster",
+     "children": [
+      {"name": "AgglomerativeCluster", "size": 3938, "group":2, "level":3},
+      {"name": "CommunityStructure", "size": 3812, "group":2, "level":3},
+      {"name": "HierarchicalCluster", "size": 6714, "group":2, "level":3},
+      {"name": "MergeEdge", "size": 743, "group":2, "level":3}
+     ],
+      "group": 2,
+      "level": 2
+
+    },
+    {
+     "name": "graph",
+     "children": [
+      {"name": "BetweennessCentrality", "size": 3534, "group":3, "level":3},
+      {"name": "LinkDistance", "size": 5731, "group":3, "level":3},
+      {"name": "MaxFlowMinCut", "size": 7840, "group":3, "level":3},
+      {"name": "ShortestPaths", "size": 5914, "group":3, "level":3},
+      {"name": "SpanningTree", "size": 3416, "group":3, "level":3}
+     ],
+      "group": 3,
+ "level": 2
+    },
+    {
+     "name": "optimization",
+     "children": [
+      {"name": "AspectRatioBanker", "size": 7074, "group":4, "level":3}
+     ],
+      "group": 4,
+ "level": 2
+    }
+ ],
+ "group": 1,
+ "level": 1
+}
