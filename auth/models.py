@@ -1,3 +1,8 @@
+"""
+models.py
+====================
+Define the models for user authorization (anonymous user and normal user)
+"""
 from __init__ import db
 from flask_login import UserMixin, AnonymousUserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -32,6 +37,7 @@ class User(UserMixin, db.Model):
 
     fname = db.Column(db.String(50))
     lname = db.Column(db.String(50))
+    interests = db.Column(db.String(500))
     education = db.Column(db.String(100))
 
     user_since = db.Column(db.DateTime(), default=db.func.current_timestamp())
@@ -60,4 +66,7 @@ class User(UserMixin, db.Model):
 
     def get_date_modified(self):
         return self.date_modified
+
+    def get_interests(self):
+        return self.interests
         
