@@ -39,7 +39,7 @@ def get_syllabus(syllabus):
 def get_syllabus_list(soup):
     """
        Return a syllabuslist for a given course.
-       
+
     """
     Syllabus_html = soup.find_all("div",class_="SyllabusModuleDetails")
     syllabuslist = [get_syllabus(syllabus) for syllabus in Syllabus_html]
