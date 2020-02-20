@@ -1,3 +1,9 @@
+"""
+controllers.py
+====================
+Controller for auth module
+"""
+
 import json
 import datetime
 import random
@@ -19,7 +25,6 @@ from auth.models import User
 import sqlite3
 import numpy as np
 from users import USERDB_PATH 
-from search import COURSEDB_PATH 
 
 # Define the blueprint: 'auth'
 auth = Blueprint('auth', __name__)
@@ -129,13 +134,7 @@ def new_user():
         interests = request.form.getlist('inputInterests')
         concepts = request.form.getlist('inputConcepts')
 
-        # new user interests entry in interests table should be populated according to questionnaire
-        # temporarily initialize to interests + random bool
-        interests = (current_user.id, ) + tuple(interests) + tuple(np.random.randint(0, 2, 100 - len(interests), 'bool'))
 
-        # new user knowledge entry in knowledge table should be populated according to questionnaire
-        # temporarily initialize to concepts + random bool
-        concepts = (current_user.id, ) + tuple(concepts) + tuple(np.random.randint(0, 2, 100 - len(concepts), 'bool'))
 
         education = request.form['inputEduLevel']
         email = request.form['inputEmail']
@@ -144,7 +143,18 @@ def new_user():
         user.lname = l_name
         user.email = email
         user.verified = True
+        #temporarily save interests in user also to keep consistency
+        user.interests = ",".join(interests)
         user.education = education
+
+        # new user interests entry in interests table should be populated according to questionnaire
+        # temporarily initialize to interests + random bool
+        interests = (current_user.id, ) + tuple(interests) + tuple(np.random.randint(0, 2, 100 - len(interests), 'bool'))
+
+        # new user knowledge entry in knowledge table should be populated according to questionnaire
+        # temporarily initialize to concepts + random bool
+        concepts = (current_user.id, ) + tuple(concepts) + tuple(np.random.randint(0, 2, 100 - len(concepts), 'bool'))
+
         try:
             db.session.add(user)
             db.session.commit()
