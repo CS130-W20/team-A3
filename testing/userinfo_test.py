@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 
 def userinfo_test(driver):
-    print("USERINFO TEST")
+    print("UPDATER USER INFO TEST...")
     return
 
 if __name__ == '__main__':

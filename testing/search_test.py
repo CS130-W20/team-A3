@@ -6,7 +6,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 
 def search_test(driver):
-    # search for 'machine learning'
+    print("SEARCH TEST...")
+
+    # search for term
     elem = driver.find_element_by_name("key_word")
     elem.clear()
     elem.send_keys("search algorithms")

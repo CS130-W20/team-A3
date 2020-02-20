@@ -6,6 +6,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 
 def graph_test(driver):
+    print("CONCEPT GRAPH TEST...")
+    
     driver.find_element_by_css_selector('a.nav-link.pointer').click()
     time.sleep(5)
     driver.find_element_by_css_selector('a.nav-link').click()

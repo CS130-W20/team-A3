@@ -6,6 +6,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 
 def signup_test(driver):
+    print("SIGNUP TEST...")
+
     # click on login/register button
     elem = driver.find_elements_by_css_selector("#navbars_dropdowns button")[2]
     elem.click()
@@ -59,8 +61,9 @@ def signup_test(driver):
     intrs.send_keys("algo"); time.sleep(0.5); intrs.send_keys(Keys.RETURN)
 
     # submit
-    body.click()
+    # body.click()
     driver.find_element_by_css_selector("button.btn.btn-lg.btn-primary").click()
+    time.sleep(2)
 
     # go to user home
     wait.until(EC.element_to_be_clickable((By.ID, 'home_entry'))).click()

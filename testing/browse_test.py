@@ -6,6 +6,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 
 def browse_test(driver):
+    print("BROWSE MODE TEST...")
+    
     # open browse bar
     driver.get("http://localhost:8080/#")
     time.sleep(2)
