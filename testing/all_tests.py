@@ -8,6 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from signup_test import signup_test
 from search_test import search_test
 from graph_test import graph_test
+from browse_test import browse_test
 from logout_test import logout_test
 from login_test import login_test
 from userimage_test import userimage_test
@@ -21,6 +22,7 @@ if __name__ == '__main__':
     signup_test(driver)
     search_test(driver)
     graph_test(driver)
+    browse_test(driver)
     logout_test(driver)
     login_test(driver)
     userimage_test(driver)
