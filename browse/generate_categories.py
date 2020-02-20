@@ -25,7 +25,7 @@ def generate_course_list(input_file):
     data = dict()
     data_2_priority = dict()
     data_2_idlist = dict()
-    f = open(input_file, 'r')
+    f = open(input_file, 'r', encoding='utf-8')
     lines = f.readlines()
     priority_max = 0
 
