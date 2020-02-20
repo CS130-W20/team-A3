@@ -12,7 +12,6 @@ def showing_concepts():
 @visualizer.route('/concept_pure',methods=['GET', 'POST'])
 def concept_visualize():
     g.concept = concept_dict
-    print(g.concept)
     return render_template('concept_visualize.html')
 
 
