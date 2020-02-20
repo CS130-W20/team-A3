@@ -4,25 +4,28 @@ from users.modules.history import get_user_history
 from users.modules.recommendation import recommend_course_for_user
 from users.modules.education import get_education_options
 from users.modules.portfolio import get_user_description, get_user_photo, remove_previous_image
-#from users.modules.analyze import get_analyze_radar_data, get_analyze_line_data
+
+from flask import request, redirect
 
 from __init__ import application as app
 
 users = Blueprint('user', __name__)
 
 # for uploading the photo
-@users.route('/upload_photo', methods=['POST'])
+@users.route('/home/upload_photo', methods=['GET', 'POST'])
 def upload_photo():
-    direct_to = request.referrer or '/'
-    if request.method == 'POST':
-        f = request.files['img']
-        filename_raw = secure_filename(f.filename)
-        user_id = current_user.get_id()
-        filename = "{}.{}".format(user_id, filename_raw.split(".")[-1])
-        remove_previous_image(user_id, app.config["UPLOAD_FOLDER"])
-        f.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
-        # return 'file uploaded successfully'
-    return redirect(direct_to)
+    user_id = current_user.get_id()
+    direct_to = '/home/' + user_id
+
+    f = request.files['photo']
+    filename = "{}.{}".format(user_id, f.filename.split(".")[-1])
+
+    remove_previous_image(user_id, app.config["UPLOAD_FOLDER"])
+    f.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
+
+    print(filename)
+
+    return redirect("/home/"+user_id)
 
 @users.route('/user_data_vis/<user_id>', methods=['GET', 'POST'])
 @users.route('/user_data_vis/<user_id>/<visualize_mode>/', methods=['GET', 'POST'])
