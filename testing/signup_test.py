@@ -40,6 +40,7 @@ def signup_test(driver):
     lname = driver.find_element_by_id("inputLastname")
     edlvl = driver.find_element_by_id("inputEduLevel")
     intrs = driver.find_element_by_css_selector("button.btn.dropdown-toggle")
+    knowl = driver.find_element_by_css_selector("button[data-id='inputConcepts']")
 
     driver.execute_script("window.scrollBy(0,300)")
     time.sleep(1)
@@ -60,8 +61,11 @@ def signup_test(driver):
     intrs.click(); time.sleep(1)
     intrs.send_keys("algo"); time.sleep(0.5); intrs.send_keys(Keys.RETURN)
 
+    knowl.click(); time.sleep(1)
+    knowl.send_keys("ai"); time.sleep(0.5); knowl.send_keys(Keys.RETURN)
+    time.sleep(1)
+
     # submit
-    # body.click()
     driver.find_element_by_css_selector("button.btn.btn-lg.btn-primary").click()
     time.sleep(2)
 
