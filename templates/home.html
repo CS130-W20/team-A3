@@ -107,14 +107,14 @@
             </div>
             <div class="card-body">
               {% if authorized %}
-              <form class="form" action="#">
+              <form class="form" action="/home/update_info", method="POST">
                 <label for="printUserName" class="mr-sm-2">User Name:</label>
                 <input type="text" id="printUserName" name="printUserName" class="form-control mb-2 mr-sm-2" placeholder="User Name" readonly value="{{g.show_user.get_name()}}">
             		<label for="email" class="mr-sm-2">Email address:</label>
-                <input type="email" class="form-control mb-2 mr-sm-2" id="email" value="{{g.show_user.get_email()}}">
+                <input type="email" class="form-control mb-2 mr-sm-2" id="email" name='email' value="{{g.show_user.get_email()}}">
                 <script type="text/javascript">console.log("{{g.show_user.get_education()}}")</script>
                 <div class="form-group">
-                  <label for="inputEduLevel">Highest Level of Education (could be on-going)</label>
+                  <label for="inputEduLevel">Highest Level of Education</label>
                   <select class="form-control" id="inputEduLevel" name="inputEduLevel">
                     {% for edu_lev in g.education_levels %}
                       {% if edu_lev == g.show_user.get_education() %}
