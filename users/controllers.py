@@ -3,6 +3,7 @@ from auth import load_user
 from users.modules.history import get_user_history
 from users.modules.recommendation import recommend_course_for_user
 from users.modules.education import get_education_options
+from users.modules.interests import get_interests_options
 from users.modules.portfolio import get_user_description, get_user_photo, remove_previous_image
 import sqlite3
 
@@ -122,4 +123,5 @@ def user_home(user_id=None):
     g.education_levels = get_education_options()
     g.user_description = get_user_description(user_id)
     g.user_image = get_user_photo(user_id, app.config["UPLOAD_FOLDER"])
+    g.interests = get_interests_options()
     return render_template('home.html', authorized=authorized)

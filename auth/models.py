@@ -69,4 +69,7 @@ class User(UserMixin, db.Model):
 
     def get_interests(self):
         return self.interests
+
+    def get_interests_list(self):
+        return self.interests.split(",")
         
