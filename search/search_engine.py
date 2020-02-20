@@ -97,17 +97,36 @@ class SearchEngine:
         content = content.replace(".", " ")
         return content
 
+    def minDistance(self, word1, word2):
+        m, n = len(word1), len(word2)  # switch word1 and word2 if m < n to ensure n ≤ m
+        curr = list(range(n+1))
+        for i in range(m):
+            prev, curr = curr, [i+1] + [0] * n
+            for j in range(n):
+                curr[j+1] = prev[j] if word1[i] == word2[j] else min(curr[j], prev[j], prev[j+1]) + 1
+        return curr[n]
+
     def result_by_BM25(self, sentence):
         idfDict = self.getIDF('search/idf.txt')
         seg_list = jieba.lcut(sentence, cut_all=False)
         #seg_list = nltk.word_tokenize(sentence)
         cleaned_dict = self.clean_list(seg_list)
         BM25_scores = {}
-        # print ("before for")
         for term in cleaned_dict.keys():
+            print(term)
             r = self.fetch_from_db(term)
             if r is None:
-                continue
+                #add edit distance checking (tolerate error within edit distance 2)
+                for k in idfDict.keys():
+                    if self.minDistance(term, k) < 3:
+                        print(k)
+                        r = self.fetch_from_db(k)
+                        if r is None:
+                            continue
+                        else:
+                            break
+                if r is None:
+                    continue
             docs = r[2].split('\!@#$')
             for doc in docs:
                 tf = 0
