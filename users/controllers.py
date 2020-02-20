@@ -15,6 +15,12 @@ users = Blueprint('user', __name__)
 # for uploading the photo
 @users.route('/home/upload_photo', methods=['GET', 'POST'])
 def upload_photo():
+    '''
+    Updates user profile picture.
+
+    Modal sends POST request with image to this function, which saves the
+    image to the server with name [user id].[extension].
+    '''
     user_id = current_user.get_id()
     direct_to = '/home/' + user_id
 
@@ -30,6 +36,13 @@ def upload_photo():
 
 @users.route('/home/update_description', methods=['GET', 'POST'])
 def update_description():
+    '''
+    Updates user description text by clicking 'Update button'.
+
+    Clicking 'Update' button sends POST to this function with text value of
+    the description text area. Function then writes this description to the
+    database.
+    '''
     user_id = current_user.get_id()
     direct_to = '/home/' + user_id
 
