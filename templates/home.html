@@ -40,7 +40,9 @@
 
         <input type="image" id="avatar-icon" src="{{ url_for('static', filename='img/users/')}}{{g.user_image}}"
         style="border-radius:50%; width:30%; padding:10px;">
+        {% if authorized %}
         <button id="change-avatar" style="display:none;" data-toggle="modal" data-target="#avatarModal"></button>
+        {% endif %}
 
         {% if authorized %}
         <div class="input-group">
@@ -133,7 +135,6 @@
               <label>User Name: {{g.show_user.get_name()}}</label>
               <label>Created At: {{g.show_user.get_date_created()}}</label>
               <label>Modified: {{g.show_user.get_date_modified()}}</label>
-              <!-- <label>Interests: {{g.show_user.get_interests()}}</label> -->
               {% endif %}
             </div>
           </div>
