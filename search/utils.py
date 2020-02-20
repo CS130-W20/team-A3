@@ -1,3 +1,6 @@
+"""
+Define utility functions for search module
+"""
 import os
 
 import xml.etree.ElementTree as ET
@@ -12,11 +15,16 @@ from search.search_engine import SearchEngine
 
 def searchidlist(key, selected=0):
     """
+    Get page number and document ids
 
-    :param key:
-    :param se:
-    :param selected:
-    :return:
+    Parameters:
+        key (string): searching keywords
+        selected (int): ranking strategy (0 for BM25, 1 for popularity, 2 for time)
+
+    Returns:
+        flag (int): found = 1, not found = 0
+        page (list<int>): list of page numbers
+        doc_id (list<string>): list of document ids
     """
     se = SearchEngine(config_path=CONFIG_PATH, config_encoding='utf-8')
     flag, id_scores = se.search(key, selected)
@@ -28,12 +36,32 @@ def searchidlist(key, selected=0):
 
 
 def str_list_naive_parse(list_string):
+    """
+    Parse string
+
+    Parameters:
+        list_string
+
+    Returns:
+        parsed
+    """
     seps = '\', \'|\', \"|\", \'|\", \"'
     parsed = re.split(seps, list_string[2:-2])
     return parsed
 
 
 def safe_et_find(root, elem_key, default=""):
+    """
+    Find element using key from database
+
+    Parameters:
+        root: root for database retrieving
+        elem_key (string): keywords
+        default(="")
+
+    Returns:
+        return element text if found, otherwise return ""
+    """
     elem = root.find(elem_key)
     if elem is not None and elem.text is not None:
         return elem.text
@@ -41,10 +69,14 @@ def safe_et_find(root, elem_key, default=""):
 
 def find(docid, extra=False):
     """
+    Find all fields for a document given its id
 
-    :param docid:
-    :param extra:
-    :return:
+    Parameters:
+        docid (string): document id
+        extra(=False)
+
+    Returns:
+        docs (list<map<field, content>>): a list of documents
     """
     docs = []
     for id in docid:
@@ -81,10 +113,14 @@ def find(docid, extra=False):
 
 def find_concept(docid, extra=False):
     """
+    Find all fields for a document given its id
 
-    :param docid:
-    :param extra:
-    :return:
+    Parameters:
+        docid (string): document id
+        extra(=False)
+
+    Returns:
+        docs (list<map<field, content>>): a list of documents
     """
     docs = []
     for id in docid:
@@ -138,11 +174,15 @@ def cut_page(page, no, doc_id):
 
 def get_k_nearest(db_path, docid, k=5):
     """
-        Gets the "k" nearest documents to document with id = docid.
-    :param db_path:     Courses database path
-    :param docid:       Document ID
-    :param k:           number of nearest documents to fetch
-    :return: List of documents.
+    Gets the "k" nearest documents to document with id = docid.
+
+    Parameters:
+        db_path:     Courses database path
+        docid:       Document ID
+        k:           number of nearest documents to fetch
+
+    Returns:
+        List of documents.
     """
     conn = sqlite3.connect(db_path)
     c = conn.cursor()
