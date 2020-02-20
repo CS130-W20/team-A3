@@ -38,8 +38,9 @@
         <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12" align="center">
         <h1>{{g.show_user.get_name()}}'s Study Room</h1>
 
-        <img src="{{ url_for('static', filename='img/users/')}}{{g.user_image}}"
+        <input type="image" id="avatar-icon" src="{{ url_for('static', filename='img/users/')}}{{g.user_image}}"
         style="border-radius:50%; width:30%; padding:10px;">
+        <button id="change-avatar" style="display:none;" data-toggle="modal" data-target="#avatarModal"></button>
 
         {% if authorized %}
         <div class="input-group">
