@@ -1,0 +1,23 @@
+<doc><id>antiresonance</id><concept_name>antiresonance</concept_name><wiki>In the physics of coupled oscillators, antiresonance, by analogy with resonance, is a pronounced minimum in the amplitude of one oscillator at a particular frequency, accompanied by a large shift in its oscillation phase. Such frequencies are known as the system's antiresonant frequencies, and at these frequencies the oscillation amplitude can drop to almost zero. Antiresonances are caused by destructive interference, for example between an external driving force and interaction with another oscillator.
+Antiresonances can occur in all types of coupled oscillator systems, including mechanical, acoustic, electromagnetic and quantum systems. They have important applications in the characterization of complex coupled systems.
+The simplest system in which antiresonance arises is a system of coupled harmonic oscillators, for example pendula or RLC circuits.
+Consider two harmonic oscillators coupled together with strength 
+
+
+
+g
+
+
+{\displaystyle g}
+
+ and with one oscillator driven by an oscillating external force 
+
+
+
+F
+
+
+{\displaystyle F}
+
+. The situation is described by the coupled ordinary differential equations
+</wiki></doc>

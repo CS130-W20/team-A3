@@ -1,0 +1,5 @@
+<doc><id>reflection_attack</id><concept_name>reflection attack</concept_name><wiki>In computer security, a reflection attack is a method of attacking a challenge-response authentication system that uses the same protocol in both directions.  That is, the same challenge-response protocol is used by each side to authenticate the other side. The essential idea of the attack is to trick the target into providing the answer to its own challenge.[1]
+The general attack outline is as follows:
+If the authentication protocol is not carefully designed, the target will accept that response as valid, thereby leaving the attacker with one fully authenticated channel connection (the other one is simply abandoned).
+Some of the most common solutions to this attack are described below:
+</wiki></doc>

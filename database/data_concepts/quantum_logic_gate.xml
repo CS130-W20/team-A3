@@ -1,0 +1,49 @@
+<doc><id>quantum_logic_gate</id><concept_name>quantum logic gate</concept_name><wiki>
+In quantum computing and specifically the quantum circuit model of computation, a quantum logic gate (or simply quantum gate) is a basic quantum circuit operating on a small number of qubits. They are the building blocks of quantum circuits, like classical logic gates are for conventional digital circuits.
+Unlike many classical logic gates, quantum logic gates are reversible. However, it is possible to perform classical computing using only reversible gates. For example, the reversible Toffoli gate can implement all Boolean functions, often at the cost of having to use ancilla bits. The Toffoli gate has a direct quantum equivalent, showing that quantum circuits can perform all operations performed by classical circuits.
+Quantum logic gates are represented by unitary matrices. The number of qubits in the input and output of the gate must be equal; a gate which acts on 
+
+
+
+n
+
+
+{\displaystyle n}
+
+ qubits is represented by a 
+
+
+
+
+2
+
+n
+
+
+&#215;
+
+2
+
+n
+
+
+
+
+{\displaystyle 2^{n}\times 2^{n}}
+
+ unitary matrix. The quantum states that the gates act upon are vectors in 
+
+
+
+
+2
+
+n
+
+
+
+
+{\displaystyle 2^{n}}
+
+ complex dimensions. The base vectors are the possible outcomes if measured, and a quantum state is a linear combination of these outcomes. The most common quantum gates operate on spaces of one or two qubits, just like the common classical logic gates operate on one or two bits.
+</wiki></doc>

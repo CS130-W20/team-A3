@@ -1,30 +1,30 @@
 from users.__init__ import *
 from auth import load_user
-# from users.modules.history import get_user_history
+from users.modules.history import get_user_history
 from users.modules.recommendation import recommend_course_for_user
-# from users.modules.education import get_education_options
-# from users.modules.portfolio import get_user_description, get_user_photo, remove_previous_image
-# from users.modules.analyze import get_analyze_radar_data, get_analyze_line_data
+from users.modules.education import get_education_options
+from users.modules.portfolio import get_user_description, get_user_photo, remove_previous_image
+from users.modules.analyze import get_analyze_radar_data, get_analyze_line_data
 
 from __init__ import application as app
 
 users = Blueprint('user', __name__)
 
-@users.route('/chatbot_handle', methods=['POST'])
-def chatbot_handle():
-    jsondata = request.form.get('data')
-    data = json.loads(jsondata)
-    text = data["text"]
-    success, reply_text = chatbot(text)
-    if success == 0:
-        success = 1
-        reply_text = "Sorry I can't understand what are you talking about."
-    info = [{
-            "success": success,
-            "reply": reply_text
-        }
-    ]
-    return json.dumps(info)
+# @users.route('/chatbot_handle', methods=['POST'])
+# def chatbot_handle():
+#     jsondata = request.form.get('data')
+#     data = json.loads(jsondata)
+#     text = data["text"]
+#     success, reply_text = chatbot(text)
+#     if success == 0:
+#         success = 1
+#         reply_text = "Sorry I can't understand what are you talking about."
+#     info = [{
+#             "success": success,
+#             "reply": reply_text
+#         }
+#     ]
+#     return json.dumps(info)
 
 # for uploading the photo
 @users.route('/upload_photo', methods=['POST'])

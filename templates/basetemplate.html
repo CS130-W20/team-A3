@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <title>{% block title %}BaseTemplate{% endblock %}</title>
-    <link rel="icon" 
-      type="image/png" 
+    <link rel="icon"
+      type="image/png"
       href="{{ url_for('static', filename='img/logo.png') }}" />
     <!--The font-awesome stylesheet has to be online-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -71,7 +71,7 @@
           <div class="input-group">
             <input id="chatbox-input" type="text" class="form-control input-sm chat_input" placeholder="Write your message here...">
             <div class="input-group-append">
-              <button class="btn btn-primary btn-sm" id="chatbox_submit" type="submit">Send</button> 
+              <button class="btn btn-primary btn-sm" id="chatbox_submit" type="submit">Send</button>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@
             <a class="nav-link" href="{{ url_for('main') }}">Home <!--span class="sr-only">(current)</span--></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link pointer" onclick="alert('Knowledge Graph Visualization coming out soon')">Concepts</a> 
+            <a class="nav-link pointer" onclick="alert('Knowledge Graph Visualization coming out soon')">Concepts</a>
             <!--href="XXX" will come out soon-->
           </li>
           <li class="nav-item dropdown">
@@ -251,7 +251,6 @@
     {% if browse_categories and browse_categories|length > 0  %}
         <hr>
         <footer class="container">
-          <p>&copy; ScAi Lab, CS Department, UCLA 2019</p>
         </footer>
         </div>
       </div>
@@ -259,7 +258,6 @@
     {% elif browse_categories %}
     <hr>
     <footer class="container">
-      <p>&copy; ScAi Lab, CS Department, UCLA 2019</p>
     </footer>
     {% endif %}
     <script src="{{ url_for('static', filename='js/chatbox_interaction.js') }}" type="text/javascript"></script>

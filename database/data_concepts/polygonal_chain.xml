@@ -1,0 +1,39 @@
+<doc><id>polygonal_chain</id><concept_name>polygonal chain</concept_name><wiki>In geometry, a polygonal chain is a connected series of line segments. More formally, a polygonal chain P is a curve specified by a sequence of points 
+
+
+
+
+(
+
+A
+
+1
+
+
+,
+
+A
+
+2
+
+
+,
+&#8230;
+,
+
+A
+
+n
+
+
+)
+
+
+
+{\displaystyle \scriptstyle (A_{1},A_{2},\dots ,A_{n})}
+
+ called its vertices. The curve itself consists of the line segments connecting the consecutive vertices. 
+A polygonal chain may also be called a polygonal curve,[1] polygonal path,[2] polyline,[3] piecewise linear curve,[3] broken line[4] or, in geographic information systems, a linestring or linear ring.[5]
+A simple polygonal chain is one in which only consecutive (or the first and the last) segments intersect and only at their endpoints.
+A closed polygonal chain is one in which the first vertex coincides with the last one, or, alternatively, the first and the last vertices are also connected by a line segment.[6] A simple closed polygonal chain in the plane is the boundary of a simple polygon. Often the term "polygon" is used in the meaning of "closed polygonal chain", but in some cases it is important to draw a distinction between a polygonal area and a polygonal chain.
+</wiki></doc>
