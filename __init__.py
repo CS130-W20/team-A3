@@ -2,6 +2,7 @@ from flask import Flask, render_template, g, session
 from flask_login import current_user, LoginManager
 # Import SQLAlchemy
 from flask_sqlalchemy import SQLAlchemy
+import json
 
 
 # Define the WSGI application object
@@ -25,6 +26,9 @@ db = SQLAlchemy(application)
 #Get course_taxonomy：
 from browse.generate_categories import generate_course_list
 browse_categories = generate_course_list("browse/course_taxonomy.txt")
+#Get concept_dict
+with open("visualization/concept_hierarchy.json",'r') as load_f:
+    concept_dict = json.load(load_f)
 
 # Import a module / component using its blueprint handler variable (mod_auth)
 from auth.controllers import auth
