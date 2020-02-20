@@ -1,0 +1,5 @@
+<doc><id>codecs</id><concept_name>codecs</concept_name><wiki>A codec is a device or computer program which encodes or decodes a digital data stream or signal.[1][2][3] Codec is a portmanteau of coder-decoder.[4]
+A coder encodes a data stream or a signal for transmission or storage, possibly in encrypted form, and the decoder function reverses the encoding for playback or editing. Codecs are used in videoconferencing, streaming media, and video editing applications.
+In the mid-20th century, a codec was a device that coded analog signals into digital form using pulse-code modulation (PCM).  Later, the name was also applied to software for converting between digital signal formats, including compander functions.
+An audio codec converts analog audio signals into digital signals for transmission or encodes them for storage. A receiving device converts the digital signals back to analog form using an audio decoder for playback. An example of this are the codecs used in the sound cards of personal computers. A video codec accomplishes the same task for video signals.
+</wiki></doc>

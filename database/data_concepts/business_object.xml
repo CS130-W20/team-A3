@@ -1,0 +1,5 @@
+<doc><id>business_object</id><concept_name>business object</concept_name><wiki>A business object is an entity within a multitiered software application that works in conjunction with the data access and business logic layers to transport data.[citation needed]
+For example, a "Manager" would be a business object where its attributes can be "Name", "Second name", "Age", "Area", "Country" and it could hold an 1-n association with its employees (a collection of Employee instances).
+Another example would be a concept like "Process" having "Identifier", "Name", "Start date", "End date" and "Kind" attributes and holding an association with the "Employee" (the responsible) that started it.
+Whereas a program may implement classes, which typically end in objects managing or executing behaviors, a business object usually does nothing itself but holds a set of instance variables or properties, also known as attributes, and associations with other business objects, weaving a map of objects representing the business relationships.
+</wiki></doc>

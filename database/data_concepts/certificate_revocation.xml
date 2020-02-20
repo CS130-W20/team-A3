@@ -1,0 +1,5 @@
+<doc><id>certificate_revocation</id><concept_name>certificate revocation</concept_name><wiki>In cryptography, a certificate revocation list (or CRL) is "a list of digital certificates that have been revoked by the issuing certificate authority (CA) before their scheduled expiration date and should no longer be trusted".[1]
+There are two different states of revocation defined in RFC 5280:
+Reasons to revoke a certificate according to RFC 5280 p69[2] are:
+Note that value 7 is not used.
+</wiki></doc>

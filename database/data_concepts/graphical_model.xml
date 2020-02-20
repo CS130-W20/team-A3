@@ -1,0 +1,91 @@
+<doc><id>graphical_model</id><concept_name>graphical model</concept_name><wiki>A graphical model or probabilistic graphical model (PGM) or structured probabilistic model is a probabilistic model for which a graph expresses the conditional dependence structure between random variables. They are commonly used in probability theory, statistics&#8212;particularly Bayesian statistics&#8212;and machine learning.
+Generally, probabilistic graphical models use a graph-based representation as the foundation for encoding a  distribution over a multi-dimensional space and a graph that is a compact or factorized representation of a set of independences that hold in the specific distribution. Two branches of graphical representations of distributions are commonly used, namely, Bayesian networks and Markov random fields. Both families encompass the properties of factorization and independences, but they differ in the set of independences they can encode and the factorization of the distribution that they induce.[1]
+If the network structure of the model is a directed acyclic graph, the model represents a factorization of the joint probability of all random variables.  More precisely, if the events are 
+
+
+
+
+X
+
+1
+
+
+,
+&#8230;
+,
+
+X
+
+n
+
+
+
+
+{\displaystyle X_{1},\ldots ,X_{n}}
+
+ then the joint probability satisfies
+where 
+
+
+
+
+pa
+
+(
+
+X
+
+i
+
+
+)
+
+
+{\displaystyle {\text{pa}}(X_{i})}
+
+ is the set of parents of node 
+
+
+
+
+X
+
+i
+
+
+
+
+{\displaystyle X_{i}}
+
+ (nodes with edges directed towards 
+
+
+
+
+X
+
+i
+
+
+
+
+{\displaystyle X_{i}}
+
+).  In other words, the joint distribution factors into a product of conditional distributions. For example, the graphical model in the Figure shown above (which is actually not a directed acyclic graph, but an ancestral graph) consists of the random variables 
+
+
+
+A
+,
+B
+,
+C
+,
+D
+
+
+{\displaystyle A,B,C,D}
+
+
+with a joint probability density that factors as
+</wiki></doc>

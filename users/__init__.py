@@ -10,6 +10,7 @@ from flask import Blueprint, request, render_template, \
 
 # Import the database object from the main app module
 from __init__ import db, login_manager
+from flask_login import current_user, login_user, logout_user, login_required
 
 config = configparser.ConfigParser()
 config.read('config.ini', 'utf-8')

@@ -1,0 +1,6 @@
+<doc><id>network_booting</id><concept_name>network booting</concept_name><wiki>
+Network booting, shortened netboot, is the process of booting a computer from a network rather than a local drive. This method of booting can be used by routers, diskless workstations and centrally managed computers (thin clients) such as public computers at libraries and schools.
+Network booting can be used to centralize management of disk storage, which supporters claim can result in reduced capital and maintenance costs. It can also be used in cluster computing, in which nodes may not have local disks.
+In the late 1980s/early 1990s, network boot was used to save the expense of a disk drive, because a decently sized harddisk would still cost thousands of dollars, often equaling the price of the CPU.[citation needed]
+Contemporary desktop personal computers generally provide an option to boot from the network in their BIOS via the Preboot Execution Environment (PXE). Post-1998 PowerPC (G3&#160;&#8211;  G5) Mac systems can also boot from their firmware to a network disk via NetBoot.[1] Old personal computers without network boot firmware support can utilize a floppy disk or flash drive containing software to boot from the network.
+</wiki></doc>

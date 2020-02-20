@@ -1,0 +1,23 @@
+<doc><id>Bermudan_option</id><concept_name>Bermudan option</concept_name><wiki>In finance, the style  or family of an option is the class into which the option falls, usually defined by the dates on which the option may be exercised. The vast majority of options are either European or American (style) options. These options&#8212;as well as others where the payoff is calculated similarly&#8212;are referred to as "vanilla options". Options where the payoff is calculated differently are categorized as "exotic options". Exotic options can pose challenging problems in valuation and hedging.
+The key difference between American and European options relates to when the options can be exercised:
+For both, the payoff&#8212;when it occurs&#8212;is given by
+where 
+
+
+
+K
+
+
+{\displaystyle K}
+
+ is the strike price and 
+
+
+
+S
+
+
+{\displaystyle S}
+
+ is the spot price of the underlying asset.
+</wiki></doc>

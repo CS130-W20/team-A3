@@ -1,0 +1,73 @@
+<doc><id>Sharpe_ratio</id><concept_name>Sharpe ratio</concept_name><wiki>In finance, the Sharpe ratio (also known as the Sharpe index, the Sharpe measure, and the reward-to-variability ratio) measures the performance of an investment (e.g., a security or portfolio) compared to a risk-free asset, after adjusting for its risk. It is defined as the difference between the returns of the investment and the risk-free return, divided by the standard deviation of the investment (i.e., its volatility). It represents the additional amount of return that an investor receives per unit of increase in risk.
+It was named after William F. Sharpe,[1] who developed it in 1966.
+Since its revision by the original author, William Sharpe, in 1994,[2] the ex-ante Sharpe ratio is defined as:
+where 
+
+
+
+
+R
+
+a
+
+
+
+
+{\displaystyle R_{a}}
+
+ is the asset return, 
+
+
+
+
+R
+
+b
+
+
+
+
+{\displaystyle R_{b}}
+
+ is the risk-free return (such as a U.S. Treasury security).  
+
+
+
+E
+[
+
+R
+
+a
+
+
+&#8722;
+
+R
+
+b
+
+
+]
+
+
+{\displaystyle E[R_{a}-R_{b}]}
+
+ is the expected value of the excess of the asset return over the benchmark return, and 
+
+
+
+
+
+&#963;
+
+a
+
+
+
+
+
+{\displaystyle {\sigma _{a}}}
+
+ is the standard deviation of the asset excess return.
+</wiki></doc>

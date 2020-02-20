@@ -1,0 +1,5 @@
+<doc><id>unit_disk_graph</id><concept_name>unit disk graph</concept_name><wiki>In geometric graph theory, a unit disk graph is the intersection graph of a family of unit disks in the Euclidean plane. That is, it is a graph with one vertex for each disk in the family, and with an edge between two vertices whenever the corresponding vertices lie within a unit distance of each other.
+They are commonly formed from a Poisson point process, making them a simple example of a random structure.
+There are several possible definitions of the unit disk graph, equivalent to each other up to a choice of scale factor:
+Every induced subgraph of a unit disk graph is also a unit disk graph.  An example of a graph that is not a unit disk graph is the star K1,7 with one central node connected to seven leaves: if each of seven unit disks touches a common unit disk, some two of the seven disks must touch each other (as the kissing number in the plane is 6). Therefore, unit disk graphs cannot contain an induced K1,7 subgraph.
+</wiki></doc>

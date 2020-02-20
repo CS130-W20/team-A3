@@ -1,0 +1,6 @@
+<doc><id>bilingual_corpus</id><concept_name>bilingual corpus</concept_name><wiki>A parallel text is a text placed alongside its translation or translations.[1][2] Parallel text alignment is the identification of the corresponding sentences in both halves of the parallel text. The Loeb Classical Library and the Clay Sanskrit Library are two examples of dual-language series of texts. Reference Bibles may contain the original languages and a translation, or several translations by themselves, for ease of comparison and study; Origen's Hexapla (Greek for "sixfold") placed six versions of the Old Testament side by side.  The most famous example is the Rosetta Stone.
+Large collections of parallel texts are called parallel corpora (see text corpus). Alignments of parallel corpora at sentence level are prerequisite for many areas of linguistic research. 
+During translation, sentences can be split, merged, deleted, inserted or reordered by the translator. This makes alignment a non-trivial task.
+Four main corpora types can be distinguished.
+A noisy parallel corpus contains bilingual sentences that are not perfectly aligned or have poor quality translations. Nevertheless, most of its contents are bilingual translations of a specific document.
+</wiki></doc>
