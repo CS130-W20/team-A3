@@ -35,7 +35,7 @@ def generate_course_list(input_file):
     """
        Return the json(dict) for a given category_taxonomy input file
        :param input_file: input_file location
-   
+
     """
 
     # input
