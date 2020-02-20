@@ -17,7 +17,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>Are you sure you want to submit?</p> 
+            <p>Are you sure you want to submit?</p>
             <p>After submitting the new photo, the old one will be removed forever.</p>
             <p>
             <div class="form-group">
@@ -37,6 +37,9 @@
       <div class="row">
         <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12" align="center">
         <h1>{{g.show_user.get_name()}}'s Study Room</h1>
+
+        <img src="{{ url_for('static', filename='img/users/')}}{{g.user_image}}"
+        style="border-radius:50%; width:30%; padding:10px;">
 
         {% if authorized %}
         <div class="input-group">
@@ -69,8 +72,8 @@
                   {% if authorized %}
                   <form id="imageInput" action="/upload_photo" method="POST" enctype="multipart/form-data">
                     <div class="avatar-edit">
-                        <input type='file' name="img" id="imageUpload" accept="image/x-png,image/gif,image/jpeg" />
-                        <label for="imageUpload" title="Accepted format: .png, .jpg, .jpeg .gif"></label>
+                        <!-- <input type='file' name="img" id="imageUpload" accept="image/x-png,image/gif,image/jpeg" />
+                        <label for="imageUpload" title="Accepted format: .png, .jpg, .jpeg .gif"></label> -->
                     </div>
                   </form>
                   <div class="avatar-submit">
@@ -94,7 +97,7 @@
       </div>
 
       <div class="row">
-      
+
 
         <div class="col-md-6 col-xs-12 col-sm-6 col-lg-4" id="basic_user_info">
           <div class="card padded_card">
@@ -165,27 +168,9 @@
     </div>
     <div class="container">
       <hr>
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
-          <div class="card padded_card">
-            <div class="card-header">
-              {{g.show_user.get_name()}} Analyze
-            </div>
-            <iframe src="{{url_for('user.user_visualize', user_id=g.show_user.get_id())}}" style="width:100%;height:300px;border:none"></iframe>
-          </div>
-        </div>
-        <div class="col-lg-8 col-md-6 col-xs-12 col-sm-12" id="user_analyze_activities">
-          <div class="card padded_card">
-            <div class="card-header">
-              {{g.show_user.get_name()}} Recent Activities
-            </div>
-            <iframe src="{{url_for('user.user_visualize', user_id=g.show_user.get_id(), visualize_mode=1 )}}" style="width:100%;height:300px;border:none"></iframe>
-          </div>
-        </div>
-      </div>
     </div>
 
-    
+
 
   </main>
 
