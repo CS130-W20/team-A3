@@ -58,6 +58,7 @@ def login():
     session['user'] = registered_user.id
     return redirect(request.args.get('next') or direct_to, code=307)
 
+#handle log out
 @login_required
 @auth.route('/logout', methods=['POST', 'GET'])
 def logout():
@@ -66,7 +67,7 @@ def logout():
     flash('Logged out successfully!', 'message')
     return redirect(direct_to, code=307)
 
-
+#handle email check
 @auth.route('/emailcheck', methods=['POST'])
 def check_email_exists():
     user = User.query.filter_by(email=request.form['email'])
@@ -74,7 +75,7 @@ def check_email_exists():
         return json.dumps({'success': False, "code": 1, "message": "Email unavailable"})
     return json.dumps({'success': True, 'code': 0})
 
-
+#handle user name check
 @auth.route('/usernamecheck', methods=['POST'])
 def check_username_exists():
     username=json.loads(request.form['data'])['username']
@@ -84,7 +85,7 @@ def check_username_exists():
         return json.dumps([{'success': 0, "code": 1, "message": "Username unavailable"}])
     return json.dumps([{'success': 1, 'code': 0}])
 
-
+#handle register
 @auth.route('/register', methods=['POST'])
 def register():
     username = request.form.get('username', '')
@@ -108,7 +109,7 @@ def register():
         return redirect(url_for('main', error=error))
     return redirect('/newuser')
 
-
+#newuser information collection
 @login_required
 @auth.route('/newuser', methods=['GET','POST'])
 def new_user():
