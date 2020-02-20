@@ -12,7 +12,6 @@ from __init__ import application as app
 
 users = Blueprint('user', __name__)
 
-# for uploading the photo
 @users.route('/home/upload_photo', methods=['GET', 'POST'])
 def upload_photo():
     '''
@@ -31,6 +30,34 @@ def upload_photo():
     f.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
 
     print(filename)
+
+    return redirect("/home/"+user_id)
+
+@users.route('/home/update_info', methods=['GET', 'POST'])
+def update_info():
+    '''
+    Updates user information
+
+    HTML sends POST request with new information, which this function writes
+    to the database.
+    '''
+    user_id = current_user.get_id()
+    direct_to = '/home/' + user_id
+
+    username = request.form.get('printUserName')
+    email    = request.form.get('email')
+    edulevel = request.form.get('inputEduLevel')
+
+    conn = sqlite3.connect(USERDB_PATH)
+    conn.execute('''
+        UPDATE user
+        SET
+            date_modified = datetime('now'),
+            email = ?,
+            education = ?
+        WHERE id = ?
+    ''', (email, edulevel, user_id))
+    conn.commit()
 
     return redirect("/home/"+user_id)
 
