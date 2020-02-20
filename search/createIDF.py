@@ -1,3 +1,6 @@
+"""
+Create IDf file
+"""
 from os import listdir
 import xml.etree.ElementTree as ET
 import jieba
@@ -6,6 +9,15 @@ import configparser
 import nltk
 
 def Replace(content):
+    """
+    preprocessing doc content (this function aligns with the SearchEngine.Replace)
+
+    Parameters:
+        content (string): input string
+
+    Returns:
+        content (string): preprocessed string
+    """
     content = content.replace("\"","")
     content = content.replace("'", "")
     content = content.replace("[", "")
@@ -16,16 +28,20 @@ def Replace(content):
     return content
 
 def is_number(w):
-        """
-            Checks if a string is a number or not.
-        :param s: the string to be checked.
-        :return: True or False
-        """
-        try:
-            float(w)
-        except ValueError:
-            return False
-        return True
+    """
+    Checks whether a string is a number or not.
+
+    Parameters:
+        s (string): the string to be checked.
+
+    Returns:
+        True or False
+    """
+    try:
+        float(w)
+    except ValueError:
+        return False
+    return True
 
 total_len = 0
 files = listdir('../database/data_courses/')

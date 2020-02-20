@@ -18,7 +18,6 @@ def recommend_course_for_user(user_id):
 
     Returns:
     array: Names and links to courses
-
     """
     # get user knowledge and interests
     conn = sqlite3.connect(USERDB_PATH)

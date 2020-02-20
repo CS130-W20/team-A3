@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-
+Define SearchEngine class
 """
-
 import jieba
 import nltk
 import math
@@ -14,7 +13,27 @@ import numpy as np
 
 
 class SearchEngine:
+    """
+    This is a class for search operations
+
+    Attributes:
+        config_path (string): configuration path
+        config_encoding (string): data files encoding format
+        stop_words (set<string>): set of stop words
+        conn (Object): connection to database
+        K1 (float): K1 (parameter used in search algorithm)
+        B (float): B (parameter used in search algorithm)
+        N (int): N (parameter used in search algorithm)
+        AVG_L (float): average length of document in corpus
+    """
     def __init__(self, config_path, config_encoding):
+        """
+        The constructor for SearchEngine class
+
+        Parameters:
+            config_path (string): configuration path
+            config_encoding (string): data files encoding format        
+        """
         self.config_path = config_path
         self.config_encoding = config_encoding
         config = configparser.ConfigParser()
@@ -36,13 +55,20 @@ class SearchEngine:
         self.AVG_L = float(config['DEFAULT']['avg_l'])
 
     def __del__(self):
+        """
+        Closes connection to database
+        """
         self.conn.close()
 
     def is_number(self, s):
         """
-            Checks if a string is a number or not.
-        :param s: the string to be checked.
-        :return: True or False
+        Checks whether a string is a number or not.
+
+        Parameters:
+            s (string): the string to be checked.
+
+        Returns:
+            True or False
         """
         try:
             float(s)
@@ -52,9 +78,13 @@ class SearchEngine:
 
     def clean_list(self, seg_list):
         """
+        clean a list of string and map to dictionary
 
-        :param seg_list:
-        :return:
+        Parameters:
+            seg_list (list<string>): a list of string
+
+        Returns:
+            cleaned_dict (dictionary): map<string, int>, cleaned word and its count in the list
         """
         cleaned_dict = {}
         for i in seg_list:
@@ -68,15 +98,28 @@ class SearchEngine:
 
     def fetch_from_db(self, term):
         """
+        Retrieves docs from database
 
-        :param term:
-        :return:
+        Parameters:
+            term (string): word
+        
+        Returns:
+            (Object): retrieved documents
         """
         c = self.conn.cursor()
         c.execute('SELECT * FROM postings WHERE term=?', (term,))
         return c.fetchone()
 
     def getIDF(self, file):
+        """
+        Get a dictionary of word and its idf (inverse-document-frequency) value from the corpus
+
+        Parameters:
+            file (string): path to the idf file
+        
+        Returns:
+            idfDict (dictionary): Map<string, float>, word and its idf value
+        """
         idfDict = {}
         with open(file,'r', encoding='utf-8') as f:
             for x in f.readlines():
@@ -85,9 +128,30 @@ class SearchEngine:
         return idfDict
 
     def tfIdf(self, tf, idf, k, b, length, avglen = 2200):
+        """
+        Calculates the tf-idf value of a word
+
+        Parameters:
+            tf (float): word tf value
+            idf (float): word idf value
+            k (float): parameter, usually between [1.2, 2.0]
+            b (float): parameter, usually 0.75
+
+        Returns:
+            float: tf-idf value
+        """
         return idf*tf*(k+1)/(tf+k*(1-b+b*length/avglen))
 
     def Replace(self, content):
+        """
+        preprocessing doc content
+
+        Parameters:
+            content (string): input string
+
+        Returns:
+            content (string): preprocessed string
+        """
         content = content.replace("\"","")
         content = content.replace("'", "")
         content = content.replace("[", "")
@@ -98,6 +162,16 @@ class SearchEngine:
         return content
 
     def minDistance(self, word1, word2):
+        """
+        Calculate edit distance between two words, including insertion, deletion, and replacement
+
+        Parameters:
+            word1 (string)
+            word2 (string)
+
+        Returns:
+            int: edit distance
+        """
         m, n = len(word1), len(word2)  # switch word1 and word2 if m < n to ensure n ≤ m
         curr = list(range(n+1))
         for i in range(m):
@@ -107,6 +181,16 @@ class SearchEngine:
         return curr[n]
 
     def result_by_BM25(self, sentence):
+        """
+        Get ranking results using BM25 (tf-idf) IR algorithm (with spelling error tolerance within edit distance two)
+
+        Parameters:
+            sentence (string): keyword string typed by user
+        
+        Returns:
+            0, []: no document is found that matches any of the keywords
+            1, BM25_scores (list<tuple>): retrived docids and their ranking scores
+        """
         idfDict = self.getIDF('search/idf.txt')
         seg_list = jieba.lcut(sentence, cut_all=False)
         #seg_list = nltk.word_tokenize(sentence)
@@ -152,6 +236,16 @@ class SearchEngine:
             return 1, BM25_scores
 
     def result_by_time(self, sentence):
+        """
+        Get ranking results using time
+
+        Parameters:
+            sentence (string): keyword string typed by user
+        
+        Returns:
+            0, []: no document is found that matches any of the keywords
+            1, time_scores (list<tuple>): retrived docids and their ranking scores
+        """
         seg_list = jieba.lcut(sentence, cut_all=False)
         n, cleaned_dict = self.clean_list(seg_list)
         time_scores = {}
@@ -177,6 +271,16 @@ class SearchEngine:
             return 1, time_scores
 
     def result_by_hot(self, sentence):
+        """
+        Get ranking results using popularity
+
+        Parameters:
+            sentence (string): keyword string typed by user
+        
+        Returns:
+            0, []: no document is found that matches any of the keywords
+            1, hot_scores (list<tuple>): retrived docids and their ranking scores
+        """
         seg_list = jieba.lcut(sentence, cut_all=False)
         n, cleaned_dict = self.clean_list(seg_list)
         hot_scores = {}
@@ -210,6 +314,16 @@ class SearchEngine:
             return 1, hot_scores
 
     def search(self, sentence, sort_type=0):
+        """
+        Which algorithm to use for search ranking
+
+        Parameters:
+            sentence (string): keyword string typed by user
+            sort_type: ranking strategy (0 for BM25, 1 for popularity, 2 for time)
+
+        Returns:
+            list<tuple>: sorted results of documents 
+        """
         if sort_type == 0:
             return self.result_by_BM25(sentence)
         elif sort_type == 1:

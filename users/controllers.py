@@ -4,6 +4,7 @@ from users.modules.history import get_user_history
 from users.modules.recommendation import recommend_course_for_user
 from users.modules.education import get_education_options
 from users.modules.portfolio import get_user_description, get_user_photo, remove_previous_image
+import sqlite3
 
 from flask import request, redirect
 
@@ -14,6 +15,12 @@ users = Blueprint('user', __name__)
 # for uploading the photo
 @users.route('/home/upload_photo', methods=['GET', 'POST'])
 def upload_photo():
+    '''
+    Updates user profile picture.
+
+    Modal sends POST request with image to this function, which saves the
+    image to the server with name [user id].[extension].
+    '''
     user_id = current_user.get_id()
     direct_to = '/home/' + user_id
 
@@ -24,6 +31,30 @@ def upload_photo():
     f.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
 
     print(filename)
+
+    return redirect("/home/"+user_id)
+
+@users.route('/home/update_description', methods=['GET', 'POST'])
+def update_description():
+    '''
+    Updates user description text by clicking 'Update button'.
+
+    Clicking 'Update' button sends POST to this function with text value of
+    the description text area. Function then writes this description to the
+    database.
+    '''
+    user_id = current_user.get_id()
+    direct_to = '/home/' + user_id
+
+    new_desc = request.form.get('new_desc')
+
+    conn = sqlite3.connect(USERDB_PATH)
+    conn.execute('''
+        UPDATE user_description
+        SET description = ?
+        WHERE id = ?
+    ''', (new_desc, user_id))
+    conn.commit()
 
     return redirect("/home/"+user_id)
 
