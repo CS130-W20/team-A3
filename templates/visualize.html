@@ -3,6 +3,7 @@
 {% block additional_static %}
     <script src="{{ url_for('static', filename='js/d3.v3.js') }}" type="text/javascript"></script>
     <script src="{{ url_for('static', filename='js/d3.legend.js') }}" type="text/javascript"></script>
+    <iframe src="{{url_for('visualizer.concept_visualize')}}" style="width:2500px;height:800px;border:none"></iframe>
 {% endblock %}
 {% block page_content %}
 {% endblock %}
