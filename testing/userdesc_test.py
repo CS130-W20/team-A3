@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 
 def userdesc_test(driver):
-    print("USERDESC TEST")
+    print("UPDATE USER DESCRIPTION TEST...")
     return
 
 if __name__ == '__main__':

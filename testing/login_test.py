@@ -6,6 +6,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 
 def login_test(driver):
+    print("LOGIN TEST...")
+    
     # click on login/register button
     elem = driver.find_elements_by_css_selector("#navbars_dropdowns button")[2]
     elem.click()
@@ -26,6 +28,7 @@ def login_test(driver):
     elem.click()
 
     # go to user home
+    time.sleep(2)
     wait.until(EC.element_to_be_clickable((By.ID, 'home_entry'))).click()
 
 if __name__ == '__main__':
