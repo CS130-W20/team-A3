@@ -1,12 +1,15 @@
 # EducationAI
 
-> Short blurb about what your product does.
+> EduAI, a website to help people learn and explore MOOCs in a more efficient way. 
+
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-One to two paragraph statement about your product and what it does.
+Our application will have two primary novel features:
+1) Features for exploring MOOCs based on knowledge concept dependencies. 
+2) Personalized learning. Learners have various backgrounds, and traditional platforms ignore this diversity by suggesting the same courses for every learner.
 
 ![](Screenshot.png)
 
