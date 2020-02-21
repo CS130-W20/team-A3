@@ -1,4 +1,8 @@
-
+"""
+__init__.py
+====================
+The initialization file for the auth module
+"""
 from auth.models import AnonymousUser, User
 from __init__ import login_manager
 

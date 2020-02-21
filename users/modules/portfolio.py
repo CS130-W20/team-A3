@@ -16,7 +16,10 @@ def get_user_description(user_id):
     '''
 
     conn = sqlite3.connect(USERDB_PATH)
-    desc = pd.read_sql_query("SELECT description FROM user_description WHERE id=%s" % user_id, conn).iloc[0][0]
+    try:
+        desc = pd.read_sql_query("SELECT description FROM user_description WHERE id=%s" % user_id, conn).iloc[0][0]
+    except Exception as e:
+        desc = "Welcome to my profile!" 
     return desc
 
 def get_user_photo(user_id, user_imgs_path):

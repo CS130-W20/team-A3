@@ -1,3 +1,9 @@
+"""
+controllers.py
+====================
+Controller for auth module
+"""
+
 import json
 import datetime
 import random
@@ -19,7 +25,6 @@ from auth.models import User
 import sqlite3
 import numpy as np
 from users import USERDB_PATH 
-from search import COURSEDB_PATH 
 
 # Define the blueprint: 'auth'
 auth = Blueprint('auth', __name__)
@@ -58,6 +63,7 @@ def login():
     session['user'] = registered_user.id
     return redirect(request.args.get('next') or direct_to, code=307)
 
+#handle log out
 @login_required
 @auth.route('/logout', methods=['POST', 'GET'])
 def logout():
@@ -66,7 +72,7 @@ def logout():
     flash('Logged out successfully!', 'message')
     return redirect(direct_to, code=307)
 
-
+#handle email check
 @auth.route('/emailcheck', methods=['POST'])
 def check_email_exists():
     user = User.query.filter_by(email=request.form['email'])
@@ -74,7 +80,7 @@ def check_email_exists():
         return json.dumps({'success': False, "code": 1, "message": "Email unavailable"})
     return json.dumps({'success': True, 'code': 0})
 
-
+#handle user name check
 @auth.route('/usernamecheck', methods=['POST'])
 def check_username_exists():
     username=json.loads(request.form['data'])['username']
@@ -84,7 +90,7 @@ def check_username_exists():
         return json.dumps([{'success': 0, "code": 1, "message": "Username unavailable"}])
     return json.dumps([{'success': 1, 'code': 0}])
 
-
+#handle register
 @auth.route('/register', methods=['POST'])
 def register():
     username = request.form.get('username', '')
@@ -108,7 +114,7 @@ def register():
         return redirect(url_for('main', error=error))
     return redirect('/newuser')
 
-
+#newuser information collection
 @login_required
 @auth.route('/newuser', methods=['GET','POST'])
 def new_user():
@@ -128,13 +134,7 @@ def new_user():
         interests = request.form.getlist('inputInterests')
         concepts = request.form.getlist('inputConcepts')
 
-        # new user interests entry in interests table should be populated according to questionnaire
-        # temporarily initialize to interests + random bool
-        interests = (current_user.id, ) + tuple(interests) + tuple(np.random.randint(0, 2, 100 - len(interests), 'bool'))
 
-        # new user knowledge entry in knowledge table should be populated according to questionnaire
-        # temporarily initialize to concepts + random bool
-        concepts = (current_user.id, ) + tuple(concepts) + tuple(np.random.randint(0, 2, 100 - len(concepts), 'bool'))
 
         education = request.form['inputEduLevel']
         email = request.form['inputEmail']
@@ -143,7 +143,18 @@ def new_user():
         user.lname = l_name
         user.email = email
         user.verified = True
+        #temporarily save interests in user also to keep consistency
+        user.interests = ",".join(interests)
         user.education = education
+
+        # new user interests entry in interests table should be populated according to questionnaire
+        # temporarily initialize to interests + random bool
+        interests = (current_user.id, ) + tuple(interests) + tuple(np.random.randint(0, 2, 100 - len(interests), 'bool'))
+
+        # new user knowledge entry in knowledge table should be populated according to questionnaire
+        # temporarily initialize to concepts + random bool
+        concepts = (current_user.id, ) + tuple(concepts) + tuple(np.random.randint(0, 2, 100 - len(concepts), 'bool'))
+
         try:
             db.session.add(user)
             db.session.commit()

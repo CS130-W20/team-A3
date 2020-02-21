@@ -1,7 +1,8 @@
-'''
-Data: Feb/01/2020
-Description: Crawl course information from coursera.
-'''
+"""
+crawler.py
+====================
+Crawl course information from coursera.
+"""
 
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
@@ -12,6 +13,9 @@ import time
 from webdriver_manager.chrome import ChromeDriverManager
 
 def get_one_subchap(html):
+    """
+       Return webpage content list, given an input html.
+    """
     subchap_html = html.contents[0].contents[0]
     sub_chap = []
     for i in range(1,len(subchap_html)):
@@ -20,17 +24,32 @@ def get_one_subchap(html):
         except:
             sub_chap.append(subchap_html.contents[i].contents[1])
     return sub_chap
+
 def get_syllabus(syllabus):
+    """
+       Error Handling when gettiing a content list from an input html.
+
+    """
     try:
         sub = get_one_subchap(syllabus)
     except:
         sub = ["$null$"]
     return sub
+
 def get_syllabus_list(soup):
+    """
+       Return a syllabuslist for a given course.
+
+    """
     Syllabus_html = soup.find_all("div",class_="SyllabusModuleDetails")
     syllabuslist = [get_syllabus(syllabus) for syllabus in Syllabus_html]
     return syllabuslist
+
 def save_xml(meta,doc_path="./data_courses/"):
+    """
+      Write data into an xml file.
+
+    """
     doc = ET.Element("doc")
     for key in meta.keys():
         ET.SubElement(doc, key).text = str(meta[key])
@@ -39,6 +58,12 @@ def save_xml(meta,doc_path="./data_courses/"):
 
 
 def crawel_one_web_coursera(url, cnt, null_tag, null_star):
+    """
+    Return crawled coursera page for an input course url.
+    :param url: course url
+    :param cnt: course id
+
+    """
     meta = {}
     url = url
     html = urlopen(url).read().decode("utf-8")
@@ -109,6 +134,12 @@ def crawel_one_web_coursera(url, cnt, null_tag, null_star):
 
 
 def crawel_one_tag_coursera(url="https://www.coursera.org/browse/data-science"):
+    """
+       Return crawled course tag from coursera given its corresponding url.
+       :param url: course url
+
+    """
+
     full = []
     url = url
     driver = webdriver.Chrome(ChromeDriverManager().install())

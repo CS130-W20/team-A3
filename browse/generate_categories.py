@@ -1,15 +1,29 @@
-'''
+"""
+generate_categories.py
+====================
+Parse the original course_taxonomy into sturctured data.
 Creator: Zijie Huang
 Data: Feb/18/2020
-Description: Parse the original course_taxonomy into sturctured data.
-'''
+"""
 
 def get_name_prioirty(line):
+    """
+       Return the catoegry name and its priority in the hierarchy structure, w.r.t the input line.
+       :param line: a line from the original .txt file
+       :param tmp_dict: an input dictionary
+
+    """
     category_name = line.split(".")[1].lstrip()
     priority = int((len(line.split(".")[0]) -1)/3.0)
     return category_name, priority
 
 def dict_for_single_record(fields,values):
+    """
+       Return the json(dict) for a given category
+       :param fields: keys for the dict
+       :param : values: values for the dict
+
+    """
     dict_tmp = dict()
     for i in range(len(fields)):
         dict_tmp[fields[i]] = values[i]
@@ -18,6 +32,12 @@ def dict_for_single_record(fields,values):
 
 
 def generate_course_list(input_file):
+    """
+       Return the json(dict) for a given category_taxonomy input file
+       :param input_file: input_file location
+
+    """
+
     # input
     fields = ['id', 'category_name', 'sub_categories']
 
