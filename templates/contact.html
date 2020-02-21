@@ -1,0 +1,30 @@
+{% extends "basetemplate.html" %}
+{% block title %}EdA About{% endblock %}
+{% block additional_static %}
+    <link href="{{ url_for('static', filename='css/floating-labels.css') }}" type="text/css" rel="stylesheet">
+{% endblock %}
+{% block page_content %}
+    <form class="form-signin-contact">
+      <div class="text-center mb-4">
+        <img class="mb-4" src="/static/img/logo.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Education AI </h1>
+        <p align="left"><b>This work is done by team-A3 in CS131 Winter Quarter, 2020, in UCLA. </b><br />
+        <b>Our team members: Jiang Song, Zijie Huang, Junyu Guo, Zixuan Lu, Yugo Watanabe</b></p>
+      </div>
+
+      <div class="form-label-group">
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputEmail">Your Email Address</label>
+      </div>
+
+      <div class="form-label-group-contact">
+        <input type="email" id="inputPassword" class="form-control" placeholder="Suggestions" required >
+        <label for="inputPassword"></label>
+      </div>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; 2020.1-2020.3</p>
+    </form>
+{% endblock %}
+
+
