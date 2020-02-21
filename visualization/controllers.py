@@ -29,12 +29,20 @@ def concept_visualize():
 
 @visualizer.route('/aboutEduAI',methods=['GET', 'POST'])
 def aboutEduAI():
+    """
+    Route to the aboutEduAI page
+
+    """
 
     return render_template('aboutEduAI.html')
 
 
 @visualizer.route('/contact',methods=['GET', 'POST'])
 def contact():
+    """
+    Route to the contact page
+
+    """
 
     return render_template('contact.html')
 
