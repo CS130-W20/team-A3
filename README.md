@@ -8,59 +8,30 @@
 
 One to two paragraph statement about your product and what it does.
 
-![](header.png)
+![](Screenshot.png)
 
 ## Installation
 
 OS X & Linux:
 
 ```sh
-npm install my-crazy-module --save
+python application.py
 ```
 
-Windows:
-
-```sh
-edit autoexec.bat
-```
 
 ## Usage example
+Go to http://0.0.0.0:8888 by default. You can enter the browse mode. Search the relevant concept such as machine learning on the above search bar, you can find relevant courses to the concept. 
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
 
 ## Release History
 
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
+* Part C
+    * Basic functional logics done 
+* Part B 
+    * Basic Templates Done 
+* Part A
+    * Work in Progress
 
-## Meta
-
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
-
-Distributed under the XYZ license. See ``LICENSE`` for more information.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
 
 ## Contributing
 
@@ -79,7 +50,7 @@ Distributed under the XYZ license. See ``LICENSE`` for more information.
 [wiki]: https://github.com/yourname/yourproject/wiki
 
 ## Note
-* **To meet the course requirement and be more professional, we resubmit our repo at Feb. 18. Please just ingore all the records before that day. (@Professor, @TA)**
+* To meet the course requirement for Part C, we re-committed our repo at Feb. 18. Please just ingore all the previous records before that day. (@Professor, @TA)
 
 
 ## Code structure.
