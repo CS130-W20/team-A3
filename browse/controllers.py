@@ -11,6 +11,7 @@ sys.path.append("...")
 from flask import request, session, Blueprint
 from __init__ import browse_categories
 import json
+from search.controllers import high_search
 
 # Define the blueprint: 'browse'
 browse = Blueprint('browse', __name__)
@@ -53,14 +54,15 @@ def get_category_content(category_id=-1):
 
     """
     if category_id == -1:
+        tmp = high_search("Artifical Intelligence")
         content = [
             {   "title": "Hot Topics",
                 "content": ["We have some keywords for you that are recently very popular:",
                     [
-                        "Machine Learning",
-                        "Artificial Intelligence",
-                        "Data Mining",
-                        "Big Data"
+                        {"Machine Learning" : "#"},
+                        {"Artificial Intelligence": "#"},
+                        {"Data Mining": "#"},
+                        {"Big Data": "#"}
                     ]
                 ],
                 "link": "#"
@@ -81,7 +83,8 @@ def get_category_content(category_id=-1):
         content = [
             {   "title": "Related Topics",
                 "content": ["balabalabalabala"
-                ]
+                ],
+                "link": "#"
             },
             {   "title": "Brief History",
                 "content": ["The development of {} experienced the following main stages".format(category_name),
