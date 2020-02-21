@@ -6,6 +6,7 @@ from users.modules.education import get_education_options
 from users.modules.interests import get_interests_options
 from users.modules.portfolio import get_user_description, get_user_photo, remove_previous_image
 import sqlite3
+import numpy as np
 
 from flask import request, redirect
 
@@ -48,16 +49,24 @@ def update_info():
     username = request.form.get('printUserName')
     email    = request.form.get('email')
     edulevel = request.form.get('inputEduLevel')
+    interests = request.form.getlist('inputInterests')
 
     conn = sqlite3.connect(USERDB_PATH)
+    conn.execute('''DELETE FROM interests WHERE user_id = ?''', (user_id, ))
+    conn.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(101)]), 
+    (user_id, ) + tuple(interests) + tuple(np.random.randint(0, 2, 100 - len(interests), 'bool')))
+
+    interests = ",".join(interests)
     conn.execute('''
         UPDATE user
         SET
             date_modified = datetime('now'),
             email = ?,
-            education = ?
+            education = ?,
+            interests = ?
         WHERE id = ?
-    ''', (email, edulevel, user_id))
+    ''', (email, edulevel, interests, user_id))
+    
     conn.commit()
 
     return redirect("/home/"+user_id)
