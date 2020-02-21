@@ -20,7 +20,7 @@ python application.py
 
 
 ## Usage example
-Go to http://0.0.0.0:8888 by default. You can enter the browse mode. Search the relevant concept such as machine learning on the above search bar, you can find relevant courses to the concept. 
+Go to http://0.0.0.0:8080 by default. You can enter the browse mode. Search the relevant concept such as machine learning on the above search bar, you can find relevant courses to the concept. 
 
 
 ## Release History
