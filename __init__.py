@@ -1,6 +1,5 @@
 from flask import Flask, render_template, g, session
 from flask_login import current_user, LoginManager
-# Import SQLAlchemy
 from flask_sqlalchemy import SQLAlchemy
 import json
 
@@ -37,12 +36,14 @@ from users.controllers import users
 from visualization.controllers import visualizer
 from browse.controllers import browse,get_category_info
 
+
 # Register blueprint(s)
 application.register_blueprint(auth)
 application.register_blueprint(searcher)
 application.register_blueprint(users)
 application.register_blueprint(visualizer)
 application.register_blueprint(browse)
+
 
 
 
