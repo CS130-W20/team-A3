@@ -11,8 +11,14 @@ def search_test(driver):
     # search for term
     elem = driver.find_element_by_name("key_word")
     elem.clear()
-    elem.send_keys("search algorithms")
+    elem.send_keys("machine learning")
     elem.send_keys(Keys.RETURN)
+
+    # tolerate spelling error within edit distance two
+    elem = driver.find_element_by_name("key_word")
+    elem.clear()
+    elem.send_keys("machin leanning")
+    elem.send_keys(Keys.RETURN)  
 
     # scroll down then up, then click on first result
     wait = WebDriverWait(driver, 10)
