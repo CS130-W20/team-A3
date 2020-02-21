@@ -40,7 +40,9 @@
 
         <input type="image" id="avatar-icon" src="{{ url_for('static', filename='img/users/')}}{{g.user_image}}"
         style="border-radius:50%; width:30%; padding:10px;">
+        {% if authorized %}
         <button id="change-avatar" style="display:none;" data-toggle="modal" data-target="#avatarModal"></button>
+        {% endif %}
 
         {% if authorized %}
         <div class="input-group">
@@ -125,15 +127,29 @@
                     {% endfor %}
                   </select>
                 </div>
+                <div class="form-group">
+                  <label for="inputInterests">Your interests</label>
+                  <select class="selectpicker form-control" id="inputInterests" name="inputInterests" data-live-search="true" multiple required>
+                    {% for subField in g.interests %}
+                    <optgroup label={{subField[0]}}>
+                      {% for interest in subField[1:] %}
+                        {% if interest in g.show_user.get_interests_list() %}
+                        <option selected>{{interest}}</option>
+                        {% else %}
+                        <option>{{interest}}</option>
+                        {% endif %}
+                      {% endfor %}
+                    {% endfor %}
+                  </select>
+                </div>
                 <label for="pwd" class="mr-sm-2">Password:</label>
                 <button class="form-control btn btn-secondary mb-2 mr-sm-2" id="pwd" onclick="alert('planning on using a modal to do this latter');">change password</button>
-                <button type="submit" class="btn btn-secondary mb-2">Update</button>
+		<button id="update-info-button" type="submit" class="btn btn-secondary mb-2">Update</button>
               </form>
               {% else %}
               <label>User Name: {{g.show_user.get_name()}}</label>
               <label>Created At: {{g.show_user.get_date_created()}}</label>
               <label>Modified: {{g.show_user.get_date_modified()}}</label>
-              <!-- <label>Interests: {{g.show_user.get_interests()}}</label> -->
               {% endif %}
             </div>
           </div>
