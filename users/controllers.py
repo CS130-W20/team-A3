@@ -1,3 +1,8 @@
+"""
+controllers.py
+====================
+Controller for user home page
+"""
 from users.__init__ import *
 from auth import load_user
 from users.modules.history import get_user_history
