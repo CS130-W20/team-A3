@@ -32,6 +32,8 @@ Go to http://0.0.0.0:8080 by default. You can enter the browse mode. Search the 
 * Part A
     * Work in Progress
 
+## Testcases.
+* All the test cases codes could be found [[here]](https://github.com/CS130-W20/team-A3/tree/master/testing).
 
 ## Contributing
 
@@ -48,6 +50,7 @@ Go to http://0.0.0.0:8080 by default. You can enter the browse mode. Search the 
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 [wiki]: https://github.com/yourname/yourproject/wiki
+
 
 ## Note
 * To meet the course requirement for Part C, we re-committed our repo at Feb. 18. Please just ingore all the previous records before that day. (@Professor, @TA)
