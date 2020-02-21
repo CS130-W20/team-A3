@@ -27,6 +27,14 @@ def concept_visualize():
     g.concept = concept_dict["children"]
     return render_template('concept_visualize.html')
 
+@visualizer.route('/aboutEduAI',methods=['GET', 'POST'])
+def aboutEduAI():
+
+    return render_template('aboutEduAI.html')
 
 
+@visualizer.route('/contact',methods=['GET', 'POST'])
+def contact():
+
+    return render_template('contact.html')
 
