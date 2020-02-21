@@ -17,6 +17,7 @@ def signup_test(driver):
     user = wait.until(EC.element_to_be_clickable((By.ID, 'username')))
     pwrd = driver.find_element_by_id("password")
     cbox = driver.find_element_by_name("reg")
+    sbox = driver.find_element_by_id("show_password_checkbox")
 
     user.clear()
     pwrd.clear()
@@ -27,6 +28,8 @@ def signup_test(driver):
     # fill in confirm password
     pwrd = wait.until(EC.element_to_be_clickable((By.ID, 'password_confirm')))
     pwrd.send_keys("password")
+    sbox.click(); time.sleep(1); sbox.click()
+
 
     time.sleep(1)
 
@@ -60,6 +63,7 @@ def signup_test(driver):
 
     intrs.click(); time.sleep(1)
     intrs.send_keys("algo"); time.sleep(0.5); intrs.send_keys(Keys.RETURN)
+    time.sleep(0.5)
 
     knowl.click(); time.sleep(1)
     knowl.send_keys("ai"); time.sleep(0.5); knowl.send_keys(Keys.RETURN)
