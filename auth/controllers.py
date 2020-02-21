@@ -33,6 +33,9 @@ auth = Blueprint('auth', __name__)
 # Set the route and accepted methods
 @auth.route('/login', methods=['POST'])
 def login():
+"""
+login function
+"""
     direct_to = request.referrer or '/'
     # print(request.referrer, "**************")
     if current_user.is_authenticated:
@@ -67,6 +70,9 @@ def login():
 @login_required
 @auth.route('/logout', methods=['POST', 'GET'])
 def logout():
+"""
+logout function
+"""
     direct_to = request.referrer or '/'
     logout_user()
     flash('Logged out successfully!', 'message')
@@ -75,6 +81,9 @@ def logout():
 #handle email check
 @auth.route('/emailcheck', methods=['POST'])
 def check_email_exists():
+"""
+check email address's uniqueness
+"""
     user = User.query.filter_by(email=request.form['email'])
     if user:
         return json.dumps({'success': False, "code": 1, "message": "Email unavailable"})
@@ -83,6 +92,9 @@ def check_email_exists():
 #handle user name check
 @auth.route('/usernamecheck', methods=['POST'])
 def check_username_exists():
+"""
+check user name's uniqueness
+"""
     username=json.loads(request.form['data'])['username']
     user = User.query.filter_by(username=username).first()
 
@@ -93,6 +105,9 @@ def check_username_exists():
 #handle register
 @auth.route('/register', methods=['POST'])
 def register():
+"""
+handle registration
+"""
     username = request.form.get('username', '')
     password = generate_password_hash(request.form.get('password', ''))
     user = User.query.filter_by(username=username).first()
@@ -118,6 +133,10 @@ def register():
 @login_required
 @auth.route('/newuser', methods=['GET','POST'])
 def new_user():
+"""
+handle new user registrattion
+collect user information and update database
+"""
     if request.method == 'GET':
         if current_user.is_anonymous:
             redirect('/')
