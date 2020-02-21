@@ -2,10 +2,7 @@
 
 > EduAI, a website to help people learn and explore MOOCs in a more efficient way. 
 
-
-[![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
 
 Our application will have two primary novel features:
 1) Features for exploring MOOCs based on knowledge concept dependencies. 
@@ -15,7 +12,7 @@ Our application will have two primary novel features:
 
 ## Installation
 
-OS X & Linux:
+OS X & Linux & Windows:
 
 ```sh
 python application.py
