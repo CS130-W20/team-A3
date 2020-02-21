@@ -35,6 +35,21 @@ Go to http://0.0.0.0:8080 by default. You can enter the browse mode. Search the 
 ## Testcases.
 * All the test cases codes could be found [[here]](https://github.com/CS130-W20/team-A3/tree/master/testing).
 
+* We have two level test cases.
+	* module level. Test each sub-module.
+		* /testing/browse_test.py
+		* /testing/graph_test.py
+		* /testing/login_test.py
+		* /testing/logout_test.py
+		* /testing/search_test.py
+		* /testing/signup_test.py
+		* /testing/userdesc_test.py
+		* /testing/userimage_test.py
+		* /testing/userinfo_test.py
+
+	* website level. Test all functions.
+		* /testing/all_test.py
+
 ## Contributing
 
 1. Fork it 
