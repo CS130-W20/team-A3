@@ -235,9 +235,9 @@ class SearchEngine:
         else:
             return 1, BM25_scores
 
-    def result_by_time(self, sentence):
+    def result_by_recommendation(self, sentence):
         """
-        Get ranking results using time
+        Get ranking results using recommendation system
 
         Parameters:
             sentence (string): keyword string typed by user
@@ -270,7 +270,7 @@ class SearchEngine:
         else:
             return 1, time_scores
 
-    def result_by_hot(self, sentence):
+    def result_by_popularity(self, sentence):
         """
         Get ranking results using popularity
 
@@ -327,9 +327,9 @@ class SearchEngine:
         if sort_type == 0:
             return self.result_by_BM25(sentence)
         elif sort_type == 1:
-            return self.result_by_hot(sentence)
+            return self.result_by_popularity(sentence)
         elif sort_type == 2:
-            return self.result_by_time(sentence)
+            return self.result_by_recommendation(sentence)
 
 
 # For testing purpose only.
