@@ -57,7 +57,99 @@ Go to http://0.0.0.0:8080 by default. You can enter the browse mode. Search the 
 
 * code
 	* This file is for the functional codes, including data crawl and database construction.
-	* crawl.py
-		* course data crawl.
-	* index_module.py
-		* build the inverted index database for search. 
+	
+	* /crawler
+		* crawl.py
+			* course data crawl.
+		* index_module.py
+			* build the inverted index database for search. 
+	* /auth
+		* __init__.py
+			* initialization file for auth
+		* controller.py
+			* functions related to user management.
+		* models.py
+			* define user class.
+	* /browse
+		* __init__.py
+			* initialization file for browse mode.
+		* controller.py
+			* functions related to browse mode.
+		* generate_categories.py
+			* Parse the original course_taxonomy into sturctured data.
+	* /search
+		* __init__.py
+			* initialization file for search mode.
+		* controller.py
+			* functions related to search mode.
+		* search_engine.py
+			* search engine class.
+		* utils.py
+			* Define utility functions for search module.
+	* /testing
+		* all_test.py
+			* test all functions.
+		* browse_test.py
+			* test browse mode.
+		* graph_test.py
+			* test concept graph.
+		* login_test.py
+			* test login
+		* logout_test.py
+			* test logout.
+		* search_test.py
+			* test search
+		* signup_test.py
+			* test sign up.
+		* userdesc_test.py
+			* test user description
+		* userimage_test.py
+			* test user image.
+		* userinfo_test.py
+			* test user information.
+	* /users
+
+		* __init__.py
+			* initialization file for user.
+		* controller.py
+			* Controller for user home page
+		* /modules
+			* education.py
+				* Provide education level list for frontend.
+			* history,py
+				* Provide user history for frontend.
+			* interests.py
+				* Provide interest list for frontend.
+			* portfolio.py 
+				* user information stored in database.
+			* recommendation.py
+				* recommend a course to user.
+
+	* /visualization
+		* __init__.py
+			* initialization file for the visualization module.
+		* controllers.py
+			* functionality in visualization.
+
+	* application.py
+			* The main file
+	* config.py
+		* setting of support files.
+	* config.ini 
+		* instantiation of support files
+	* __init__.py
+		* homepage backend.
+	* /static
+		* resources for frontend.
+	* /templates
+		* templates for frontend.
+	* requirements.txt
+		* dependent libraries 
+
+
+
+
+
+
+
+
