@@ -18,7 +18,6 @@ def recommend_course_for_user(user_id):
 
     Returns:
     array: Names and links to courses
-
     """
     # get user knowledge and interests
     conn = sqlite3.connect(USERDB_PATH)
@@ -42,11 +41,10 @@ def recommend_course_for_user(user_id):
 
     conn.close()
 
-    print(knowledge)
-    print(interests)
-    print(courses_df)
+    # print(knowledge)
+    # print(interests)
+    # print(courses_df)
 
-    print("WARNING from users.modules.recommendation: This function is FAKE now, please do something to handle the user's history in the future")
     recommended = [
         {"name": "Machine Learning: Classification", "link": "/search/Coursera_99/"},
         {"name": "Machine Learning: Regression", "link": "/search/Coursera_83/"},

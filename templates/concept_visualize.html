@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.node circle {
+  cursor: pointer;
+  stroke: #bbbcbd;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 14px sans-serif;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+line.link {
+  fill: none;
+  stroke: rgba(187, 188, 189, 0.9);
+  stroke-width: 1.5px;
+}
+
+</style>
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+var width = window.innerWidth,
+    height = window.innerHeight,
+    color = d3.scale.category10(),
+    root;
+
+var force = d3.layout.force()
+    .linkDistance(110)
+    .charge(-100)
+    .gravity(.005)
+    .size([width, height])
+    .on("tick", tick);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var link = svg.selectAll(".link"),
+    node = svg.selectAll(".node");
+
+
+var root = {
+ "name": "Concepts",
+ "children": [
+    {
+     "name": "Information Science",
+     "children": [
+      {"name": "Data Mining",
+       "children": [
+        {"name": "Data Analysis", "group":2, "level":4},
+        {"name": "Probability and Mathematical Statistics Model", "group":2, "level":4},
+        {"name": "Data Mining Applications", "group":2, "level":4}
+        ],
+       "group":2,
+       "level":3},
+      {"name": "The Web & Information Retrieval",
+       "children": [
+        {"name": "Intelligent Information Systems", "group":2, "level":4},
+        {"name": "Web information Systems", "group":2, "level":4},
+        {"name": "Web Applications", "group":2, "level":4},
+        {"name": "Mobile and Web Development", "group":2, "level":4}
+        ],
+       "group":2,
+       "level":3},
+      {"name": "Database",
+       "children": [
+        {"name": "Data Management", "group":2, "level":4},
+        {"name": "Database Systems", "group":2, "level":4}
+      ],
+       "group":2,
+       "level":3},
+      {"name": "Information Theory", "group":2, "level":3}
+     ],
+      "group": 2,
+      "level": 2
+    },
+    {
+     "name": "Networking",
+     "children": [
+      {"name": "Wireless Systems", "group":3, "level":3},
+      {"name": "Mobile Computing",  "group":3, "level":3},
+      {"name": "Data Communications", "group":3, "level":3},
+       {"name": "Cloud Computing", "group":3, "level":3},
+       {"name": "Network development", "group":3, "level":3}
+     ],
+      "group": 3,
+ "level": 2
+    },
+    {
+     "name": "Computer Theory",
+     "children": [
+      {"name": "Logic and Verification", "group":4, "level":3},
+      {"name": "Algorithms and Complexity", "group":4, "level":3},
+      {"name": "Data Structure and Algorithms", "group":4, "level":3}
+     ],
+      "group": 4,
+ "level": 2
+    },
+   {
+     "name": "Artificial Intelligence",
+     "children": [
+      {"name": "Natural Language Processing", "group":5, "level":3},
+      {"name": "Computer Vision", "group":5, "level":3},
+      {"name": "Machine Learning", "group":5, "level":3}
+     ],
+      "group": 5,
+ "level": 2
+    }
+ ],
+ "group": 1,
+ "level": 1
+};
+
+
+
+
+update();
+function update() {
+  var nodes = flatten(root),
+      links = d3.layout.tree().links(nodes);
+
+  // Restart the force layout.
+  force
+      .nodes(nodes)
+      .links(links)
+      .start();
+
+  // Update links.
+  link = link.data(links, function(d) { return d.target.id; });
+
+  link.exit().remove();
+
+  link.enter().insert("line", ".node")
+      .attr("class", "link");
+
+  // Update nodes.
+  node = node.data(nodes, function(d) { return d.id; });
+
+  node.exit().remove();
+
+  var nodeEnter = node.enter().append("g")
+      .attr("class", "node")
+      .on("click", click)
+      .call(force.drag);
+
+  nodeEnter.append("circle")
+      .attr("r", function(d) { return 1.0/ d.level * 40; });
+
+  nodeEnter.append("text")
+      .attr("dy", ".35em")
+      .text(function(d) { return d.name; });
+
+  node.select("circle")
+      .style("fill", function(d) {var current_color = color(d.group); console.log(current_color); return current_color;});
+}
+
+function tick() {
+  link.attr("x1", function(d) { return d.source.x; })
+      .attr("y1", function(d) { return d.source.y; })
+      .attr("x2", function(d) { return d.target.x; })
+      .attr("y2", function(d) { return d.target.y; });
+
+  node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+}
+
+
+
+// Toggle children on click.
+function click(d) {
+  if (d3.event.defaultPrevented) return; // ignore drag
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+  } else {
+    d.children = d._children;
+    d._children = null;
+  }
+  update();
+}
+
+// Returns a list of all nodes under the root.
+function flatten(root) {
+  var nodes = [], i = 0;
+
+  function recurse(node) {
+    if (node.children) node.children.forEach(recurse);
+    if (!node.id) node.id = ++i;
+    nodes.push(node);
+  }
+
+  recurse(root);
+  return nodes;
+}
+
+</script>

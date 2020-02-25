@@ -1,6 +1,7 @@
-'''
-Creator: Zijie Huang
-Data: Feb/18/2020
-'''
+"""
+__init__.py
+====================
+The initialization file for the browse module
+"""
 COURSE_CATEGORY_PATH = "course_taxonomy.txt"
 

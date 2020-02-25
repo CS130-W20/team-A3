@@ -17,7 +17,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>Are you sure you want to submit?</p> 
+            <p>Are you sure you want to submit?</p>
             <p>After submitting the new photo, the old one will be removed forever.</p>
             <p>
             <div class="form-group">
@@ -38,6 +38,12 @@
         <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12" align="center">
         <h1>{{g.show_user.get_name()}}'s Study Room</h1>
 
+        <input type="image" id="avatar-icon" src="{{ url_for('static', filename='img/users/')}}{{g.user_image}}"
+        style="border-radius:50%; width:30%; padding:10px;">
+        {% if authorized %}
+        <button id="change-avatar" style="display:none;" data-toggle="modal" data-target="#avatarModal"></button>
+        {% endif %}
+
         {% if authorized %}
         <div class="input-group">
           <div class="input-group-prepend">
@@ -45,7 +51,7 @@
           </div>
           <textarea class="form-control" aria-label="textarea">{{g.user_description}}</textarea>
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" onclick="alert('do something to update the description of a user account');">Update</button>
+            <button id="update-description" class="btn btn-outline-secondary" type="button">Update</button>
           </div>
         </div>
         {% else %}
@@ -69,8 +75,8 @@
                   {% if authorized %}
                   <form id="imageInput" action="/upload_photo" method="POST" enctype="multipart/form-data">
                     <div class="avatar-edit">
-                        <input type='file' name="img" id="imageUpload" accept="image/x-png,image/gif,image/jpeg" />
-                        <label for="imageUpload" title="Accepted format: .png, .jpg, .jpeg .gif"></label>
+                        <!-- <input type='file' name="img" id="imageUpload" accept="image/x-png,image/gif,image/jpeg" />
+                        <label for="imageUpload" title="Accepted format: .png, .jpg, .jpeg .gif"></label> -->
                     </div>
                   </form>
                   <div class="avatar-submit">
@@ -94,7 +100,7 @@
       </div>
 
       <div class="row">
-      
+
 
         <div class="col-md-6 col-xs-12 col-sm-6 col-lg-4" id="basic_user_info">
           <div class="card padded_card">
@@ -103,14 +109,14 @@
             </div>
             <div class="card-body">
               {% if authorized %}
-              <form class="form" action="#">
+              <form class="form" action="/home/update_info", method="POST">
                 <label for="printUserName" class="mr-sm-2">User Name:</label>
                 <input type="text" id="printUserName" name="printUserName" class="form-control mb-2 mr-sm-2" placeholder="User Name" readonly value="{{g.show_user.get_name()}}">
             		<label for="email" class="mr-sm-2">Email address:</label>
-                <input type="email" class="form-control mb-2 mr-sm-2" id="email" value="{{g.show_user.get_email()}}">
+                <input type="email" class="form-control mb-2 mr-sm-2" id="email" name='email' value="{{g.show_user.get_email()}}">
                 <script type="text/javascript">console.log("{{g.show_user.get_education()}}")</script>
                 <div class="form-group">
-                  <label for="inputEduLevel">Highest Level of Education (could be on-going)</label>
+                  <label for="inputEduLevel">Highest Level of Education</label>
                   <select class="form-control" id="inputEduLevel" name="inputEduLevel">
                     {% for edu_lev in g.education_levels %}
                       {% if edu_lev == g.show_user.get_education() %}
@@ -121,15 +127,29 @@
                     {% endfor %}
                   </select>
                 </div>
+                <div class="form-group">
+                  <label for="inputInterests">Your interests (at most 6)</label>
+                  <select class="selectpicker form-control" id="inputInterests" name="inputInterests" data-live-search="true" multiple required>
+                    {% for subField in g.interests %}
+                    <optgroup label={{subField[0]}}>
+                      {% for interest in subField[1:] %}
+                        {% if interest in g.show_user.get_interests_list() %}
+                        <option selected>{{interest}}</option>
+                        {% else %}
+                        <option>{{interest}}</option>
+                        {% endif %}
+                      {% endfor %}
+                    {% endfor %}
+                  </select>
+                </div>
                 <label for="pwd" class="mr-sm-2">Password:</label>
                 <button class="form-control btn btn-secondary mb-2 mr-sm-2" id="pwd" onclick="alert('planning on using a modal to do this latter');">change password</button>
-                <button type="submit" class="btn btn-secondary mb-2">Update</button>
+		<button id="update-info-button" type="submit" class="btn btn-secondary mb-2">Update</button>
               </form>
               {% else %}
               <label>User Name: {{g.show_user.get_name()}}</label>
               <label>Created At: {{g.show_user.get_date_created()}}</label>
               <label>Modified: {{g.show_user.get_date_modified()}}</label>
-              <label>Interests: {{g.show_user.get_interests()}}</label>
               {% endif %}
             </div>
           </div>
@@ -165,27 +185,9 @@
     </div>
     <div class="container">
       <hr>
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
-          <div class="card padded_card">
-            <div class="card-header">
-              {{g.show_user.get_name()}} Analyze
-            </div>
-            <iframe src="{{url_for('user.user_visualize', user_id=g.show_user.get_id())}}" style="width:100%;height:300px;border:none"></iframe>
-          </div>
-        </div>
-        <div class="col-lg-8 col-md-6 col-xs-12 col-sm-12" id="user_analyze_activities">
-          <div class="card padded_card">
-            <div class="card-header">
-              {{g.show_user.get_name()}} Recent Activities
-            </div>
-            <iframe src="{{url_for('user.user_visualize', user_id=g.show_user.get_id(), visualize_mode=1 )}}" style="width:100%;height:300px;border:none"></iframe>
-          </div>
-        </div>
-      </div>
     </div>
 
-    
+
 
   </main>
 

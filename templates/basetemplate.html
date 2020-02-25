@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <title>{% block title %}BaseTemplate{% endblock %}</title>
-    <link rel="icon" 
-      type="image/png" 
+    <link rel="icon"
+      type="image/png"
       href="{{ url_for('static', filename='img/logo.png') }}" />
     <!--The font-awesome stylesheet has to be online-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/bootstrap-select.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/jquery-ui.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/customized_layout.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/chatbox_layout.css') }}" type="text/css" rel="stylesheet">
     <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}" type="text/javascript"></script>
@@ -19,19 +20,9 @@
     <script src="{{ url_for('static', filename='js/bootstrap-toolkit.min.js') }}" type="text/javascript"></script>
     <script src="{{ url_for('static', filename='js/jquery-ui.js') }}" type="text/javascript"></script>
     <script src="{{ url_for('static', filename='js/frontend_interaction.js') }}" type="text/javascript"></script>
+    {% block additional_static %}{% endblock %}
 </head>
 <body>
-    <!--
-    {% with fmessages = get_flashed_messages() %}
-       {% if fmessages %}
-          {% for fmessage in fmessages %}
-              <div class="alert alert-dismissible alert-secondary">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>{{ fmessage }}
-    </div>
-          {% endfor %}
-       {% endif %}
-    {% endwith %}
-    -->
     <nav class="fixed-bottom navbar_blue_solid" style="height:6px;"></nav>
     <!-- if current_user.is_authenticated -->
     {% if current_user.is_authenticated %}
@@ -71,7 +62,7 @@
           <div class="input-group">
             <input id="chatbox-input" type="text" class="form-control input-sm chat_input" placeholder="Write your message here...">
             <div class="input-group-append">
-              <button class="btn btn-primary btn-sm" id="chatbox_submit" type="submit">Send</button> 
+              <button class="btn btn-primary btn-sm" id="chatbox_submit" type="submit">Send</button>
             </div>
           </div>
         </div>
@@ -94,14 +85,14 @@
             <a class="nav-link" href="{{ url_for('main') }}">Home <!--span class="sr-only">(current)</span--></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link pointer" onclick="alert('Knowledge Graph Visualization coming out soon')">Concepts</a> 
-            <!--href="XXX" will come out soon-->
+            <!--a class="nav-link pointer" onclick="alert('Knowledge Graph Visualization coming out soon')">Concepts</a-->
+            <a class="nav-link pointer" href="/concepts">Concepts</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Learn More</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#" aria-disabled="true">About Education AI</a>
-              <a class="dropdown-item" href="#" aria-disabled="true">Contact</a>
+              <a class="dropdown-item" href="/aboutEduAI" aria-disabled="true">About Education AI</a>
+              <a class="dropdown-item" href="/contact" aria-disabled="true">Contact</a>
             </div>
           </li>
         </ul>
@@ -129,12 +120,29 @@
         &nbsp;
         &nbsp;
         <script type="text/javascript">
-          console.log("{{g.user['username']}}");
+          var current_category = {};
+          {% if session["current_category"] %}
+          current_category = JSON.parse('{{session["current_category"]|tojson}}');
+          {% endif %}
+          // console.log(current_category);
+          // console.log(current_category.intro);
         </script>
         {% if current_user.is_authenticated %}
-        <button class="btn btn-secondary my-2 my-sm-0" onclick="logout();">
+        <!--button class="btn btn-secondary my-2 my-sm-0" onclick="logout();" title="Logout From Here"-->
+        <button class="btn btn-secondary my-2 my-sm-0" data-toggle="modal" data-target="#logoutModal" title="Logout From Here">
           logout {{ current_user.get_name() }}
         </button>
+        &nbsp;
+        &nbsp;
+        <a class="btn btn-secondary my-2 my-sm-0" href="/home/{{current_user.get_id()}}" id="home_entry" title="Enter Your Personal Portal">
+          <font color="white"><i class="fa fa-home" aria-hidden="true"></i></font>
+        </a>
+        &nbsp;
+        &nbsp;
+        <!--to-be implemented-->
+        <a class="btn btn-secondary my-2 my-sm-0" href="#" id="message_entry" title="Enter Your Message Box">
+          <font color="white"><i class="fa fa-envelope" aria-hidden="true"></i></font>
+        </a>
         <script type="text/javascript">
           function logout() {
             var form = document.getElementById("logout_form");
@@ -149,22 +157,27 @@
           </form>
         </div>
         {% else %}
-        <button class="btn btn-secondary my-2 my-sm-0" data-toggle="modal" data-target="#loginModal">
+        <button class="btn btn-secondary my-2 my-sm-0" data-toggle="modal" data-target="#loginModal" title="Login or Register from here">
           Login / Register
         </button>
         {% endif %}
       </div>
     </nav>
     <!-- alert -->
-    {% if error %}
-    <script type="text/javascript">console.log("error");</script>
-    <div class="alert alert-danger alert-dismissible alert-block" style="margin: 0 auto;">
-      <strong>ERROR: </strong> {{error}}
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    {% endif %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          {% if category == "error" %}
+          <div class="alert alert-danger alert-dismissible alert-block" style="margin: 0 auto;">
+            <strong>ERROR: </strong> {{message}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
     <!-- Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -225,6 +238,54 @@
       </div>
     </div>
     <!-- End Modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="logoutModalLabel">Confirmation</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you meant to logout?</p>
+            <p>After logging out, we won't be able to provide you with any personalized guidance.</p>
+            <p>
+            <div class="form-group">
+              <button type="button" class="btn btn-secondary pull-right" onclick="logout();">
+                Yes, I'm still leaving
+              </button>
+            </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="avatarModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="logoutModalLabel">Change avatar</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <form action="/home/upload_photo" method="POST" enctype="multipart/form-data">
+              <input type="file" name="photo" accept="image/*">
+              <input type="submit" class="btn btn-secondary pull-right" value="Upload">
+              </form>
+            </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
     {% if browse_categories and browse_categories|length > 0  %}
     <script type="text/javascript">
       //console.log('{{browse_categories|tojson}}');
@@ -251,7 +312,7 @@
     {% if browse_categories and browse_categories|length > 0  %}
         <hr>
         <footer class="container">
-          <p>&copy; ScAi Lab, CS Department, UCLA 2019</p>
+          <p>&copy; CS130-teamA3, CS Department, UCLA 2020</p>
         </footer>
         </div>
       </div>
@@ -259,9 +320,9 @@
     {% elif browse_categories %}
     <hr>
     <footer class="container">
-      <p>&copy; ScAi Lab, CS Department, UCLA 2019</p>
+      <p>&copy; ScAi Lab, CS Department, UCLA 2020</p>
     </footer>
     {% endif %}
-    <script src="{{ url_for('static', filename='js/chatbox_interaction.js') }}" type="text/javascript"></script>
+    <!--script src="{{ url_for('static', filename='js/chatbox_interaction.js') }}" type="text/javascript"></--script>
 </body>
 </html>

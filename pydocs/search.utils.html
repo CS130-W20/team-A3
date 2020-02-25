@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module search.utils</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="search.html"><font color="#ffffff">search</font></a>.utils</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cucla%5Ccourses%5Ccs130%5Cteam-a3%5Csearch%5Cutils.py">d:\ucla\courses\cs130\team-a3\search\utils.py</a></font></td></tr></table>
+    <p><tt>Define&nbsp;utility&nbsp;functions&nbsp;for&nbsp;search&nbsp;module</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="xml.etree.ElementTree.html">xml.etree.ElementTree</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="sqlite3.html">sqlite3</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-cut_page"><strong>cut_page</strong></a>(page, no, doc_id)</dt><dd><tt>:param&nbsp;page:<br>
+:param&nbsp;no:<br>
+:return:</tt></dd></dl>
+ <dl><dt><a name="-find"><strong>find</strong></a>(docid, extra=False)</dt><dd><tt>Find&nbsp;all&nbsp;fields&nbsp;for&nbsp;a&nbsp;document&nbsp;given&nbsp;its&nbsp;id<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;docid&nbsp;(string):&nbsp;document&nbsp;id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;extra(=False)<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;docs&nbsp;(list&lt;map&lt;field,&nbsp;content&gt;&gt;):&nbsp;a&nbsp;list&nbsp;of&nbsp;documents</tt></dd></dl>
+ <dl><dt><a name="-find_concept"><strong>find_concept</strong></a>(docid, extra=False)</dt><dd><tt>Find&nbsp;all&nbsp;fields&nbsp;for&nbsp;a&nbsp;document&nbsp;given&nbsp;its&nbsp;id<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;docid&nbsp;(string):&nbsp;document&nbsp;id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;extra(=False)<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;docs&nbsp;(list&lt;map&lt;field,&nbsp;content&gt;&gt;):&nbsp;a&nbsp;list&nbsp;of&nbsp;documents</tt></dd></dl>
+ <dl><dt><a name="-get_k_nearest"><strong>get_k_nearest</strong></a>(db_path, docid, k=5)</dt><dd><tt>Gets&nbsp;the&nbsp;"k"&nbsp;nearest&nbsp;documents&nbsp;to&nbsp;document&nbsp;with&nbsp;id&nbsp;=&nbsp;docid.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;db_path:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Courses&nbsp;database&nbsp;path<br>
+&nbsp;&nbsp;&nbsp;&nbsp;docid:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Document&nbsp;ID<br>
+&nbsp;&nbsp;&nbsp;&nbsp;k:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;nearest&nbsp;documents&nbsp;to&nbsp;fetch<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;documents.</tt></dd></dl>
+ <dl><dt><a name="-safe_et_find"><strong>safe_et_find</strong></a>(root, elem_key, default='')</dt><dd><tt>Find&nbsp;element&nbsp;using&nbsp;key&nbsp;from&nbsp;database<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;root:&nbsp;root&nbsp;for&nbsp;database&nbsp;retrieving<br>
+&nbsp;&nbsp;&nbsp;&nbsp;elem_key&nbsp;(string):&nbsp;keywords<br>
+&nbsp;&nbsp;&nbsp;&nbsp;default(="")<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;element&nbsp;text&nbsp;if&nbsp;found,&nbsp;otherwise&nbsp;return&nbsp;""</tt></dd></dl>
+ <dl><dt><a name="-searchidlist"><strong>searchidlist</strong></a>(key, selected=0)</dt><dd><tt>Get&nbsp;page&nbsp;number&nbsp;and&nbsp;document&nbsp;ids<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;key&nbsp;(string):&nbsp;searching&nbsp;keywords<br>
+&nbsp;&nbsp;&nbsp;&nbsp;selected&nbsp;(int):&nbsp;ranking&nbsp;strategy&nbsp;(0&nbsp;for&nbsp;BM25,&nbsp;1&nbsp;for&nbsp;popularity,&nbsp;2&nbsp;for&nbsp;time)<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;flag&nbsp;(int):&nbsp;found&nbsp;=&nbsp;1,&nbsp;not&nbsp;found&nbsp;=&nbsp;0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;page&nbsp;(list&lt;int&gt;):&nbsp;list&nbsp;of&nbsp;page&nbsp;numbers<br>
+&nbsp;&nbsp;&nbsp;&nbsp;doc_id&nbsp;(list&lt;string&gt;):&nbsp;list&nbsp;of&nbsp;document&nbsp;ids</tt></dd></dl>
+ <dl><dt><a name="-str_list_naive_parse"><strong>str_list_naive_parse</strong></a>(list_string)</dt><dd><tt>Parse&nbsp;string<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list_string<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;parsed</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>CONFIG_PATH</strong> = 'config.ini'<br>
+<strong>DIR_CONCEPT_PATH</strong> = 'database/data_concepts/'<br>
+<strong>DIR_PATH</strong> = 'database/data_courses/'</td></tr></table>
+</body></html>

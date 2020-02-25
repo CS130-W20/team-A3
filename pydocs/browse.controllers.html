@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module browse.controllers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="browse.html"><font color="#ffffff">browse</font></a>.controllers</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cucla%5Ccourses%5Ccs130%5Cteam-a3%5Cbrowse%5Ccontrollers.py">d:\ucla\courses\cs130\team-a3\browse\controllers.py</a></font></td></tr></table>
+    <p><tt>controllers.py<br>
+====================<br>
+Functionality&nbsp;in&nbsp;Browse&nbsp;mode:&nbsp;1.click&nbsp;box&nbsp;and&nbsp;expand.&nbsp;2.click&nbsp;box&nbsp;and&nbsp;show&nbsp;the&nbsp;corresponding&nbsp;category&nbsp;introduction.<br>
+Creator:&nbsp;Zijie&nbsp;Huang<br>
+Data:&nbsp;Feb/18/2020</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-get_category_content"><strong>get_category_content</strong></a>(category_id=-1)</dt><dd><tt>Return&nbsp;the&nbsp;catoegry&nbsp;content&nbsp;information&nbsp;given&nbsp;the&nbsp;category&nbsp;id.<br>
+:param&nbsp;category_id:&nbsp;the&nbsp;id&nbsp;for&nbsp;the&nbsp;query&nbsp;category.</tt></dd></dl>
+ <dl><dt><a name="-get_category_info"><strong>get_category_info</strong></a>(category_id)</dt><dd><tt>Return&nbsp;the&nbsp;aggregated&nbsp;catoegry&nbsp;information&nbsp;(id,name,intro,content)&nbsp;given&nbsp;the&nbsp;category&nbsp;id.<br>
+:param&nbsp;category_id:&nbsp;the&nbsp;id&nbsp;for&nbsp;the&nbsp;query&nbsp;category.</tt></dd></dl>
+ <dl><dt><a name="-get_category_introduction"><strong>get_category_introduction</strong></a>(category_id=-1)</dt><dd><tt>Return&nbsp;the&nbsp;catoegry&nbsp;introduction&nbsp;information&nbsp;given&nbsp;the&nbsp;category&nbsp;id.<br>
+:param&nbsp;category_id:&nbsp;the&nbsp;id&nbsp;for&nbsp;the&nbsp;query&nbsp;category.</tt></dd></dl>
+ <dl><dt><a name="-include_category_tree"><strong>include_category_tree</strong></a>(tmp_tree, tmp_dict)</dt><dd><tt>Return&nbsp;the&nbsp;catoegry&nbsp;tree&nbsp;dict&nbsp;from&nbsp;the&nbsp;input&nbsp;tmp_tree,&nbsp;tmp_dict<br>
+:param&nbsp;tmp_tree:&nbsp;an&nbsp;input&nbsp;list<br>
+:param&nbsp;tmp_dict:&nbsp;an&nbsp;input&nbsp;dictionary</tt></dd></dl>
+ <dl><dt><a name="-select_category"><strong>select_category</strong></a>()</dt><dd><tt>The&nbsp;front-end&nbsp;interaction&nbsp;part.&nbsp;When&nbsp;calling&nbsp;from&nbsp;the&nbsp;front&nbsp;by&nbsp;ajax,&nbsp;it&nbsp;returns&nbsp;all&nbsp;needed&nbsp;information&nbsp;about&nbsp;the&nbsp;selected&nbsp;category.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>browse</strong> = &lt;flask.blueprints.Blueprint object&gt;<br>
+<strong>browse_categories</strong> = []<br>
+<strong>id2categories</strong> = {-1: 'Welcome to Education AI'}<br>
+<strong>request</strong> = &lt;LocalProxy unbound&gt;<br>
+<strong>session</strong> = &lt;LocalProxy unbound&gt;</td></tr></table>
+</body></html>

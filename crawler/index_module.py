@@ -1,8 +1,9 @@
-'''
-# -*- coding: utf-8 -*-
-Data: Feb/03/2020
-Description: Generate .db file for database, based on the crawled dataset
-'''
+"""
+index_module.py
+====================
+Generate .db file for database, based on the crawled dataset.
+-*- coding: utf-8 -*-
+"""
 
 from os import listdir
 import xml.etree.ElementTree as ET
@@ -11,6 +12,9 @@ import sqlite3
 import configparser
 
 class Doc:
+    """
+    Wrap each doc in a structured way, with docid, create_time, tf and ld.
+    """
     docid = 0
     date_time = ''
     tf = 0
@@ -26,6 +30,10 @@ class Doc:
         return(str(self.docid) + '\t' + self.date_time + '\t' + str(self.tf) + '\t' + str(self.ld))
 
 class IndexModule:
+    """
+    Process the crawled course dataset and transform them into a .db file in a structured way.
+
+    """
     stop_words = set()
     postings_lists = {}
     
@@ -62,6 +70,11 @@ class IndexModule:
         return n, cleaned_dict
     
     def write_postings_to_db(self, db_path):
+        """
+          Writing courses into database
+          :param db_path: the database path for storing course list.
+
+        """
         conn = sqlite3.connect(db_path)
         c = conn.cursor()
         
@@ -78,6 +91,11 @@ class IndexModule:
         conn.close()
     
     def construct_postings_lists(self):
+        """
+           Read from the crawled course doc file, parse it and organize each doc file in a structured way.
+           Writing structured course list into database.
+
+        """
         config = configparser.ConfigParser()
         config.read(self.config_path, self.config_encoding)
         files = listdir(config['DEFAULT']['doc_dir_path'])

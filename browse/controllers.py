@@ -1,14 +1,17 @@
-'''
+"""
+controllers.py
+====================
+Functionality in Browse mode: 1.click box and expand. 2.click box and show the corresponding category introduction.
 Creator: Zijie Huang
 Data: Feb/18/2020
-Description: Functionality in Browse mode: 1.click box and expand. 2.clike box and show the corresponding category introduction.
-'''
+"""
 
 import sys
 sys.path.append("...")
 from flask import request, session, Blueprint
 from __init__ import browse_categories
 import json
+from search.controllers import high_search
 
 # Define the blueprint: 'browse'
 browse = Blueprint('browse', __name__)
@@ -16,6 +19,12 @@ browse = Blueprint('browse', __name__)
 
 
 def include_category_tree(tmp_tree, tmp_dict):
+    """
+    Return the catoegry tree dict from the input tmp_tree, tmp_dict
+    :param tmp_tree: an input list
+    :param tmp_dict: an input dictionary
+
+    """
     for child in tmp_tree:
         tmp_dict[child["id"]] = child["category_name"]
         sub_categories = child.get("sub_categories", [])
@@ -26,9 +35,11 @@ def include_category_tree(tmp_tree, tmp_dict):
 id2categories = include_category_tree(browse_categories, {-1: "Welcome to Education AI"})
 
 def get_category_introduction(category_id=-1):
-    '''
-    TODO : this is fake now, please implement it later
-    '''
+    """
+    Return the catoegry introduction information given the category id.
+    :param category_id: the id for the query category.
+
+    """
     if category_id == -1:
         introduction = "We will help you get started with AI and enjoy your study."
     else:
@@ -37,18 +48,21 @@ def get_category_introduction(category_id=-1):
 
 
 def get_category_content(category_id=-1):
-    '''
-    TODO : this is all fake, please implement it later
-    '''
+    """
+    Return the catoegry content information given the category id.
+    :param category_id: the id for the query category.
+
+    """
     if category_id == -1:
+        tmp = high_search("Artifical Intelligence")
         content = [
             {   "title": "Hot Topics",
                 "content": ["We have some keywords for you that are recently very popular:",
                     [
-                        "Machine Learning",
-                        "Artificial Intelligence",
-                        "Data Mining",
-                        "Big Data"
+                        {"Machine Learning" : "#"},
+                        {"Artificial Intelligence": "#"},
+                        {"Data Mining": "#"},
+                        {"Big Data": "#"}
                     ]
                 ],
                 "link": "#"
@@ -69,7 +83,8 @@ def get_category_content(category_id=-1):
         content = [
             {   "title": "Related Topics",
                 "content": ["balabalabalabala"
-                ]
+                ],
+                "link": "#"
             },
             {   "title": "Brief History",
                 "content": ["The development of {} experienced the following main stages".format(category_name),
@@ -91,6 +106,11 @@ def get_category_content(category_id=-1):
     return content
 
 def get_category_info(category_id):
+    """
+    Return the aggregated catoegry information (id,name,intro,content) given the category id.
+    :param category_id: the id for the query category.
+
+    """
     category_intro = get_category_introduction(category_id)
     category_name = id2categories[category_id]
     category_content = get_category_content(category_id)
@@ -101,6 +121,10 @@ def get_category_info(category_id):
 # handeling the category selection
 @browse.route('/select_category', methods=['POST'])
 def select_category():
+    """
+    The front-end interaction part. When calling from the front by ajax, it returns all needed information about the selected category.
+
+    """
     jsondata = request.form.get('data')
     data = json.loads(jsondata)
     # Notice: this category id is turned to string after passing back from the front-end

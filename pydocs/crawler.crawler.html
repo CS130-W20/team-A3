@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module crawler.crawler</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="crawler.html"><font color="#ffffff">crawler</font></a>.crawler</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cucla%5Ccourses%5Ccs130%5Cteam-a3%5Ccrawler%5Ccrawler.py">d:\ucla\courses\cs130\team-a3\crawler\crawler.py</a></font></td></tr></table>
+    <p><tt>crawler.py<br>
+====================<br>
+Crawl&nbsp;course&nbsp;information&nbsp;from&nbsp;coursera.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="xml.etree.ElementTree.html">xml.etree.ElementTree</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="selenium.webdriver.html">selenium.webdriver</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-crawel_one_tag_coursera"><strong>crawel_one_tag_coursera</strong></a>(url='https://www.coursera.org/browse/data-science')</dt><dd><tt>Return&nbsp;crawled&nbsp;course&nbsp;tag&nbsp;from&nbsp;coursera&nbsp;given&nbsp;its&nbsp;corresponding&nbsp;url.<br>
+:param&nbsp;url:&nbsp;course&nbsp;url</tt></dd></dl>
+ <dl><dt><a name="-crawel_one_web_coursera"><strong>crawel_one_web_coursera</strong></a>(url, cnt, null_tag, null_star)</dt><dd><tt>Return&nbsp;crawled&nbsp;coursera&nbsp;page&nbsp;for&nbsp;an&nbsp;input&nbsp;course&nbsp;url.<br>
+:param&nbsp;url:&nbsp;course&nbsp;url<br>
+:param&nbsp;cnt:&nbsp;course&nbsp;id</tt></dd></dl>
+ <dl><dt><a name="-get_one_subchap"><strong>get_one_subchap</strong></a>(html)</dt><dd><tt>Return&nbsp;webpage&nbsp;content&nbsp;list,&nbsp;given&nbsp;an&nbsp;input&nbsp;html.</tt></dd></dl>
+ <dl><dt><a name="-get_syllabus"><strong>get_syllabus</strong></a>(syllabus)</dt><dd><tt>Error&nbsp;Handling&nbsp;when&nbsp;gettiing&nbsp;a&nbsp;content&nbsp;list&nbsp;from&nbsp;an&nbsp;input&nbsp;html.</tt></dd></dl>
+ <dl><dt><a name="-get_syllabus_list"><strong>get_syllabus_list</strong></a>(soup)</dt><dd><tt>Return&nbsp;a&nbsp;syllabuslist&nbsp;for&nbsp;a&nbsp;given&nbsp;course.</tt></dd></dl>
+ <dl><dt><a name="-save_xml"><strong>save_xml</strong></a>(meta, doc_path='./data_courses/')</dt><dd><tt>Write&nbsp;data&nbsp;into&nbsp;an&nbsp;xml&nbsp;file.</tt></dd></dl>
+</td></tr></table>
+</body></html>
