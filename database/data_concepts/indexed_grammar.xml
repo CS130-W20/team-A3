@@ -1,0 +1,11 @@
+<doc><id>indexed_grammar</id><concept_name>indexed grammar</concept_name><wiki>Indexed grammars are a generalization of context-free grammars in that nonterminals are equipped with lists of flags, or index symbols.
+The language produced by an indexed grammar is called an indexed language.
+In contemporary publications following Hopcroft and Ullman (1979),
+[2]
+an indexed grammar is formally defined a 5-tuple G = &#10216;N,T,F,P,S&#10217; where
+In productions as well as in derivations of indexed grammars, a string ("stack") &#963; &#8712; F* of index symbols is attached to every nonterminal symbol A &#8712; N, denoted by A[&#963;].[note 1]
+Terminal symbols may not be followed by index stacks.
+For an index stack &#963; &#8712; F* and a string &#945; &#8712; (N &#8746; T)* of nonterminal and terminal symbols, &#945;[&#963;] denotes the result of attaching [&#963;] to every nonterminal in &#945;; for example if &#945; equals a B C d E with a,d &#8712; T terminal, and B,C,E &#8712; N nonterminal symbols, then &#945;[&#963;] denotes a B[&#963;] C[&#963;] d E[&#963;].
+Using this notation, each production in P has to be of the form
+where A, B &#8712; N are nonterminal symbols, f &#8712; F is an index, &#963; &#8712; F* is a string of index symbols, and &#945; &#8712; (N &#8746; T)* is a string of nonterminal and terminal symbols. Some authors write ".." instead of "&#963;" for the index stack in production rules; the rule of type 1, 2, and 3 then reads A[..]&#8594;&#945;[..], &#160; A[..]&#8594;B[f..], and A[f..]&#8594;&#945;[..], respectively.
+</wiki></doc>

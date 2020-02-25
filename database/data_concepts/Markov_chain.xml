@@ -1,0 +1,5 @@
+<doc><id>Markov_chain</id><concept_name>Markov chain</concept_name><wiki>A Markov chain is a stochastic model describing a sequence of possible events in which the probability of each event depends only on the state attained in the previous event.[1][2][3] In continuous-time, it is known as a Markov process. It is named after the Russian mathematician Andrey Markov.
+Markov chains have many applications as statistical models of real-world processes,[1][4][5][6] such as studying cruise control systems in motor vehicles, queues or lines of customers arriving at an airport, currency exchange rates and animal population dynamics.[7]
+Markov processes are the basis for general stochastic simulation methods known as Markov chain Monte Carlo, which are used for simulating sampling from complex probability distributions, and have found application in Bayesian statistics and artificial intelligence.[7][8][9]
+The adjective Markovian is used to describe something that is related to a Markov process.[1][10]
+</wiki></doc>

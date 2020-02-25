@@ -1,0 +1,20 @@
+<doc><id>largest_empty_sphere</id><concept_name>largest empty sphere</concept_name><wiki>In computational geometry, the largest empty sphere problem is the problem of finding a hypersphere of largest radius  in d-dimensional space whose interior does not overlap with any given obstacles.
+The largest empty circle problem is the problem of finding a circle of largest radius in the plane whose interior does not overlap with any given obstacles.
+A common special case is as follows. Given n points in the plane, find a largest circle centered within their convex hull and enclosing none of them. The problem may be solved using Voronoi diagrams in  optimal time 
+
+
+
+&#920;
+(
+n
+
+log
+
+n
+)
+
+
+{\displaystyle \Theta (n\,\log \,n)}
+
+.[1][2]
+</wiki></doc>

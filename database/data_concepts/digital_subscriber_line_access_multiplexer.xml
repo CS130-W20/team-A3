@@ -1,0 +1,5 @@
+<doc><id>digital_subscriber_line_access_multiplexer</id><concept_name>digital subscriber line access multiplexer</concept_name><wiki>
+A digital subscriber line access multiplexer (DSLAM, often pronounced DEE-slam) is a network device, often located in telephone exchanges, that connects multiple customer digital subscriber line (DSL) interfaces to a high-speed digital communications channel using multiplexing techniques.[1]
+The DSLAM equipment collects the data from its many modem ports and aggregates their voice and data traffic into one complex composite "signal" via multiplexing. Depending on its device architecture and setup, a DSLAM aggregates the DSL lines over its Asynchronous Transfer Mode (ATM), frame relay, and/or Internet Protocol network, i.e., an IP-DSLAM using Packet Transfer Mode - Transmission Convergence (PTM-TC) protocol(s) stack.
+The aggregated traffic is then directed to a telco's backbone switch, via an access network (AN), also called a Network Service Provider (NSP), at up to 10 Gbit/s data rates.
+</wiki></doc>

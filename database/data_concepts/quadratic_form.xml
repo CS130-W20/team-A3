@@ -1,0 +1,5 @@
+<doc><id>quadratic_form</id><concept_name>quadratic form</concept_name><wiki>In mathematics, a quadratic form is a polynomial with terms all of degree two. For example, 
+is a quadratic form in the variables x and y. The coefficients usually belong to a fixed field K, such as the real or complex numbers, and we speak of a quadratic form over K.
+Quadratic forms occupy a central place in various branches of mathematics, including number theory, linear algebra, group theory (orthogonal group), differential geometry (Riemannian metric, second fundamental form), differential topology (intersection forms of four-manifolds), and Lie theory (the Killing form).
+Quadratic forms are not to be confused with a quadratic equation which has only one variable and includes terms of degree two or less. A quadratic form is one case of the more general concept of homogeneous polynomials.
+</wiki></doc>

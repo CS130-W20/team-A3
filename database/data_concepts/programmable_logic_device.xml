@@ -1,0 +1,5 @@
+<doc><id>programmable_logic_device</id><concept_name>programmable logic device</concept_name><wiki>
+A programmable logic device (PLD) is an electronic component used to build reconfigurable digital circuits. Unlike integrated circuits (IC) which consist of logic gates and have a fixed function, a PLD has an undefined function at the time of manufacture.[1] Before the PLD can be used in a circuit it must be programmed (reconfigured) by using a specialized program.[2]
+In 1969, Motorola offered the XC157, a mask-programmed gate array with 12 gates and 30 uncommitted input/output pins.[3]
+In 1970, Texas Instruments developed a mask-programmable IC based on the IBM read-only associative memory or ROAM. This device, the TMS2000, was programmed by altering the metal layer during the production of the IC. The TMS2000 had up to 17 inputs and 18 outputs with 8 JK flip flop for memory. TI coined the term Programmable Logic Array (PLA) for this device.[4]
+</wiki></doc>

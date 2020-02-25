@@ -1,0 +1,5 @@
+<doc><id>intensional_definition</id><concept_name>intensional definition</concept_name><wiki>Extensional and intensional definitions are two key ways in which the object(s) or concept(s) a term refers to can be defined.
+In logic and mathematics, an intensional definition gives the meaning of a term by specifying necessary and sufficient conditions for when the term should be used. In the case of nouns, this is equivalent to specifying the properties that an object needs to have in order to be counted as a referent of the term.
+For example, an intensional definition of the word "bachelor" is "unmarried man". This definition is valid because being an unmarried man is both a necessary condition and a sufficient condition for being a bachelor: it is necessary because one cannot be a bachelor without being an unmarried man, and it is sufficient because any unmarried man is a bachelor.[1]
+This is the opposite approach to the extensional definition, which defines by listing everything that falls under that definition &#8211; an extensional definition of bachelor would be a listing of all the unmarried men in the world.[1]
+</wiki></doc>

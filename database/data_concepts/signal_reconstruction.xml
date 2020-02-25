@@ -1,0 +1,35 @@
+<doc><id>signal_reconstruction</id><concept_name>signal reconstruction</concept_name><wiki>
+In signal processing, reconstruction usually means the determination of an original continuous signal from a sequence of equally spaced samples.
+This article takes a generalized abstract mathematical approach to signal sampling and reconstruction.  For a more practical approach based on band-limited signals, see Whittaker&#8211;Shannon interpolation formula.
+Let F be any sampling method, i.e. a linear map from the Hilbert space of square-integrable functions 
+
+
+
+
+L
+
+2
+
+
+
+
+{\displaystyle L^{2}}
+
+ to complex space 
+
+
+
+
+
+C
+
+
+n
+
+
+
+
+{\displaystyle \mathbb {C} ^{n}}
+
+.
+</wiki></doc>

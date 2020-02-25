@@ -1,0 +1,37 @@
+<doc><id>firefly_algorithm</id><concept_name>firefly algorithm</concept_name><wiki>In mathematical optimization, the firefly algorithm is a metaheuristic proposed by Xin-She Yang and inspired by the flashing behavior of fireflies.[1]
+In pseudocode the algorithm can be stated as:
+Note that the number of objective function evaluations per loop is one evaluation per firefly, even though the above pseudocode suggests it is n&#215;n. (Based on Yang's MATLAB code.) Thus the total number of objective function evaluations is (number of generations) &#215; (number of fireflies).
+The main update formula for any pair of two fireflies 
+
+
+
+
+
+x
+
+
+i
+
+
+
+
+{\displaystyle \mathbf {x} _{i}}
+
+ and 
+
+
+
+
+
+x
+
+
+j
+
+
+
+
+{\displaystyle \mathbf {x} _{j}}
+
+ is
+</wiki></doc>

@@ -1,0 +1,54 @@
+<doc><id>multivariate_interpolation</id><concept_name>multivariate interpolation</concept_name><wiki>In numerical analysis, multivariate interpolation or spatial interpolation is interpolation on functions of more than one variable.
+The function to be interpolated is known at given points 
+
+
+
+(
+
+x
+
+i
+
+
+,
+
+y
+
+i
+
+
+,
+
+z
+
+i
+
+
+,
+&#8230;
+)
+
+
+{\displaystyle (x_{i},y_{i},z_{i},\dots )}
+
+ and the interpolation problem consist of yielding values at arbitrary points 
+
+
+
+(
+x
+,
+y
+,
+z
+,
+&#8230;
+)
+
+
+{\displaystyle (x,y,z,\dots )}
+
+.
+Multivariate interpolation is particularly important in geostatistics, where it is used to create a digital elevation model from a set of points on the Earth's surface (for example, spot heights in a topographic survey or depths in a hydrographic survey).
+For function values known on a regular grid (having predetermined, not necessarily uniform, spacing), the following methods are available.
+</wiki></doc>

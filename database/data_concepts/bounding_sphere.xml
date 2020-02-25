@@ -1,0 +1,23 @@
+<doc><id>bounding_sphere</id><concept_name>bounding sphere</concept_name><wiki>In mathematics, given a non-empty set of objects of finite extension in 
+
+
+
+d
+
+
+{\displaystyle d}
+
+-dimensional space, for example a set of points, a bounding sphere, enclosing sphere or enclosing ball for that set is an 
+
+
+
+d
+
+
+{\displaystyle d}
+
+-dimensional solid sphere containing all of these objects.
+Used in computer graphics and computational geometry, a bounding sphere is a special type of bounding volume. There are several fast and simple bounding sphere construction algorithms with a high practical value in real-time computer graphics applications.[1]
+In statistics and operations research, the objects are typically points, and generally the sphere of interest is the minimal bounding sphere, that is, the  sphere with minimal radius among all bounding spheres. It may be proven that such a sphere is unique: If there are two of them, then the objects in question lie within their intersection. But an intersection of two non-coinciding spheres of equal radius is contained in a sphere of smaller radius.
+The problem of computing the center of a minimal bounding sphere is also known as the "unweighted Euclidean 1-center problem".
+</wiki></doc>

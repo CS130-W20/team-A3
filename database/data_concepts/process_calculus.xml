@@ -1,0 +1,94 @@
+<doc><id>process_calculus</id><concept_name>process calculus</concept_name><wiki>In computer science, the process calculi (or process algebras) are a diverse family of related approaches for formally modelling concurrent systems. Process calculi provide a tool for the high-level description of interactions, communications, and synchronizations between a collection of independent agents or processes. They also provide algebraic laws that allow process descriptions to be manipulated and analyzed, and permit formal reasoning about equivalences between processes (e.g., using bisimulation). Leading examples of process calculi include  CSP, CCS, ACP, and LOTOS.[1] More recent additions to the family include the &#960;-calculus, the ambient calculus, PEPA, the fusion calculus and the join-calculus.
+While the variety of existing process calculi is very large (including variants that incorporate stochastic behaviour, timing information, and specializations for studying molecular interactions), there are several features that all process calculi have in common:[2]
+To define a process calculus, one starts with a set of names (or channels) whose purpose is to provide means of communication.  In many implementations, channels have rich internal structure to improve efficiency, but this is abstracted away in  most theoretic models.  In addition to names, one needs a means to form new processes from old ones. The basic operators, always present in some form or other, allow:[3]
+Parallel composition of two processes 
+
+
+
+
+
+P
+
+
+
+
+{\displaystyle {\mathit {P}}}
+
+ and 
+
+
+
+
+
+Q
+
+
+
+
+{\displaystyle {\mathit {Q}}}
+
+, usually written 
+
+
+
+P
+|
+Q
+
+
+{\displaystyle P\vert Q}
+
+, is the key primitive distinguishing the process calculi from sequential models of computation. Parallel composition allows computation in 
+
+
+
+
+
+P
+
+
+
+
+{\displaystyle {\mathit {P}}}
+
+ and 
+
+
+
+
+
+Q
+
+
+
+
+{\displaystyle {\mathit {Q}}}
+
+ to proceed simultaneously and independently. But it also allows interaction, that is synchronisation and flow of information from 
+
+
+
+
+
+P
+
+
+
+
+{\displaystyle {\mathit {P}}}
+
+ to 
+
+
+
+
+
+Q
+
+
+
+
+{\displaystyle {\mathit {Q}}}
+
+ (or vice versa) on a channel shared by both. Crucially, an agent or process can be connected to more than one channel at a time.
+</wiki></doc>

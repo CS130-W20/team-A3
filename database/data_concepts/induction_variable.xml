@@ -1,0 +1,5 @@
+<doc><id>induction_variable</id><concept_name>induction variable</concept_name><wiki>In computer science, an induction variable is a variable that gets increased or decreased by a fixed amount on every iteration of a loop or is a linear function of another induction variable.[1]
+For example, in the following loop, i and j are induction variables:
+A common compiler optimization is to recognize the existence of induction variables and replace them with simpler computations; for example, the code above could be rewritten by the compiler as follows, on the assumption that the addition of a constant will be cheaper than a multiplication.
+This optimization is a special case of strength reduction.
+</wiki></doc>

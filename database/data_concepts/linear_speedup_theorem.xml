@@ -1,0 +1,39 @@
+<doc><id>linear_speedup_theorem</id><concept_name>linear speedup theorem</concept_name><wiki>In computational complexity theory, the linear speedup theorem for Turing machines states that given any real c &gt; 0 and any k-tape Turing machine solving a problem in time f(n), there is another k-tape machine that solves the same problem in time at most f(n)/c + 2n + 3, where k&gt;1 
+.[1][2]
+If the original machine is non-deterministic, then the new machine is also non-deterministic.
+The concrete constants 2 and 3 in 2n+3 can be lowered, for example, to n+2.[1]
+The construction is based on packing several tape symbols of the original machine M into one tape symbol of the new machine N.
+It has a similar effect as using longer words and commands in processors: It speeds up the computations but increases the machine size.
+How many old symbols are packed into a new symbol depends on the desired speed-up.
+Suppose the new machine packs three old symbols into a new symbol.
+Then the alphabet of the new machine is 
+
+
+
+&#931;
+&#8746;
+
+&#931;
+
+3
+
+
+
+
+{\displaystyle \Sigma \cup \Sigma ^{3}}
+
+: It consists of the original symbols and the packed symbols.
+The new machine has the same number k&gt;1 of tapes.
+A state of N consists of the following components:
+The new machine N starts with encoding the given input into a new alphabet (that is why its alphabet must include 
+
+
+
+&#931;
+
+
+{\displaystyle \Sigma }
+
+).
+For example, if the input to 2-tape M is on the left, then after the encoding the tape configuration of N is on the right:
+</wiki></doc>

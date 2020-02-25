@@ -1,0 +1,5 @@
+<doc><id>message_authentication_code</id><concept_name>message authentication code</concept_name><wiki>In cryptography, a message authentication code (MAC), sometimes known as a tag, is a short piece of information used to authenticate a message&#8212;in other words, to confirm that the message came from the stated sender (its authenticity) and has not been changed. The MAC value protects both a message's data integrity as well as its authenticity, by allowing verifiers (who also possess the secret key) to detect any changes to the message content.
+Informally, a message authentication code system consists of three algorithms:
+For a secure unforgeable message authentication code, it should be computationally infeasible to compute a valid tag of the given message without knowledge of the key, even if for the worst case, we assume the adversary can forge the tag of any message except the given one.[1]
+Formally, a message authentication code (MAC) system is a triple of efficient[2] algorithms (G, S, V) satisfying:
+</wiki></doc>

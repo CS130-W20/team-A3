@@ -1,0 +1,128 @@
+<doc><id>statistical_machine_translation</id><concept_name>statistical machine translation</concept_name><wiki>Statistical machine translation (SMT) is a machine translation paradigm where translations are generated on the basis of statistical models whose parameters are derived from the analysis of bilingual text corpora.  The statistical approach contrasts with the rule-based approaches to machine translation as well as with example-based machine translation.[1]
+The first ideas of statistical machine translation were introduced by Warren Weaver in 1949,[2] including the ideas of applying Claude Shannon's information theory. Statistical machine translation was re-introduced in the late 1980s and early 1990s by researchers at IBM's Thomas J. Watson Research Center[3][4][5] and has contributed to the significant resurgence in interest in machine translation in recent years. Before the introduction of neural machine translation, it was by far the most widely studied machine translation method.
+The idea behind statistical machine translation comes from information theory. A document is translated according to the probability distribution 
+
+
+
+p
+(
+e
+
+|
+
+f
+)
+
+
+{\displaystyle p(e|f)}
+
+ that a string 
+
+
+
+e
+
+
+{\displaystyle e}
+
+ in the target language (for example, English) is the translation of a string 
+
+
+
+f
+
+
+{\displaystyle f}
+
+ in the source language (for example, French).
+The problem of modeling the probability distribution 
+
+
+
+p
+(
+e
+
+|
+
+f
+)
+
+
+{\displaystyle p(e|f)}
+
+ has been approached in a number of ways.  One approach which lends itself well to computer implementation is to apply Bayes Theorem, that is 
+
+
+
+p
+(
+e
+
+|
+
+f
+)
+&#8733;
+p
+(
+f
+
+|
+
+e
+)
+p
+(
+e
+)
+
+
+{\displaystyle p(e|f)\propto p(f|e)p(e)}
+
+, where the translation model 
+
+
+
+p
+(
+f
+
+|
+
+e
+)
+
+
+{\displaystyle p(f|e)}
+
+ is the probability that the source string is the translation of the target string, and the language model 
+
+
+
+p
+(
+e
+)
+
+
+{\displaystyle p(e)}
+
+ is the probability of seeing that target language string. This decomposition is attractive as it splits the problem into two subproblems. Finding the best translation 
+
+
+
+
+
+
+e
+~
+
+
+
+
+
+{\displaystyle {\tilde {e}}}
+
+ is done by picking up the one that gives the highest probability:
+</wiki></doc>

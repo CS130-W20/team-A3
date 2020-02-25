@@ -1,0 +1,5 @@
+<doc><id>proof_assistant</id><concept_name>proof assistant</concept_name><wiki>In computer science and mathematical logic, a proof assistant or interactive theorem prover is a software tool to assist with the development of formal proofs by human-machine collaboration. This involves some sort of interactive proof editor, or other interface, with which a human can guide the search for proofs, the details of which are stored in, and some steps provided by, a computer.
+The Theorem Prover Museum is an initiative to conserve the sources of theorem prover systems for future analysis, since they are important cultural/scientific artefacts. It has the sources of many of the systems mentioned above.
+A popular front-end for proof assistants is the Emacs-based Proof General, developed at the University of Edinburgh.
+Coq includes CoqIDE, which is based on OCaml/Gtk.  Isabelle includes Isabelle/jEdit, which is based on jEdit and the Isabelle/Scala infrastructure for document-oriented proof processing. More recently, Visual Studio Code extension for Isabelle has also been developed by Makarius Wenzel.[5]
+</wiki></doc>

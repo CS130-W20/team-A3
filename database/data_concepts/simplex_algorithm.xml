@@ -1,0 +1,127 @@
+<doc><id>simplex_algorithm</id><concept_name>simplex algorithm</concept_name><wiki>In mathematical optimization, Dantzig's simplex algorithm (or simplex method) is a popular algorithm for linear programming.[1]
+The name of the algorithm is derived from the concept of a simplex and was suggested by T. S. Motzkin.[2] Simplices are not actually used in the method, but one interpretation of it is that it operates on simplicial cones, and these become proper simplices with an additional constraint.[3][4][5][6] The simplicial cones in question are the corners (i.e., the neighborhoods of the vertices) of a geometric object called a polytope. The shape of this polytope is defined by the constraints applied to the objective function.
+The simplex algorithm operates on linear programs in the canonical form
+with 
+
+
+
+
+x
+
+=
+(
+
+x
+
+1
+
+
+,
+
+&#8230;
+,
+
+
+x
+
+n
+
+
+)
+
+
+{\displaystyle \mathbf {x} =(x_{1},\,\dots ,\,x_{n})}
+
+ the variables of the problem, 
+
+
+
+
+c
+
+=
+(
+
+c
+
+1
+
+
+,
+
+&#8230;
+,
+
+
+c
+
+n
+
+
+)
+
+
+{\displaystyle \mathbf {c} =(c_{1},\,\dots ,\,c_{n})}
+
+ the coefficients of the objective function, 
+
+
+
+A
+
+
+{\displaystyle A}
+
+ a p&#215;n matrix, and 
+
+
+
+
+b
+
+=
+(
+
+b
+
+1
+
+
+,
+
+&#8230;
+,
+
+
+b
+
+p
+
+
+)
+
+
+{\displaystyle \mathbf {b} =(b_{1},\,\dots ,\,b_{p})}
+
+ nonnegative constants (
+
+
+
+&#8704;
+j
+,
+
+b
+
+j
+
+
+&#8805;
+0
+&#160;
+
+
+{\displaystyle \forall j,b_{j}\geq 0\ }
+
+). There is a straightforward process to convert any linear program into one in standard form, so using this form of linear programs results in no loss of generality.
+</wiki></doc>

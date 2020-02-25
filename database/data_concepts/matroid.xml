@@ -1,0 +1,62 @@
+<doc><id>matroid</id><concept_name>matroid</concept_name><wiki>In combinatorics, a branch of mathematics, a matroid /&#712;me&#618;tr&#596;&#618;d/ is a structure that abstracts and generalizes the notion of linear independence in vector spaces. There are many equivalent ways to define a matroid, the most significant being in terms of independent sets, bases, circuits, closed sets or flats, closure operators, and rank functions.
+Matroid theory borrows extensively from the terminology of linear algebra and graph theory, largely because it is the abstraction of various notions of central importance in these fields. Matroids have found applications in geometry, topology, combinatorial optimization, network theory and coding theory.[1][2]
+There are many equivalent (cryptomorphic) ways to define a (finite) matroid.[3]
+In terms of independence, a finite matroid 
+
+
+
+M
+
+
+{\displaystyle M}
+
+ is a pair 
+
+
+
+(
+E
+,
+
+
+I
+
+
+)
+
+
+{\displaystyle (E,{\mathcal {I}})}
+
+, where 
+
+
+
+E
+
+
+{\displaystyle E}
+
+ is a finite set (called the ground set) and 
+
+
+
+
+
+I
+
+
+
+
+{\displaystyle {\mathcal {I}}}
+
+ is a family of subsets of 
+
+
+
+E
+
+
+{\displaystyle E}
+
+ (called the independent sets) with the following properties:[4]
+</wiki></doc>

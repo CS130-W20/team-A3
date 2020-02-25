@@ -1,0 +1,173 @@
+<doc><id>Shor's_algorithm</id><concept_name>Shor's algorithm</concept_name><wiki>Shor's algorithm is a polynomial-time quantum computer algorithm for integer factorization.[1] Informally, it solves the following problem: Given an integer 
+
+
+
+N
+
+
+{\displaystyle N}
+
+, find its prime factors. It was invented in 1994 by the American mathematician Peter Shor.
+On a quantum computer, to factor an integer 
+
+
+
+N
+
+
+{\displaystyle N}
+
+, Shor's algorithm runs in polynomial time (the time taken is polynomial in 
+
+
+
+log
+&#8289;
+N
+
+
+{\displaystyle \log N}
+
+, the size of the integer given as input).[2] Specifically, it takes quantum gates of order 
+
+
+
+O
+
+
+(
+
+(
+log
+&#8289;
+N
+
+)
+
+2
+
+
+(
+log
+&#8289;
+log
+&#8289;
+N
+)
+(
+log
+&#8289;
+log
+&#8289;
+log
+&#8289;
+N
+)
+
+)
+
+
+
+{\displaystyle O\!\left((\log N)^{2}(\log \log N)(\log \log \log N)\right)}
+
+ using fast multiplication,[3] thus demonstrating that the integer-factorization problem can be efficiently solved on a quantum computer and is consequently in the complexity class BQP. This is almost exponentially faster than the most efficient known classical factoring algorithm, the general number field sieve, which works in sub-exponential time &#8212; 
+
+
+
+O
+
+
+(
+
+e
+
+1.9
+(
+log
+&#8289;
+N
+
+)
+
+1
+
+/
+
+3
+
+
+(
+log
+&#8289;
+log
+&#8289;
+N
+
+)
+
+2
+
+/
+
+3
+
+
+
+
+)
+
+
+
+{\displaystyle O\!\left(e^{1.9(\log N)^{1/3}(\log \log N)^{2/3}}\right)}
+
+.[4] The efficiency of Shor's algorithm is due to the efficiency of the quantum Fourier transform, and modular exponentiation by repeated squarings.
+If a quantum computer with a sufficient number of qubits could operate without succumbing to quantum noise and other quantum-decoherence phenomena, then Shor's algorithm could be used to break public-key cryptography schemes, such as the widely used RSA scheme. RSA is based on the assumption that factoring large integers is computationally intractable. As far as is known, this assumption is valid for classical (non-quantum) computers; no classical algorithm is known that can factor integers in polynomial time. However, Shor's algorithm shows that factoring integers is efficient on an ideal quantum computer, so it may be feasible to defeat RSA by constructing a large quantum computer. It was also a powerful motivator for the design and construction of quantum computers, and for the study of new quantum-computer algorithms. It has also facilitated research on new cryptosystems that are secure from quantum computers, collectively called post-quantum cryptography.
+In 2001, Shor's algorithm was demonstrated by a group at IBM, who factored 
+
+
+
+15
+
+
+{\displaystyle 15}
+
+ into 
+
+
+
+3
+&#215;
+5
+
+
+{\displaystyle 3\times 5}
+
+, using an NMR implementation of a quantum computer with 
+
+
+
+7
+
+
+{\displaystyle 7}
+
+ qubits.[5] After IBM's implementation, two independent groups implemented Shor's algorithm using photonic qubits, emphasizing that multi-qubit entanglement was observed when running the Shor's algorithm circuits.[6][7] In 2012, the factorization of 
+
+
+
+15
+
+
+{\displaystyle 15}
+
+ was performed with solid-state qubits.[8] Also, in 2012, the factorization of 
+
+
+
+21
+
+
+{\displaystyle 21}
+
+ was achieved, setting the record for the largest integer factored with Shor's algorithm.[9]
+</wiki></doc>

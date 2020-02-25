@@ -1,0 +1,5 @@
+<doc><id>ABox</id><concept_name>ABox</concept_name><wiki>In computer science, an ABox is an "assertion component"&#8212;a fact associated with a conceptual model or ontologies within a knowledge base.
+The terms "ABox" and "TBox" are used to describe two different types of statements in knowledge bases.  TBox statements describe a domain of interest by defining classes and properties as a domain vocabulary.  ABox are TBox-compliant statements that use the vocabulary.
+TBox statements are sometimes associated with object-oriented classes and ABox statements associated with instances of those classes.
+Together ABox and TBox statements make up a knowledge base or a Knowledge graph.
+</wiki></doc>

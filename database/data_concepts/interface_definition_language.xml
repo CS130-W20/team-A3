@@ -1,0 +1,5 @@
+<doc><id>interface_definition_language</id><concept_name>interface definition language</concept_name><wiki>An interface description language or interface definition language (IDL), is a specification language used to describe a software component's application programming interface (API). IDLs describe an interface in a language-independent way, enabling communication between software components that do not share one language, for example, between those written in C++ and those written in Java.
+IDLs are commonly used in remote procedure call software. In these cases the machines at either end of the link may be using different operating systems and computer languages. IDLs offer a bridge between the two different systems.
+Software systems based on IDLs include Sun's ONC RPC, The Open Group's Distributed Computing Environment, IBM's System Object Model, the Object Management Group's CORBA (which implements OMG IDL, an IDL based on DCE/RPC) and Data Distribution Service, Mozilla's XPCOM, Microsoft's Microsoft RPC (which evolved into COM and DCOM), Facebook's Thrift and WSDL for Web services.
+
+</wiki></doc>

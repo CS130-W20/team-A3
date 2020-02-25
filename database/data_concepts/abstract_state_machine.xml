@@ -1,0 +1,5 @@
+<doc><id>abstract_state_machine</id><concept_name>abstract state machine</concept_name><wiki>In computer science, an abstract state machine (ASM) is a state machine operating on states that are arbitrary data structures (structure in the sense of mathematical logic, that is a nonempty set together with a number of functions (operations) and relations over the set).
+The ASM Method is a practical and scientifically well-founded systems engineering method that bridges the gap between the two ends of system development:
+The method builds upon three basic concepts: 
+In the original conception of ASMs, a single agent executes a program in a sequence of steps, possibly interacting with its environment. This notion was extended to capture distributed computations, in which multiple agents execute their programs concurrently.
+</wiki></doc>

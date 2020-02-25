@@ -1,0 +1,5 @@
+<doc><id>graph_isomorphism_problem</id><concept_name>graph isomorphism problem</concept_name><wiki>The graph isomorphism problem is the computational problem of determining whether two finite graphs are isomorphic.
+The problem is not known to be solvable in polynomial time nor to be NP-complete, and therefore may be in the computational complexity class NP-intermediate.  It is known that the graph isomorphism problem is in the low hierarchy of class NP, which implies that it is not NP-complete unless the polynomial time hierarchy collapses to its second level.[1]  At the same time, isomorphism for many special classes of graphs can be solved in polynomial time, and in practice graph isomorphism can often be solved efficiently.[2]
+This problem is a special case of the subgraph isomorphism problem,[3] which asks whether a given graph G contains a subgraph that is isomorphic to another given graph H; this problem is known to be NP-complete. It is also known to be a special case of the non-abelian hidden subgroup problem over the symmetric group.[4]
+In the area of image recognition it is known as the exact graph matching.[5]
+</wiki></doc>

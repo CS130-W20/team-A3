@@ -1,0 +1,5 @@
+<doc><id>integer_programming</id><concept_name>integer programming</concept_name><wiki>An integer programming problem is a mathematical optimization or feasibility program in which some or all of the variables are restricted to be integers. In many settings the term refers to integer linear programming (ILP), in which the objective function and the constraints (other than the integer constraints) are linear.
+Integer programming is NP-complete. In particular, the special case of 0-1 integer linear programming, in which unknowns are binary, and only the restrictions must be satisfied, is one of Karp's 21 NP-complete problems.
+If some decision variables are not discrete the problem is known as a mixed-integer programming problem.[1]
+An integer linear program in canonical form is expressed as:[2]
+</wiki></doc>

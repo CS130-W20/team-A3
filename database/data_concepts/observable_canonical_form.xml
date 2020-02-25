@@ -1,0 +1,45 @@
+<doc><id>observable_canonical_form</id><concept_name>observable canonical form</concept_name><wiki>In control engineering, a state-space representation is a mathematical model of a physical system as a set of input, output and state variables related by first-order differential equations or difference equations. State variables are variables whose values evolve through time in a way that depends on the values they have at any given time and also depends on the externally imposed values of input variables. Output variables&#8217; values depend on the values of the state variables.
+The "state space" is the Euclidean space in which the variables on the axes are the state variables. The state of the system can be represented as a vector within that space.
+To abstract from the number of inputs, outputs and states, these variables are expressed as vectors. Additionally, if the dynamical system is linear, time-invariant, and finite-dimensional, then the differential and algebraic equations may be written in matrix form.[1][2]
+The state-space method is characterized by significant algebraization of general system theory, which makes it possible to use Kronecker vector-matrix structures. The capacity of these structures can be efficiently applied to research systems with modulation or without it.[3]         
+The state-space representation (also known as the "time-domain approach") provides a convenient and compact way to model and analyze systems with multiple inputs and outputs. With 
+
+
+
+p
+
+
+{\displaystyle p}
+
+ inputs and 
+
+
+
+q
+
+
+{\displaystyle q}
+
+ outputs, we would otherwise have to write down 
+
+
+
+q
+&#215;
+p
+
+
+{\displaystyle q\times p}
+
+ Laplace transforms to encode all the information about a system. Unlike the frequency domain approach, the use of the state-space representation is not limited to systems with linear components and zero initial conditions. The state-space model is used in many different areas. In econometrics, the state-space model can be used for forecasting stock prices[4] and numerous other variables.
+The internal state variables are the smallest possible subset of system variables that can represent the entire state of the system at any given time.[5] The minimum number of state variables required to represent a given system, 
+
+
+
+n
+
+
+{\displaystyle n}
+
+, is usually equal to the order of the system's defining differential equation, but not necessarily. If the system is represented in transfer function form, the minimum number of state variables is equal to the order of the transfer function's denominator after it has been reduced to a proper fraction. It is important to understand that converting a state-space realization to a transfer function form may lose some internal information about the system, and may provide a description of a system which is stable, when the state-space realization is unstable at certain points. In electric circuits, the number of state variables is often, though not always, the same as the number of energy storage elements in the circuit such as capacitors and inductors. The state variables defined must be linearly independent, i.e., no state variable can be written as a linear combination of the other state variables or the system will not be able to be solved.
+</wiki></doc>

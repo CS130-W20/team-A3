@@ -1,0 +1,5 @@
+<doc><id>standard_generalized_markup_language</id><concept_name>standard generalized markup language</concept_name><wiki>The Standard Generalized Markup Language (SGML; ISO 8879:1986) is a standard for defining generalized markup languages for documents. ISO 8879 Annex A.1 states that generalized markup is "based on two postulates":[1]
+HTML was theoretically an example of an SGML-based language until HTML 5, which browsers cannot parse as SGML for compatibility reasons.
+DocBook SGML and LinuxDoc are examples which were used almost exclusively with actual SGML tools.
+SGML is an ISO standard:  "ISO 8879:1986 Information processing&#160;&#8211; Text and office systems&#160;&#8211; Standard Generalized Markup Language (SGML)", of which there are three versions:
+</wiki></doc>

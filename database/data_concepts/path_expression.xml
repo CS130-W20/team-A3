@@ -1,0 +1,7 @@
+<doc><id>path_expression</id><concept_name>path expression</concept_name><wiki>In query languages, path expressions identify an object by describing how to navigate to it
+in some  graph (possibly implicit) of objects. For example, the path expression p.Manager.Home.City might refer the city of residence of someone's manager.
+Path expressions have been extended to support regular expression-like flexibility.
+XPath is an example of a path expression language.
+In concurrency control, path expressions are a mechanism for expressing permitted sequences of execution. For example, a path expression like " {read},  write" might specify that either multiple simultaneous executions of read or a single execution of write but not both are allowed at any point in time.
+
+</wiki></doc>

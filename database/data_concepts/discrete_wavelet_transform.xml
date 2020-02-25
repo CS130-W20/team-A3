@@ -1,0 +1,49 @@
+<doc><id>discrete_wavelet_transform</id><concept_name>discrete wavelet transform</concept_name><wiki>In numerical analysis and functional analysis, a discrete wavelet transform (DWT) is any wavelet transform for which the wavelets are discretely sampled. As with other wavelet transforms, a key advantage it has over Fourier transforms is temporal resolution: it captures both frequency and location information (location in time).
+The first DWT was invented by Hungarian mathematician Alfr&#233;d Haar. For an input represented by a list of 
+
+
+
+
+2
+
+n
+
+
+
+
+{\displaystyle 2^{n}}
+
+ numbers, the Haar wavelet transform may be considered to pair up input values, storing the difference and passing the sum. This process is repeated recursively, pairing up the sums to prove the next scale, which leads to 
+
+
+
+
+2
+
+n
+
+
+&#8722;
+1
+
+
+{\displaystyle 2^{n}-1}
+
+ differences and a final sum.
+The most commonly used set of discrete wavelet transforms was formulated by the Belgian mathematician Ingrid Daubechies in 1988. This formulation is based on the use of recurrence relations to generate progressively finer discrete samplings of an implicit mother wavelet function; each resolution is twice that of the previous scale. In her seminal paper, Daubechies derives a family of wavelets, the first of which is the Haar wavelet. Interest in this field has exploded since then, and many variations of Daubechies' original wavelets were developed.[1][2]
+The dual-tree complex wavelet transform (&#8450;WT) is a relatively recent enhancement to the discrete wavelet transform (DWT), with important additional properties: It is nearly shift invariant and directionally selective in two and higher dimensions. It achieves this with a redundancy factor of only 
+
+
+
+
+2
+
+d
+
+
+
+
+{\displaystyle 2^{d}}
+
+ substantially lower than the undecimated DWT. The multidimensional (M-D) dual-tree &#8450;WT is nonseparable but is based on a computationally efficient, separable filter bank (FB).[3]
+</wiki></doc>

@@ -1,0 +1,53 @@
+<doc><id>shear_transformation</id><concept_name>shear transformation</concept_name><wiki>In plane geometry, a shear mapping is a linear map that displaces each point in fixed direction, by an amount proportional to its signed distance from the line that is parallel to that direction and goes through the origin.[1]  This type of mapping is also called shear transformation, transvection, or just shearing.
+An example is the mapping that takes any point with coordinates 
+
+
+
+(
+x
+,
+y
+)
+
+
+{\displaystyle (x,y)}
+
+ to the point 
+
+
+
+(
+x
++
+2
+y
+,
+y
+)
+
+
+{\displaystyle (x+2y,y)}
+
+.  In this case, the displacement is horizontal, the fixed line is the 
+
+
+
+x
+
+
+{\displaystyle x}
+
+-axis, and the signed distance is the 
+
+
+
+y
+
+
+{\displaystyle y}
+
+ coordinate.  Note that points on opposite sides of the reference line are displaced in opposite directions.
+Shear mappings must not be confused with rotations. Applying a shear map to a set of points of the plane will change all angles between them (except straight angles), and the length of any line segment that is not parallel to the direction of displacement. Therefore it will usually distort the shape of a geometric figure, for example turning squares into non-square parallelograms, and circles into ellipses.  However a shearing does preserve the area of geometric figures and the alignment and relative distances of collinear points.  A shear mapping is the main difference between the upright and slanted (or italic) styles of letters.
+The same definition is used in three-dimensional geometry, except that the distance is measured from a fixed plane.  A three-dimensional shearing transformation preserves the volume of solid figures, but changes areas of plane figures (except those that are parallel to the displacement). 
+This transformation is used to describe laminar flow of a fluid between plates, one moving in a plane above and parallel to the first.
+</wiki></doc>

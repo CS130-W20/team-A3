@@ -1,0 +1,72 @@
+<doc><id>homogeneous_polynomial</id><concept_name>homogeneous polynomial</concept_name><wiki>In mathematics, a homogeneous polynomial is a polynomial whose nonzero terms all have the same degree.[1] For example, 
+
+
+
+
+x
+
+5
+
+
++
+2
+
+x
+
+3
+
+
+
+y
+
+2
+
+
++
+9
+x
+
+y
+
+4
+
+
+
+
+{\displaystyle x^{5}+2x^{3}y^{2}+9xy^{4}}
+
+ is a homogeneous polynomial of degree 5, in two variables; the sum of the exponents in each term is always 5. The polynomial 
+
+
+
+
+x
+
+3
+
+
++
+3
+
+x
+
+2
+
+
+y
++
+
+z
+
+7
+
+
+
+
+{\displaystyle x^{3}+3x^{2}y+z^{7}}
+
+ is not homogeneous, because the sum of exponents does not match from term to term. A polynomial is homogeneous if and only if it defines a homogeneous function.  An algebraic form, or simply form, is a function defined by a homogeneous polynomial.[2] A binary form is a form in two variables. A form is also a function defined on a vector space, which may be expressed as a homogeneous function of the coordinates over any basis.
+A polynomial of degree 0 is always homogeneous; it is simply an element of the field or ring of the coefficients, usually called a constant or a scalar. A form of degree 1 is a linear form.[3] A form of degree 2 is a quadratic form. In geometry, the Euclidean distance is the square root of a quadratic form.
+Homogeneous polynomials are ubiquitous in mathematics and physics.[4] They play a fundamental role in algebraic geometry, as a projective algebraic variety is defined as the set of  the common zeros of a set of homogeneous polynomials.
+A homogeneous polynomial defines a homogeneous function. This means that, if a multivariate polynomial P is homogeneous of degree d, then
+</wiki></doc>

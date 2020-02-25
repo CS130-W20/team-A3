@@ -1,0 +1,29 @@
+<doc><id>holographic_algorithm</id><concept_name>holographic algorithm</concept_name><wiki>In computer science, a holographic algorithm is an algorithm that uses a holographic reduction. A holographic reduction is a constant-time reduction that maps solution fragments many-to-many such that the sum of the solution fragments remains unchanged. These concepts were introduced by Leslie Valiant, who called them holographic because "their effect can be viewed as that of producing interference patterns among the solution fragments".[1] The algorithms are unrelated to laser holography, except metaphorically. Their power comes from the mutual cancellation of many contributions to a sum, analogous to the interference patterns in a hologram.[2]
+Holographic algorithms have been used to find polynomial-time solutions to problems without such previously known solutions for special cases of satisfiability, vertex cover, and other graph problems.[3] They have received notable coverage due to speculation that they are relevant to the P versus NP problem[2] and their impact on computational complexity theory.  Although some of the general problems are #P-hard problems, the special cases solved are not themselves #P-hard, and thus do not prove FP = #P.
+Holographic algorithms have some similarities with quantum computation, but are completely classical.[4]
+Holographic algorithms exist in the context of Holant problems, which generalize counting constraint satisfaction problems (#CSP). A #CSP instance is a hypergraph G=(V,E) called the constraint graph. Each hyperedge represents a variable and each vertex 
+
+
+
+v
+
+
+{\displaystyle v}
+
+ is assigned a constraint 
+
+
+
+
+f
+
+v
+
+
+.
+
+
+{\displaystyle f_{v}.}
+
+ A vertex is connected to an hyperedge if the constraint on the vertex involves the variable on the hyperedge. The counting problem is to compute
+</wiki></doc>

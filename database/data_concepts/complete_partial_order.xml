@@ -1,0 +1,5 @@
+<doc><id>complete_partial_order</id><concept_name>complete partial order</concept_name><wiki>In mathematics, the phrase complete partial order is variously used to refer to at least three similar, but distinct, classes of partially ordered sets, characterized by particular completeness properties. Complete partial orders play a central role in theoretical computer science, in denotational semantics and domain theory.
+A complete partial order abbreviated cpo can, depending on context, refer to any of the following concepts. 
+Note that complete partial order is never used to mean a poset in which all subsets have suprema; the terminology complete lattice is used for this concept.
+Requiring the existence of directed suprema can be motivated by viewing directed sets as generalized approximation sequences and suprema as limits of the respective (approximative) computations. This intuition, in the context of denotational semantics, was the motivation behind the development of domain theory.
+</wiki></doc>

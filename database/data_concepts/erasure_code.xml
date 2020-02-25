@@ -1,0 +1,72 @@
+<doc><id>erasure_code</id><concept_name>erasure code</concept_name><wiki>In coding theory, an erasure code is a forward error correction (FEC) code under the assumption of bit erasures (rather than bit errors), which transforms a message of k symbols into a longer message (code word) with n symbols such that the original message can be recovered from a subset of the n symbols. The fraction r&#160;=&#160;k/n is called the code rate. The fraction k&#8217;/k, where k&#8217; denotes the number of symbols required for recovery, is called reception efficiency.
+Optimal erasure codes have the property that any k out of the n code word symbols are sufficient to recover the original message (i.e., they have optimal reception efficiency). Optimal erasure codes are maximum distance separable codes (MDS codes).
+Parity check is the special case where n = k + 1. From a set of k values 
+
+
+
+{
+
+v
+
+i
+
+
+
+}
+
+1
+&#8804;
+i
+&#8804;
+k
+
+
+
+
+{\displaystyle \{v_{i}\}_{1\leq i\leq k}}
+
+, a checksum is computed and appended to the k source values:
+The set of k&#160;+&#160;1 values 
+
+
+
+{
+
+v
+
+i
+
+
+
+}
+
+1
+&#8804;
+i
+&#8804;
+k
++
+1
+
+
+
+
+{\displaystyle \{v_{i}\}_{1\leq i\leq k+1}}
+
+ is now consistent with regard to the checksum.
+If one of these values, 
+
+
+
+
+v
+
+e
+
+
+
+
+{\displaystyle v_{e}}
+
+, is erased, it can be easily recovered by summing the remaining variables:
+</wiki></doc>

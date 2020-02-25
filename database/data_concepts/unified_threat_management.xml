@@ -1,6 +1,5 @@
 <doc><id>unified_threat_management</id><concept_name>unified threat management</concept_name><wiki>Unified threat management (UTM) is an approach to information security where a single hardware or software installation provides multiple security functions. This contrasts with the traditional method of having point solutions for each security function.[1] UTM simplifies  information-security management by providing a single management and reporting point for the security administrator rather than managing multiple products from different vendors.[2][3] UTM appliances have been gaining popularity since 2009, partly because the all-in-one approach simplifies installation, configuration and maintenance.[4] Such a setup saves time, money and people when compared to the management of multiple security systems. Instead of having several single-function appliances, all needing individual familiarity, attention and support, network administrators can centrally administer their security defenses from one computer. Some of the prominent UTM brands are Fortinet, Sophos, WiJungle, SonicWall and Check Point[5].
 UTMs at the minimum should have some converged security features like 
-Some of the other features commonly found in UTMs are 
-UTM Stands for Unified Threat Management
+Some of the other features commonly found in UTMs are: 
 
 </wiki></doc>

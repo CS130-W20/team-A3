@@ -1,0 +1,28 @@
+<doc><id>possibility_theory</id><concept_name>possibility theory</concept_name><wiki>Possibility theory is a mathematical theory for dealing with certain types of uncertainty and is an alternative to probability theory. Professor Lotfi Zadeh first introduced possibility theory in 1978 as an extension of his theory of fuzzy sets and fuzzy logic. Didier Dubois and Henri Prade further contributed to its development. Earlier in the 1950s, economist G. L. S. Shackle proposed the min/max algebra to describe degrees of potential surprise.
+For simplicity, assume that the universe of discourse &#937; is a finite set. A possibility measure is a function 
+
+
+
+pos
+
+
+{\displaystyle \operatorname {pos} }
+
+ from 
+
+
+
+
+2
+
+&#937;
+
+
+
+
+{\displaystyle 2^{\Omega }}
+
+ to [0,&#160;1] such that:
+It follows that, like probability, the possibility measure is determined by its behavior on singletons:
+provided that U is finite or countably infinite.
+</wiki></doc>

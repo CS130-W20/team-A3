@@ -1,0 +1,34 @@
+<doc><id>Q_learning</id><concept_name>Q learning</concept_name><wiki>Q-learning is a model-free reinforcement learning algorithm. The goal of Q-learning is to learn a policy, which tells an agent what action to take under what circumstances. It does not require a model (hence the connotation "model-free") of the environment, and it can handle problems with stochastic transitions and rewards, without requiring adaptations.
+For any finite Markov decision process (FMDP), Q-learning finds a policy that is optimal in the sense that it maximizes the expected value of the total reward over any and  all successive steps, starting from the current state.[1] Q-learning can identify an optimal action-selection policy for any given FMDP, given infinite exploration time and a partly-random policy.[1] "Q" names the function that returns the reward used to provide the reinforcement and can be said to stand for the "quality" of an action taken in a given state.[2]
+Reinforcement learning involves an agent, a set of states 
+
+
+
+S
+
+
+{\displaystyle S}
+
+, and a set 
+
+
+
+A
+
+
+{\displaystyle A}
+
+ of actions per state. By performing an action 
+
+
+
+a
+&#8712;
+A
+
+
+{\displaystyle a\in A}
+
+, the agent transitions from state to state. Executing an action in a specific state provides the agent with a reward (a numerical score).
+The goal of the agent is to maximize its total (future) reward. It does this by adding the maximum reward attainable from future states to the reward for achieving its current state, effectively influencing the current action by the potential future reward. This potential reward is a weighted sum of the expected values of the rewards of all future steps starting from the current state.
+</wiki></doc>

@@ -1,0 +1,182 @@
+<doc><id>preconditioner</id><concept_name>preconditioner</concept_name><wiki>In mathematics, preconditioning is the application of a transformation, called the preconditioner,  that conditions a given problem into a form that is more suitable for numerical solving methods. Preconditioning is typically related to reducing a condition number of the problem. The preconditioned problem is then usually solved by an iterative method.
+In linear algebra and numerical analysis, a preconditioner 
+
+
+
+P
+
+
+{\displaystyle P}
+
+ of a matrix 
+
+
+
+A
+
+
+{\displaystyle A}
+
+ is a matrix such that 
+
+
+
+
+P
+
+&#8722;
+1
+
+
+A
+
+
+{\displaystyle P^{-1}A}
+
+ has a smaller condition number than 
+
+
+
+A
+
+
+{\displaystyle A}
+
+. It is also common to call 
+
+
+
+T
+=
+
+P
+
+&#8722;
+1
+
+
+
+
+{\displaystyle T=P^{-1}}
+
+ the preconditioner, rather than 
+
+
+
+P
+
+
+{\displaystyle P}
+
+, since 
+
+
+
+P
+
+
+{\displaystyle P}
+
+ itself is rarely explicitly available. In modern preconditioning, the application of  
+
+
+
+T
+=
+
+P
+
+&#8722;
+1
+
+
+
+
+{\displaystyle T=P^{-1}}
+
+, i.e., multiplication of a column vector, or a block of column vectors, by 
+
+
+
+T
+=
+
+P
+
+&#8722;
+1
+
+
+
+
+{\displaystyle T=P^{-1}}
+
+, is commonly performed by rather sophisticated computer software packages in a matrix-free fashion, i.e., where neither 
+
+
+
+P
+
+
+{\displaystyle P}
+
+, nor  
+
+
+
+T
+=
+
+P
+
+&#8722;
+1
+
+
+
+
+{\displaystyle T=P^{-1}}
+
+ (and often not even 
+
+
+
+A
+
+
+{\displaystyle A}
+
+) are explicitly available in a matrix form. 
+Preconditioners are useful in iterative methods to solve a linear system  
+
+
+
+A
+x
+=
+b
+
+
+{\displaystyle Ax=b}
+
+ for 
+
+
+
+x
+
+
+{\displaystyle x}
+
+ since the rate of convergence for most iterative linear solvers increases because the condition number of a matrix decreases as a result of preconditioning. Preconditioned iterative solvers typically outperform direct solvers, e.g., Gaussian elimination, for large, especially for sparse, matrices. Iterative solvers can be used as matrix-free methods, i.e. become the only choice if the coefficient matrix 
+
+
+
+A
+
+
+{\displaystyle A}
+
+ is not stored explicitly, but is accessed by evaluating matrix-vector products.
+Instead of solving the original linear system above, one may solve the right preconditioned system:
+</wiki></doc>

@@ -1,0 +1,106 @@
+<doc><id>function_problem</id><concept_name>function problem</concept_name><wiki>In computational complexity theory, a function problem is a computational problem where a single output (of a total function) is expected for every input, but the output is more complex than that of a decision problem. For function problems, the output is not simply 'yes' or 'no'.
+A functional problem 
+
+
+
+P
+
+
+{\displaystyle P}
+
+ is defined as a relation 
+
+
+
+R
+
+
+{\displaystyle R}
+
+ over strings of an arbitrary alphabet 
+
+
+
+&#931;
+
+
+{\displaystyle \Sigma }
+
+:
+
+
+
+
+R
+&#8838;
+
+&#931;
+
+&#8727;
+
+
+&#215;
+
+&#931;
+
+&#8727;
+
+
+
+
+{\displaystyle R\subseteq \Sigma ^{*}\times \Sigma ^{*}}
+
+
+An algorithm solves 
+
+
+
+P
+
+
+{\displaystyle P}
+
+ if for every input 
+
+
+
+x
+
+
+{\displaystyle x}
+
+ such that there exists a 
+
+
+
+y
+
+
+{\displaystyle y}
+
+ satisfying 
+
+
+
+(
+x
+,
+y
+)
+&#8712;
+R
+
+
+{\displaystyle (x,y)\in R}
+
+, the algorithm produces one such 
+
+
+
+y
+
+
+{\displaystyle y}
+
+.
+</wiki></doc>

@@ -1,0 +1,6 @@
+<doc><id>service_choreography</id><concept_name>service choreography</concept_name><wiki>Service choreography is a form of service composition[clarification needed] in which the interaction protocol between several partner services[clarification needed] is defined from a global perspective.[1]
+The idea underlying the notion of service choreography can be summarised as follows:
+"Dancers dance following a global scenario without a single point of control"
+That is, at run-time each participant in a service choreography executes its part according to the behavior of the other participants.[2] A choreography's role specifies the expected messaging behavior of the participants that will play it in terms of the sequencing and timing of the messages that they can consume and produce.[3]
+Choreography describes the sequence and conditions in which the data is exchanged between two or more participants in order to meet some useful purpose.[4]
+</wiki></doc>

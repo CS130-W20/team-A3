@@ -1,0 +1,113 @@
+<doc><id>projection-valued_measure</id><concept_name>projection-valued measure</concept_name><wiki>In mathematics, particularly in functional analysis, a  projection-valued measure (PVM) is a function defined on certain subsets of a fixed set and whose values are self-adjoint projections on a fixed Hilbert space. Projection-valued measures are formally similar to real-valued measures, except that their values are self-adjoint projections rather than real numbers. As in the case of ordinary measures, it is possible to integrate complex-valued functions with respect to a PVM; the result of such an integration is a linear operator on the given Hilbert space.
+Projection-valued measures are used to express results in spectral theory, such as the important spectral theorem for self-adjoint operators. The Borel functional calculus for self-adjoint operators is constructed using integrals with respect to PVMs.  In quantum mechanics, PVMs are the mathematical description of projective measurements.[clarification needed]  They are generalized by positive operator valued measures (POVMs) in the same sense that a mixed state or density matrix generalizes the notion of a pure state.
+A projection-valued measure on a measurable space
+
+
+
+
+(
+X
+,
+M
+)
+
+
+{\displaystyle (X,M)}
+
+, where 
+
+
+
+M
+
+
+{\displaystyle M}
+
+ is a &#963;-algebra of subsets of 
+
+
+
+X
+
+
+{\displaystyle X}
+
+, is a mapping 
+
+
+
+&#960;
+
+
+{\displaystyle \pi }
+
+ from 
+
+
+
+M
+
+
+{\displaystyle M}
+
+ to the set of self-adjoint projections on a Hilbert space 
+
+
+
+H
+
+
+{\displaystyle H}
+
+ (i.e. the orthogonal projections) such that
+(where 
+
+
+
+
+id
+
+H
+
+
+
+
+{\displaystyle \operatorname {id} _{H}}
+
+ is the identity operator of 
+
+
+
+H
+
+
+{\displaystyle H}
+
+) and for every 
+
+
+
+&#958;
+,
+&#951;
+&#8712;
+H
+
+
+{\displaystyle \xi ,\eta \in H}
+
+, the following function 
+
+
+
+M
+&#8594;
+
+C
+
+
+
+{\displaystyle M\to \mathbb {C} }
+
+
+</wiki></doc>

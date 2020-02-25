@@ -1,0 +1,129 @@
+<doc><id>optical_proximity_correction</id><concept_name>optical proximity correction</concept_name><wiki>Optical proximity correction (OPC) is a photolithography enhancement technique commonly used to compensate for image errors due to diffraction or process effects. The need for OPC is seen mainly in the making of semiconductor devices and is due to the limitations of light to maintain the edge placement integrity of the original design, after processing, into the etched image on the silicon wafer. These projected images appear with irregularities such as line widths that are narrower or wider than designed, these are amenable to compensation by changing the pattern on the photomask used for imaging. Other distortions such as rounded corners are driven by the resolution of the optical imaging tool and are harder to compensate for. Such distortions, if not corrected for, may significantly alter the electrical properties of what was being fabricated. Optical proximity correction corrects these errors by moving edges or adding extra polygons to the pattern written on the photomask. This may be driven by pre-computed look-up tables based on width and spacing between features (known as rule based OPC) or by using compact models to dynamically simulate the final pattern and thereby drive the movement of edges, typically broken into sections, to find the best solution, (this is known as model based OPC). The objective is to reproduce on the semiconductor wafer, as well as possible, the original layout drawn by the designer.
+The two most visible benefits of OPC are correcting linewidth differences seen between features in regions of different density (e.g., center vs. edge of an array, or nested vs. isolated lines), and line end shortening (e.g., gate overlap on field oxide). For the former case, this may be used together with resolution enhancement technologies such as scattering bars (sub-resolution lines placed adjacent to resolvable lines) together with linewidth adjustments. For the latter case, "dog-ear" (serif or hammerhead) features may be generated at the line end in the design. OPC has a cost impact on photomask fabrication whereby the mask write time is related to the complexity of the mask and data-files and similarly mask inspection for defects takes longer as the finer edge control requires a smaller spot size.
+The conventional diffraction-limited resolution is given by the Rayleigh criterion as 
+
+
+
+0.61
+&#955;
+
+/
+
+N
+A
+,
+
+
+{\displaystyle 0.61\lambda /NA,}
+
+ where 
+
+
+
+N
+A
+
+
+{\displaystyle NA}
+
+ is the numerical aperture and 
+
+
+
+&#955;
+
+
+{\displaystyle \lambda }
+
+ is the wavelength of the illumination source. It is often common to compare the critical feature width to this value, by defining a parameter, 
+
+
+
+
+k
+
+1
+
+
+,
+
+
+{\displaystyle k_{1},}
+
+ such that feature width equals 
+
+
+
+
+k
+
+1
+
+
+&#955;
+
+/
+
+N
+A
+.
+
+
+{\displaystyle k_{1}\lambda /NA.}
+
+ Nested features with 
+
+
+
+
+k
+
+1
+
+
+&lt;
+1
+
+
+{\displaystyle k_{1}&lt;1}
+
+ benefit less from OPC than isolated features of the same size. The reason is the spatial frequency spectrum of nested features contains fewer components than isolated features. As the feature pitch decreases, more components are truncated by the numerical aperture, resulting in greater difficulty to affect the pattern in the desired fashion.
+The degree of coherence of the illumination source is determined by the ratio of its angular extent to the numerical aperture. This ratio is often called the partial coherence factor, or 
+
+
+
+&#963;
+
+
+{\displaystyle \sigma }
+
+.[1] It also affects the pattern quality and hence the application of OPC. The coherence distance in the image plane is given roughly by 
+
+
+
+0.5
+&#955;
+
+/
+
+(
+&#963;
+N
+A
+)
+.
+
+
+{\displaystyle 0.5\lambda /(\sigma NA).}
+
+[2] Two image points separated by more than this distance will effectively be uncorrelated, allowing a simpler OPC application. This distance is in fact close to the Rayleigh criterion for values of 
+
+
+
+&#963;
+
+
+{\displaystyle \sigma }
+
+ close to 1.
+</wiki></doc>

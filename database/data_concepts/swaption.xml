@@ -1,0 +1,5 @@
+<doc><id>swaption</id><concept_name>swaption</concept_name><wiki>A swaption is an option granting its owner the right but not the obligation to enter into an underlying swap. Although options can be traded on a variety of swaps, the term "swaption" typically refers to options on interest rate swaps.
+There are two types of swaption contracts (analogous to put and call options)[1]:
+In addition, a "straddle" refers to a combination of a receiver and a payer option on the same underlying swap.
+The buyer and seller of the swaption agree on:
+</wiki></doc>

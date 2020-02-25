@@ -1,0 +1,5 @@
+<doc><id>z-transform</id><concept_name>z-transform</concept_name><wiki>In mathematics and signal processing, the Z-transform converts a discrete-time signal, which is a sequence of real or complex numbers, into a complex frequency-domain representation.
+It can be considered as a discrete-time equivalent of the Laplace transform. This similarity is explored in the theory of time-scale calculus.
+The basic idea now known as the Z-transform was known to Laplace, and it was re-introduced in 1947 by W. Hurewicz[1][2] and others as a way to treat sampled-data control systems used with radar. It gives a tractable way to solve linear, constant-coefficient difference equations. It was later dubbed "the z-transform" by Ragazzini and Zadeh in the sampled-data control group at Columbia University in 1952.[3][4]
+The modified or advanced Z-transform was later developed and popularized by E. I. Jury.[5][6]
+</wiki></doc>

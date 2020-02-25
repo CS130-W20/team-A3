@@ -1,0 +1,5 @@
+<doc><id>rendering_equation</id><concept_name>rendering equation</concept_name><wiki>In computer graphics, the rendering equation is an integral equation in which the equilibrium radiance leaving a point is given as the sum of emitted plus reflected radiance under a geometric optics approximation. It was simultaneously introduced into computer graphics by David Immel et al.[1] and James Kajiya[2]  in 1986. The various realistic rendering techniques in computer graphics attempt to solve this equation.
+The physical basis for the rendering equation is the law of conservation of energy. Assuming that L denotes radiance, we have that at each particular position and direction, the outgoing light (Lo) is the sum of the emitted light (Le) and the reflected light. The reflected light itself is the sum from all directions of the incoming light (Li) multiplied by the surface reflection and cosine of the incident angle.
+The rendering equation may be written in the form
+where
+</wiki></doc>

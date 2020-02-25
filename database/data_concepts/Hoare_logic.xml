@@ -1,0 +1,50 @@
+<doc><id>Hoare_logic</id><concept_name>Hoare logic</concept_name><wiki>Hoare logic (also known as Floyd&#8211;Hoare logic or Hoare rules) is a formal system with a set of logical rules for reasoning rigorously about the correctness of computer programs. It was proposed in 1969 by the British computer scientist and logician Tony Hoare, and subsequently refined by Hoare and other researchers.[1] The original ideas were seeded by the work of Robert W. Floyd, who had published a similar system[2] for flowcharts.
+The central feature of Hoare logic is the Hoare triple. A triple describes how the execution of a piece of code changes the state of the computation. A Hoare triple is of the form
+where 
+
+
+
+P
+
+
+{\displaystyle P}
+
+ and 
+
+
+
+Q
+
+
+{\displaystyle Q}
+
+ are assertions and 
+
+
+
+C
+
+
+{\displaystyle C}
+
+ is a command.[note 1] 
+
+
+
+P
+
+
+{\displaystyle P}
+
+ is named the precondition and 
+
+
+
+Q
+
+
+{\displaystyle Q}
+
+ the postcondition: when the precondition is met, executing the command establishes the postcondition. Assertions are formulae in predicate logic.
+Hoare logic provides axioms and inference rules for all the constructs of a simple imperative programming language. In addition to the rules for the simple language in Hoare's original paper, rules for other language constructs have been developed since then by Hoare and many other researchers. There are rules for concurrency, procedures, jumps, and pointers.
+</wiki></doc>

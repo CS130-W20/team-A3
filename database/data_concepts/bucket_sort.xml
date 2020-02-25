@@ -1,0 +1,39 @@
+<doc><id>bucket_sort</id><concept_name>bucket sort</concept_name><wiki>Bucket sort, or bin sort, is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket is then sorted individually, either using a different sorting algorithm, or by recursively applying the bucket sorting algorithm. It is a distribution sort,  a generalization of pigeonhole sort, and is a cousin of radix sort in the most-to-least significant digit flavor. Bucket sort can be implemented with comparisons and therefore can also be considered a comparison sort algorithm. The computational complexity depends on the algorithm used to sort each bucket, the number of buckets to use, and whether the input is uniformly distributed.
+Bucket sort works as follows:
+Here array is the array to be sorted and k is the number of buckets to use. The maximum key value can be computed in linear time by looking up all the keys once. The floor function must be used to convert a floating number to an integer. The function nextSort is a sorting function used to sort each bucket. Conventionally, insertion sort would be used, but other algorithms could be used as well. Using bucketSort itself as nextSort produces a relative of radix sort; in particular, the case n = 2 corresponds to quicksort (although potentially with poor pivot choices).
+Bucket sort is mainly useful when input is uniformly distributed over a range. When the input contains several keys that are close to each other (clustering), those elements are likely to be placed in the same bucket, which results in some buckets containing more elements than average. The worst-case scenario occurs when all the elements are placed in a single bucket. The overall performance would then be dominated by the algorithm used to sort each bucket, which is typically 
+
+
+
+O
+(
+
+n
+
+2
+
+
+)
+
+
+{\displaystyle O(n^{2})}
+
+ insertion sort, making bucket sort less optimal than 
+
+
+
+O
+(
+n
+log
+&#8289;
+(
+n
+)
+)
+
+
+{\displaystyle O(n\log(n))}
+
+ comparison sort algorithms like Quicksort.
+</wiki></doc>

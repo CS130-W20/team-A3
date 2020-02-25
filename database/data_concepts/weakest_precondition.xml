@@ -1,0 +1,36 @@
+<doc><id>weakest_precondition</id><concept_name>weakest precondition</concept_name><wiki>Predicate transformer semantics were introduced by Edsger Dijkstra in his seminal paper "Guarded commands, nondeterminacy and formal derivation of programs". They define the semantics of an imperative programming paradigm by assigning to each statement in this language a corresponding predicate transformer: a total function between two predicates on the state space of the statement. In this sense, predicate transformer semantics are a kind of denotational semantics. Actually, in guarded commands, Dijkstra uses only one kind of predicate transformer: the well-known weakest preconditions (see below).
+Moreover, predicate transformer semantics are a reformulation of Floyd&#8211;Hoare logic. Whereas Hoare logic is presented as a deductive system, predicate transformer semantics (either by weakest-preconditions or by strongest-postconditions see below) are complete strategies to build valid deductions of Hoare logic. In other words, they provide an effective algorithm to reduce the problem of verifying a Hoare triple to the problem of proving a first-order formula. Technically, predicate transformer semantics perform a kind of symbolic execution of statements into predicates: execution runs backward in the case of weakest-preconditions, or runs forward in the case of strongest-postconditions.
+Given a  statement S, the weakest-precondition of S is a
+function mapping any postcondition R to a precondition P. Actually,  the result of this function, denoted 
+
+
+
+w
+p
+(
+S
+,
+R
+)
+
+
+{\displaystyle wp(S,R)}
+
+, is the "weakest" precondition on the initial state ensuring that execution of S terminates in a final state satisfying R.
+More formally, let us use variable x to denote abusively the tuple of variables involved in statement S. Then, a given Hoare triple 
+
+
+
+{
+P
+}
+S
+{
+R
+}
+
+
+{\displaystyle \{P\}S\{R\}}
+
+ is provable in Hoare logic for total correctness if and only if the first-order predicate below holds:
+</wiki></doc>

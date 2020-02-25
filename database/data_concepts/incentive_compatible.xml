@@ -1,0 +1,5 @@
+<doc><id>incentive_compatible</id><concept_name>incentive compatible</concept_name><wiki>A mechanism is called incentive-compatible (IC) if every participant can achieve the best outcome to themselves just by acting according to their true preferences.[1]:225
+There are several different degrees of incentive-compatibility: 
+Every DSIC mechanism is also BNIC, but a BNIC mechanism may exist even if no DSIC mechanism exists.
+Typical examples of DSIC mechanisms are majority voting between two alternatives, and second-price auction.
+</wiki></doc>

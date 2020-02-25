@@ -1,0 +1,5 @@
+<doc><id>file_attribute</id><concept_name>file attribute</concept_name><wiki>File attributes are metadata associated with computer files that define file system behavior. Each attribute can have one of two states: set and cleared. Attributes are considered distinct from other metadata, such as dates and times, filename extensions or file system permissions. In addition to files, folders, volumes and other file system objects may have attributes.
+Traditionally, in MS-DOS and Microsoft Windows, there were four attributes: archive, hidden, read-only and system. Windows has added new ones. Systems derived from 4.4BSD-Lite, such as FreeBSD, NetBSD, OpenBSD, DragonFly BSD, and macOS, have sets of "system" and "user" attributes; newer versions of the Linux kernel also support a set of file attributes.
+Traditionally, in DOS and Microsoft Windows, files and folders accepted four attributes:[1][2][3]
+As new versions of Windows came out, Microsoft has added to the inventory of available attributes on the  NTFS file system,[7] including but not limited to:[8]
+</wiki></doc>

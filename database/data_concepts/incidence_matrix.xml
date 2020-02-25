@@ -1,0 +1,5 @@
+<doc><id>incidence_matrix</id><concept_name>incidence matrix</concept_name><wiki>In mathematics, an incidence matrix is a matrix that shows the relationship between two classes of objects. If the first class is X and the second is Y, the matrix has one row for each element of X and one column for each element of Y. The entry in row x and column y is 1 if x and y are related (called incident in this context) and 0 if they are not. There are variations; see below.
+Incidence matrices are frequently used in graph theory.
+In graph theory an undirected graph has two kinds of incidence matrices: unoriented and oriented. 
+The unoriented incidence matrix (or simply incidence matrix) of an undirected graph is a n &#215; m matrix B, where n and m are the numbers of vertices and edges respectively, such that Bi,j = 1 if the vertex vi and edge ej are incident and 0 otherwise.
+</wiki></doc>

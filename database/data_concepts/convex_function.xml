@@ -1,0 +1,57 @@
+<doc><id>convex_function</id><concept_name>convex function</concept_name><wiki>In mathematics, a real-valued function defined on an n-dimensional interval is called convex (or convex downward or concave upward) if the line segment between any two points on the graph of the function lies above or on the graph. Equivalently, a function is convex if its epigraph (the set of points on or above the graph of the function) is a convex set. For a twice-differentiable function of a single variable, if its second derivative is always nonnegative on its entire domain, then the function is convex.[1] In fact, if a twice-differentiable function of a single variable is convex, then its second derivative must be nonnegative on its entire domain. Well-known examples of convex functions of a single variable include the squaring function 
+
+
+
+
+x
+
+2
+
+
+
+
+{\displaystyle x^{2}}
+
+ and the exponential function 
+
+
+
+
+e
+
+x
+
+
+
+
+{\displaystyle e^{x}}
+
+.
+Convex functions play an important role in many areas of mathematics. They are especially important in the study of optimization problems where they are distinguished by a number of convenient properties. For instance, a strictly convex function on an open set has no more than one minimum. Even in infinite-dimensional spaces, under suitable additional hypotheses, convex functions continue to satisfy such properties and as a result, they are the most well-understood functionals in the calculus of variations. In probability theory, a convex function applied to the expected value of a random variable is always bounded above by the expected value of the convex function of the random variable.  This result, known as Jensen's inequality, can be used to deduce inequalities such as the arithmetic&#8211;geometric mean inequality and H&#246;lder's inequality.
+Let 
+
+
+
+X
+
+
+{\displaystyle X}
+
+ be a convex set in a vector space and let 
+
+
+
+f
+:
+X
+&#8594;
+
+R
+
+
+
+{\displaystyle f:X\rightarrow \mathbb {R} }
+
+ be a function.
+The concept of strong convexity extends and parametrizes the notion of strict convexity. A strongly convex function is also strictly convex, but not vice versa.
+</wiki></doc>

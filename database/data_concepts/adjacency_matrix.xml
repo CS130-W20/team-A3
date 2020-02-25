@@ -1,0 +1,6 @@
+<doc><id>adjacency_matrix</id><concept_name>adjacency matrix</concept_name><wiki>In graph theory and computer science, an adjacency matrix is a square matrix used to represent a finite graph. The elements of the matrix indicate whether pairs of vertices are adjacent or not in the graph.
+In the special case of a finite simple graph, the adjacency matrix is a (0,1)-matrix with zeros on its diagonal. If the graph is undirected, the adjacency matrix is symmetric. 
+The relationship between a graph and the eigenvalues and eigenvectors of its adjacency matrix is studied in spectral graph theory.
+The adjacency matrix should be distinguished from the incidence matrix for a graph, a different matrix representation whose elements indicate whether vertex&#8211;edge pairs are incident or not, and degree matrix which contains information about the degree of each vertex.
+For a simple graph with vertex set V, the adjacency matrix is a square |V|&#160;&#215;&#160;|V| matrix A such that its element Aij is one when there is an edge from vertex i to vertex j, and zero when there is no edge.[1] The diagonal elements of the matrix are all zero, since edges from a vertex to itself (loops) are not allowed in simple graphs. It is also sometimes useful in algebraic graph theory to replace the nonzero elements with algebraic variables.[2]
+</wiki></doc>

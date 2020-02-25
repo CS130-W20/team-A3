@@ -1,0 +1,30 @@
+<doc><id>Ackermann_function</id><concept_name>Ackermann function</concept_name><wiki>In computability theory, the Ackermann function, named after Wilhelm Ackermann, is one of the simplest[1] and earliest-discovered examples of a total computable function that is not primitive recursive. All primitive recursive functions are total and computable, but the Ackermann function illustrates that not all total computable functions are primitive recursive.
+After Ackermann's publication[2] of his function (which had three nonnegative integer arguments), many authors modified it to suit various purposes, so that today "the Ackermann function" may refer to any of numerous variants of the original function. One common version, the two-argument Ackermann&#8211;P&#233;ter function, is defined as follows for nonnegative integers m and n:
+Its value grows rapidly, even for small inputs. For example, A(4, 2) is an integer of 19,729 decimal digits[3] (equivalent to 265536&#8722;3, or 22222&#8722;3).
+In the late 1920s, the mathematicians Gabriel Sudan and Wilhelm Ackermann, students of David Hilbert, were studying the foundations of computation. Both Sudan and Ackermann are credited[4] with discovering total computable functions (termed simply "recursive" in some references) that are not primitive recursive. Sudan published the lesser-known Sudan function, then shortly afterwards and independently, in 1928, Ackermann published his function 
+
+
+
+&#966;
+
+
+{\displaystyle \varphi }
+
+ (the Greek letter phi). Ackermann's three-argument function, 
+
+
+
+&#966;
+(
+m
+,
+n
+,
+p
+)
+
+
+{\displaystyle \varphi (m,n,p)}
+
+, is defined such that for p = 0, 1, 2, it reproduces the basic operations of addition, multiplication, and exponentiation as
+</wiki></doc>

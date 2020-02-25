@@ -1,0 +1,5 @@
+<doc><id>busy_beaver</id><concept_name>busy beaver</concept_name><wiki>Informally, in theoretical computer science, the busy beaver game aims at finding a terminating program of a given size that produces the most output possible.[1]
+More precisely, the busy beaver game consists of designing a halting, binary-alphabet Turing machine which writes the most 1s on the tape, using only a given set of states. The rules for the 2-state game are as follows:
+A player should conceive a transition table aiming for the longest output of 1s on the tape while making sure the machine will halt eventually.
+An nth busy beaver, BB-n or simply "busy beaver" is a Turing machine that wins the n-state Busy Beaver Game. That is, it attains the largest number of 1s among all other possible n-state competing Turing Machines. The BB-2 Turing machine, for instance, achieves four 1s in six steps.
+</wiki></doc>

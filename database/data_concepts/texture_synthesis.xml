@@ -1,0 +1,5 @@
+<doc><id>texture_synthesis</id><concept_name>texture synthesis</concept_name><wiki>Texture synthesis is the process of algorithmically constructing a large digital image from a small digital sample image by taking advantage of its structural content. It is an object of research in computer graphics and is used in many fields, amongst others digital image editing, 3D computer graphics and post-production of films.
+Texture synthesis can be used to fill in holes in images (as in inpainting), create large non-repetitive background images and expand small pictures.[1]
+Procedural textures are a related technique which may synthesise textures from scratch with no source material. By contrast, texture synthesis refers to techniques where some source image is being matched or extended.
+"Texture" is an ambiguous word and in the context of texture synthesis may have one of the following meanings:
+</wiki></doc>

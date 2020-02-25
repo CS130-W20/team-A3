@@ -1,0 +1,8 @@
+<doc><id>three-dimensional_morphing</id><concept_name>three-dimensional morphing</concept_name><wiki>Morph target animation, per-vertex animation, shape interpolation, shape keys, or blend shapes[1] is a method of 3D computer animation used together with techniques such as skeletal animation. In a morph target animation, a "deformed" version of a mesh is stored as a series of vertex positions. In each key frame of an animation, the vertices are then interpolated between these stored positions.
+The "morph target" is a deformed version of a shape. When applied to a human face, for example, the head is first modelled with a neutral expression and a "target deformation" is then created for each other expression. When the face is being animated, the animator can then smoothly morph (or "blend") between the base shape and one or several morph targets.
+[2]
+Typical examples of morph targets used in facial animation is a smiling mouth, a closed eye, and a raised eyebrow, but the technique can also be used to morph between, for example, Dr Jekyll and Mr Hyde.  Early 3D videogames, such as Quake [3] and Crash Bandicoot use per-vertex animation for all character animations.
+When used for facial animation, these morph target are often referred to as "key poses". The interpolations between key poses when an animation is being rendered, are typically small and simple transformations of movement, rotation, and scale performed by the 3D software.
+[1]
+Not all morph target animation has to be done by actually editing vertex positions. It is also possible to take vertex positions found in skeletal animation and then use those rendered as morph target animation.
+</wiki></doc>

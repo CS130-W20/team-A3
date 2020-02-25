@@ -1,0 +1,5 @@
+<doc><id>bigram</id><concept_name>bigram</concept_name><wiki>A bigram or digram is a sequence of two adjacent elements from a string of tokens, which are typically letters, syllables, or words. A bigram is an n-gram for n=2. The frequency distribution of every bigram in a string is commonly used for simple statistical analysis of text in many applications, including in computational linguistics, cryptography, speech recognition, and so on.
+Gappy bigrams or skipping bigrams are word pairs which allow gaps (perhaps avoiding connecting words, or allowing some simulation of dependencies, as in a dependency grammar).
+Head word bigrams are gappy bigrams with an explicit dependency relationship.
+Bigrams help provide the conditional probability of a token given the preceding token, when the relation of the conditional probability is applied:
+</wiki></doc>

@@ -1,0 +1,72 @@
+<doc><id>supermodular_function</id><concept_name>supermodular function</concept_name><wiki>In mathematics, a function
+is supermodular if
+for all 
+
+
+
+x
+
+
+{\displaystyle x}
+
+, 
+
+
+
+y
+&#8712;
+
+
+R
+
+
+k
+
+
+
+
+{\displaystyle y\in \mathbb {R} ^{k}}
+
+, where 
+
+
+
+x
+&#8593;
+y
+
+
+{\displaystyle x\uparrow y}
+
+ denotes the componentwise maximum and 
+
+
+
+x
+&#8595;
+y
+
+
+{\displaystyle x\downarrow y}
+
+ the componentwise minimum of 
+
+
+
+x
+
+
+{\displaystyle x}
+
+ and 
+
+
+
+y
+
+
+{\displaystyle y}
+
+.
+If &#8722;f is supermodular then f is called submodular, and if the inequality is changed to an equality the function is modular.
+</wiki></doc>

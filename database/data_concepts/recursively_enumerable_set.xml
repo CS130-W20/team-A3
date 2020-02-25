@@ -1,0 +1,18 @@
+<doc><id>recursively_enumerable_set</id><concept_name>recursively enumerable set</concept_name><wiki>In computability theory, traditionally called recursion theory, a set S of natural numbers is called recursively enumerable, computably enumerable, semidecidable,  provable or Turing-recognizable if:
+Or, equivalently,
+The first condition suggests why the term semidecidable is sometimes used; the second suggests why computably enumerable is used.    The abbreviations r.e. and c.e. are often used, even in print, instead of the full phrase.
+In computational complexity theory, the complexity class containing all recursively enumerable sets is RE. In recursion theory, the lattice of r.e. sets under inclusion is denoted 
+
+
+
+
+
+E
+
+
+
+
+{\displaystyle {\mathcal {E}}}
+
+.
+</wiki></doc>

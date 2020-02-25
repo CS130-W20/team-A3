@@ -1,0 +1,121 @@
+<doc><id>variational_inequality</id><concept_name>variational inequality</concept_name><wiki>In mathematics, a variational inequality is an inequality involving a functional, which has to be solved for all possible values of a given variable, belonging usually to a convex set. The mathematical theory of variational inequalities was initially developed to deal with equilibrium problems, precisely the Signorini problem: in that model problem, the functional involved was obtained as the first variation of the involved potential energy. Therefore it has a variational origin, recalled by the name of the general abstract problem. The applicability of the theory has since been expanded to include problems from economics, finance, optimization and game theory.
+The first problem involving a variational inequality was the Signorini problem, posed by Antonio Signorini in 1959 and solved by Gaetano Fichera in 1963, according to the references (Antman 1983, pp.&#160;282&#8211;284) and (Fichera 1995): the first papers of the theory were (Fichera 1963) and (Fichera 1964a), (Fichera 1964b). Later on, Guido Stampacchia proved his generalization to the Lax&#8211;Milgram theorem in (Stampacchia 1964) in order to study the regularity problem for partial differential equations and coined the name "variational inequality" for all the problems involving inequalities of this kind. Georges Duvaut encouraged his graduate students to study and expand on Fichera's work, after attending a conference in Brixen on 1965 where Fichera presented his study of the Signorini problem, as Antman 1983, p.&#160;283 reports: thus the theory become widely known throughout France. Also in 1965, Stampacchia and Jacques-Louis Lions extended earlier results of (Stampacchia 1964), announcing them in the paper (Lions &amp; Stampacchia 1965): full proofs of their results appeared later in the paper (Lions &amp; Stampacchia 1967).
+Following Antman (1983, p.&#160;283), the formal definition of a variational inequality is the following one.
+Definition 1. Given a Banach space 
+
+
+
+
+E
+
+
+
+{\displaystyle {\boldsymbol {E}}}
+
+, a subset 
+
+
+
+
+K
+
+
+
+{\displaystyle {\boldsymbol {K}}}
+
+ of 
+
+
+
+
+E
+
+
+
+{\displaystyle {\boldsymbol {E}}}
+
+, and a functional 
+
+
+
+F
+:
+
+K
+
+&#8594;
+
+
+E
+
+
+&#8727;
+
+
+
+
+{\displaystyle F\colon {\boldsymbol {K}}\to {\boldsymbol {E}}^{\ast }}
+
+ from 
+
+
+
+
+K
+
+
+
+{\displaystyle {\boldsymbol {K}}}
+
+ to the dual space 
+
+
+
+
+
+E
+
+
+&#8727;
+
+
+
+
+{\displaystyle {\boldsymbol {E}}^{\ast }}
+
+ of the space 
+
+
+
+
+E
+
+
+
+{\displaystyle {\boldsymbol {E}}}
+
+, 
+the variational inequality problem 
+is the problem of solving 
+for the variable 
+
+
+
+x
+
+
+{\displaystyle x}
+
+ belonging to 
+
+
+
+
+K
+
+
+
+{\displaystyle {\boldsymbol {K}}}
+
+ the following inequality:
+</wiki></doc>

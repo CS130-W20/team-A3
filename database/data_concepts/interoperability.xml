@@ -1,0 +1,5 @@
+<doc><id>interoperability</id><concept_name>interoperability</concept_name><wiki>
+Interoperability is a characteristic of a product or system, whose interfaces are completely understood, to work with other products or systems, at present or in the future, in either implementation or access, without any restrictions.[1]
+While the term was initially defined for information technology or systems engineering services to allow for information exchange,[2] a broader definition takes into account social, political, and organizational factors that impact system to system performance.[3] Task of building coherent services for users when the individual components are technically different and managed by different organizations[4]
+If two or more systems use a common data formats and communication protocols and are capable of communicating with each other, they exhibit syntactic interoperability. XML and SQL are examples of common data formats and protocols. Lower-level data formats also contribute to syntactic interoperability, ensuring that alphabetical characters are stored in a same ASCII or a Unicode format in all the communicating systems.
+</wiki></doc>

@@ -1,0 +1,13 @@
+<doc><id>pachinko_allocation</id><concept_name>pachinko allocation</concept_name><wiki>In machine learning and natural language processing, the pachinko allocation model (PAM) is a topic model. Topic models are a suite of algorithms to uncover the hidden thematic structure of a collection of documents. [1] The algorithm improves upon earlier topic models such as latent Dirichlet allocation (LDA) by modeling correlations between topics in addition to the word correlations which constitute topics. PAM provides more flexibility and greater expressive power
+than latent Dirichlet allocation.[2]  While first described and implemented in the context of natural language processing, the algorithm may have applications in other fields such as bioinformatics.  The
+model is named for pachinko machines&#8212;a game popular in Japan, in which metal balls bounce down around
+a complex collection of pins until they land in various
+bins at the bottom.[3]
+Pachinko allocation was first described by Wei Li and Andrew McCallum in 2006.[3]
+The idea was extended with hierarchical Pachinko allocation by Li, McCallum, and David Mimno in 2007.[4] In 2007, McCallum and his colleagues proposed a nonparametric Bayesian prior for PAM based
+on a variant of the hierarchical Dirichlet process (HDP).[2]  The algorithm has been implemented in the MALLET software package published by McCallum's group at the University of Massachusetts Amherst.
+PAM connects words in V and topics in T with an arbitrary directed acyclic graph (DAG), where topic nodes occupy the
+interior levels and the leaves are words.
+The probability of generating a whole corpus
+is the product of the probabilities for every document:
+</wiki></doc>

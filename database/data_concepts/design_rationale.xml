@@ -1,0 +1,6 @@
+<doc><id>design_rationale</id><concept_name>design rationale</concept_name><wiki>A design rationale is an explicit documentation of the reasons behind decisions made when designing a system or artifact. As initially developed by W.R. Kunz and Horst Rittel, design rationale seeks to provide argumentation-based structure to the political, collaborative process of addressing wicked problems.[1]
+A design rationale is the explicit listing of decisions made during a design process, and the reasons why those decisions were made.[2] Its primary goal is to support designers by providing a means to record and communicate the argumentation and reasoning behind the design process.[3] 
+It should therefore include:[4]
+Several science areas are involved in the study of design rationales, such as computer science[2] cognitive science,[3] artificial intelligence,[5] and knowledge management.[6] For supporting design rationale, various frameworks have been proposed, such as QOC, DRCS, IBIS, and DRL.
+While argumentation formats can be traced back to Stephen Toulmin's work in the 1950s[7] datums, claims, warrants, backings and rebuttals, the origin of design rationale can be traced back to W.R. Kunz and Horst Rittel's[1] development of the Issue-Based Information System (IBIS) notation in 1970. Several variants on IBIS have since been proposed.
+</wiki></doc>

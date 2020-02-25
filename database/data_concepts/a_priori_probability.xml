@@ -1,0 +1,6 @@
+<doc><id>a_priori_probability</id><concept_name>a priori probability</concept_name><wiki>An a priori probability is a probability that is derived purely by deductive reasoning.[1] One way of deriving a priori probabilities is the principle of indifference, which has the character of saying that, if there are N mutually exclusive and collectively exhaustive events and if they are equally likely, then the probability of a given event occurring is 1/N. Similarly the probability of one of a given collection of K events is K / N.
+One disadvantage of defining probabilities in the above way is that it applies only to finite collections of events.
+In Bayesian inference, "uninformative priors" or "objective priors" are particular choices of a priori probabilities.[2]
+Note that "prior probability" is a broader concept.
+Similar to the distinction in philosophy between a priori and a posteriori, in Bayesian inference a priori denotes general knowledge about the data distribution before making an inference, while a posteriori denotes knowledge that incorporates the results of making an inference.[3]
+</wiki></doc>

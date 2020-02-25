@@ -1,0 +1,127 @@
+<doc><id>thin_plate_spline</id><concept_name>thin plate spline</concept_name><wiki>Thin plate splines (TPS) are a spline-based technique for data interpolation and smoothing. They were introduced to geometric design by Duchon.[1] They are an important special case of a polyharmonic spline. Robust Point Matching (RPM) is a common extension and shortly known as the TPS-RPM algorithm.[2]
+The name thin plate spline refers to a physical analogy involving the bending of a thin sheet of metal. Just as the metal has rigidity, the TPS fit resists bending also, implying a penalty involving the smoothness of the fitted surface. In the physical setting, the deflection is in the 
+
+
+
+z
+
+
+{\displaystyle z}
+
+ direction, orthogonal to the plane. In order to apply this idea to the problem of coordinate transformation, one interprets the lifting of the plate as a displacement of the 
+
+
+
+x
+
+
+{\displaystyle x}
+
+ or 
+
+
+
+y
+
+
+{\displaystyle y}
+
+ coordinates within the plane. In 2D cases, given a set of 
+
+
+
+K
+
+
+{\displaystyle K}
+
+ corresponding points, the TPS warp is described by 
+
+
+
+2
+(
+K
++
+3
+)
+
+
+{\displaystyle 2(K+3)}
+
+ parameters which include 6 global affine motion parameters and 
+
+
+
+2
+K
+
+
+{\displaystyle 2K}
+
+ coefficients for correspondences of the control points. These parameters are computed by solving a linear system, in other words, TPS has a closed-form solution.
+The TPS arises from consideration of the integral of the square of the second derivative&#8212;this forms its smoothness measure. In the case where 
+
+
+
+x
+
+
+{\displaystyle x}
+
+ is two dimensional, for interpolation, the TPS fits a mapping function 
+
+
+
+f
+(
+x
+)
+
+
+{\displaystyle f(x)}
+
+ between corresponding point-sets 
+
+
+
+{
+
+y
+
+i
+
+
+}
+
+
+{\displaystyle \{y_{i}\}}
+
+ and 
+
+
+
+{
+
+x
+
+i
+
+
+}
+
+
+{\displaystyle \{x_{i}\}}
+
+ that minimizes the following energy function: 
+The smoothing variant, correspondingly, uses a tuning parameter 
+
+
+
+&#955;
+
+
+{\displaystyle \lambda }
+
+ to control the rigidity of the deformation, balancing the aforementioned criterion with the measure of goodness of fit, thus minimizing:
+</wiki></doc>

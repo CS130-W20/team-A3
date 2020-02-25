@@ -1,0 +1,6 @@
+<doc><id>echo_off</id><concept_name>echo off</concept_name><wiki>
+AUTOEXEC.BAT is a system file that was originally on DOS-type operating systems. It is a plain-text batch file in the root directory of the boot device. The name of the file is an abbreviation of "automatic execution", which describes its function in automatically executing commands on system startup; the filename was coined in response to the 8.3 filename limitations of the FAT file system family.
+AUTOEXEC.BAT is read upon startup by all versions of DOS, including MS-DOS version 7.x as used in Windows 95 and Windows 98. Windows ME only parses environment variables as part of its attempts to reduce legacy dependencies,[1] but this can be worked around.[2]
+The filename was also used by Disk Control Program&#160;[de] (DCP), an MS-DOS derivative by the former East-German VEB Robotron.[3]
+In Korean versions of MS-DOS/PC&#160;DOS 4.01 and higher (except for PC&#160;DOS 7 and 2000), if the current country code is set to 82 (for Korea) and no /P:filename is given and no default AUTOEXEC.BAT is found, COMMAND.COM will look for a file named KAUTOEXE.BAT instead in order to ensure that the DBCS frontend drivers will be loaded even without properly set up CONFIG.SYS and AUTOEXEC.BAT files.[4]
+</wiki></doc>

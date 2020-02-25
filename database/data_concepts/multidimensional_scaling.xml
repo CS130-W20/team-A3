@@ -1,0 +1,5 @@
+<doc><id>multidimensional_scaling</id><concept_name>multidimensional scaling</concept_name><wiki>Multidimensional scaling (MDS) is a means of visualizing the level of similarity of individual cases of a dataset.  MDS is used to translate "information about the pairwise 'distances' among a set of n objects or individuals" into a configuration of n points mapped into an abstract Cartesian space.[1]
+More technically, MDS refers to a set of related ordination techniques used in information visualization, in particular to display the information contained in a distance matrix. It is a form of non-linear dimensionality reduction. 
+Given a distance matrix with the distances between each pair of objects in a set, and a chosen number of dimensions, N, an MDS algorithm places each object into N-dimensional space such that the between-object distances are preserved as well as possible. For N=1, 2, and 3, the resulting points can be visualized on a scatter plot.[2]
+MDS algorithms fall into a taxonomy, depending on the meaning of the input matrix:
+</wiki></doc>

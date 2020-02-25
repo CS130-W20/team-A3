@@ -1,0 +1,5 @@
+<doc><id>active_partition</id><concept_name>active partition</concept_name><wiki>A boot flag is a 1-byte value in a non-extended partition record, within a master boot record. It appears at the beginning of a partition record, as the value 0x80. A value of 0x00 indicates the partition does not have the boot flag set.[1][2] Any other value is invalid.
+Its primary function is to indicate to a MS-DOS/MS Windows-type boot loader which partition to boot. In some cases it is used by Windows XP/2000 to assign the active partition the letter "C:".[3] The active partition is the partition where the boot flag is set. DOS and Windows allow only one boot partition to be set with the boot flag.[4]
+Other boot loaders used by third-party boot managers (such as GRUB or XOSL) can be installed to a master boot record and can boot primary or extended partitions, which do not have the boot flag set.
+There are many disk editors that can modify the boot flag, such as Disk Management in Windows[5] and fdisk.
+</wiki></doc>

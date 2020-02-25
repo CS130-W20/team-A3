@@ -1,0 +1,5 @@
+<doc><id>asynchronous_replication</id><concept_name>asynchronous replication</concept_name><wiki>Replication in computing involves sharing information so as to ensure consistency between redundant resources, such as software or hardware components, to improve reliability, fault-tolerance, or accessibility.
+Replication in computing can refer to:
+Replication in space or in time is often linked to scheduling algorithms.[1]
+Access to a replicated entity is typically uniform with access to a single non-replicated entity. The replication itself should be transparent to an external user. In a failure scenario, a failover of replicas should be hidden as much as possible with respect to quality of service.[2]
+</wiki></doc>

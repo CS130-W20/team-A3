@@ -1,0 +1,5 @@
+<doc><id>trusted_platform_module</id><concept_name>trusted platform module</concept_name><wiki>
+Trusted Platform Module (TPM, also known as ISO/IEC 11889) is an international standard for a secure cryptoprocessor, a dedicated microcontroller designed to secure hardware through integrated cryptographic keys.
+Trusted Platform Module (TPM) was conceived by a computer industry consortium called Trusted Computing Group (TCG), and was standardized by International Organization for Standardization (ISO) and  International Electrotechnical Commission (IEC) in 2009 as ISO/IEC 11889.[1]
+TCG continued to revise the TPM specifications. The last revised edition of TPM Main Specification Version 1.2 was published on March 3, 2011. It consisted of three parts, based on their purpose.[2] For the second major version of TPM, however, TCG released TPM Library Specification 2.0, which builds upon the previously published TPM Main Specification. Its latest edition was released on September 29, 2016, with several errata with the latest one being dated on January 8, 2018.[3][4]
+</wiki></doc>

@@ -1,0 +1,144 @@
+<doc><id>range_searching</id><concept_name>range searching</concept_name><wiki>In data structures, the range searching problem most generally consists of preprocessing a set S of objects, in order to determine which objects from S intersect with a query object, called a range. For example, if S is a set of points corresponding to the coordinates of several cities, a geometric variant of the problem is to find cities within a certain latitude and longitude range.
+The range searching problem and the data structures that solve it are a fundamental topic of computational geometry. Applications of the problem arise in areas including geographical information systems (GIS) and computer-aided design (CAD), and databases.
+There are several variations of the problem, and different data structures may be necessary for different variations.[1] In order to obtain an efficient solution, several aspects of the problem need to be specified:
+In orthogonal range searching, the set S consists of 
+
+
+
+n
+
+
+{\displaystyle n}
+
+ points in 
+
+
+
+d
+
+
+{\displaystyle d}
+
+ dimensions, and the query consists of intervals in each of those dimensions. Thus, the query consists of a multi-dimensional axis-aligned rectangle. With an output size of 
+
+
+
+k
+
+
+{\displaystyle k}
+
+, Jon Bentley used a k-d tree to achieve (in Big O notation) 
+
+
+
+O
+(
+n
+)
+
+
+{\displaystyle O(n)}
+
+ space and 
+
+
+
+O
+
+
+(
+
+
+
+n
+
+1
+&#8722;
+
+
+1
+d
+
+
+
+
++
+k
+
+
+)
+
+
+
+
+{\displaystyle O{\big (}n^{1-{\frac {1}{d}}}+k{\big )}}
+
+ query time.[2] Bentley also proposed using range trees, which improved query time to 
+
+
+
+O
+(
+
+log
+
+d
+
+
+&#8289;
+n
++
+k
+)
+
+
+{\displaystyle O(\log ^{d}n+k)}
+
+ but increased space to 
+
+
+
+O
+(
+n
+
+log
+
+d
+&#8722;
+1
+
+
+&#8289;
+n
+)
+
+
+{\displaystyle O(n\log ^{d-1}n)}
+
+.[3] Dan Willard used downpointers, a special case of fractional cascading to reduce the query time further to 
+
+
+
+O
+(
+
+log
+
+d
+&#8722;
+1
+
+
+&#8289;
+n
++
+k
+)
+
+
+{\displaystyle O(\log ^{d-1}n+k)}
+
+. [4]
+</wiki></doc>
