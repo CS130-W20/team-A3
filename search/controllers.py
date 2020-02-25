@@ -44,8 +44,17 @@ def search():
                                        browse_categories=browse_categories)
 
             docs = cut_page(page, 0, docid)
-            return render_template('high_search.html', checked=checked, key=keys, docs=docs, page=page,
-                                   nonempty=True, welcome=False, browse_categories=browse_categories)
+
+            docs_concept = find_concept([keys.replace(" ", "_")], extra=True)
+            if docs_concept:
+                        docs_concept = docs_concept[0]
+                        docs_concept["concept_name"] = docs_concept["concept_name"].title()
+                        show_concept = True
+            else:
+                        show_concept = False
+
+            return render_template('high_search.html', checked=checked, key=keys, docs=docs,concept=docs_concept, page=page,
+                                   nonempty=True, welcome=False,showconcept = show_concept, browse_categories=browse_categories)
         else:
             return render_template('search.html', nonempty=False, welcome=True, browse_categories=browse_categories)
 
@@ -95,8 +104,8 @@ def content(id):
     try:
         doc = find([id], extra=True)
         return render_template('content.html', doc=doc[0])
-    except:
-        print('content error')
+    except Exception as e:
+        print('content error' +str(e))
 
 
 @searcher.route('/search/<key>/', methods=['POST'])

@@ -1,0 +1,5 @@
+<doc><id>datalog</id><concept_name>datalog</concept_name><wiki>Datalog is a declarative logic programming language that syntactically is a subset of Prolog.  It is often used as a query language for deductive databases.  In recent years, Datalog has found new application in data integration, information extraction, networking, program analysis, security, and cloud computing.[1]
+Its origins date back to the beginning of logic programming, but it became prominent as a separate area around 1977 when Herv&#233; Gallaire and Jack Minker organized a workshop on logic and databases.[2] David Maier is credited with coining the term Datalog.[3]
+Unlike in Prolog, statements of a Datalog program can be stated in any order. Furthermore, Datalog queries on finite sets are guaranteed to terminate, so Datalog does not have Prolog's cut operator. This makes Datalog a fully declarative language.
+In contrast to Prolog, Datalog
+</wiki></doc>

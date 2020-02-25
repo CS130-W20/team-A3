@@ -1,0 +1,5 @@
+<doc><id>light_pen</id><concept_name>light pen</concept_name><wiki>A light pen is a computer input device in the form of a light-sensitive wand used in conjunction with a computer's cathode-ray tube (CRT) display.
+It allows the user to point to displayed objects or draw on the screen in a similar way to a touchscreen but with greater positional accuracy.  A light pen can work with any CRT-based display, but its ability to be used with LCDs was unclear (though Toshiba and Hitachi displayed a similar idea at the "Display 2006" show in Japan[1]).
+A light pen detects changes in brightness of nearby screen pixels when scanned by cathode-ray tube electron beam and communicates the timing of this event to the computer. Since a CRT scans the entire screen one pixel at a time, the computer can keep track of the expected time of scanning various locations on screen by the beam and infer the pen's position from the latest timestamp.
+The first light pen was created around 1955 as part of the Whirlwind project at MIT.[2][3]
+</wiki></doc>

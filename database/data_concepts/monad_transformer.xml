@@ -1,0 +1,53 @@
+<doc><id>monad_transformer</id><concept_name>monad transformer</concept_name><wiki>In functional programming, a monad transformer is a type constructor which takes a monad as an argument and returns a monad as a result.
+Monad transformers can be used to compose features encapsulated by monads &#8211; such as state, exception handling, and I/O &#8211; in a modular way. Typically, a monad transformer is created by generalising an existing monad; applying the resulting monad transformer to the identity monad yields a monad which is equivalent to the original monad (ignoring any necessary boxing and unboxing).
+A monad transformer consists of:
+Given any monad 
+
+
+
+
+M
+
+
+A
+
+
+{\displaystyle \mathrm {M} \,A}
+
+, the option monad transformer 
+
+
+
+
+M
+
+
+(
+
+A
+
+?
+
+
+)
+
+
+
+{\displaystyle \mathrm {M} \left(A^{?}\right)}
+
+ (where 
+
+
+
+
+A
+
+?
+
+
+
+
+{\displaystyle A^{?}}
+
+ denotes the option type) is defined by:
+</wiki></doc>

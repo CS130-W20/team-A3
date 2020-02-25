@@ -1,0 +1,5 @@
+<doc><id>Kruskal's_algorithm</id><concept_name>Kruskal's algorithm</concept_name><wiki> Kruskal's algorithm is a minimum-spanning-tree algorithm which finds an edge of the least possible weight that connects any two trees in the forest.[1] It is a greedy algorithm in graph theory as it finds a minimum spanning tree for a connected weighted graph adding increasing cost arcs at each step.[1] This means it finds a subset of the edges that forms a tree that includes every vertex, where the total weight of all the edges in the tree is minimized.  If the graph is not connected, then it finds a minimum spanning forest (a minimum spanning tree for each connected component).
+This algorithm first appeared in Proceedings of the American Mathematical Society, pp.&#160;48&#8211;50 in 1956, and was written by Joseph Kruskal.[2]
+Other algorithms for this problem include Prim's algorithm, Reverse-delete algorithm, and Bor&#367;vka's algorithm.
+At the termination of the algorithm, the forest forms a minimum spanning forest of the graph. If the graph is connected, the forest has a single component and forms a minimum spanning tree
+</wiki></doc>

@@ -1,0 +1,5 @@
+<doc><id>binary_logarithm</id><concept_name>binary logarithm</concept_name><wiki>
+In mathematics, the binary logarithm (log2&#8202;n) is the power to which the number 2 must be raised to obtain the value&#160;n. That is, for any real number x,
+For example, the binary logarithm of 1 is 0, the binary logarithm of 2 is 1, the binary logarithm of 4 is&#160;2, and the binary logarithm of 32 is&#160;5.
+The binary logarithm is the logarithm to the base 2. The binary logarithm function is the inverse function of the power of two function. As well as log2, alternative notations for the binary logarithm include lg, ld, lb (the notation preferred by ISO 31-11 and ISO 80000-2), and (with a prior statement that the default base is&#160;2) log.
+</wiki></doc>

@@ -1,0 +1,4 @@
+<doc><id>partition_table</id><concept_name>partition table</concept_name><wiki>A partition is a fixed-size subset of a disk drive which is treated as a unit by the operating system.[1] A partition table is a table maintained on disk by the operating system describing the partitions on that disk. 
+The terms partition table and partition map are most commonly associated with the MBR partition table of a Master Boot Record (MBR) in IBM PC compatibles, but it may be used generically to refer to other "formats" that divide a disk drive into partitions, such as: GUID Partition Table (GPT), Apple partition map (APM),[2] or BSD disklabel.[3]
+Partitions can be created, resized, or deleted. This is called disk partitioning. It is usually done during the installation of an operating system, but it is also possible to make changes to the partitions after the operating system has been installed.
+</wiki></doc>

@@ -1,0 +1,18 @@
+<doc><id>data_stream</id><concept_name>data stream</concept_name><wiki>
+In connection-oriented communication, a data stream is a sequence of digitally encoded coherent signals (packets of data or data packets) used to transmit or receive information that is in the process of being transmitted.[1] A data stream is a set of extracted information from a data provider.[2] It contains raw data that was gathered out of users' browser behavior from websites, where a dedicated pixel is placed. Data streams are useful for data scientists for big data and AI algorithms supply. The main data stream providers are data technology companies.
+In a formal way, a data stream is any ordered pair 
+
+
+
+(
+s
+,
+&#916;
+)
+
+
+{\displaystyle (s,\Delta )}
+
+ where:
+Data Stream contains different sets of data, that depend on the chosen data format. 
+</wiki></doc>

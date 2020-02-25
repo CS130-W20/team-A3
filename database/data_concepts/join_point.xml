@@ -1,0 +1,5 @@
+<doc><id>join_point</id><concept_name>join point</concept_name><wiki>In computer science, a join point is a point in the control flow of a program where the control flow can arrive via two different paths. In particular, it's a basic block that has more than one predecessor.[1] In aspect-oriented programming a set of join points is called a pointcut. A join point is a specification of when, in the corresponding main program, the aspect code should be executed.
+The join point is a point of execution in the base code where the advice specified in a corresponding pointcut is applied.
+Conceptually, a join point exists where a precondition for a command in Hoare logic makes an assertion parametric upon the joint and several advice supplied by the different concerns at that point in a generalized abstract process, the unified thing composed from its concrete aspects being the pointcut.
+
+</wiki></doc>

@@ -1,0 +1,4 @@
+<doc><id>strong_duality</id><concept_name>strong duality</concept_name><wiki>Strong duality is a condition in mathematical optimization in which the primal optimal objective and the dual optimal objective are equal.  This is as opposed to weak duality (the primal problem has optimal value not smaller than the dual problem, in other words the duality gap is greater than or equal to zero). 
+Strong duality holds if and only if the duality gap is equal to 0.
+Sufficient conditions comprise:
+</wiki></doc>

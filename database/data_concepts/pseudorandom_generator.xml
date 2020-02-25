@@ -1,0 +1,212 @@
+<doc><id>pseudorandom_generator</id><concept_name>pseudorandom generator</concept_name><wiki>In theoretical computer science and cryptography, a pseudorandom generator (PRG) for a class of statistical tests is a deterministic procedure that maps a random seed to a longer pseudorandom string such that no statistical test in the class can distinguish between the output of the generator and the uniform distribution. The random seed is typically a short binary string drawn from the uniform distribution.
+Many different classes of statistical tests have been considered in the literature, among them the class of all Boolean circuits of a given size.
+It is not known whether good pseudorandom generators for this class exist, but it is known that their existence is in a certain sense equivalent to (unproven) circuit lower bounds in computational complexity theory.
+Hence the construction of pseudorandom generators for the class of Boolean circuits of a given size rests on currently unproven hardness assumptions.
+Let 
+
+
+
+
+
+A
+
+
+=
+{
+A
+:
+{
+0
+,
+1
+
+}
+
+n
+
+
+&#8594;
+{
+0
+,
+1
+
+}
+
+&#8727;
+
+
+}
+
+
+{\displaystyle {\mathcal {A}}=\{A:\{0,1\}^{n}\to \{0,1\}^{*}\}}
+
+ be a class of functions.
+These functions are the statistical tests that the pseudorandom generator will try to fool, and they are usually algorithms.
+Sometimes the statistical tests are also called adversaries or distinguishers.[1]
+A function 
+
+
+
+G
+:
+{
+0
+,
+1
+
+}
+
+&#8467;
+
+
+&#8594;
+{
+0
+,
+1
+
+}
+
+n
+
+
+
+
+{\displaystyle G:\{0,1\}^{\ell }\to \{0,1\}^{n}}
+
+ with 
+
+
+
+&#8467;
+&#8804;
+n
+
+
+{\displaystyle \ell \leq n}
+
+ is a pseudorandom generator against 
+
+
+
+
+
+A
+
+
+
+
+{\displaystyle {\mathcal {A}}}
+
+ with bias 
+
+
+
+&#1013;
+
+
+{\displaystyle \epsilon }
+
+ if, for every 
+
+
+
+A
+
+
+{\displaystyle A}
+
+ in 
+
+
+
+
+
+A
+
+
+
+
+{\displaystyle {\mathcal {A}}}
+
+, the statistical distance between the distributions 
+
+
+
+A
+(
+G
+(
+
+U
+
+&#8467;
+
+
+)
+)
+
+
+{\displaystyle A(G(U_{\ell }))}
+
+ and 
+
+
+
+A
+(
+
+U
+
+n
+
+
+)
+
+
+{\displaystyle A(U_{n})}
+
+ is at most 
+
+
+
+&#1013;
+
+
+{\displaystyle \epsilon }
+
+, where 
+
+
+
+
+U
+
+k
+
+
+
+
+{\displaystyle U_{k}}
+
+ is the uniform distribution on 
+
+
+
+{
+0
+,
+1
+
+}
+
+k
+
+
+
+
+{\displaystyle \{0,1\}^{k}}
+
+.
+</wiki></doc>

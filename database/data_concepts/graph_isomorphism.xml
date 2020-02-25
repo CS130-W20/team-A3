@@ -1,0 +1,16 @@
+<doc><id>graph_isomorphism</id><concept_name>graph isomorphism</concept_name><wiki>In graph theory, an isomorphism of graphs G and H is a bijection between the vertex sets of G and H
+such that any two vertices u and v of G are adjacent in G if and only if f(u) and f(v) are adjacent in H. This kind of bijection is commonly described as "edge-preserving bijection", in accordance with the general notion of isomorphism being a structure-preserving bijection
+If an isomorphism exists between two graphs, then the graphs are called isomorphic and denoted as 
+
+
+
+G
+&#8771;
+H
+
+
+{\displaystyle G\simeq H}
+
+. In the case  when the bijection is a mapping of a graph onto itself, i.e., when G and H are one and the same graph, the bijection is called an automorphism of G.
+Graph isomorphism is an equivalence relation on graphs and as such it partitions the class of all graphs into equivalence classes. A set of graphs isomorphic to each other is called an isomorphism class of graphs.
+</wiki></doc>

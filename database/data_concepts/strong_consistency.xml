@@ -1,0 +1,5 @@
+<doc><id>strong_consistency</id><concept_name>strong consistency</concept_name><wiki>Strong consistency is one of the consistency models used in the domain of the concurrent programming (e.g., in distributed shared memory, distributed transactions).
+The protocol is said to support strong consistency if:
+Therefore, only one consistent state can be observed, as opposed to weak consistency, where different parallel processes (or nodes, etc.) can perceive variables in different states.
+
+</wiki></doc>

@@ -1,0 +1,7 @@
+<doc><id>color_graphics_adapter</id><concept_name>color graphics adapter</concept_name><wiki>PCjr/Tandy Graphics Adapter
+Enhanced Graphics Adapter
+Multi-Color Graphics Array
+The Color Graphics Adapter (CGA), originally also called the Color/Graphics Adapter or IBM Color/Graphics Monitor Adapter,[1] introduced in 1981, was IBM's first graphics card and first color display card for the IBM PC. For this reason, it also became that computer's first color computer display standard.
+The standard IBM CGA graphics card was equipped with 16&#160;kilobytes of video memory and could be connected either to a dedicated direct-drive CRT monitor using a 4-bit digital (TTL) RGBI interface, such as the IBM 5153 color display, or to an NTSC-compatible television or composite video monitor via an RCA connector.[2] The RCA connector provided only baseband video, so to connect the CGA card to a standard television set required a separate RF modulator unless the TV had a composite video input, although doing so with the former combined with an amplifier was sometimes more practical, since one could then hook up an antenna to the amplifier and get wireless video.[3]
+Built around the Motorola 6845 display controller,[4] the CGA card featured several graphics and text modes. The highest display resolution of any mode was 640&#215;200, and the highest color depth supported was 4-bit (16&#160;colors).
+</wiki></doc>

@@ -1,0 +1,5 @@
+<doc><id>interlaced</id><concept_name>interlaced</concept_name><wiki>
+Interlaced video (also known as Interlaced scan) is a technique for doubling the perceived frame rate of a video display without consuming extra bandwidth. The interlaced signal contains two fields of a video frame captured consecutively. This enhances motion perception to the viewer, and reduces flicker by taking advantage of the phi phenomenon.
+This effectively doubles the time resolution (also called temporal resolution) as compared to non-interlaced footage (for frame rates equal to field rates). Interlaced signals require a display that is natively capable of showing the individual fields in a sequential order. CRT displays and ALiS plasma displays are made for displaying interlaced signals.
+Interlaced scan refers to one of two common methods for "painting" a video image on an electronic display screen (the other being progressive scan) by scanning or displaying each line or row of pixels. This technique uses two fields to create a frame. One field contains all odd-numbered lines in the image; the other contains all even-numbered lines.
+</wiki></doc>

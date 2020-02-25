@@ -1,0 +1,16 @@
+<doc><id>k-anonymity</id><concept_name>k-anonymity</concept_name><wiki>k-anonymity is a property possessed by certain anonymized data. The concept of k-anonymity was first introduced by Latanya Sweeney and Pierangela Samarati in a paper published in 1998[1] as an attempt to solve the problem: "Given person-specific field-structured data, produce a release of the data with scientific guarantees that the individuals who are the subjects of the data cannot be re-identified while the data remain practically useful."[2][3][4] A release of data is said to have the k-anonymity property if the information for each person contained in the release cannot be distinguished from at least 
+
+
+
+k
+&#8722;
+1
+
+
+{\displaystyle k-1}
+
+ individuals whose information also appear in the release.
+K-anonymity received widespread media coverage in 2018 when British computer scientist Junade Ali used the property alongside cryptographic hashing to create a communication protocol to anonymously verify if a password was leaked without disclosing the searched password.[5][6] This protocol was implemented as a public API in Troy Hunt's Have I Been Pwned? service and is consumed by multiple services including password managers[7][8] and browser extensions.[9][10] This approach was later replicated by Google's Password Checkup feature.[11][12][13]
+In the context of k-anonymization problems, a database is a table with n rows and m columns. Each row of the table represents a record relating to a specific member of a population and the entries in the various rows need not be unique. The values in the various columns are the values of attributes associated with the members of the population. The following table is a nonanonymized database consisting of the patient records of some fictitious hospital in Kochi. 
+There are 6 attributes and 10 records in this data. There are two common methods for achieving k-anonymity for some value of k.
+</wiki></doc>

@@ -1,0 +1,63 @@
+<doc><id>orthogonal_wavelet</id><concept_name>orthogonal wavelet</concept_name><wiki>An orthogonal wavelet is a wavelet whose associated wavelet transform is orthogonal.
+That is, the inverse wavelet transform is the adjoint of the wavelet transform.
+If this condition is weakened one may end up with biorthogonal wavelets.
+The scaling function is a refinable function.
+That is, it is a fractal functional equation, called the refinement equation (twin-scale relation or dilation equation):
+where the sequence 
+
+
+
+(
+
+a
+
+0
+
+
+,
+&#8230;
+,
+
+a
+
+N
+&#8722;
+1
+
+
+)
+
+
+{\displaystyle (a_{0},\dots ,a_{N-1})}
+
+ of real numbers is called a scaling sequence or scaling mask.
+The wavelet proper is obtained by a similar linear combination,
+where the sequence 
+
+
+
+(
+
+b
+
+0
+
+
+,
+&#8230;
+,
+
+b
+
+M
+&#8722;
+1
+
+
+)
+
+
+{\displaystyle (b_{0},\dots ,b_{M-1})}
+
+ of real numbers is called a wavelet sequence or wavelet mask.
+</wiki></doc>

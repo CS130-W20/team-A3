@@ -1,0 +1,118 @@
+<doc><id>visibility_polygon</id><concept_name>visibility polygon</concept_name><wiki>In computational geometry, the visibility polygon or visibility region for a point p in the plane among obstacles is the possibly unbounded polygonal region of all points of the plane visible from p. The visibility polygon can also be defined for visibility from a segment, or a polygon. Visibility polygons are useful in robotics, video games, and in determining positions to locate facilities, such as the best placement of security guards in an art gallery.
+If the visibility polygon is bounded then it is a star-shaped polygon. A visibility polygon is bounded if all rays shooting from the point eventually terminate in some obstacle. This is the case, e.g., if the obstacles are the edges of a simple polygon and p is inside the polygon. In the latter case the visibility polygon may be found in linear time.
+[1][2][3][4]
+Formally, we can define the planar visibility polygon problem as such. Let 
+
+
+
+S
+
+
+{\displaystyle S}
+
+ be a set of obstacles (either segments, or polygons) in 
+
+
+
+
+
+R
+
+
+2
+
+
+
+
+{\displaystyle \mathbb {R} ^{2}}
+
+. Let 
+
+
+
+p
+
+
+{\displaystyle p}
+
+ be a point in 
+
+
+
+
+
+R
+
+
+2
+
+
+
+
+{\displaystyle \mathbb {R} ^{2}}
+
+ that is not within an obstacle. Then, the point visibility polygon 
+
+
+
+V
+
+
+{\displaystyle V}
+
+ is the set of points in 
+
+
+
+
+
+R
+
+
+2
+
+
+
+
+{\displaystyle \mathbb {R} ^{2}}
+
+, such that for every point 
+
+
+
+q
+
+
+{\displaystyle q}
+
+ in 
+
+
+
+V
+
+
+{\displaystyle V}
+
+, the segment 
+
+
+
+p
+q
+
+
+{\displaystyle pq}
+
+ does not intersect any obstacle in 
+
+
+
+S
+
+
+{\displaystyle S}
+
+.
+Likewise, the segment visibility polygon or edge visibility polygon is the portion visible to any point along a line segment.
+</wiki></doc>

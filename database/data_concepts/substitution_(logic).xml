@@ -1,0 +1,8 @@
+<doc><id>substitution_(logic)</id><concept_name>substitution (logic)</concept_name><wiki>Substitution is a fundamental concept in logic.
+A substitution is a syntactic transformation on formal expressions.
+To apply a substitution to an expression means to consistently replace its variable, or placeholder, symbols by other expressions.
+The resulting expression is called a substitution instance, or short instance, of the original expression.
+Where &#968; and &#966; represent formulas of propositional logic, &#968; is a substitution instance of &#966; if and only if &#968; may be obtained from &#966; by substituting formulas for symbols in &#966;, replacing each occurrence of the same symbol by an occurrence of the same formula. For example:
+is a substitution instance of:
+and
+</wiki></doc>

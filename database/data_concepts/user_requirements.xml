@@ -1,0 +1,5 @@
+<doc><id>user_requirements</id><concept_name>user requirements</concept_name><wiki>The user requirement(s) document (URD) or user requirement(s) specification (URS) is a document usually used in software engineering that specifies what the user expects the software to be able to do.
+Once the required information is completely gathered it is documented in a URD, which is meant to spell out exactly what the software must do and becomes part of the contractual agreement.  A customer cannot demand features not in the URD, while the developer cannot claim the product is ready if it does not meet an item of the URD.
+The URD can be used as a guide to planning cost, timetables, milestones, testing, etc.  The explicit nature of the URD allows customers to show it to various stakeholders to make sure all necessary features are described.
+Formulating a URD requires negotiation  to determine what is technically and economically feasible.  Preparing a URD is one of those skills that lies between a science and an art, requiring both software technical skills and interpersonal skills.[1]
+</wiki></doc>

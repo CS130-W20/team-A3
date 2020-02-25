@@ -1,0 +1,5 @@
+<doc><id>compact_element</id><concept_name>compact element</concept_name><wiki>In the mathematical area of order theory, the compact elements or finite elements of a partially ordered set are those elements that  cannot be subsumed by a supremum of any non-empty directed set that does not already contain members above the compact element.
+There are other notions of compactness in mathematics; also, the term "finite" in its normal set theoretic meaning does not coincide with the order-theoretic notion of a "finite element".
+In a partially ordered set (P,&#8804;) an element c is called compact (or finite) if it satisfies one of the following equivalent conditions:
+If the poset P additionally is a join-semilattice (i.e., if it has binary suprema) then these conditions are equivalent to the following statement:
+</wiki></doc>

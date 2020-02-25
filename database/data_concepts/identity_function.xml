@@ -1,0 +1,5 @@
+<doc><id>identity_function</id><concept_name>identity function</concept_name><wiki>In mathematics, an identity function, also called an identity relation or identity map or identity transformation, is a function that always returns the same value that was used as its argument. That is, for f being identity, the equality f(x) = x holds for all x.
+Formally, if M is a set, the identity function f on M is defined to be that function with domain and codomain M which satisfies
+In other words, the function value f(x) in M (that is, the codomain) is always the same input element x of M (now considered as the domain). The identity function on M is clearly an injective function as well as a surjective function, so it is also bijective.[2]
+The identity function f on M is often denoted by idM.
+</wiki></doc>

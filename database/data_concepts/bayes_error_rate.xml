@@ -1,0 +1,7 @@
+<doc><id>bayes_error_rate</id><concept_name>bayes error rate</concept_name><wiki>In statistical classification, Bayes error rate is the lowest possible error rate for any classifier of a random outcome (into, for example, one of two categories) and is analogous to the irreducible error.[1][2]
+A number of approaches to the estimation of the Bayes error rate exist. One method seeks to obtain analytical bounds which are inherently dependent on distribution parameters, and hence difficult to estimate. Another approach focuses on class densities, while yet another method combines and compares various classifiers.[2]
+The Bayes error rate finds important use in the study  of patterns and machine learning techniques.[3]
+In terms of machine learning and pattern classification, the labels of a set of random observations can be divided into 2 or more classes. Each observation is called an instance and the class it belongs to is the label.
+The Bayes error rate of the data distribution is the probability an instance is misclassified by a classifier that knows the true class probabilities given the predictors. 
+For a multiclass classifier, the Bayes error rate may be calculated as follows:[citation needed]
+</wiki></doc>

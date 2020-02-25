@@ -1,0 +1,50 @@
+<doc><id>discriminant_validity</id><concept_name>discriminant validity</concept_name><wiki>In psychology, discriminant validity tests whether concepts or measurements that are not supposed to be related are actually unrelated.
+Campbell and Fiske (1959) introduced the concept of discriminant validity within their discussion on evaluating test validity. They stressed the importance of using both discriminant and convergent validation techniques when assessing new tests. A successful evaluation of discriminant validity shows that a test of a concept is not highly correlated with other tests designed to measure theoretically different concepts.
+In showing that two scales do not correlate, it is necessary to correct for attenuation in the correlation due to measurement error. It is possible to calculate the extent to which the two scales overlap by using the following formula where 
+
+
+
+
+r
+
+x
+y
+
+
+
+
+{\displaystyle r_{xy}}
+
+ is correlation between x and y, 
+
+
+
+
+r
+
+x
+x
+
+
+
+
+{\displaystyle r_{xx}}
+
+ is the reliability of x, and 
+
+
+
+
+r
+
+y
+y
+
+
+
+
+{\displaystyle r_{yy}}
+
+ is the reliability of y:
+Although there is no standard value for discriminant validity, a result less than 0.85 suggests that discriminant validity likely exists between the two scales. A result greater than 0.85, however, suggests that the two constructs overlap greatly and they are likely measuring the same thing, and therefore, discriminant validity between them cannot be claimed.
+</wiki></doc>

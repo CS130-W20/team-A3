@@ -1,0 +1,174 @@
+<doc><id>convex_optimization</id><concept_name>convex optimization</concept_name><wiki>Convex optimization is a subfield of mathematical optimization that studies the problem of minimizing convex functions over convex sets. Many classes of convex optimization problems admit polynomial-time algorithms,[1] whereas mathematical optimization is in general NP-hard.[2][3][4]
+Convex optimization has applications in a wide range of disciplines, such as automatic control systems, estimation and signal processing, communications and networks, electronic circuit design,[5] data analysis and modeling, finance, statistics (optimal experimental design),[6] and structural optimization, where the approximation concept has proven to be efficient.[7] [8] 
+With recent advancements in computing and optimization algorithms, convex programming is nearly as straightforward as linear programming.[9]
+A convex optimization problem is an optimization problem in which the objective function is a convex function and the feasible set is a convex set. A function 
+
+
+
+f
+
+
+{\displaystyle f}
+
+  mapping some subset of 
+
+
+
+
+
+R
+
+
+n
+
+
+
+
+{\displaystyle \mathbb {R} ^{n}}
+
+into 
+
+
+
+
+R
+
+&#8746;
+{
+&#177;
+&#8734;
+}
+
+
+{\displaystyle \mathbb {R} \cup \{\pm \infty \}}
+
+ is convex if its domain is convex and for all 
+
+
+
+&#952;
+&#8712;
+[
+0
+,
+1
+]
+
+
+{\displaystyle \theta \in [0,1]}
+
+ and all 
+
+
+
+x
+,
+y
+
+
+{\displaystyle x,y}
+
+ in its domain, the following condition holds:
+
+
+
+f
+(
+&#952;
+x
++
+(
+1
+&#8722;
+&#952;
+)
+y
+)
+&#8804;
+&#952;
+f
+(
+x
+)
++
+(
+1
+&#8722;
+&#952;
+)
+f
+(
+y
+)
+
+
+{\displaystyle f(\theta x+(1-\theta )y)\leq \theta f(x)+(1-\theta )f(y)}
+
+. A set S is convex if for all members 
+
+
+
+x
+,
+y
+&#8712;
+S
+
+
+{\displaystyle x,y\in S}
+
+ and all  
+
+
+
+&#952;
+&#8712;
+[
+0
+,
+1
+]
+
+
+{\displaystyle \theta \in [0,1]}
+
+, we have that 
+
+
+
+&#952;
+x
++
+(
+1
+&#8722;
+&#952;
+)
+y
+&#8712;
+S
+
+
+{\displaystyle \theta x+(1-\theta )y\in S}
+
+.
+Concretely, a convex optimization problem is the problem of finding some 
+
+
+
+
+
+x
+
+&#8727;
+
+
+
+&#8712;
+C
+
+
+{\displaystyle \mathbf {x^{\ast }} \in C}
+
+ attaining
+</wiki></doc>

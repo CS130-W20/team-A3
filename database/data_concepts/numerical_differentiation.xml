@@ -1,0 +1,5 @@
+<doc><id>numerical_differentiation</id><concept_name>numerical differentiation</concept_name><wiki>In numerical analysis, numerical differentiation describes algorithms for estimating the derivative of a mathematical function or function subroutine using values of the function and perhaps other knowledge about the function.
+The simplest method is to use finite difference approximations.
+A simple two-point estimation is to compute the slope of a nearby secant line through the points (x, f(x)) and (x&#160;+&#160;h, f(x&#160;+&#160;h)).[1] Choosing a small number h,  h represents a small change in x, and it can be either positive or negative.  The slope of this line is
+This expression is Newton's difference quotient (also known as a first-order divided difference).
+</wiki></doc>

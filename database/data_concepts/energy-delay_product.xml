@@ -1,0 +1,6 @@
+<doc><id>energy-delay_product</id><concept_name>energy-delay product</concept_name><wiki>
+In digital electronics, the power&#8211;delay product (PDP) is a figure of merit correlated with the energy efficiency of a logic gate or logic family.[1] Also known as switching energy, it is the product of power consumption P (averaged over a switching event) times the input&#8211;output delay or duration of the switching event D.[1] It has the dimension of energy and measures the energy consumed per switching event.
+In a CMOS circuit the switching energy and thus the PDP for a 0-to-1-to-0 computation cycle is CL&#183;VDD2. Therefore, lowering the supply voltage VDD lowers the PDP.[1]
+Energy-efficient circuits with a low PDP may also be performing very slowly, thus energy&#8211;delay product (EDP), the product of E and D (or P and D2), is sometimes a preferable metric.[1]
+In CMOS circuits the delay is inversely proportional to the supply voltage VDD and hence EDP is proportional to VDD. Consequently, lowering VDD also benefits EDP.[1]
+</wiki></doc>

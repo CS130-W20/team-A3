@@ -1,0 +1,5 @@
+<doc><id>xeon_phi</id><concept_name>xeon phi</concept_name><wiki>
+Xeon Phi[1] is a series of x86 manycore processors designed and made by Intel. It is intended for use in supercomputers, servers, and high-end workstations. Its architecture allows use of standard programming languages and APIs such as OpenMP.[2][3]
+Since it was originally based on an earlier GPU design by Intel, it shares application areas with GPUs.[4] The main difference between Xeon Phi and a GPGPU like Nvidia Tesla is that Xeon Phi, with an x86-compatible core, can, with less modification, run software that was originally targeted to a standard x86 CPU.[4]
+Initially in the form of PCIe-based add-on cards, a second generation product, codenamed Knights Landing, was announced in June 2013.[5] These second generation chips could be used as a standalone CPU, rather than just as an add-in card.
+</wiki></doc>

@@ -1,0 +1,23 @@
+<doc><id>p_value</id><concept_name>p value</concept_name><wiki>In statistical hypothesis testing, the p-value or probability value is the probability of obtaining test results at least as extreme as the results actually observed during the test, assuming that the null hypothesis is correct.[1][2] The use of p-values in statistical hypothesis testing is common in many fields of research[3] such as physics, economics, finance, accounting, political science, psychology,[4] biology, criminal justice, criminology, and sociology.[5] The misuse of p-values is a controversial[according to whom?] topic in metascience.[6]
+Italicisation, capitalisation and hyphenation of the term varies. For example, AMA style uses "P value", APA style uses "p value", and the American Statistical Association uses "p-value".[7]
+In statistics, every conjecture concerning the unknown distribution 
+
+
+
+F
+
+
+{\displaystyle F}
+
+ of a random variable 
+
+
+
+X
+
+
+{\displaystyle X}
+
+ is called a statistical hypothesis. If we state one hypothesis only and the aim of the statistical test is to verify whether this hypothesis is not false, but not, at the same time, to investigate other hypotheses, then such a test is called a significance test. A statistical hypothesis that refers only to the numerical values of unknown parameters of a distribution is called a parametric hypothesis. Methods of verifying statistical hypotheses are called statistical tests. Tests of parametric hypotheses are called parametric tests.[8] We can likewise also have non-parametric hypotheses and non-parametric tests. 
+The p-value is used in the context of null hypothesis testing in order to quantify the idea of statistical significance of evidence.[note 1] Null hypothesis testing is a reductio ad absurdum argument adapted to statistics. In essence, a claim is assumed valid if its counter-claim is improbable.
+</wiki></doc>

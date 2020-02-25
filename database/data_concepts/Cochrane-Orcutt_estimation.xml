@@ -1,0 +1,112 @@
+<doc><id>Cochrane-Orcutt_estimation</id><concept_name>Cochrane-Orcutt estimation</concept_name><wiki>Cochrane&#8211;Orcutt estimation is a procedure in econometrics, which adjusts a linear model for serial correlation in the error term. Developed in the 1940s, it is named after statisticians Donald Cochrane and Guy Orcutt.[1]
+Consider the model
+where 
+
+
+
+
+y
+
+t
+
+
+
+
+{\displaystyle y_{t}}
+
+ is the value of the dependent variable of interest at time t, 
+
+
+
+&#946;
+
+
+{\displaystyle \beta }
+
+ is a column vector of coefficients to be estimated, 
+
+
+
+
+X
+
+t
+
+
+
+
+{\displaystyle X_{t}}
+
+ is a row vector of explanatory variables at time t, and 
+
+
+
+
+&#949;
+
+t
+
+
+
+
+{\displaystyle \varepsilon _{t}}
+
+ is the error term at time t.
+If it is found, for instance via the Durbin&#8211;Watson statistic, that the error term is serially correlated over time, then standard statistical inference as normally applied to regressions is invalid because standard errors are estimated with bias. To avoid this problem, the residuals must be modeled. If the process generating the residuals is found to be a stationary first-order autoregressive structure,[2] 
+
+
+
+
+&#949;
+
+t
+
+
+=
+&#961;
+
+&#949;
+
+t
+&#8722;
+1
+
+
++
+
+e
+
+t
+
+
+,
+&#160;
+
+|
+
+&#961;
+
+|
+
+&lt;
+1
+
+
+{\displaystyle \varepsilon _{t}=\rho \varepsilon _{t-1}+e_{t},\ |\rho |&lt;1}
+
+, with the errors {
+
+
+
+
+e
+
+t
+
+
+
+
+{\displaystyle e_{t}}
+
+} being white noise, then the Cochrane&#8211;Orcutt procedure can be used to transform the model by taking a quasi-difference:
+</wiki></doc>

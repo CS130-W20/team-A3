@@ -1,0 +1,5 @@
+<doc><id>standard_ML</id><concept_name>standard ML</concept_name><wiki>Standard ML (SML) is a general-purpose, modular, functional programming language with compile-time type checking and type inference. It is popular among compiler writers and programming language researchers, as well as in the development of theorem provers.
+SML is a modern dialect of ML, the programming language used in the Logic for Computable Functions (LCF) theorem-proving project. It is distinctive among widely used languages in that it has a formal specification, given as typing rules and operational semantics in The Definition of Standard ML.[4]
+Standard ML is a functional programming language with some impure features. Programs written in Standard ML consist of expressions to be evaluated, as opposed to statements or commands, although some expressions return a trivial "unit" value and are only evaluated for their side-effects.
+Like all functional programming languages, a key feature of Standard ML is the function, which is used for abstraction. For instance, the factorial function can be expressed as:
+</wiki></doc>

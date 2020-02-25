@@ -1,0 +1,5 @@
+<doc><id>code_review</id><concept_name>code review</concept_name><wiki>Code review (sometimes referred to as peer review) is a software quality assurance activity in which one or several people check a program mainly by viewing and reading parts of its source code, and they do so after implementation or as an interruption of implementation. At least one of the persons must not be the code's author. The persons performing the checking, excluding the author, are called "reviewers".[1][2]
+Although direct discovery of quality problems is often the main goal[3], code reviews are usually performed to reach a combination of goals [4][5]:
+The above-mentioned definition of code review delimits it against neighboring but separate software quality assurance techniques: In static code analysis the main checking is performed by an automated program, in self checks only the author checks the code, in testing the execution of the code is an integral part, and pair programming is performed continuously during implementation and not as a separate step.[1]
+There are many variations of code review processes, some of which will be detailed below.
+</wiki></doc>

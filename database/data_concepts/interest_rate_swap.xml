@@ -1,0 +1,8 @@
+<doc><id>interest_rate_swap</id><concept_name>interest rate swap</concept_name><wiki>In finance, an interest rate swap (IRS) is an interest rate derivative (IRD). It involves exchange of interest rates between two parties. In particular it is a "linear" IRD and one of the most liquid, benchmark products. It has associations with forward rate agreements (FRAs), and with zero coupon swaps (ZCSs).
+An interest rate swap's (IRS's) effective description is a derivative contract, agreed between two counterparties, which specifies the nature of an exchange of payments benchmarked against an interest rate index. 
+The most common IRS is a fixed for floating swap, whereby one party will make payments to the other based on an initially agreed fixed rate of interest, to receive back payments based on a floating interest rate index. 
+Each of these series of payments is termed a "leg", so a typical IRS has both a fixed and a floating leg. 
+The floating index is commonly an interbank offered rate (IBOR) of specific tenor in the appropriate currency of the IRS, for example LIBOR in USD, GBP, EURIBOR in EUR, or STIBOR in SEK.
+To completely determine any IRS a number of parameters must be specified for each leg: [1]
+Each currency has its own standard market conventions regarding the frequency of payments, the day count conventions and the end-of-month rule.[2]
+</wiki></doc>

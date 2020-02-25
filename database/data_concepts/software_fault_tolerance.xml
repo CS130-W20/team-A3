@@ -1,0 +1,5 @@
+<doc><id>software_fault_tolerance</id><concept_name>software fault tolerance</concept_name><wiki>Software fault tolerance is the ability of computer software to continue its normal operation despite the presence of system or hardware faults. Fault-tolerant software has the ability to satisfy requirements despite failures.[1][2]
+The only thing constant is change. This is certainly more true of software systems than almost any phenomenon,[3] not all software change in the same way so software fault tolerance methods are designed to overcome execution errors by modifying variable values to create an acceptable program state.[4] The need to control software fault is one of the most rising challenges facing software industries today. Fault tolerance must be a key consideration in the early stage of software development.
+There exist different mechanisms for software fault tolerance, among which:
+Computer applications make a call using the application programming interface (API) to access shared resources, like the keyboard, mouse, screen, disk drive, network, and printer. These can fail in two ways.
+</wiki></doc>

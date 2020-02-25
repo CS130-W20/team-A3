@@ -1,0 +1,5 @@
+<doc><id>upper_control_limit</id><concept_name>upper control limit</concept_name><wiki>Control limits, also known as natural process limits, are horizontal lines drawn on a statistical process control chart, usually at a distance of &#177;3 standard deviations of the plotted statistic from the statistic's mean.
+Control limits should not be confused with tolerance limits or specifications, which are completely independent of the distribution of the plotted sample statistic. Control limits describe what a process is capable of producing (sometimes referred to as the &#8220;voice of the process&#8221;), while tolerances and specifications describe how the product should perform to meet the customer's expectations (referred to as the &#8220;voice of the customer&#8221;).
+Control limits are used to detect signals in process data that indicate that a process is not in control and, therefore, not operating predictably. 
+There are several sets of rules for detecting signals - see Control chart - in one specification:
+</wiki></doc>

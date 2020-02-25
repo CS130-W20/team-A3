@@ -1,0 +1,5 @@
+<doc><id>variational_analysis</id><concept_name>variational analysis</concept_name><wiki>In mathematics, the term variational analysis usually denotes the combination and extension of methods from convex optimization and the classical calculus of variations to a more general theory.[1] This includes the more general problems of optimization theory, including topics in set-valued analysis, e.g. generalized derivatives.
+In the Mathematics Subject Classification scheme (MSC2010), the field of "Set-valued and variational analysis"  is coded by "49J53".[2]
+While this area of mathematics has a long history, the first use of the term "Variational analysis" in this sense was in an eponymous book by R. Tyrrell Rockafellar and Roger J-B Wets.[3]
+A classical result is that a lower semicontinuous function on a compact set attains its minimum. Results from variational analysis such as Ekeland's variational principle allow us to extend this result of lower semicontinuous functions on non-compact sets provided that the function has a lower bound and at the cost of adding a small perturbation to the function.
+</wiki></doc>

@@ -1,0 +1,74 @@
+<doc><id>event_calculus</id><concept_name>event calculus</concept_name><wiki>The event calculus is a logical language for representing and reasoning about events and their effects first presented by Robert Kowalski and Marek Sergot in 1986.
+It was extended by Murray Shanahan and Rob Miller in the 1990s. Similar to other languages for reasoning about change, the event calculus represents the effects of actions on fluents. However, events can also be external to the system. In the event calculus, one can specify the value of fluents at some given time points, the events that take place at given time points, and  their effects.
+In the event calculus, fluents are reified. This means that they are not formalized by means of predicates but by means of functions. A separate predicate HoldsAt is used to tell which fluents hold at a given time point. For example, 
+
+
+
+
+
+H
+o
+l
+d
+s
+A
+t
+
+
+(
+o
+n
+(
+b
+o
+x
+,
+t
+a
+b
+l
+e
+)
+,
+t
+)
+
+
+{\displaystyle {\mathit {HoldsAt}}(on(box,table),t)}
+
+ means that the box is on the table at time t; in this formula, HoldsAt is a predicate while on is a function.
+Events are also represented as terms. The effects of events are given using the predicates Initiates and Terminates. In particular, 
+
+
+
+
+
+I
+n
+i
+t
+i
+a
+t
+e
+s
+
+
+(
+e
+,
+f
+,
+t
+)
+
+
+{\displaystyle {\mathit {Initiates}}(e,f,t)}
+
+ means that,
+if the event represented by the term e is executed at time t,
+then the fluent f will be true after t.
+The Terminates predicate has a similar meaning, with the only difference 
+being that f will be false and not true after t.
+Like other languages for representing actions, the event calculus formalizes the correct evolution of the fluent via formulae telling the value of each fluent after an arbitrary action has been performed. The event calculus solves the frame problem in a way that is similar to the successor state axioms of the situation calculus: a fluent is true at time t if and only if it has been made true in the past and has not been made false in the meantime.
+</wiki></doc>

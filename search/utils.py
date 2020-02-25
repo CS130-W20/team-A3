@@ -124,7 +124,10 @@ def find_concept(docid, extra=False):
     """
     docs = []
     for id in docid:
-        root = ET.parse(DIR_CONCEPT_PATH + '%s.xml' % id).getroot()
+        try:
+            root = ET.parse(DIR_CONCEPT_PATH + '%s.xml' % id).getroot()
+        except:
+            return []
         id = root.find('id').text
         concept_name = safe_et_find(root, 'concept_name', "N/A")
         wiki = safe_et_find(root, 'wiki', "N/A")

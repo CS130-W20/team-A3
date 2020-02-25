@@ -1,0 +1,5 @@
+<doc><id>opengl</id><concept_name>opengl</concept_name><wiki>
+Open Graphics Library (OpenGL)[3][4] is a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics. The API is typically used to interact with a graphics processing unit (GPU), to achieve hardware-accelerated rendering.
+Silicon Graphics Inc., (SGI) began developing OpenGL in 1991 and released it on June 30, 1992;[5][6] applications use it extensively in the fields of computer-aided design (CAD), virtual reality, scientific visualization, information visualization, flight simulation, and video games. Since 2006, OpenGL has been managed by the non-profit technology consortium Khronos Group.
+The OpenGL specification describes an abstract API for drawing 2D and 3D graphics. Although it is possible for the API to be implemented entirely in software, it is designed to be implemented mostly or entirely in hardware.
+</wiki></doc>

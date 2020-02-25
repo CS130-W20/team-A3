@@ -1,0 +1,89 @@
+<doc><id>weight_function</id><concept_name>weight function</concept_name><wiki>
+A weight function is a mathematical device used when performing a sum, integral, or average to give some elements more "weight" or influence on the result than other elements in the same set. The result of this application of a weight function is a weighted sum or weighted average. Weight functions occur frequently in statistics and analysis, and are closely related to the concept of a measure.  Weight functions can be employed in both discrete and continuous settings. They can be used to construct systems of calculus called "weighted calculus"[1] and "meta-calculus".[2]
+In the discrete setting, a weight function 
+
+
+
+
+w
+:
+A
+&#8594;
+
+
+
+R
+
+
+
++
+
+
+
+
+
+{\displaystyle \scriptstyle w\colon A\to {\mathbb {R} }^{+}}
+
+ is a positive function defined on a discrete set 
+
+
+
+A
+
+
+{\displaystyle A}
+
+, which is typically finite or countable.  The weight function 
+
+
+
+w
+(
+a
+)
+:=
+1
+
+
+{\displaystyle w(a):=1}
+
+ corresponds to the unweighted situation in which all elements have equal weight.  One can then apply this weight to various concepts.
+If the function 
+
+
+
+
+f
+:
+A
+&#8594;
+
+
+R
+
+
+
+
+
+{\displaystyle \scriptstyle f\colon A\to {\mathbb {R} }}
+
+ is a real-valued function, then the unweighted sum of 
+
+
+
+f
+
+
+{\displaystyle f}
+
+ on 
+
+
+
+A
+
+
+{\displaystyle A}
+
+ is defined as
+</wiki></doc>

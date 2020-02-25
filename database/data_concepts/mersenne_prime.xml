@@ -1,0 +1,6 @@
+<doc><id>mersenne_prime</id><concept_name>mersenne prime</concept_name><wiki>In mathematics, a Mersenne prime is a prime number that is one less than a power of two.  That is, it is a prime number of the form Mn = 2n &#8722; 1 for some integer n.  They are named after Marin Mersenne, a French Minim friar, who studied them in the early 17th century.
+The exponents n which give Mersenne primes are 2, 3, 5, 7, 13, 17, 19, 31,&#160;... (sequence A000043 in the OEIS) and the resulting Mersenne primes are 3, 7, 31, 127, 8191, 131071, 524287, 2147483647,&#160;... (sequence A000668 in the OEIS).
+If n is a composite number then so is 2n &#8722; 1. (2ab &#8722; 1 is divisible by both 2a &#8722; 1 and 2b &#8722; 1.) This definition is therefore equivalent to the definition as a prime number of the form Mp = 2p &#8722; 1 for some prime p.
+More generally, numbers of the form Mn = 2n &#8722; 1 without the primality requirement may be called Mersenne numbers.  Sometimes, however, Mersenne numbers are defined to have the additional requirement that n be prime.
+The smallest composite Mersenne number with prime exponent n is 211 &#8722; 1 = 2047 = 23 &#215; 89.
+</wiki></doc>

@@ -1,0 +1,5 @@
+<doc><id>distributed_component_object_model</id><concept_name>distributed component object model</concept_name><wiki>Distributed Component Object Model (DCOM) is a proprietary Microsoft technology for communication between software components on networked computers. DCOM, which originally was called "Network OLE", extends Microsoft's COM, and provides the communication substrate under Microsoft's COM+ application server infrastructure.
+The addition of the "D" to COM was due to extensive use of DCE/RPC (Distributed Computing Environment/Remote Procedure Calls) &#8211; more specifically Microsoft's enhanced version, known as MSRPC.
+In terms of the extensions it added to COM, DCOM had to solve the problems of
+One of the key factors in solving these problems is the use of DCE/RPC as the underlying RPC mechanism behind DCOM. DCE/RPC has strictly defined rules regarding marshalling and who is responsible for freeing memory.
+</wiki></doc>

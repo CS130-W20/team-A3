@@ -1,0 +1,5 @@
+<doc><id>sampling_interval</id><concept_name>sampling interval</concept_name><wiki>In signal processing, sampling is the reduction of a continuous-time signal to a discrete-time signal. A common example is the conversion of a sound wave (a continuous signal) to a sequence of samples (a discrete-time signal).
+A sample is a value or set of values at a point in time and/or space. A sampler is a subsystem or operation that extracts samples from a continuous signal. A theoretical ideal sampler produces samples equivalent to the instantaneous value of the continuous signal at the desired points.
+The original signal is retrievable from a sequence of samples, up to the Nyquist limit, by passing the sequence of samples through a type of low pass filter called a reconstruction filter.
+Sampling can be done for functions varying in space, time, or any other dimension, and similar results are obtained in two or more dimensions.
+</wiki></doc>

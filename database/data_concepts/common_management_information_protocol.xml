@@ -1,0 +1,5 @@
+<doc><id>common_management_information_protocol</id><concept_name>common management information protocol</concept_name><wiki>
+
+The Common Management Information Protocol (CMIP) is the OSI specified network management protocol.
+Defined in ITU-T Recommendation X.711, ISO/IEC International Standard 9596-1.  It provides an implementation for the services defined by the Common Management Information Service (CMIS) specified in ITU-T Recommendation X.710, ISO/IEC International Standard 9595, allowing communication between network management applications and management agents. CMIS/CMIP is the network management protocol specified by the ISO/OSI Network management model and is further defined by the ITU-T in the X.700 series of recommendations.
+</wiki></doc>

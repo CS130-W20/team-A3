@@ -1,0 +1,37 @@
+<doc><id>quantum_information_theory</id><concept_name>quantum information theory</concept_name><wiki>In physics and computer science, quantum information is the information of the state of a quantum system.  It is the basic entity of study in quantum information theory,[1] and can be manipulated using quantum information processing techniques. Quantum information refers to both the technical definition in terms of Von Neumann entropy and the general computational term.
+Quantum information, like classical information, can be processed using digital computers, transmitted from one location to another, manipulated with algorithms, and analyzed with computer science and mathematics. Recently, the field quantum computing has become an active research area because of the possibility to disrupt modern computation, communication, and cryptography.
+Quantum information differs strongly from classical information, epitomized by the bit, in many striking and unfamiliar ways.  While the fundamental unit of classical information is the bit, the most basic unit of quantum information is the qubit. Classical information is measured using Shannon entropy, while the quantum mechanical analogue is Von Neumann entropy.  Given a statistical ensemble of quantum mechanical systems with the density matrix 
+
+
+
+&#961;
+
+
+{\displaystyle \rho }
+
+, it is given by 
+
+
+
+S
+(
+&#961;
+)
+=
+&#8722;
+Tr
+&#8289;
+(
+&#961;
+ln
+&#8289;
+&#961;
+)
+.
+
+
+{\displaystyle S(\rho )=-\operatorname {Tr} (\rho \ln \rho ).}
+
+[1]  Many of the same entropy measures in classical information theory can also be generalized to the quantum case, such as Holevo entropy[2] and the conditional quantum entropy.
+Unlike classical digital states (which are discrete), a qubit is continuous-valued, describable by a direction on the Bloch sphere.  Despite being continuously valued in this way, a qubit is the smallest possible unit of quantum information, as despite the qubit state being continuously-valued, it is impossible to measure the value precisely. Three famous theorems describe the limits on manipulation of quantum information.[1]
+</wiki></doc>

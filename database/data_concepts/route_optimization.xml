@@ -1,0 +1,31 @@
+<doc><id>route_optimization</id><concept_name>route optimization</concept_name><wiki>Pathfinding or pathing is the plotting, by a computer application, of the shortest route between two points. It is a more practical variant on solving mazes. This field of research is based heavily on Dijkstra's algorithm for finding the shortest path on a weighted graph.
+Pathfinding is closely related to the shortest path problem, within graph theory, which examines how to identify the path that best meets some criteria (shortest, cheapest, fastest, etc) between two points in a large network.
+At its core, a pathfinding method searches a graph by starting at one vertex and exploring adjacent nodes until the destination node is reached, generally with the intent of finding the cheapest route. Although graph searching methods such as a breadth-first search would find a route if given enough time, other methods, which "explore" the graph, would tend to reach the destination sooner. An analogy would be a person walking across a room; rather than examining every possible route in advance, the person would generally walk in the direction of the destination and only deviate from the path to avoid an obstruction, and make deviations as minor as possible.
+Two primary problems of pathfinding are (1) to find a path between two nodes in a graph; and (2) the shortest path problem&#8212;to find the optimal shortest path. Basic algorithms such as breadth-first and depth-first search address the first problem by exhausting all possibilities; starting from the given node, they iterate over all potential paths until they reach the destination node. These algorithms run in 
+
+
+
+O
+(
+
+|
+
+V
+
+|
+
++
+
+|
+
+E
+
+|
+
+)
+
+
+{\displaystyle O(|V|+|E|)}
+
+, or linear time, where V is the number of vertices, and E is the number of edges between vertices.
+</wiki></doc>

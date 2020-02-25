@@ -1,0 +1,4 @@
+<doc><id>session_key</id><concept_name>session key</concept_name><wiki>A  session key is a single-use symmetric key used for encrypting all messages in one communication session. A closely related term is content encryption key (CEK), traffic encryption key (TEK), or multicast key which refers to any key used to encrypt messages, as opposed to other uses, like encrypting other keys (key encryption key (KEK) or key wrapping key).
+Session keys can introduce complication into a system. However, they solve some real problems. There are two primary reasons to use session keys:
+Like all cryptographic keys, session keys must be chosen so that they cannot be predicted by an attacker, usually requiring them to be chosen randomly. Failure to choose session keys (or any key) properly is a major (and too common in actual practice) design flaw in any crypto system.[citation needed]
+</wiki></doc>

@@ -1,0 +1,6 @@
+<doc><id>electronic_design</id><concept_name>electronic design</concept_name><wiki>
+
+Electronic design automation (EDA), also referred to as electronic computer-aided design (ECAD),[1] is a category of software tools for designing electronic systems such as integrated circuits and printed circuit boards. The tools work together in a design flow that chip designers use to design and analyze entire semiconductor chips. Since a modern semiconductor chip can have billions of components, EDA tools are essential for their design.
+This article describes EDA specifically with respect to integrated circuits (ICs).
+Before EDA, integrated circuits were designed by hand, and manually laid out. Some advanced shops used geometric software to generate the tapes for the Gerber photoplotter, but even those copied digital recordings of mechanically drawn components. The process was fundamentally graphic, with the translation from electronics to graphics done manually. The best known company from this era was Calma, whose GDSII format survives.
+</wiki></doc>

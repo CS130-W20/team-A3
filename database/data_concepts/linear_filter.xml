@@ -1,0 +1,35 @@
+<doc><id>linear_filter</id><concept_name>linear filter</concept_name><wiki>Linear filters process time-varying input signals to produce output signals, subject to the constraint of linearity. In most cases these linear filters are also time invariant (or shift invariant) in which case they can be analyzed exactly using LTI ("linear time-invariant") system theory revealing their transfer functions in the frequency domain and their impulse responses in the time domain. Real-time implementations of such linear signal processing filters in the time domain are inevitably causal, an additional constraint on their transfer functions. An analog electronic circuit consisting only of linear components (resistors, capacitors, inductors, and linear amplifiers) will necessarily fall in this category, as will comparable mechanical systems or digital signal processing systems containing only linear elements. Since linear time-invariant filters can be completely characterized by their response to sinusoids of different frequencies (their frequency response), they are sometimes known as frequency filters.
+Non real-time implementations of linear time-invariant filters need not be causal. Filters of more than one dimension are also used such as in Image processing. The general concept of linear filtering also extends into other fields and technologies such as statistics, data analysis, and mechanical engineering.
+A linear time-invariant (LTI) filter can be uniquely specified by its impulse response h, and the output of any filter is mathematically expressed as the convolution of the input with that impulse response. The frequency response, given by the filter's transfer function 
+
+
+
+H
+(
+&#969;
+)
+
+
+{\displaystyle H(\omega )}
+
+, is an alternative characterization of the filter. Typical filter design goals are to realize a particular frequency response, that is, the magnitude of the transfer function 
+
+
+
+
+|
+
+H
+(
+&#969;
+)
+
+|
+
+
+
+{\displaystyle |H(\omega )|}
+
+; the importance of the phase of the transfer function varies according to the application, inasmuch as the shape of a waveform can be distorted to a greater or lesser extent in the process of achieving a desired (amplitude) response in the frequency domain. The frequency response may be tailored to, for instance, eliminate unwanted frequency components from an input signal, or to limit an amplifier to signals within a particular band of frequencies.
+The impulse response h of a linear time-invariant causal filter specifies the output that the filter would produce if it were to receive an input consisting of a single impulse at time 0. An "impulse" in a continuous time filter means a Dirac delta function; in a discrete time filter the Kronecker delta function would apply. The impulse response completely characterizes the response of any such filter, inasmuch as any possible input signal can be expressed as a (possibly infinite) combination of weighted delta functions. Multiplying the impulse response shifted in time according to the arrival of each of these delta functions by the amplitude of each delta function, and summing these responses together (according to the superposition principle, applicable to all linear systems) yields the output waveform.
+</wiki></doc>

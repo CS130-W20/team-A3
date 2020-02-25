@@ -1,0 +1,5 @@
+<doc><id>overlay_network</id><concept_name>overlay network</concept_name><wiki>An overlay network is a computer network that is layered on top of another network[1][2].
+Nodes in the overlay network can be thought of as being connected by virtual or logical links, each of which corresponds to a path, perhaps through many physical links, in the underlying network. For example, distributed systems such as peer-to-peer networks and client-server applications are overlay networks because their nodes run on top of the Internet.[citation needed]
+The Internet was originally built as an overlay upon the telephone network, while today (through the advent of VoIP), the telephone network is increasingly turning into an overlay network built on top of the Internet.[citation needed]
+Enterprise private networks were first overlaid on telecommunication networks such as frame relay and Asynchronous Transfer Mode packet switching infrastructures but migration from these (now legacy) infrastructures to IP based MPLS networks and virtual private networks started (2001~2002).
+</wiki></doc>

@@ -1,0 +1,41 @@
+<doc><id>Myhill_isomorphism_theorem</id><concept_name>Myhill isomorphism theorem</concept_name><wiki>In computability theory the Myhill isomorphism theorem, named after John Myhill, provides a characterization for two numberings to induce the same notion of computability on a set.
+Sets A and B of natural numbers are said to be recursively isomorphic if there is a total computable bijection f from the set of natural numbers to itself such that f(A) = B. 
+A set A of natural numbers is said to be one-one reducible to a set B if there is a total computable injection f on the natural numbers such that 
+
+
+
+f
+(
+A
+)
+&#8838;
+B
+
+
+{\displaystyle f(A)\subseteq B}
+
+ and 
+
+
+
+f
+(
+
+N
+
+&#8726;
+A
+)
+&#8838;
+
+N
+
+&#8726;
+B
+
+
+{\displaystyle f(\mathbb {N} \setminus A)\subseteq \mathbb {N} \setminus B}
+
+.
+Myhill's isomorphism theorem states that two sets A and B of natural numbers are recursively isomorphic if and only if A is one-reducible to B and B is one-reducible to A.
+</wiki></doc>

@@ -1,0 +1,5 @@
+<doc><id>belief_propagation</id><concept_name>belief propagation</concept_name><wiki>
+Belief propagation, also known as sum-product message passing, is a message-passing algorithm for performing inference on graphical models, such as Bayesian networks and Markov random fields. It calculates the marginal distribution for each unobserved node (or variable), conditional on any observed nodes (or variables). Belief propagation is commonly used in artificial intelligence and information theory and has demonstrated empirical success in numerous applications including low-density parity-check codes, turbo codes, free energy approximation, and satisfiability.[1]
+The algorithm was first proposed by Judea Pearl in 1982,[2] who formulated it as an exact inference algorithm on trees, which was later extended to polytrees.[3] While it is not exact on general graphs, it has been shown to be a useful approximate algorithm.[4]
+If X={Xi} is a set of discrete random variables with a joint mass function p, the marginal distribution of a single Xi is simply the summation of p over all other variables:
+</wiki></doc>

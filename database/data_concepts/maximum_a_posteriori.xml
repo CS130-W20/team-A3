@@ -1,0 +1,82 @@
+<doc><id>maximum_a_posteriori</id><concept_name>maximum a posteriori</concept_name><wiki>In Bayesian statistics, a maximum a posterior probability (MAP) estimate is an estimate of an unknown quantity, that equals the mode of the posterior distribution. The MAP can be used to obtain a point estimate of an unobserved quantity on the basis of empirical data. It is closely related to the method of maximum likelihood (ML) estimation, but employs an augmented optimization objective which incorporates a prior distribution (that quantifies the additional information available through prior knowledge of a related event) over the quantity one wants to estimate.  MAP estimation can therefore be seen as a regularization of ML estimation.
+Assume that we want to estimate an unobserved population parameter 
+
+
+
+&#952;
+
+
+{\displaystyle \theta }
+
+ on the basis of observations 
+
+
+
+x
+
+
+{\displaystyle x}
+
+. Let 
+
+
+
+f
+
+
+{\displaystyle f}
+
+ be the sampling distribution of 
+
+
+
+x
+
+
+{\displaystyle x}
+
+, so that 
+
+
+
+f
+(
+x
+&#8739;
+&#952;
+)
+
+
+{\displaystyle f(x\mid \theta )}
+
+ is the probability of 
+
+
+
+x
+
+
+{\displaystyle x}
+
+ when the underlying population parameter is 
+
+
+
+&#952;
+
+
+{\displaystyle \theta }
+
+.  Then the function:
+is known as the likelihood function and the estimate:
+is the maximum likelihood estimate of 
+
+
+
+&#952;
+
+
+{\displaystyle \theta }
+
+.
+</wiki></doc>

@@ -1,0 +1,62 @@
+<doc><id>Lagrange_multiplier_method</id><concept_name>Lagrange multiplier method</concept_name><wiki>In mathematical optimization, the method of Lagrange multipliers is a strategy for finding the local maxima and minima of a function subject to equality constraints (i.e., subject to the condition that one or more equations have to be satisfied exactly by the chosen values of the variables).[1] The basic idea is to convert a constrained problem into a form such that the derivative test of an unconstrained problem can still be applied. Once stationary points have been identified from the first-order necessary conditions, the definiteness of the bordered Hessian matrix determines whether those points are maxima, minima, or saddle points.[2]
+The Lagrange multiplier theorem roughly states that at any stationary point of the function that also satisfies the equality constraints, the gradient of the function at that point can be expressed as a linear combination of the gradients of the constraints at that point, with the Lagrange multipliers acting as coefficients.[3] The relationship between the gradient of the function and gradients of the constraints rather naturally leads to a reformulation of the original problem, known as the Lagrangian function.[4]
+The great advantage of this method is that it allows the optimization to be solved without explicit parameterization in terms of the constraints. As a result, the method of Lagrange multipliers is widely used to solve challenging constrained optimization problems. The method can be summarized as follows: in order to find the stationary points of a function 
+
+
+
+f
+(
+x
+)
+
+
+{\displaystyle f(x)}
+
+ subjected to the equality constraint 
+
+
+
+g
+(
+x
+)
+=
+0
+
+
+{\displaystyle g(x)=0}
+
+, form the Lagrangian function
+and find the stationary points of 
+
+
+
+
+
+L
+
+
+
+
+{\displaystyle {\mathcal {L}}}
+
+ considered as a function of 
+
+
+
+x
+
+
+{\displaystyle x}
+
+ and the Lagrange multiplier 
+
+
+
+&#955;
+
+
+{\displaystyle \lambda }
+
+.[5] The solution corresponding to the original constrained optimization is always a saddle point of the Lagrangian function.[6]
+</wiki></doc>

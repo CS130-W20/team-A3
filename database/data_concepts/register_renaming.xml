@@ -1,0 +1,68 @@
+<doc><id>register_renaming</id><concept_name>register renaming</concept_name><wiki>In computer architecture, register renaming is a technique that abstracts logical registers from physical registers.
+Every logical register has a set of physical registers associated with it.
+While a programmer in assembly language refers for instance to a logical register accu, the processor transposes this name to one specific physical register on the fly.
+The physical registers are opaque and cannot be referenced directly but only via the canonical names.
+This technique is used to eliminate false data dependencies arising from the reuse of registers by successive instructions that do not have any real data dependencies between them.
+The elimination of these false data dependencies reveals more  instruction-level parallelism in an instruction stream, which can be exploited by various and complementary techniques such as superscalar and out-of-order execution for better performance.
+In a register machine, programs are composed of instructions which operate on values.
+The instructions must name these values in order to distinguish them from one another.
+A typical instruction might say: &#8220;add 
+
+
+
+x
+
+
+{\displaystyle x}
+
+ and 
+
+
+
+y
+
+
+{\displaystyle y}
+
+ and put the result in 
+
+
+
+z
+
+
+{\displaystyle z}
+
+&#8221;.
+In this instruction, 
+
+
+
+x
+
+
+{\displaystyle x}
+
+, 
+
+
+
+y
+
+
+{\displaystyle y}
+
+ and 
+
+
+
+z
+
+
+{\displaystyle z}
+
+ are the names of storage locations.
+In order to have a compact instruction encoding, most processor instruction sets have a small set of special locations which can be referred to by special names: registers.
+For example, the x86 instruction set architecture has 8&#160;integer registers, x86-64 has 16, many RISCs have 32, and IA-64 has 128.
+In smaller processors, the names of these locations correspond directly to elements of a register file.
+</wiki></doc>

@@ -1,0 +1,195 @@
+<doc><id>voronoi_diagram</id><concept_name>voronoi diagram</concept_name><wiki>In mathematics, a Voronoi diagram is a partition of a plane into regions close to each of a given set of objects. In the simplest case, these objects are just finitely many points in the plane (called seeds, sites, or generators). For each seed there is a corresponding region consisting of all points of the plane closer to that seed than to any other. These regions are called Voronoi cells. The Voronoi diagram of a set of points is dual to its Delaunay triangulation.
+The Voronoi diagram is named after Russian mathematician Georgy Voronoy, and is also called a Voronoi tessellation, a Voronoi decomposition, a Voronoi partition, or a Dirichlet tessellation (after Peter Gustav Lejeune Dirichlet). Voronoi cells are also known as Thiessen polygons.[1][2][3] Voronoi diagrams have practical and theoretical applications in many fields, mainly in science and technology, but also in visual art.[4][5]
+In the simplest case, shown in the first picture, we are given a finite set of points {p1, ..., pn} in the Euclidean plane. In this case each site pk is simply a point, and its corresponding Voronoi cell Rk consists of every point in the Euclidean plane whose distance to pk is less than or equal to its distance to any other pk. Each such cell is obtained from the intersection of half-spaces, and hence it is a convex polygon. The line segments of the Voronoi diagram are all the points in the plane that are equidistant to the two nearest sites.  The Voronoi vertices (nodes) are the points equidistant to three (or more) sites.
+Let 
+
+
+
+X
+
+
+{\textstyle X}
+
+ be a metric space with distance function 
+
+
+
+d
+
+
+{\textstyle d}
+
+. Let 
+
+
+
+K
+
+
+{\textstyle K}
+
+ be a set of indices and let 
+
+
+
+(
+
+P
+
+k
+
+
+
+)
+
+k
+&#8712;
+K
+
+
+
+
+{\textstyle (P_{k})_{k\in K}}
+
+ be a tuple (ordered collection) of nonempty subsets (the sites) in the space 
+
+
+
+X
+
+
+{\textstyle X}
+
+. The Voronoi cell, or Voronoi region,  
+
+
+
+
+R
+
+k
+
+
+
+
+{\textstyle R_{k}}
+
+, associated with the site 
+
+
+
+
+P
+
+k
+
+
+
+
+{\textstyle P_{k}}
+
+ is the set of all points in 
+
+
+
+X
+
+
+{\textstyle X}
+
+ whose distance to 
+
+
+
+
+P
+
+k
+
+
+
+
+{\textstyle P_{k}}
+
+ is not greater than their distance to the other sites 
+
+
+
+
+P
+
+j
+
+
+
+
+{\textstyle P_{j}}
+
+, where 
+
+
+
+j
+
+
+{\textstyle j}
+
+ is any index different from 
+
+
+
+k
+
+
+{\textstyle k}
+
+. In other words, if 
+
+
+
+d
+(
+x
+,
+
+A
+)
+=
+inf
+{
+d
+(
+x
+,
+
+a
+)
+&#8739;
+a
+&#8712;
+A
+}
+
+
+{\textstyle d(x,\,A)=\inf\{d(x,\,a)\mid a\in A\}}
+
+ denotes the distance between the point 
+
+
+
+x
+
+
+{\textstyle x}
+
+ and the subset 
+
+
+
+A
+
+
+{\textstyle A}
+
+, then
+</wiki></doc>

@@ -1,0 +1,11 @@
+<doc><id>space_hierarchy_theorem</id><concept_name>space hierarchy theorem</concept_name><wiki>In computational complexity theory, the space hierarchy theorems are separation results that show that both deterministic and nondeterministic machines can solve more problems in (asymptotically) more space, subject to certain conditions. For example, a deterministic Turing machine can solve more decision problems in space n log n than in space n. The somewhat weaker analogous theorems for time are the time hierarchy theorems.
+The foundation for the hierarchy theorems lies in the intuition that
+with either more time or more space comes the ability to compute more
+functions (or decide more languages).  The hierarchy theorems are used
+to demonstrate that the time and space complexity classes form a
+hierarchy where classes with tighter bounds contain fewer languages
+than those with more relaxed bounds.  Here we define and prove the
+space hierarchy theorem.
+The space hierarchy theorems rely on the concept of space-constructible functions. The deterministic and nondeterministic space hierarchy theorems state that for all space-constructible functions f(n),
+where SPACE stands for either DSPACE or NSPACE, and o refers to the little o notation.
+</wiki></doc>

@@ -1,0 +1,44 @@
+<doc><id>B-spline_surface</id><concept_name>B-spline surface</concept_name><wiki>In the mathematical subfield of numerical analysis, a B-spline, or basis spline, is a spline function that has minimal support with respect to a given degree, smoothness, and domain partition. Any spline function of given degree can be expressed as a linear combination of B-splines of that degree. Cardinal B-splines have knots that are equidistant from each other. B-splines can be used for curve-fitting and numerical differentiation of experimental data.
+In computer-aided design and computer graphics, spline functions are constructed as linear combinations of B-splines with a set of control points.
+The term "B-spline" was coined by Isaac Jacob Schoenberg[1] and is short for basis spline.[2] 
+A spline function of order 
+
+
+
+n
+
+
+{\displaystyle n}
+
+ is a piecewise polynomial function of degree 
+
+
+
+n
+&#8722;
+1
+
+
+{\displaystyle n-1}
+
+ in a variable 
+
+
+
+x
+
+
+{\displaystyle x}
+
+. The places where the pieces meet are known as knots. The key property of spline functions is that they and their derivatives may be continuous, depending on the multiplicities of the knots.
+B-splines of order 
+
+
+
+n
+
+
+{\displaystyle n}
+
+ are basis functions for spline functions of the same order defined over the same knots, meaning that all possible spline functions can be built from a linear combination of B-splines, and there is only one unique combination for each spline function.[3]
+</wiki></doc>

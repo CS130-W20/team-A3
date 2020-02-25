@@ -1,0 +1,45 @@
+<doc><id>decision_rule</id><concept_name>decision rule</concept_name><wiki>In decision theory, a decision rule is a function which maps an observation to an appropriate action. Decision rules play an important role in the theory of statistics and economics, and are closely related to the concept of a strategy in game theory.
+In order to evaluate the usefulness of a decision rule, it is necessary to have a loss function detailing the outcome of each action under different states.
+Given an observable random variable X over the probability space 
+
+
+
+
+(
+
+
+X
+
+
+,
+&#931;
+,
+
+P
+
+&#952;
+
+
+)
+
+
+
+{\displaystyle \scriptstyle ({\mathcal {X}},\Sigma ,P_{\theta })}
+
+, determined by a parameter &#952;&#160;&#8712;&#160;&#920;, and a set A of possible actions, a (deterministic) decision rule is a function &#948;&#160;:&#160;
+
+
+
+
+
+
+X
+
+
+
+
+
+{\displaystyle \scriptstyle {\mathcal {X}}}
+
+&#8594;&#160;A.
+</wiki></doc>

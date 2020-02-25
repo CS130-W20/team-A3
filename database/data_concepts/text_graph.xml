@@ -1,0 +1,7 @@
+<doc><id>text_graph</id><concept_name>text graph</concept_name><wiki>In natural language processing (NLP), a text graph is a graph representation of a text item (document, passage or sentence). It is typically created as a preprocessing step to support NLP tasks such as text condensation[1]
+term disambiguation[2]
+(topic-based) text summarization,[3] relation extraction [4] and textual entailment.[5]
+The semantics of what a text graph's nodes and edges represent can vary widely. Nodes for example can simply connect to tokenized words, or to domain-specific terms, or to entities mentioned in the text. The edges, on the other hand, can be between these text-based tokens or they can also link to a knowledge base.
+The TextGraphs Workshop series[6] is a series of regular academic workshops intended to encourage the synergy between the fields of natural language processing (NLP) and graph theory. The mix between the two started small, with graph theoretical framework providing efficient and elegant solutions for NLP applications that focused on single documents for part-of-speech tagging, word sense disambiguation and semantic role labelling, got progressively larger with ontology learning and information extraction from large text collections.
+The 11th edition of the workshop (TextGraphs-11) will be collocated with the Annual Meeting of Association for Computational Linguistics (ACL 2017) in Vancouver, BC, Canada.
+</wiki></doc>

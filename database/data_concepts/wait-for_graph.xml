@@ -1,0 +1,89 @@
+<doc><id>wait-for_graph</id><concept_name>wait-for graph</concept_name><wiki>A wait-for graph in computer science is a directed graph used for deadlock detection in operating systems and relational database systems. 
+In computer science, a system that allows concurrent operation of multiple processes and locking of resources and which does not provide mechanisms to avoid or prevent deadlock must support a mechanism to detect deadlocks and an algorithm for recovering from them.
+One such deadlock detection algorithm makes use of a wait-for graph to track which other processes a process is currently blocking on. In a wait-for graph, processes are represented as nodes, and an edge from process 
+
+
+
+
+P
+
+i
+
+
+
+
+{\displaystyle P_{i}}
+
+ to 
+
+
+
+
+P
+
+j
+
+
+
+
+{\displaystyle P_{j}}
+
+ implies 
+
+
+
+
+P
+
+j
+
+
+
+
+{\displaystyle P_{j}}
+
+ is holding a resource that 
+
+
+
+
+P
+
+i
+
+
+
+
+{\displaystyle P_{i}}
+
+ needs and thus 
+
+
+
+
+P
+
+i
+
+
+
+
+{\displaystyle P_{i}}
+
+ is waiting for 
+
+
+
+
+P
+
+j
+
+
+
+
+{\displaystyle P_{j}}
+
+ to release its lock on that resource. If the process is waiting for more than a single resource to become available (the trivial case), multiple edges may represent a conjunctive (and) or disjunctive (or) set of different resources or a certain number of equivalent resources from a collection. The possibility of a deadlock is implied by graph cycles in the conjunctive case, and by knots in the disjunctive case. There is no simple algorithm for detecting the possibility of deadlock in the final case. (Srinavasan, Rajaram 2011)
+The wait-for-graph scheme is not applicable to a resource allocation system with multiple instances of each resource type.
+</wiki></doc>

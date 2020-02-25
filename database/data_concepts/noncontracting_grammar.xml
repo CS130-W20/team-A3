@@ -1,0 +1,12 @@
+<doc><id>noncontracting_grammar</id><concept_name>noncontracting grammar</concept_name><wiki>In formal language theory, a grammar is noncontracting (or monotonic) if all of its production rules are of the form 
+&#945;&#160;&#8594;&#160;&#946; where &#945; and &#946; are strings of nonterminal and terminal symbols, and 
+the length of &#945; is less than or equal to that of &#946;, |&#945;| &#8804; |&#946;|, that is &#946; is not shorter than &#945;. 
+A grammar is essentially noncontracting if there may be one exception, namely, a rule
+S &#8594; &#949;
+where S is the start symbol and &#949; the empty string, and furthermore, S never occurs in the right-hand side of any rule.
+None of the rules of a noncontracting grammar decreases the length of the string that is being rewritten. If each rule even properly increases the length, the grammar is called a growing context-sensitive grammar.
+Chomsky (1963) called a noncontracting grammar a type 1 grammar; in the same work, he called a context-sensitive grammar a "type 2 grammar", and he proved that these two are weakly equivalent (context-free grammars were designated "type 4" in this work).[1] The type numbering scheme in this 1963 work of Chomsky does not coincide with the earlier one known today as the Chomsky hierarchy because he was trying to emphasize the distinction between weak [generative] and strong [structural] equivalence; in his 1959 work he had used "type 1 grammar" to denote a context-sensitive grammar and "type 2" for context-free.[2][3]
+This grammar, with the start symbol S, generates the language 
+{ anbncn&#160;: n &#8805; 1 },[4]
+which is not context-free due to the pumping lemma.
+</wiki></doc>

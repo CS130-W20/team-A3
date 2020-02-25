@@ -1,0 +1,18 @@
+<doc><id>optical_flow</id><concept_name>optical flow</concept_name><wiki>Optical flow or optic flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer and a scene.[1][2] Optical flow can also be defined as the distribution of apparent velocities of movement of brightness pattern in an image.[3] The concept of optical flow was introduced by the American psychologist James J. Gibson in the 1940s to describe the visual stimulus provided to animals moving through the world.[4] Gibson stressed the importance of optic flow for affordance perception, the ability to discern possibilities for action within the environment.  Followers of Gibson and his ecological approach to psychology have further demonstrated the role of the optical flow stimulus for the perception of movement by the observer in the world; perception of the shape, distance and movement of objects in the world; and the control of locomotion.[5]
+The term optical flow is also used by roboticists, encompassing related techniques from image processing and control of navigation including motion detection, object segmentation, time-to-contact information, focus of expansion calculations, luminance, motion compensated encoding, and stereo disparity measurement.[6][7]
+Sequences of ordered images allow the estimation of motion as either instantaneous image velocities or discrete image displacements.[7] Fleet and Weiss provide a tutorial introduction to gradient based optical flow.[8]
+John L. Barron, David J. Fleet, and Steven Beauchemin provide a performance analysis of a number of optical flow techniques. It emphasizes the accuracy and density of measurements.[9]
+The optical flow methods try to calculate the motion between two image frames which are taken at times t and 
+
+
+
+t
++
+&#916;
+t
+
+
+{\displaystyle t+\Delta t}
+
+ at every voxel position. These methods are called differential since they are based on local Taylor series approximations of the image signal; that is, they use partial derivatives with respect to the spatial and temporal coordinates.
+</wiki></doc>

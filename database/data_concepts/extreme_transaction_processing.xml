@@ -1,0 +1,4 @@
+<doc><id>extreme_transaction_processing</id><concept_name>extreme transaction processing</concept_name><wiki>In marketing, Extreme Transaction Processing (XTP) refers to a transaction processing rate of more than 10,000 concurrent accesses or 500 transaction per second to more than 100,000 concurrent accesses or 5,000 transaction per second.[1]
+Gartner defines XTP as an application style aimed at supporting the design, development, deployment, management and maintenance of distributed TP applications characterized by exceptionally demanding performance, scalability, availability, security, manageability and dependability requirements.[2][3][4]
+XTP applications focuses on delivering high and consistent performance in a linearly scalable and highly available system.[5]
+</wiki></doc>

@@ -1,0 +1,5 @@
+<doc><id>classical_cipher</id><concept_name>classical cipher</concept_name><wiki>In cryptography, a classical cipher is a type of cipher that was used historically but now has fallen, for the most part, into disuse. In contrast to modern cryptographic algorithms, most classical ciphers can be practically computed and solved by hand. However, they are also usually very simple to break with modern technology. The term includes the simple systems used since Greek and Roman times, the elaborate Renaissance ciphers, World War II cryptography such as the Enigma machine and beyond.
+In contrast, modern strong cryptography relies on new algorithms and computers developed since the 1970s.
+Classical ciphers are often divided into transposition ciphers and substitution ciphers.
+In a substitution cipher, letters (or groups of letters) are systematically replaced throughout the message for other letters (or groups of letters).
+</wiki></doc>

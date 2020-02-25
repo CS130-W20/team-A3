@@ -1,0 +1,10 @@
+<doc><id>answer_set_programming</id><concept_name>answer set programming</concept_name><wiki>Answer set programming (ASP) is a form of declarative programming oriented towards difficult (primarily NP-hard) search problems.  It is based on the stable model (answer set) semantics of logic programming.  In ASP, search problems are reduced to computing stable models, and answer set solvers&#8212;programs for generating stable models&#8212;are used to perform search.  The computational process employed in the design of many answer set solvers is an enhancement of the DPLL algorithm and, in principle, it always terminates (unlike Prolog query evaluation, which may lead to an infinite loop).
+In a more general sense, ASP includes all applications of answer sets to knowledge representation[1][2] and the use of Prolog-style query evaluation for solving problems arising in these applications.
+The planning method proposed in 1993 by Dimopoulos, Nebel and K&#246;hler[3] 
+is an early example of answer set programming. Their approach is based on the relationship between plans and stable models.[4] 
+Soininen and Niemel&#228;[5] 
+applied what is now known as answer set programming to the problem of product configuration.  The use of answer set solvers for search was identified as a new programming paradigm by Marek and Truszczy&#324;ski in a paper that appeared in a 25-year perspective on the logic programming paradigm published in 1999 [6] 
+and in [Niemel&#228; 1999].[7]  
+Indeed, the new terminology of "answer set" instead of "stable model" was first proposed by Lifschitz[8] in a paper appearing in the same retrospective volume as the Marek-Truszczynski paper.
+Lparse is the name of the program that was originally created as a grounding tool (front-end) for the answer set solver smodels. The language that Lparse accepts is now commonly called AnsProlog*,[9] short for Answer Set Programming in Logic.[10] It is now used in the same way in many other answer set solvers, including assat, clasp, cmodels, gNt, nomore++ and pbmodels. (dlv is an exception; the syntax of ASP programs written for dlv is somewhat different.)
+</wiki></doc>

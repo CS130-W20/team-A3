@@ -1,0 +1,5 @@
+<doc><id>level_set</id><concept_name>level set</concept_name><wiki>
+In mathematics, a level set of a real-valued function f of n real variables is a set of the form
+that is, a set where the function takes on a given constant value c.
+When the number of variables is two, a level set is generically a curve, called  a level curve, contour line, or isoline.  So a level curve is the set of all real-valued solutions of an equation in two variables x1 and x2.   When n&#160;=&#160;3, a level set is called a level surface (see also isosurface), and for  higher values of n the level set is a level hypersurface.  So a level surface is the set of all real-valued roots of an equation in three variables x1, x2 and x3, and a level hypersurface is the set of all real-valued roots of an equation in n (n &gt; 3) variables.
+</wiki></doc>

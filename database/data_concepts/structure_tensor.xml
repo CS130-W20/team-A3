@@ -1,0 +1,132 @@
+<doc><id>structure_tensor</id><concept_name>structure tensor</concept_name><wiki>In mathematics, the structure tensor, also referred to as the second-moment matrix, is a matrix derived from the  gradient of a function.  It summarizes the predominant directions of the gradient in a specified neighborhood of a point, and the degree to which those directions are coherent.  The structure tensor is often used in image processing and computer vision.[1][2][3]
+For a function 
+
+
+
+I
+
+
+{\displaystyle I}
+
+ of two variables p = (x, y), the structure tensor is the 2&#215;2 matrix
+where 
+
+
+
+
+I
+
+x
+
+
+
+
+{\displaystyle I_{x}}
+
+ and 
+
+
+
+
+I
+
+y
+
+
+
+
+{\displaystyle I_{y}}
+
+ are the partial derivatives of 
+
+
+
+I
+
+
+{\displaystyle I}
+
+ with respect to x and y; the integrals range over the plane 
+
+
+
+
+
+R
+
+
+2
+
+
+
+
+{\displaystyle \mathbb {R} ^{2}}
+
+; and w is some fixed "window function", a distribution on two variables.   Note that the matrix 
+
+
+
+
+S
+
+w
+
+
+
+
+{\displaystyle S_{w}}
+
+ is itself a function of p = (x, y).
+The formula above can be written also as 
+
+
+
+
+S
+
+w
+
+
+(
+p
+)
+=
+&#8747;
+w
+(
+r
+)
+
+S
+
+0
+
+
+(
+p
+&#8722;
+r
+)
+
+d
+r
+
+
+{\displaystyle S_{w}(p)=\int w(r)S_{0}(p-r)\,dr}
+
+, where 
+
+
+
+
+S
+
+0
+
+
+
+
+{\displaystyle S_{0}}
+
+ is the matrix-valued function defined by
+</wiki></doc>

@@ -1,0 +1,105 @@
+<doc><id>importance_sampling</id><concept_name>importance sampling</concept_name><wiki>In statistics, importance sampling is a general technique for estimating properties of a particular distribution, while only having samples generated from a different distribution than the distribution of interest.  It is related to umbrella sampling in computational physics. Depending on the application, the term may refer to the process of sampling from this alternative distribution, the process of inference, or both.
+Let 
+
+
+
+X
+:
+&#937;
+&#8594;
+
+R
+
+
+
+{\displaystyle X:\Omega \to \mathbb {R} }
+
+ be a random variable in some probability space 
+
+
+
+(
+&#937;
+,
+
+
+F
+
+
+,
+P
+)
+
+
+{\displaystyle (\Omega ,{\mathcal {F}},P)}
+
+. We wish to estimate the expected value of X under P, denoted E[X;P]. If we have statistically independent random samples 
+
+
+
+
+x
+
+1
+
+
+,
+&#8230;
+,
+
+x
+
+n
+
+
+
+
+{\displaystyle x_{1},\ldots ,x_{n}}
+
+, generated according to P, then an empirical estimate of E[X;P] is
+and the precision of this estimate depends on the variance of X:
+The basic idea of importance sampling is to sample the states from a different distribution to lower the variance of the estimation of E[X;P], or when sampling from P is difficult.
+This is accomplished by first choosing a random variable 
+
+
+
+L
+&#8805;
+0
+
+
+{\displaystyle L\geq 0}
+
+ such that E[L;P]&#160;=&#160;1 and that P-almost everywhere 
+
+
+
+L
+(
+&#969;
+)
+&#8800;
+0
+
+
+{\displaystyle L(\omega )\neq 0}
+
+.
+With the variate L we define a probability 
+
+
+
+
+P
+
+(
+L
+)
+
+
+
+
+{\displaystyle P^{(L)}}
+
+ that satisfies
+</wiki></doc>

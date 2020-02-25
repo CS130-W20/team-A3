@@ -1,0 +1,5 @@
+<doc><id>comb_filter</id><concept_name>comb filter</concept_name><wiki>In signal processing, a comb filter is a filter implemented by adding a delayed version of a signal to itself, causing constructive and destructive interference. The frequency response of a comb filter consists of a series of regularly spaced notches, giving the appearance of a comb.
+Comb filters are used in a variety of signal processing applications. These include:
+In acoustics, comb filtering can arise in some unwanted ways. For instance, when two loudspeakers are playing the same signal at different distances from the listener, there is a comb filtering effect on the signal.[1] In any enclosed space, listeners hear a mixture of direct sound and reflected sound. Because the reflected sound takes a longer path, it constitutes a delayed version of the direct sound and a comb filter is created where the two combine at the listener.[2]
+Comb filters exist in two different forms, feedforward and feedback; the names refer to the direction in which signals are delayed before they are added to the input.
+</wiki></doc>

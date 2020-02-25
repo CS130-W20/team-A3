@@ -1,0 +1,80 @@
+<doc><id>metric_tree</id><concept_name>metric tree</concept_name><wiki>A metric tree is any tree data structure specialized to index data in metric spaces. Metric trees exploit properties of metric spaces such as the triangle inequality to make accesses to the data more efficient. Examples include the M-tree, vp-trees, cover trees, MVP Trees, and BK-trees.[1]
+Most algorithms and data structures for searching a dataset are based on the classical binary search algorithm, and generalizations such as the k-d tree or range tree work by interleaving the binary search algorithm over the separate coordinates and treating each spatial coordinate as an independent search constraint. These data structures are well-suited for range query problems asking for every point 
+
+
+
+(
+x
+,
+y
+)
+
+
+{\displaystyle (x,y)}
+
+ that  satisfies 
+
+
+
+
+
+
+min
+
+
+
+x
+
+
+&#8804;
+x
+&#8804;
+
+
+
+max
+
+
+
+x
+
+
+
+
+{\displaystyle {\mbox{min}}_{x}\leq x\leq {\mbox{max}}_{x}}
+
+ and 
+
+
+
+
+
+
+min
+
+
+
+y
+
+
+&#8804;
+y
+&#8804;
+
+
+
+max
+
+
+
+y
+
+
+
+
+{\displaystyle {\mbox{min}}_{y}\leq y\leq {\mbox{max}}_{y}}
+
+.
+A limitation of these multidimensional search structures is that they are only defined for searching over objects that can be treated as vectors. They aren't applicable for the more general case in which the algorithm is given only a collection of objects and a function for measuring the distance or similarity between two objects. If, for example, someone were to create a function that returns a value indicating how similar one image is to another, a natural algorithmic problem would be to take a dataset of images and find the ones that are similar according to the function to a given query image.
+If there is no structure to the similarity measure then a brute force search requiring the comparison of the query image to every image in the dataset is the best that can be done[citation needed]. If, however, the similarity function satisfies the triangle inequality then it is possible to use the result of each comparison to prune the set of candidates to be examined.
+</wiki></doc>

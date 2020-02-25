@@ -1,0 +1,5 @@
+<doc><id>sequential_decoding</id><concept_name>sequential decoding</concept_name><wiki>Recognised by John Wozencraft, sequential decoding is a limited memory technique for decoding tree codes.   Sequential decoding is mainly used as an approximate decoding algorithm for long constraint-length convolutional codes.  This approach may not be as accurate as the Viterbi algorithm but can save a substantial amount of computer memory. It was used to decode a convolutional code in 1968 Pioneer 9 mission.
+Sequential decoding explores the tree code in such a way to try to minimise the computational cost and memory requirements to store the tree.
+There is a range of sequential decoding approaches based on the choice of metric and algorithm.  Metrics include:
+Algorithms include:
+</wiki></doc>

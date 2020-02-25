@@ -31,7 +31,7 @@ def get_xml(concept, concept_name_str):
     id.text = concept
     concept_name.text = concept_name_str
     wiki.text = get_wiki(concept)
-    with open("./data_concepts/" + concept+".xml", 'wb') as f:
+    with open("./data_concepts/" + concept.replace("/", "-")+".xml", 'wb') as f:
         f.write(ET.tostring(data))
 
 def concept_to_string(c):
@@ -44,7 +44,7 @@ if __name__ == "__main__":
         print(s)
         try:
             get_xml(s, concept)
-        except requests.exceptions.HTTPError:
+        except requests.exceptions.HTTPError or FileNotFoundError:
             with open("not_found_entries.txt", "a+") as f:
                 f.write(s + "\n")
                 

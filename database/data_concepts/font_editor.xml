@@ -1,0 +1,4 @@
+<doc><id>font_editor</id><concept_name>font editor</concept_name><wiki>A font editor is a class of application software specifically designed to create or modify  font files. Font editors differ greatly depending on if they are designed to edit bitmap fonts or outline fonts. Most modern font editors deal with the outline fonts. Bitmap fonts uses an older technology and are most commonly used in  console applications. The bitmap font editors were usually very specialized, as each computing platform had its own font format. One subcategory of bitmap fonts is text mode fonts.
+The following editors use outline vector graphics to create font files in common formats.
+
+</wiki></doc>

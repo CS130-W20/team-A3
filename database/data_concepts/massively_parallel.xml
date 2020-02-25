@@ -1,0 +1,5 @@
+<doc><id>massively_parallel</id><concept_name>massively parallel</concept_name><wiki>
+Massively parallel is the term for using a large number of computer processors (or separate computers) to simultaneously perform a set of coordinated computations in parallel.
+One approach is grid computing, where the processing power of many computers in distributed, diverse administrative domains is opportunistically used whenever a computer is available.[1] An example is BOINC, a volunteer-based, opportunistic grid system, whereby the grid provides power only on a best effort basis.[2]
+Another approach is grouping many processors in close proximity to each other, as in a computer cluster. In such a centralized system the speed and flexibility of the interconnect becomes very important, and modern supercomputers have used various approaches ranging from enhanced InfiniBand systems to three-dimensional torus interconnects.[3]
+</wiki></doc>

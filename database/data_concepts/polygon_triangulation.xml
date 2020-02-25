@@ -1,0 +1,5 @@
+<doc><id>polygon_triangulation</id><concept_name>polygon triangulation</concept_name><wiki>In computational geometry, polygon triangulation is the decomposition of a polygonal area (simple polygon) P into a set of triangles,[1] i.e., finding a set of triangles with pairwise non-intersecting interiors whose union is P.
+Triangulations may be viewed as special cases of planar straight-line graphs. When there are no holes or added points, triangulations form maximal outerplanar graphs.
+Over time, a number of algorithms have been proposed to triangulate a polygon.
+It is trivial to triangulate any convex polygon in linear time into a fan triangulation, by adding diagonals from one vertex to all other vertices. 
+</wiki></doc>

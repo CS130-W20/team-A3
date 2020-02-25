@@ -1,0 +1,5 @@
+<doc><id>redundant_code</id><concept_name>redundant code</concept_name><wiki>In computer programming, redundant code is source code or compiled code in a computer program that is unnecessary, such as:
+A NOP instruction might be considered to be redundant code that has been explicitly inserted to pad out the instruction stream or introduce a time delay, for example to create a timing loop by "wasting time". Identifiers that are declared, but never referenced, are termed redundant declarations.
+The second iX*2 expression is redundant code and can be replaced by a reference to the variable iY. Alternatively, the definition int iY = iX*2 can instead be removed.
+Consider:
+</wiki></doc>

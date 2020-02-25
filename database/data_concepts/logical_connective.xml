@@ -1,0 +1,5 @@
+<doc><id>logical_connective</id><concept_name>logical connective</concept_name><wiki>In logic, a logical connective (also called a logical operator, sentential connective, or sentential operator) is a symbol or word used to connect two or more sentences (of either a formal or a natural language) in a grammatically valid way, such that the value of the compound sentence produced depends only on that of the original sentences and on the meaning of the connective.
+The most common logical connectives are binary connectives (also called dyadic connectives) which join two sentences which can be thought of as the function's operands. Also commonly, negation is considered to be a unary connective.
+Logical connectives along with quantifiers are the two main types of logical constants used in formal systems such as propositional logic and predicate logic. Semantics of a logical connective is often, but not always, presented as a truth function.
+A logical connective is similar to but not equivalent to a conditional operator.[1]
+</wiki></doc>

@@ -1,0 +1,5 @@
+<doc><id>sankey_diagram</id><concept_name>sankey diagram</concept_name><wiki>Sankey diagrams are a type of flow diagram in which the width of the arrows is proportional to the flow rate.
+The illustration shows a Sankey diagram that represents all the primary energy flows into a factory. The widths of the bands are linearly proportional to energy production, utilization and loss. The primary energy inputs enter the left side of the diagram, and are differentiated into gas, electricity and coal/oil.
+Sankey diagrams can also visualize the energy accounts, material flow accounts on a regional or national level, and cost breakdowns[1] .
+Sankey diagrams emphasize the major transfers or flows within a system. They help locate the most important contributions to a flow. They often show conserved quantities within defined system boundaries.
+</wiki></doc>

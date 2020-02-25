@@ -1,0 +1,5 @@
+<doc><id>installable_file_system</id><concept_name>installable file system</concept_name><wiki>The Installable File System (IFS) is a filesystem API in MS-DOS/PC DOS 4.x, IBM OS/2 and Microsoft Windows that enables the operating system to recognize and load drivers for file systems.
+When IBM and Microsoft were co-developing OS/2, they realized that the FAT file system did not offer some of the features modern OSes would require, and Microsoft began developing the High Performance File System (HPFS), codenamed Pinball.
+Instead of coding it inside the kernel, as FAT was, Microsoft developed a "driver-based" filesystem API that could allow them and other developers to add new filesystems to the kernel without needing to modify it.
+When Microsoft stopped working on OS/2, IBM continued using the IFS interface and Microsoft implemented a similar one in Windows NT.
+</wiki></doc>
