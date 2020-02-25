@@ -43,6 +43,17 @@
       <div id="container" class="padded_content">
           {% block high_search%}
           {% endblock %}
+          {% if showconcept %}
+              <div id="concept">
+                  <ul id="navigation">
+                      <p><big><a href="/search/concepts/{{concept.id}}/" target="_blank">{{concept.concept_name}}</a></big></p>
+                      <p><br/>{{concept.wiki}}<br/>
+                      </p>
+                  </ul>
+              </div>
+              <br/>
+          <ul>
+	  {% endif %}
           {% if nonempty %}
               {% for doc in docs%}
               <div id="doc">
