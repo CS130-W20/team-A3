@@ -15,6 +15,7 @@ def showing_concepts():
      The front-end interaction part. Render to the visualize.html webpage.
 
     """
+    g.name = "information science"
     return render_template('visualize.html')
 
 

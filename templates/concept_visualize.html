@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<head>
+    <!--The font-awesome stylesheet has to be online-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-select.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/jquery-ui.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/customized_layout.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/chatbox_layout.css') }}" type="text/css" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/tooltip.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-select.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-toolkit.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/jquery-ui.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/frontend_interaction.js') }}" type="text/javascript"></script>
+</head>
 <style>
 
 .node circle {
@@ -22,6 +39,10 @@ line.link {
 
 </style>
 <body>
+<div class="container">
+      <div class="row" id="1">
+      </div>
+    </div>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
@@ -171,6 +192,50 @@ function tick() {
 
 
 
+
+function showcontent(d) {
+    var content_div = document.getElementById("1");
+    content_div.innerHTML = ""; // clear
+    var tmpcontent_element = generate_d_element(d)
+    content_div.appendChild(tmpcontent_element);
+}
+
+
+
+function generate_d_element (d) {
+  var container = document.createElement('div');
+  container.className = "col-md-4";
+  var button_container = document.createElement('p');
+  var button = document.createElement('a');
+  button.className = "btn btn-secondary";
+  button.innerHTML = "Plunge deeper into " + d.name;
+  button.setAttribute("href", "{{url_for('searcher.search_keyword')}}" + d.name);
+  button.setAttribute("role", "button");
+  button_container.appendChild(button);
+  container.appendChild(button_container);
+  return container;
+}
+
+
+function showresult(d) {
+    var data = {
+    data: JSON.stringify({
+      "name": d.name
+    })
+  };
+  $.ajax({
+      url: "/search_keyword" ,
+      type: "POST",
+      data: data,
+      dataType: 'json',
+      success: function(data) {
+      },
+      error: function(xhr, type) {
+        console.log("error", xhr, type);
+      }
+  });
+}
+
 // Toggle children on click.
 function click(d) {
   if (d3.event.defaultPrevented) return; // ignore drag
@@ -182,6 +247,9 @@ function click(d) {
     d._children = null;
   }
   update();
+  if (d.name != "Concepts") {
+        showcontent(d);
+  }
 }
 
 // Returns a list of all nodes under the root.

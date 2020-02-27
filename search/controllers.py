@@ -6,6 +6,7 @@ from search.utils import cut_page, find, searchidlist, \
 from search.search_engine import SearchEngine
 from search import CONFIG_PATH
 from __init__ import browse_categories
+import json
 
 # Define the blueprint: 'search', and set its url prefix: search
 searcher = Blueprint('searcher', __name__, url_prefix='/search/')
@@ -108,7 +109,7 @@ def content(id):
         print('content error' +str(e))
 
 
-@searcher.route('/search/<key>/', methods=['POST'])
+@searcher.route('/search/<key>/', methods=['POST','GET'])
 def high_search(key):
     """
 
@@ -139,7 +140,50 @@ def high_search(key):
         print('high search error')
 
 
+@searcher.route('search_keyword/', methods=['POST', 'GET'])
+@searcher.route('/search_keyword/<key>/', methods=['POST','GET'])
+def search_keyword(key = None):
+    """
+    Implements search functionality to find courses.
 
+    :return:
+        HTML template with the results.
+    """
+    try:
 
+        checked = ['checked="true"', '', '']
+        keys =key
+        session['checked'] = checked
+        session['keys'] = keys
+
+        if keys not in ['']:
+            flag, page, docid = searchidlist(keys)
+            session['page'] = page
+            session['s_flag'] = flag
+            session['doc_id'] = docid
+
+            if flag == 0:
+                return render_template('search.html', nonempty=False, welcome=False,
+                                       browse_categories=browse_categories)
+
+            docs = cut_page(page, 0, docid)
+
+            docs_concept = find_concept([keys.replace(" ", "_")], extra=True)
+            if docs_concept:
+                        docs_concept = docs_concept[0]
+                        docs_concept["concept_name"] = docs_concept["concept_name"].title()
+                        show_concept = True
+            else:
+                        show_concept = False
+
+            return render_template('high_search.html', checked=checked, key=keys, docs=docs,concept=docs_concept, page=page,
+                                   nonempty=True, welcome=False,showconcept = show_concept, browse_categories=browse_categories)
+        else:
+            return render_template('search.html', nonempty=False, welcome=True, browse_categories=browse_categories)
+
+    except Exception as e:
+        print('search keyword error')
+        print(e)
+        return render_template('search.html', nonempty=False, welcome=True, browse_categories=browse_categories)
 
 
