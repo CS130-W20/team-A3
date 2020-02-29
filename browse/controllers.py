@@ -54,37 +54,35 @@ def get_category_content(category_id=-1):
 
     """
     if category_id == -1:
-        tmp = high_search("Artifical Intelligence")
         content = [
             {   "title": "Hot Topics",
-                "content": ["We have some keywords for you that are recently very popular:",
+                "content": ["We have some keywords for you that are recent very popular:",
                     [
-                        {"Machine Learning" : "#"},
-                        {"Artificial Intelligence": "#"},
-                        {"Data Mining": "#"},
-                        {"Big Data": "#"}
+                        {"Machine Learning" : "search/search_keyword/machine learning"},
+                        {"Artificial Intelligence": "search/search_keyword/Artificial Intelligence"},
+                        {"Data Mining": "search/search_keyword/Data Mining"},
+                        {"Big Data": "search/search_keyword/Big Data"}
                     ]
-                ],
-                "link": "#"
+                ]
             },
             {   "title": "Popular Resource",
-                "content": ["Here are some of the courses / blogs that are recently very popular on our dataset. (balabalabala)"
+                "content": ["Here is a great visualization about concepts in computer science domain!"
                 ],
-                "link": "#"
+                "link": "concepts"
             },
             {   "title": "What\'s New",
-                "content": ["Here are some of the recently-come-out courses... (balabalabala)"
+                "content": ["Here are some of the recently updates of our website"
                 ],
-                "link": "#"
+                "link": "aboutEduAI"
             }
         ]
     else:
         category_name = id2categories[category_id]
         content = [
             {   "title": "Related Topics",
-                "content": ["balabalabalabala"
+                "content": ["Check out our concept graph to find out related topics!"
                 ],
-                "link": "#"
+                "link": "concepts"
             },
             {   "title": "Brief History",
                 "content": ["The development of {} experienced the following main stages".format(category_name),
@@ -98,9 +96,9 @@ def get_category_content(category_id=-1):
                 "link": "#"
             },
             {   "title": "Most Recent Paper",
-                "content": ["Here are some of the most-recent research papers in {}... (balabalabala)".format(category_name)
+                "content": ["Here are some of the most-recent research papers in {}... ".format(category_name)
                 ],
-                "link": "#"
+                "link": "search/search_keyword/{}".format(category_name)
             }
         ]
     return content
