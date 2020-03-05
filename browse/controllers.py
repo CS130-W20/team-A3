@@ -84,17 +84,7 @@ def get_category_content(category_id=-1):
                 ],
                 "link": "concepts"
             },
-            {   "title": "Brief History",
-                "content": ["The development of {} experienced the following main stages".format(category_name),
-                    [
-                        {"stage 1": "#"},
-                        {"stage 2": "#"},
-                        {"stage 3": "#"},
-                        {"stage 4": "#"}
-                    ]
-                ],
-                "link": "#"
-            },
+
             {   "title": "Most Recent Paper",
                 "content": ["Here are some of the most-recent research papers in {}... ".format(category_name)
                 ],

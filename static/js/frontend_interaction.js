@@ -51,7 +51,7 @@ function fill_list_category_content(parent, list) {
       newline.innerHTML = list[idx];
       parent.appendChild(newline);
     } else {
-      if (list[idx].length) {
+      if (list[idx].length) {s
         var newlist = document.createElement('ul');
         fill_list_category_content(newlist, list[idx]);
         parent.appendChild(newlist);
@@ -96,7 +96,7 @@ function generate_category_content_element(category_elem_info) {
           var newline = document.createElement('li');
           var newlink = document.createElement('a');
           newlink.innerHTML = link_name[0];
-          newlink.setAttribute("href", category_elem_info.content[idx][link_name[0]]);
+          newlink.setAttribute("href",  category_elem_info.content[idx][link_name[0]]);
           newline.appendChild(newlink);
           parent.appendChild(newline);
         }
@@ -108,7 +108,7 @@ function generate_category_content_element(category_elem_info) {
     var button = document.createElement('a');
     button.className = "btn btn-secondary";
     button.innerHTML = "View details &raquo;";
-    button.setAttribute("href", category_elem_info.link);
+    button.setAttribute("href",  category_elem_info.link);
     button.setAttribute("role", "button");
     button_container.appendChild(button);
     container.appendChild(button_container);
