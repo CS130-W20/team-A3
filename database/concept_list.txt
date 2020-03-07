@@ -1,0 +1,148 @@
+Computer science
+ACM Computing Classification System
+Computer hardware
+Printed circuit board
+Peripheral
+Integrated circuit
+Very Large Scale Integration
+System on a chip
+Green computing
+Electronic design automation
+Hardware acceleration
+Computer architecture
+Embedded system
+Real-time computing
+Dependability
+Computer network
+Network architecture
+Communication protocol
+Networking hardware
+Network scheduler
+Network performance
+Network service
+Interpreter (computing)
+Middleware
+Virtual machine
+Operating system
+Software quality
+Programming language theory
+Programming tool
+Programming paradigm
+Programming language
+Compiler
+Domain-specific language
+Modeling language
+Software framework
+Integrated development environment
+Software configuration management
+Library (computing)
+Software repository
+Software development
+Software development process
+Requirements analysis
+Software design
+Software construction
+Software deployment
+Software maintenance
+Programming team
+Open-source software
+Theory of computation
+Model of computation
+Formal language
+Automata theory
+Computability theory
+Computational complexity theory
+Logic in computer science
+Semantics (computer science)
+Algorithm
+Algorithm
+Analysis of algorithms
+Algorithmic efficiency
+Randomized algorithm
+Computational geometry
+Discrete mathematics
+Probability
+Statistics
+Mathematical software
+Information theory
+Mathematical analysis
+Numerical analysis
+Information system
+Database
+Computer data storage
+Enterprise information system
+Social software
+Geographic information system
+Decision support system
+Process control
+Multimedia database
+Data mining
+Digital library
+Computing platform
+Digital marketing
+World Wide Web
+Information retrieval
+Computer security
+Cryptography
+Formal methods
+Security service (telecommunication)
+Intrusion detection system
+Computer security compromised by hardware failure
+Network security
+Information security
+Application security
+Human–computer interaction
+Interaction design
+Social computing
+Ubiquitous computing
+Visualization (graphics)
+Computer accessibility
+Concurrency (computer science)
+Concurrent computing
+Parallel computing
+Distributed computing
+Multithreading (computer architecture)
+Multiprocessing
+Artificial intelligence
+Natural language processing
+Knowledge representation and reasoning
+Computer vision
+Automated planning and scheduling
+Mathematical optimization
+Control theory
+Philosophy of artificial intelligence
+Distributed artificial intelligence
+Machine learning
+Supervised learning
+Unsupervised learning
+Reinforcement learning
+Multi-task learning
+Cross-validation (statistics)
+Computer graphics
+Computer animation
+Rendering (computer graphics)
+Photo manipulation
+Graphics processing unit
+Mixed reality
+Virtual reality
+Image compression
+Solid modeling
+E-commerce
+Enterprise software
+Computational mathematics
+Computational physics
+Computational chemistry
+Computational biology
+Computational social science
+Computational engineering
+Health informatics
+Digital art
+Electronic publishing
+Cyberwarfare
+Electronic voting
+Video game
+Word processor
+Operations research
+Educational technology
+Document management system
+Outline of computer science
