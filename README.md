@@ -63,7 +63,7 @@ Go to http://0.0.0.0:8080 by default. You can enter the browse mode. Search the 
 [npm-url]: https://npmjs.org/package/datadog-metrics
 [npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+[travis-url]: https://travis-ci.org/CS130-W20/team-A3
 [wiki]: https://github.com/yourname/yourproject/wiki
 
 ## Document
