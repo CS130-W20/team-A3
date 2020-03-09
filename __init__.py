@@ -22,7 +22,7 @@ application.config.from_object('config')
 # by modules and controllers
 db = SQLAlchemy(application)
 
-#Get course_taxonomy：
+# Get course taxonomy
 from browse.generate_categories import generate_course_list
 browse_categories = generate_course_list("browse/course_taxonomy.txt")
 #Get concept_dict
