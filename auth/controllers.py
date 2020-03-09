@@ -24,7 +24,7 @@ from auth.models import User
 
 import sqlite3
 import numpy as np
-from users import USERDB_PATH 
+from users import USERDB_PATH
 
 # Define the blueprint: 'auth'
 auth = Blueprint('auth', __name__)
@@ -168,19 +168,19 @@ def new_user():
 
         # new user interests entry in interests table should be populated according to questionnaire
         # temporarily initialize to interests + random bool
-        interests = (current_user.id, ) + tuple(interests) + tuple(np.random.randint(0, 2, 100 - len(interests), 'bool'))
+        interests = (current_user.id, ) + tuple([0]*1640)
 
         # new user knowledge entry in knowledge table should be populated according to questionnaire
         # temporarily initialize to concepts + random bool
-        concepts = (current_user.id, ) + tuple(concepts) + tuple(np.random.randint(0, 2, 100 - len(concepts), 'bool'))
+        concepts = (current_user.id, ) + tuple([0]*1640)
 
         try:
             db.session.add(user)
             db.session.commit()
             conn = sqlite3.connect(USERDB_PATH)
-            cur = conn.cursor()            
-            cur.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(101)]), interests)
-            cur.execute("INSERT INTO knowledge VALUES (%s)" % ",".join(['?' for i in range(101)]), concepts)
+            cur = conn.cursor()
+            cur.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(1641)]), interests)
+            cur.execute("INSERT INTO knowledge VALUES (%s)" % ",".join(['?' for i in range(1641)]), concepts)
             conn.commit()
             conn.close()
         except:
