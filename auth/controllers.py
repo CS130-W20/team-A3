@@ -22,8 +22,11 @@ from flask_login import current_user, login_user, logout_user, login_required
 # Import module models (i.e. User)
 from auth.models import User
 
+from users.modules.interests import get_ohe_concepts
+
 import sqlite3
 import numpy as np
+
 from users import USERDB_PATH
 
 # Define the blueprint: 'auth'
@@ -153,8 +156,6 @@ def new_user():
         interests = request.form.getlist('inputInterests')
         concepts = request.form.getlist('inputConcepts')
 
-
-
         education = request.form['inputEduLevel']
         email = request.form['inputEmail']
         user = User.query.filter_by(id=current_user.id).first()
@@ -166,21 +167,18 @@ def new_user():
         user.interests = ",".join(interests)
         user.education = education
 
-        # new user interests entry in interests table should be populated according to questionnaire
-        # temporarily initialize to interests + random bool
-        interests = (current_user.id, ) + tuple([0]*1640)
+        interests_ohe, concepts_ohe = get_ohe_concepts(interests, concepts)
 
-        # new user knowledge entry in knowledge table should be populated according to questionnaire
-        # temporarily initialize to concepts + random bool
-        concepts = (current_user.id, ) + tuple([0]*1640)
+        interests = (current_user.id, ) + tuple(interests_ohe)
+        concepts = (current_user.id, ) + tuple(concepts_ohe)
 
         try:
             db.session.add(user)
             db.session.commit()
             conn = sqlite3.connect(USERDB_PATH)
             cur = conn.cursor()
-            cur.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(1641)]), interests)
-            cur.execute("INSERT INTO knowledge VALUES (%s)" % ",".join(['?' for i in range(1641)]), concepts)
+            cur.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(len(interests))]), interests)
+            cur.execute("INSERT INTO knowledge VALUES (%s)" % ",".join(['?' for i in range(len(concepts))]), concepts)
             conn.commit()
             conn.close()
         except:

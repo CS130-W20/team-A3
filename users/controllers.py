@@ -8,7 +8,7 @@ from auth import load_user
 from users.modules.history import get_user_history
 from users.modules.recommendation import recommend_course_for_user
 from users.modules.education import get_education_options
-from users.modules.interests import get_interests_options
+from users.modules.interests import get_interests_options, get_ohe_concepts
 from users.modules.portfolio import get_user_description, get_user_photo, remove_previous_image
 import sqlite3
 import numpy as np
@@ -56,10 +56,12 @@ def update_info():
     edulevel = request.form.get('inputEduLevel')
     interests = request.form.getlist('inputInterests')
 
+    interests_ohe, _ = get_ohe_concepts(interests, [])
+    interests_ohe = (user_id, ) + tuple(interests_ohe)
+
     conn = sqlite3.connect(USERDB_PATH)
-    # conn.execute('''DELETE FROM interests WHERE user_id = ?''', (user_id, ))
-    # conn.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(101)]),
-    # (user_id, ) + tuple(interests) + tuple(np.random.randint(0, 2, 100 - len(interests), 'bool')))
+    conn.execute('''DELETE FROM interests WHERE user_id = ?''', (user_id, ))
+    conn.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(len(interests_ohe))]), interests_ohe)
 
     interests = ",".join(interests)
     conn.execute('''

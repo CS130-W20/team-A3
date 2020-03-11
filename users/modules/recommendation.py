@@ -39,8 +39,8 @@ def recommend_course_for_user(user_id):
 
     conn.close()
 
-    # print(knowledge)
-    # print(interests)
+    print(knowledge[198])
+    print(interests[391])
     # print(courses_df)
 
     recommended = [
