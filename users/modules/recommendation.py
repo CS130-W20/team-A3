@@ -3,9 +3,6 @@ import pandas as pd
 import numpy as np
 from users import USERDB_PATH   # path to users db
 from search import COURSEDB_PATH  # path to courses db
-
-'''DELETE ME '''
-import pickle
 import re
 
 def recommend_course_for_user(user_id):
@@ -39,13 +36,26 @@ def recommend_course_for_user(user_id):
 
     conn.close()
 
-    print(knowledge[198])
-    print(interests[391])
+    recs = courses_df.mul(np.array(interests), axis=1).sum(axis=1).sort_values(ascending=False).index
+    recommended = []
+    for rec in recs[:5]:
+        rex = re.compile(r'<course_name>(.*?)</course_name>')
+        f = open('database/data_courses/%s' % rec, 'r')
+        course_name = rex.search(f.read()).group(1)
+        course_name = course_name.replace("&amp;", "&")
+        course_link = "/search/" + rec[:-4] + "/"
+        recommended += [{"name": course_name, "link": course_link}]
+        f.close()
+
+    print(recommended)
+
+    # print(knowledge)
+    # print(interests)
     # print(courses_df)
 
-    recommended = [
-        {"name": "Machine Learning: Classification", "link": "/search/Coursera_99/"},
-        {"name": "Machine Learning: Regression", "link": "/search/Coursera_83/"},
-        {"name": "Mathematics for Machine Learning: PCA", "link": "/search/Coursera_91/"}
-    ]
+    # recommended = [
+    #     {"name": "Machine Learning: Classification", "link": "/search/Coursera_99/"},
+    #     {"name": "Machine Learning: Regression", "link": "/search/Coursera_83/"},
+    #     {"name": "Mathematics for Machine Learning: PCA", "link": "/search/Coursera_91/"}
+    # ]
     return recommended
