@@ -57,9 +57,9 @@ def update_info():
     interests = request.form.getlist('inputInterests')
 
     conn = sqlite3.connect(USERDB_PATH)
-    conn.execute('''DELETE FROM interests WHERE user_id = ?''', (user_id, ))
-    conn.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(101)]), 
-    (user_id, ) + tuple(interests) + tuple(np.random.randint(0, 2, 100 - len(interests), 'bool')))
+    # conn.execute('''DELETE FROM interests WHERE user_id = ?''', (user_id, ))
+    # conn.execute("INSERT INTO interests VALUES (%s)" % ",".join(['?' for i in range(101)]),
+    # (user_id, ) + tuple(interests) + tuple(np.random.randint(0, 2, 100 - len(interests), 'bool')))
 
     interests = ",".join(interests)
     conn.execute('''
@@ -71,7 +71,7 @@ def update_info():
             interests = ?
         WHERE id = ?
     ''', (email, edulevel, interests, user_id))
-    
+
     conn.commit()
 
     return redirect("/home/"+user_id)

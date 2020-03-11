@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <title>EducationAI first-time login</title>
-    <link rel="icon" 
-      type="image/png" 
+    <link rel="icon"
+      type="image/png"
       href="{{ url_for('static', filename='img/logo.png') }}" />
     <meta charset="utf-8">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -90,67 +90,71 @@
   </div>
 
   <div class="form-group">
-    <label for="inputInterests">(*) What's your interests? (at most 6)</label>
+    <label for="inputInterests">(*) What are your interests? (at most 6)</label>
     <select id="inputInterests" name="inputInterests" class="selectpicker form-control" data-live-search="true" multiple data-max-options="6" required>
-      <optgroup label="General Domain">
+      <!-- <optgroup label="General Domain"> -->
         <option>Machine Learning</option>
-        <option>Data Mining</option>
-        <option>Artificial Intelligence</option>
-      </optgroup>
-      <optgroup label="Direction">
+        <option>Deep Learning</option>
+        <option>Data Mining & Analysis</option>
+        <option>Big Data</option>
+        <option>Databases</option>
+        <option>Other</option>
+      <!-- </optgroup> -->
+      <!-- <optgroup label="Direction">
         <option>Natural Language Processing</option>
         <option>Computer Vision</option>
-      </optgroup>
-      <optgroup label="Perspective">
+      </optgroup> -->
+      <!-- <optgroup label="Perspective">
         <option>Algorithm</option>
         <option>Application</option>
         <option>Research</option>
-      </optgroup>
+      </optgroup> -->
     </select>
   </div>
 
   <div class="form-group">
-    <label for="inputConcepts">(*) What concepts do you know for now? </label>
+    <label for="inputConcepts">(*) What concepts do you know? </label>
     <select id="inputConcepts" name="inputConcepts" class="selectpicker form-control" data-live-search="true" multiple required>
-      <optgroup label="Mahcine Learning">
-        <option>ML Important Concept 1</option>
-        <option>ML Important Concept 2</option>
-        <option>ML Important Concept 3</option>
+      <optgroup label="Machine Learning Concepts">
+        <option>Machine Learning</option>
+        <option>Regression Model</option>
+        <option>Artificial Intelligence</option>
+        <option>Logistic Regression</option>
+        <option>Decision Tree</option>
       </optgroup>
-      <optgroup label="Data Mining">
-        <option>DM Important Concept 1</option>
-        <option>DM Important Concept 2</option>
-        <option>DM Important Concept 3</option>
+      <optgroup label="Deep Learning">
+        <option>Deep Learning</option>
+        <option>Deep Neural Network</option>
+        <option>Reinforcement Learning</option>
+        <option>Natural Language Processing</option>
+        <option>Computer Vision</option>
       </optgroup>
-      <optgroup label="Artificial Intelligence">
-        <option>AI Important Concept 1</option>
-        <option>AI Important Concept 2</option>
-        <option>AI Important Concept 3</option>
+      <optgroup label="Data Mining & Analysis">
+        <option>Data Analysis</option>
+        <option>Data Visualization</option>
+        <option>Statistical Model</option>
+        <option>Regression Analysis</option>
+        <option>Linear Regression Model</option>
+        <option>Data Mining</option>
+        <option>Statistical Inference</option>
       </optgroup>
-      <optgroup label="Natural Language Processing">
-        <option>NLP Important Concept 1</option>
-        <option>NLP Important Concept 2</option>
-        <option>NLP Important Concept 3</option>
+      <optgroup label="Big Data">
+        <option>Bid Data</option>
+        <option>Hadoop</option>
+        <option>Cloud Computing</option>
       </optgroup>
-      <optgroup label="Computer Vision">
-        <option>NLP Important Concept 1</option>
-        <option>NLP Important Concept 2</option>
-        <option>NLP Important Concept 3</option>
+      <optgroup label="Databases">
+        <option>Database</option>
+        <option>MySQL</option>
+        <option>Datalog</option>
+        <option>Data Management</option>
       </optgroup>
-      <optgroup label="Algorithm">
-        <option>ALGO Important Concept 1</option>
-        <option>ALGO Important Concept 2</option>
-        <option>ALGO Important Concept 3</option>
-      </optgroup>
-      <optgroup label="Application">
-        <option>APP Important Concept 1</option>
-        <option>APP Important Concept 2</option>
-        <option>APP Important Concept 3</option>
-      </optgroup>
-      <optgroup label="Research">
-        <option>RESEARCH Important Concept 1</option>
-        <option>RESEARCH Important Concept 2</option>
-        <option>RESEARCH Important Concept 3</option>
+      <optgroup label="Other">
+        <option>Programming</option>
+        <option>Algorithm</option>
+        <option>System programming</option>
+        <option>Graphics</option>
+        <option>Biostatistics</option>
       </optgroup>
     </select>
   </di

@@ -25,13 +25,13 @@ def recommend_course_for_user(user_id):
     """
     # get user knowledge and interests
     conn = sqlite3.connect(USERDB_PATH)
-    # userinfo_df =   pd.read_sql_query("SELECT * FROM user      WHERE id=%s"      % user_id, conn).iloc[0]
-    # knowledge =     pd.read_sql_query("SELECT * FROM knowledge WHERE user_id=%s" % user_id, conn).iloc[0][1:]
-    # interests =     pd.read_sql_query("SELECT * FROM interests WHERE user_id=%s" % user_id, conn).iloc[0][1:]
+    userinfo_df =   pd.read_sql_query("SELECT * FROM user      WHERE id=%s"      % user_id, conn).iloc[0]
+    knowledge =     pd.read_sql_query("SELECT * FROM knowledge WHERE user_id=%s" % user_id, conn).iloc[0][1:]
+    interests =     pd.read_sql_query("SELECT * FROM interests WHERE user_id=%s" % user_id, conn).iloc[0][1:]
 
-    print(pd.read_sql_query("SELECT id, fname, lname FROM user", conn, index_col='id'))
-    print(pd.read_sql_query("SELECT * FROM knowledge", conn, index_col='user_id'))
-    print(pd.read_sql_query("SELECT * FROM interests", conn, index_col='user_id'))
+    # print(pd.read_sql_query("SELECT id, fname, lname FROM user", conn, index_col='id'))
+    # print(pd.read_sql_query("SELECT * FROM knowledge", conn, index_col='user_id'))
+    # print(pd.read_sql_query("SELECT * FROM interests", conn, index_col='user_id'))
 
     # get course embeddings
     conn = sqlite3.connect(COURSEDB_PATH)
