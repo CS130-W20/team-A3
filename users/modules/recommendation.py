@@ -11,8 +11,7 @@ def recommend_course_for_user(user_id):
 
     Connects to user_interest, user_knowledge, and course_concepts tables
     and uses the vector representations of each to find courses which a user may
-    be interested in (course covers many user interests) as well as matches
-    background of user (user has background knowledge to complete course).
+    be interested in (course covers many user interests).
 
     Parameters:
     user_id (int): ID of user
@@ -47,15 +46,8 @@ def recommend_course_for_user(user_id):
         recommended += [{"name": course_name, "link": course_link}]
         f.close()
 
-    print(recommended)
-
     # print(knowledge)
     # print(interests)
     # print(courses_df)
 
-    # recommended = [
-    #     {"name": "Machine Learning: Classification", "link": "/search/Coursera_99/"},
-    #     {"name": "Machine Learning: Regression", "link": "/search/Coursera_83/"},
-    #     {"name": "Mathematics for Machine Learning: PCA", "link": "/search/Coursera_91/"}
-    # ]
     return recommended
