@@ -48,6 +48,38 @@ class BasicTests(unittest.TestCase):
         response = self.app.get('/', follow_redirects=True)
         self.assertEqual(response.status_code, 200)
  
- 
+    def register(self, email, password):
+        return self.app.post(
+            '/register',
+            data=dict(email=email, password=password),
+            follow_redirects=True
+        )
+
+    def test_valid_user_registration(self):
+        response = self.register('test@test.com', 'test')
+        self.assertEqual(response.status_code, 200)
+
+
+    def login(self, email, password):
+        return self.app.post(
+            '/login',
+            data=dict(email=email, password=password),
+            follow_redirects=True
+        )
+
+    def logout(self):
+        return self.app.get(
+            '/logout',
+            follow_redirects=True
+        )
+
+    def test_logout(self):
+        response = self.logout()
+        self.assertEqual(response.status_code, 200)
+
+    def test_login(self):
+        response = self.login('test@test.com', 'test')
+        self.assertEqual(response.status_code, 200)
+    
 if __name__ == "__main__":
     unittest.main()
