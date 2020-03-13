@@ -15,6 +15,7 @@ Our application will have two primary novel features:
 OS X & Linux & Windows:
 
 ```sh
+pip install -r requirements.txt
 python application.py
 ```
 
