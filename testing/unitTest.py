@@ -29,7 +29,6 @@ class BasicTests(unittest.TestCase):
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + \
             os.path.join(app.config['BASE_DIR'], 'database', TEST_DB)
         self.app = app.test_client()
-        db.drop_all()
         db.create_all()
  
         # Disable sending emails during unit testing
@@ -47,18 +46,6 @@ class BasicTests(unittest.TestCase):
     def test_main_page(self):
         response = self.app.get('/', follow_redirects=True)
         self.assertEqual(response.status_code, 200)
- 
-    def register(self, email, password):
-        return self.app.post(
-            '/register',
-            data=dict(email=email, password=password),
-            follow_redirects=True
-        )
-
-    def test_valid_user_registration(self):
-        response = self.register('test@test.com', 'test')
-        self.assertEqual(response.status_code, 200)
-
 
     def login(self, email, password):
         return self.app.post(
@@ -73,13 +60,14 @@ class BasicTests(unittest.TestCase):
             follow_redirects=True
         )
 
+    def test_login(self):
+        response = self.login('testuser', 'password')
+        self.assertEqual(response.status_code, 200)
+
     def test_logout(self):
         response = self.logout()
         self.assertEqual(response.status_code, 200)
 
-    def test_login(self):
-        response = self.login('test@test.com', 'test')
-        self.assertEqual(response.status_code, 200)
     
 if __name__ == "__main__":
     unittest.main()
