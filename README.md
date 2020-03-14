@@ -71,6 +71,16 @@ Go to http://0.0.0.0:8080 by default. You can enter the browse mode. Search the 
 
 The document of our this project can be found [[here]](https://github.com/CS130-W20/team-A3/tree/master/docs).
 
+## Deployment
+
+The system has been deployed on AWS, please check this [link](http://educationai-env.ntxv4kf8fy.us-west-1.elasticbeanstalk.com/) for you need.
+
+## Video
+
+Our demo can be found in this [link](https://youtu.be/lfUvEKk4W4U).
+
+
+
 ## Note
 * To meet the course requirement for Part C, we re-committed our repo at Feb. 18. Please just ingore all the previous records before that day. (@Professor, @TA)
 
